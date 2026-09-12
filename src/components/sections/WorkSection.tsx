@@ -229,27 +229,40 @@ export const WorkSection: React.FC<WorkSectionProps> = ({ onDiscussSimilar }) =>
         {/* Section Header with Exact Match to User Reference Screenshot */}
         <div className="text-center space-y-4 max-w-4xl mx-auto">
           
-          {/* Centered Top Badge: ✦ WORKS */}
+          {/* Top Pill Badge */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-1.5 text-xs font-pilcrow font-bold uppercase tracking-widest text-zinc-600"
+            className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-zinc-100 border border-zinc-250 text-xs font-semibold text-zinc-700 shadow-xs"
           >
-            <span className="text-[#FFAE00] font-black text-sm">✦</span>
-            <span>WORKS</span>
+            <span className="h-2 w-2 rounded-full bg-[#FFAE00]" />
+            <span className="font-sans font-bold text-[11px] uppercase tracking-wider text-zinc-600">
+              PROVEN CLIENT TRACK RECORD
+            </span>
           </motion.div>
 
-          {/* Bold Lowercase Headline with Signature Crimson Period */}
+          {/* High-Impact Headline with Fontshare Boska Italic Contrast */}
           <motion.h2
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-[-0.04em] text-zinc-950 lowercase max-w-4xl mx-auto leading-tight font-display"
+            className="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight text-zinc-950 max-w-4xl mx-auto leading-[1.08] font-display"
           >
-            crafting <span className="font-boska italic font-normal text-zinc-500">the finest</span> of all<span className="text-[#FFAE00]">.</span>
+            Engineered for <span className="font-boska italic font-light text-[#FF4D3D]">scale</span> and measurable growth<span className="text-[#FFAE00]">.</span>
           </motion.h2>
+
+          {/* Clean Subtitle */}
+          <motion.p
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.18 }}
+            className="text-sm sm:text-base text-zinc-600 max-w-2xl mx-auto font-normal leading-relaxed font-sans"
+          >
+            Every product below was architected, coded, and deployed directly by Rohith E. Zero template bloat, sub-0.4s load times, and custom full-stack infrastructure.
+          </motion.p>
         </div>
 
         {/* Filter Navigation Capsule Bar (Exact Match to User Reference Screenshot) */}

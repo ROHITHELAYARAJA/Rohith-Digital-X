@@ -88,14 +88,21 @@ export const HomePage: React.FC = () => {
 
         <div className="container max-w-5xl mx-auto px-4 sm:px-6 relative z-10 space-y-12">
           <div className="text-center space-y-4 max-w-2xl mx-auto">
-            <span className="text-[11px] font-mono font-bold tracking-widest uppercase text-[#FFAE00]">
-              DIRECT CALENDAR ACCESS
-            </span>
-            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight font-display">
-              Let's build something <span className="text-[#FFAE00]">good</span>.
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-zinc-900 border border-zinc-800 text-xs font-semibold text-zinc-300 shadow-xs">
+              <span className="h-2 w-2 rounded-full bg-[#FFAE00]" />
+              <span className="font-sans font-bold text-[11px] uppercase tracking-wider text-zinc-400">
+                DIRECT CALENDAR ACCESS
+              </span>
+            </div>
+            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight font-display leading-[1.08]">
+              Let's build something{" "}
+              <span className="font-boska italic font-light text-[#FFAE00]">
+                extraordinary
+              </span>
+              .
             </h2>
-            <p className="text-sm sm:text-base text-zinc-400 font-normal leading-relaxed">
-              Book a 30-minute discovery call directly with founder Rohith E. We'll review your project scope, timeline, and tech architecture with zero fluff.
+            <p className="text-sm sm:text-base text-zinc-400 font-normal leading-relaxed font-sans">
+              Book a 30-minute technical discovery call directly with founder Rohith E. We will map your system architecture, scope, and sprint timeline with zero fluff.
             </p>
           </div>
 

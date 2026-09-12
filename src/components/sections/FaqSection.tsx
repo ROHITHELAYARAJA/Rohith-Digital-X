@@ -17,18 +17,22 @@ export const FaqSection: React.FC = () => {
       <div className="container max-w-4xl mx-auto px-4 sm:px-6">
         
         {/* Section Header with Editorial Typography */}
-        <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16 space-y-3">
-          <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#FFAE00] font-mono">
-            TRANSPARENT ANSWERS
-          </span>
-          <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-zinc-950 leading-tight font-display">
-            Frequently asked{" "}
-            <span className="text-[#FFAE00]">
-              questions
-            </span>.
+        <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16 space-y-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-zinc-100 border border-zinc-250 text-xs font-semibold text-zinc-700 shadow-xs">
+            <span className="h-2 w-2 rounded-full bg-[#FFAE00]" />
+            <span className="font-sans font-bold text-[11px] uppercase tracking-wider text-zinc-600">
+              TRANSPARENT ANSWERS
+            </span>
+          </div>
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-zinc-950 leading-[1.08] font-display">
+            Everything you need to{" "}
+            <span className="font-boska italic font-light text-[#FF4D3D]">
+              know
+            </span>
+            .
           </h2>
-          <p className="text-xs sm:text-sm md:text-base text-zinc-600 leading-relaxed font-normal">
-            Direct, candid answers about pricing, speed, communication, and post-launch guarantees.
+          <p className="text-sm sm:text-base text-zinc-600 leading-relaxed font-normal font-sans">
+            Direct, candid answers about sprint timelines, founder communication, code ownership, and post-launch guarantees.
           </p>
         </div>
 

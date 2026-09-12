@@ -73,36 +73,39 @@ Please let me know the kickoff process and timeline to get started!`
       <div className="container max-w-7xl mx-auto px-4 sm:px-6">
         
         {/* Section Header with Clean Typography */}
-        <div className="max-w-3xl mx-auto text-center mb-10 sm:mb-12 space-y-3">
-          <motion.span
+        <div className="max-w-3xl mx-auto text-center mb-10 sm:mb-12 space-y-4">
+          <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#FFAE00] font-mono inline-block"
+            className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-zinc-100 border border-zinc-250 text-xs font-semibold text-zinc-700 shadow-xs"
           >
-            TRANSPARENT PRICING &amp; PACKAGES
-          </motion.span>
+            <span className="h-2 w-2 rounded-full bg-[#FFAE00]" />
+            <span className="font-sans font-bold text-[11px] uppercase tracking-wider text-zinc-600">
+              TRANSPARENT FIXED PRICING
+            </span>
+          </motion.div>
           <motion.h2
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-zinc-950 leading-tight font-display"
+            className="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight text-zinc-950 leading-[1.08] font-display"
           >
-            Tailored digital{" "}
-            <span className="text-[#FFAE00]">
-              service packages.
+            Clear investment with{" "}
+            <span className="font-boska italic font-light text-[#FF4D3D]">
+              zero surprises
             </span>
+            .
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-xs sm:text-sm md:text-base text-zinc-600 leading-relaxed font-normal font-sans"
+            className="text-sm sm:text-base text-zinc-600 leading-relaxed font-normal font-sans max-w-2xl mx-auto"
           >
-            Clear, transparent scope and pricing designed for businesses, clinics, retail shops, startups, and institutions.
-            Tap any package to inquire instantly on WhatsApp or book online.
+            No hourly bill padding or bloated agency overhead. Transparent milestones, guaranteed delivery sprints, and direct founder-level architecture.
           </motion.p>
         </div>
 
