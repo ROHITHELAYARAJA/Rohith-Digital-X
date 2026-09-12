@@ -46,18 +46,23 @@ export const WebDevelopmentPage: React.FC = () => {
             </div>
 
             <div className="flex-1 space-y-6 max-w-3xl">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900/90 border border-zinc-700/80 text-[11px] font-mono font-semibold text-zinc-300">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-zinc-900/90 border border-zinc-700/80 text-xs font-semibold text-zinc-300">
                 <span className="h-2 w-2 rounded-full bg-[#FFAE00]" />
-                <span>CORE ENGINEERING CAPABILITY</span>
+                <span className="font-sans font-bold text-[11px] uppercase tracking-wider text-zinc-400">
+                  CORE ENGINEERING CAPABILITY
+                </span>
               </div>
 
-              <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.08] font-display">
-                Websites built for{" "}
-                <span className="text-[#FFAE00]">speed, taste</span> &amp; conversion.
+              <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white leading-[1.08] font-display">
+                Web platforms built for{" "}
+                <span className="font-boska italic font-light text-[#FFAE00]">
+                  speed &amp; taste
+                </span>
+                .
               </h1>
 
               <p className="text-base sm:text-lg text-zinc-400 font-normal leading-relaxed max-w-2xl font-sans">
-                We engineer lightning-fast digital storefronts, SaaS landing pages, and web applications that load under 0.4s and convert visitors into paying clients.
+                We engineer lightning-fast digital storefronts, SaaS platforms, and enterprise web applications that load under 0.4s and convert visitors into paying clients.
               </p>
 
               <div className="flex flex-wrap items-center gap-3 pt-2">
