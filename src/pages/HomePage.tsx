@@ -1,6 +1,7 @@
 import React from "react"
 import { HeroSection } from "@/components/sections/HeroSection"
 import { ThreeReasonsSection } from "@/components/sections/ThreeReasonsSection"
+import { DigitalProductCapabilitiesSection } from "@/components/sections/DigitalProductCapabilitiesSection"
 import { ServicesSection } from "@/components/sections/ServicesSection"
 import { PackagesSection } from "@/components/sections/PackagesSection"
 import { WorkSection } from "@/components/sections/WorkSection"
@@ -65,6 +66,9 @@ export const HomePage: React.FC = () => {
 
       {/* 2. Signature "Three Reasons They Stay" Section (Crisp White Card Rhythm) */}
       <ThreeReasonsSection />
+
+      {/* 2.5. Fastlane-Inspired Proprietary Architecture & Bento Capabilities */}
+      <DigitalProductCapabilitiesSection />
 
       {/* 3. Featured Flagship Work Section (JSBuilders + Catalog) */}
       <WorkSection onDiscussSimilar={handleDiscussSimilar} />

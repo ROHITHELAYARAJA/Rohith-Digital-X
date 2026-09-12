@@ -20,11 +20,11 @@ export const ThreeReasonsSection: React.FC = () => {
             </div>
 
             <h2 className="text-4xl sm:text-6xl font-black text-zinc-950 tracking-tight font-display leading-[1.08]">
-              Three reasons they <span className="text-[#FFAE00]">stay</span>.
+              Three reasons they <span className="font-boska italic font-light text-[#FF4D3D]">stay</span>.
             </h2>
           </div>
 
-          <p className="text-sm sm:text-base text-zinc-600 max-w-md font-normal leading-relaxed">
+          <p className="text-sm sm:text-base text-zinc-600 max-w-md font-normal leading-relaxed font-sans">
             Most agencies overpromise, pad estimates with account-manager overhead, and ship bloated templates. We do things differently.
           </p>
         </div>
@@ -33,30 +33,30 @@ export const ThreeReasonsSection: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           
           {/* Card 1: Speed. */}
-          <div className="p-8 sm:p-10 rounded-3xl bg-zinc-50 border border-zinc-200/90 hover:border-[#FFAE00] hover:shadow-2xl transition-all flex flex-col justify-between group">
+          <div className="p-8 sm:p-10 rounded-3xl bg-zinc-50 border border-zinc-200/90 hover:border-[#FF4D3D] hover:shadow-2xl transition-all flex flex-col justify-between group">
             <div className="space-y-6">
               <div className="flex items-center justify-between">
-                <span className="px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-[11px] font-mono font-bold text-[#FFAE00]">
+                <span className="px-3 py-1 rounded-full bg-[#FF4D3D]/10 border border-[#FF4D3D]/20 text-[11px] font-sans font-bold text-[#FF4D3D] uppercase tracking-wider">
                   01 / 2 TO 4 WEEKS
                 </span>
-                <div className="h-10 w-10 rounded-xl bg-amber-500/10 text-[#FFAE00] flex items-center justify-center font-bold group-hover:scale-110 transition-transform">
+                <div className="h-10 w-10 rounded-xl bg-[#FF4D3D]/10 text-[#FF4D3D] flex items-center justify-center font-bold group-hover:scale-110 transition-transform">
                   <Zap className="h-5 w-5" />
                 </div>
               </div>
 
               <div>
                 <h3 className="text-3xl sm:text-4xl font-black text-zinc-950 font-display">
-                  Speed<span className="text-[#FFAE00]">.</span>
+                  Speed<span className="text-[#FF4D3D]">.</span>
                 </h3>
-                <p className="text-sm text-zinc-600 mt-3 leading-relaxed">
-                  Turnaround in 2 to 4 weeks, not endless quarters. You talk directly with engineer &amp; founder Rohith E with zero bureaucracy, instant Slack/WhatsApp updates, and rapid build iterations.
+                <p className="text-sm text-zinc-600 mt-3 leading-relaxed font-sans">
+                  Turnaround in 2 to 4 weeks, not endless quarters. You talk directly with engineer &amp; founder Rohith E with zero bureaucracy, instant WhatsApp updates, and rapid build iterations.
                 </p>
               </div>
             </div>
 
-            <div className="pt-8 border-t border-zinc-200/80 mt-8 text-xs font-mono text-zinc-500 flex items-center justify-between">
+            <div className="pt-8 border-t border-zinc-200/80 mt-8 text-xs font-sans text-zinc-500 flex items-center justify-between">
               <span>Rapid Prototyping</span>
-              <span className="text-zinc-900 font-bold">&lt;0.4s Web Vitals</span>
+              <span className="text-zinc-900 font-bold font-khand text-base tracking-wide text-[#FF4D3D]">&lt;0.4s Web Vitals</span>
             </div>
           </div>
 
@@ -64,8 +64,8 @@ export const ThreeReasonsSection: React.FC = () => {
           <div className="p-8 sm:p-10 rounded-3xl bg-zinc-50 border border-zinc-200/90 hover:border-[#FFAE00] hover:shadow-2xl transition-all flex flex-col justify-between group">
             <div className="space-y-6">
               <div className="flex items-center justify-between">
-                <span className="px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-[11px] font-mono font-bold text-[#FFAE00]">
-                  02 / ONE DIRECTION
+                <span className="px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-[11px] font-sans font-bold text-[#FFAE00] uppercase tracking-wider">
+                  02 / HIGH TASTE
                 </span>
                 <div className="h-10 w-10 rounded-xl bg-amber-500/10 text-[#FFAE00] flex items-center justify-center font-bold group-hover:scale-110 transition-transform">
                   <Eye className="h-5 w-5" />
@@ -74,43 +74,43 @@ export const ThreeReasonsSection: React.FC = () => {
 
               <div>
                 <h3 className="text-3xl sm:text-4xl font-black text-zinc-950 font-display">
-                  Taste<span className="text-[#FFAE00]">.</span>
+                  <span className="font-boska italic font-normal">Taste</span><span className="text-[#FFAE00]">.</span>
                 </h3>
-                <p className="text-sm text-zinc-600 mt-3 leading-relaxed">
+                <p className="text-sm text-zinc-600 mt-3 leading-relaxed font-sans">
                   Obsession with typography, 60fps micro-animations, and visual balance. We don't build generic websites; we create memorable digital storefronts that stand out in crowded industries.
                 </p>
               </div>
             </div>
 
-            <div className="pt-8 border-t border-zinc-200/80 mt-8 text-xs font-mono text-zinc-500 flex items-center justify-between">
+            <div className="pt-8 border-t border-zinc-200/80 mt-8 text-xs font-sans text-zinc-500 flex items-center justify-between">
               <span>Bespoke 3D &amp; Motion</span>
               <span className="text-zinc-900 font-bold">Award-Grade Craft</span>
             </div>
           </div>
 
           {/* Card 3: Stay. */}
-          <div className="p-8 sm:p-10 rounded-3xl bg-zinc-50 border border-zinc-200/90 hover:border-[#FFAE00] hover:shadow-2xl transition-all flex flex-col justify-between group">
+          <div className="p-8 sm:p-10 rounded-3xl bg-zinc-50 border border-zinc-200/90 hover:border-emerald-500 hover:shadow-2xl transition-all flex flex-col justify-between group">
             <div className="space-y-6">
               <div className="flex items-center justify-between">
-                <span className="px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-[11px] font-mono font-bold text-[#FFAE00]">
+                <span className="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-[11px] font-sans font-bold text-emerald-600 uppercase tracking-wider">
                   03 / 14-DAY SUPPORT
                 </span>
-                <div className="h-10 w-10 rounded-xl bg-amber-500/10 text-[#FFAE00] flex items-center justify-center font-bold group-hover:scale-110 transition-transform">
+                <div className="h-10 w-10 rounded-xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center font-bold group-hover:scale-110 transition-transform">
                   <ShieldCheck className="h-5 w-5" />
                 </div>
               </div>
 
               <div>
                 <h3 className="text-3xl sm:text-4xl font-black text-zinc-950 font-display">
-                  Stay<span className="text-[#FFAE00]">.</span>
+                  Stay<span className="text-emerald-500">.</span>
                 </h3>
-                <p className="text-sm text-zinc-600 mt-3 leading-relaxed">
+                <p className="text-sm text-zinc-600 mt-3 leading-relaxed font-sans">
                   Launch day isn't the finish line. Every sprint comes with a 14-day warranty, full performance audits, DNS configuration, and continuous optimization so you never feel abandoned.
                 </p>
               </div>
             </div>
 
-            <div className="pt-8 border-t border-zinc-200/80 mt-8 text-xs font-mono text-zinc-500 flex items-center justify-between">
+            <div className="pt-8 border-t border-zinc-200/80 mt-8 text-xs font-sans text-zinc-500 flex items-center justify-between">
               <span>Post-Launch Warranty</span>
               <span className="text-zinc-900 font-bold">100% Code Handover</span>
             </div>

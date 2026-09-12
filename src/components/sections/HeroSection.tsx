@@ -63,7 +63,7 @@ export const HeroSection: React.FC = () => {
               className="text-4xl sm:text-6xl md:text-7xl lg:text-[5.4rem] font-extrabold tracking-[-0.035em] text-white leading-[1.05] font-display"
             >
               Digital engineering &amp; design partner for{" "}
-              <span className="text-[#FFAE00] inline-block underline decoration-[#FFAE00]/30 decoration-wavy decoration-2 underline-offset-8">
+              <span className="font-boska italic font-light text-[#FF4D3D] inline-block underline decoration-[#FF4D3D]/30 decoration-wavy decoration-2 underline-offset-8">
                 fast-growing
               </span>{" "}
               businesses.
@@ -108,7 +108,7 @@ export const HeroSection: React.FC = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.45 }}
-              className="flex flex-wrap items-center gap-6 pt-4 text-xs font-mono text-zinc-400"
+              className="flex flex-wrap items-center gap-6 pt-4 text-xs font-sans text-zinc-400"
             >
               <div className="flex items-center gap-2">
                 <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
@@ -116,12 +116,12 @@ export const HeroSection: React.FC = () => {
               </div>
               <span className="text-zinc-700">•</span>
               <div className="flex items-center gap-1.5">
-                <span className="text-[#FFAE00] font-bold">2–4 WEEKS</span>
+                <span className="text-[#FFAE00] font-khand text-base font-bold tracking-wide">2–4 WEEKS</span>
                 <span>Avg. Sprint Turnaround</span>
               </div>
               <span className="text-zinc-700">•</span>
               <div className="flex items-center gap-1.5">
-                <span className="text-[#FFAE00] font-bold">100/100</span>
+                <span className="text-[#FF4D3D] font-khand text-base font-bold tracking-wide">100/100</span>
                 <span>Lighthouse Target</span>
               </div>
             </motion.div>

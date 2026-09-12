@@ -220,17 +220,7 @@ export const Navbar: React.FC = () => {
             </AnimatePresence>
           </div>
 
-          <div className="hidden md:flex items-center justify-end">
-            <a
-              href="https://wa.me/919655483130?text=Hello%20Rohith,%20I%20would%20like%20to%20discuss%20a%20project."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/90 backdrop-blur-md border border-zinc-200/90 text-zinc-900 text-xs font-bold shadow-sm hover:border-emerald-500 hover:text-emerald-700 transition-all active:scale-95 cursor-pointer"
-            >
-              <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
-              <span>WhatsApp Direct</span>
-            </a>
-          </div>
+          <div className="hidden md:block" />
 
           <div className="md:hidden flex items-center gap-2">
             <button

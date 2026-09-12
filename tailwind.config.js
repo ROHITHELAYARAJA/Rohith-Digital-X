@@ -55,6 +55,22 @@ export default {
           'amber-bright': '#FFB800',
           'amber-dark': '#E69500',
           'amber-subtle': '#FFF8EB',
+          coral: '#FF4D3D',
+          'coral-hover': '#FF3B2B',
+          'coral-subtle': '#FFF1F0',
+        },
+        coral: {
+          DEFAULT: '#FF4D3D',
+          hover: '#FF3B2B',
+          glow: 'rgba(255, 77, 61, 0.4)',
+          subtle: '#FFF1F0',
+          dark: '#E03627',
+        },
+        sand: {
+          DEFAULT: '#F4EFE6',
+          dark: '#E7DECE',
+          subtle: '#FAF7F2',
+          border: '#E2D8C7',
         },
         void: {
           DEFAULT: '#070708',
