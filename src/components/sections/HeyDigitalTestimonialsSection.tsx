@@ -37,8 +37,7 @@ export const HeyDigitalTestimonialsSection: React.FC = () => {
 
           <div className="flex-1 flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-zinc-800">
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900 border border-zinc-700/80 text-[11px] font-mono font-bold text-zinc-300">
-                <span className="h-2 w-2 rounded-full bg-[#FFAE00]" />
+              <div className="inline-flex items-center px-3 py-1 rounded-full bg-zinc-900 border border-zinc-700/80 text-[11px] font-mono font-bold text-zinc-300">
                 <span>CLIENT SUCCESS &amp; REPUTATION</span>
               </div>
               <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight font-manrope mt-3 leading-[1.08]">

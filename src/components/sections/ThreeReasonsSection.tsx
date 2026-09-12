@@ -19,8 +19,7 @@ export const ThreeReasonsSection: React.FC = () => {
           className="flex flex-col md:flex-row md:items-end justify-between gap-8 pb-8 border-b border-zinc-200"
         >
           <div className="space-y-3 max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-100 border border-zinc-300/80 text-[11px] font-mono font-bold text-zinc-700">
-              <span className="h-2 w-2 rounded-full bg-[#FF3B30]" />
+            <div className="inline-flex items-center px-3.5 py-1 rounded-full bg-zinc-100 border border-zinc-300/80 text-[11px] font-mono font-bold text-zinc-700">
               <span>THE FOUNDER GUARANTEE</span>
             </div>
 

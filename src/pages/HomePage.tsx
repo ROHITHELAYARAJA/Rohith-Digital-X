@@ -92,8 +92,7 @@ export const HomePage: React.FC = () => {
 
         <div className="container max-w-5xl mx-auto px-4 sm:px-6 relative z-10 space-y-12">
           <div className="text-center space-y-4 max-w-2xl mx-auto">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-zinc-900 border border-zinc-800 text-xs font-semibold text-zinc-300 shadow-xs">
-              <span className="h-2 w-2 rounded-full bg-[#FFAE00]" />
+            <div className="inline-flex items-center px-3.5 py-1 rounded-full bg-zinc-900 border border-zinc-800 text-xs font-semibold text-zinc-300 shadow-xs">
               <span className="font-sans font-bold text-[11px] uppercase tracking-wider text-zinc-400">
                 DIRECT CALENDAR ACCESS
               </span>

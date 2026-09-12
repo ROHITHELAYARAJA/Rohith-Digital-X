@@ -2,6 +2,7 @@ import React from "react"
 import { motion } from "framer-motion"
 import { ArrowUpRight, ArrowRight, ShieldCheck, Zap, Award } from "lucide-react"
 import { useNavigation } from "@/context/NavigationContext"
+import VaporizeTextCycle from "@/components/ui/vapour-text-effect"
 
 export const HeroSection: React.FC = () => {
   const { navigate } = useNavigation()
@@ -9,23 +10,20 @@ export const HeroSection: React.FC = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-[90vh] flex flex-col justify-between pt-32 sm:pt-40 pb-12 overflow-hidden bg-white text-zinc-950 selection:bg-[#FF4D3D] selection:text-white border-b border-zinc-200/80"
+      className="relative min-h-[90vh] flex flex-col justify-between pt-32 sm:pt-40 pb-12 overflow-hidden bg-white text-zinc-950 selection:bg-[#FF3B30] selection:text-white border-b border-zinc-200/80"
     >
       {/* Fastlane-style Top Ambient Speed Glow (Atmospheric soft red/coral haze at the top) */}
       <div className="absolute -top-24 sm:-top-32 left-1/2 -translate-x-1/2 w-[700px] sm:w-[1100px] h-[340px] sm:h-[460px] bg-gradient-to-b from-[#FF4D3D]/18 via-[#FFAE00]/10 to-transparent rounded-full blur-[90px] sm:blur-[120px] pointer-events-none -z-0" />
 
-      {/* Subtle fine architectural dot grid */}
-      <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_40%,#000_70%,transparent_100%)] pointer-events-none -z-0 opacity-70" />
-
       <div className="container max-w-5xl mx-auto px-4 sm:px-6 relative z-10 flex-1 flex flex-col justify-center text-center">
-        <div className="space-y-6 sm:space-y-8 max-w-4xl mx-auto">
+        <div className="space-y-6 sm:space-y-7 max-w-4xl mx-auto">
           
-          {/* Eyebrow Badge (Fastlane-inspired, clean pill, vibrant red 'New' tag) */}
+          {/* Eyebrow Badge (Fastlane-inspired, clean pill, vibrant red 'New' tag, zero dots) */}
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-            className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/90 border border-zinc-200/80 text-xs font-dmsans text-zinc-700 shadow-[0_2px_12px_rgba(0,0,0,0.04)] backdrop-blur-md hover:border-zinc-300 transition-colors"
+            className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/95 border border-zinc-200/90 text-xs font-dmsans text-zinc-700 shadow-[0_2px_12px_rgba(0,0,0,0.04)] backdrop-blur-md hover:border-zinc-300 transition-colors"
           >
             <span className="px-2 py-0.5 rounded-full bg-[#FF3B30] text-white font-extrabold text-[10px] tracking-wide uppercase">
               New
@@ -63,12 +61,49 @@ export const HeroSection: React.FC = () => {
             The fastest way to engineer web applications, native mobile apps, and autonomous AI systems — delivered in 14 days directly by founder Rohith E.
           </motion.p>
 
+          {/* Dynamic Particle Vaporization Effect (Wise Integration of vapour-text-effect) */}
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.22 }}
+            className="w-full max-w-lg mx-auto h-12 flex items-center justify-center px-4 rounded-xl bg-zinc-50/80 border border-zinc-200/80"
+          >
+            <div className="text-[11px] font-mono uppercase tracking-widest text-zinc-500 font-bold mr-2 shrink-0">
+              BUILDING:
+            </div>
+            <div className="flex-1 h-10 flex items-center justify-center overflow-hidden">
+              <VaporizeTextCycle
+                texts={[
+                  "High-Converting Web Platforms",
+                  "Native Mobile iOS & Android Apps",
+                  "Autonomous AI Automation Agents",
+                  "Sub-0.4s Scalable Backend APIs"
+                ]}
+                font={{
+                  fontFamily: "Manrope, sans-serif",
+                  fontSize: "14px",
+                  fontWeight: 700,
+                }}
+                color="rgb(24, 24, 27)"
+                spread={3}
+                density={5}
+                animation={{
+                  vaporizeDuration: 1.8,
+                  fadeInDuration: 0.6,
+                  waitDuration: 1.4,
+                }}
+                direction="left-to-right"
+                alignment="center"
+              />
+            </div>
+          </motion.div>
+
           {/* Action CTA Buttons: Sleek Fastlane-Style Pill Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.24, ease: [0.22, 1, 0.36, 1] }}
-            className="flex flex-wrap items-center justify-center gap-3 pt-2"
+            transition={{ duration: 0.5, delay: 0.26, ease: [0.22, 1, 0.36, 1] }}
+            className="flex flex-wrap items-center justify-center gap-3 pt-1"
           >
             <button
               onClick={() => navigate("contact")}
@@ -87,24 +122,22 @@ export const HeroSection: React.FC = () => {
             </button>
           </motion.div>
 
-          {/* Micro-Trust Line: Pure, Clean Stats without Any Distracting Blinking Balls */}
+          {/* Micro-Trust Line: Pure, Clean Stats without Any Small Dots or Blinking Balls */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.32 }}
-            className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 pt-3 text-xs sm:text-sm font-dmsans text-zinc-600"
+            className="flex flex-wrap items-center justify-center gap-6 sm:gap-8 pt-3 text-xs sm:text-sm font-dmsans text-zinc-600"
           >
             <div className="flex items-center gap-1.5 font-medium text-zinc-800">
               <ShieldCheck className="h-4 w-4 text-[#FF3B30]" />
               <span>Direct Founder Access (Rohith E)</span>
             </div>
-            <span className="text-zinc-300 hidden sm:inline">•</span>
             <div className="flex items-center gap-1.5">
               <Zap className="h-4 w-4 text-[#FFAE00]" />
               <span className="font-bold text-zinc-950 font-manrope">14-Day Delivery</span>
               <span className="text-zinc-500">Guarantee</span>
             </div>
-            <span className="text-zinc-300 hidden sm:inline">•</span>
             <div className="flex items-center gap-1.5">
               <Award className="h-4 w-4 text-[#FF3B30]" />
               <span className="font-bold text-zinc-950 font-manrope">100/100</span>
@@ -128,8 +161,6 @@ export const HeroSection: React.FC = () => {
               <span className="text-zinc-500 font-normal">(&lt;0.4s load speed)</span>
             </button>
 
-            <span className="hidden md:inline text-zinc-300">•</span>
-
             <button
               onClick={() => navigate("services-mobile")}
               className="flex items-center gap-2 hover:text-[#FF3B30] transition-colors cursor-pointer group"
@@ -139,8 +170,6 @@ export const HeroSection: React.FC = () => {
               <span className="text-zinc-500 font-normal">(iOS &amp; Android)</span>
             </button>
 
-            <span className="hidden md:inline text-zinc-300">•</span>
-
             <button
               onClick={() => navigate("services-automation")}
               className="flex items-center gap-2 hover:text-[#FF3B30] transition-colors cursor-pointer group"
@@ -149,8 +178,6 @@ export const HeroSection: React.FC = () => {
               <span className="font-bold text-zinc-900 group-hover:text-[#FF3B30]">AI AGENTS</span>
               <span className="text-zinc-500 font-normal">(WhatsApp &amp; Autopilot)</span>
             </button>
-
-            <span className="hidden md:inline text-zinc-300">•</span>
 
             <button
               onClick={() => navigate("packages")}

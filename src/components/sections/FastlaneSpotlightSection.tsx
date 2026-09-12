@@ -76,9 +76,8 @@ export const FastlaneSpotlightSection: React.FC = () => {
 
   return (
     <section className="py-24 sm:py-32 bg-white text-zinc-950 relative overflow-hidden border-b border-zinc-200">
-      {/* Background Soft Glow & Grid */}
+      {/* Background Soft Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] sm:w-[950px] h-[400px] bg-gradient-to-r from-[#FF4D3D]/6 via-[#FFAE00]/6 to-transparent rounded-full blur-[100px] pointer-events-none" />
-      <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none opacity-40" />
 
       <div className="container max-w-6xl mx-auto px-4 sm:px-6 relative z-10 space-y-12">
         
@@ -133,14 +132,12 @@ export const FastlaneSpotlightSection: React.FC = () => {
               {/* Left Column: Spotlight Text & The Famous Orange/Red Box Button */}
               <div className="lg:col-span-7 space-y-7">
                 
-                {/* Image 5 Style • SPOTLIGHT Tag */}
-                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-zinc-200 shadow-xs text-xs font-manrope font-bold tracking-wider text-zinc-800">
-                  <span className="h-2 w-2 rounded-full bg-[#FF3B30] animate-pulse" />
+                {/* Image 5 Style SPOTLIGHT Tag without any blinking dots */}
+                <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white border border-zinc-200 shadow-xs text-xs font-manrope font-bold tracking-wider text-zinc-800">
                   <span className="uppercase text-[11px] font-extrabold text-[#FF3B30] tracking-widest">
                     SPOTLIGHT
                   </span>
-                  <span className="text-zinc-300">•</span>
-                  <span className="text-zinc-600 font-semibold">{currentStory.category}</span>
+                  <span className="text-zinc-500 font-semibold">{currentStory.category}</span>
                 </div>
 
                 {/* Giant Bold Headline */}

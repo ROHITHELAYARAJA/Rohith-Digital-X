@@ -78,9 +78,8 @@ Please let me know the kickoff process and timeline to get started!`
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-zinc-100 border border-zinc-250 text-xs font-semibold text-zinc-700 shadow-xs"
+            className="inline-flex items-center px-3.5 py-1 rounded-full bg-zinc-100 border border-zinc-250 text-xs font-semibold text-zinc-700 shadow-xs"
           >
-            <span className="h-2 w-2 rounded-full bg-[#FFAE00]" />
             <span className="font-sans font-bold text-[11px] uppercase tracking-wider text-zinc-600">
               TRANSPARENT FIXED PRICING
             </span>

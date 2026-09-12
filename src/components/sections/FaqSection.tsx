@@ -25,8 +25,7 @@ export const FaqSection: React.FC = () => {
           transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
           className="text-center max-w-2xl mx-auto mb-12 sm:mb-16 space-y-4"
         >
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-zinc-100 border border-zinc-250 text-xs font-semibold text-zinc-700 shadow-xs">
-            <span className="h-2 w-2 rounded-full bg-[#FF3B30]" />
+          <div className="inline-flex items-center px-3.5 py-1 rounded-full bg-zinc-100 border border-zinc-250 text-xs font-semibold text-zinc-700 shadow-xs">
             <span className="font-manrope font-bold text-[11px] uppercase tracking-wider text-zinc-600">
               TRANSPARENT ANSWERS
             </span>

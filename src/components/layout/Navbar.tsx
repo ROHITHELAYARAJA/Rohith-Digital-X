@@ -64,21 +64,23 @@ export const Navbar: React.FC = () => {
           {/* Fastlane-style Single Unified Floating Glass Pill */}
           <nav className="flex items-center gap-2 sm:gap-3 bg-white/95 dark:bg-zinc-950/90 backdrop-blur-xl py-1.5 pl-4 pr-1.5 rounded-full border border-zinc-200/90 dark:border-zinc-800/90 shadow-[0_16px_40px_rgba(0,0,0,0.12)] dark:shadow-[0_16px_40px_rgba(0,0,0,0.5)]">
             
-            {/* Logo on Left */}
+            {/* Logo on Left: Aerodynamic R Logo (Fastlane Racing Style) */}
             <button
               onClick={() => handleNavClick("home")}
-              className="flex items-center gap-2 pr-1.5 text-xs sm:text-sm font-manrope font-extrabold tracking-tight text-zinc-950 dark:text-white hover:text-[#FF4D3D] transition-colors cursor-pointer group"
+              className="flex items-center gap-2.5 pr-2 text-xs sm:text-sm font-manrope font-extrabold tracking-tight text-zinc-950 dark:text-white hover:text-[#FF3B30] transition-colors cursor-pointer group"
             >
-              <div className="h-5 w-5 rounded-md bg-gradient-to-br from-[#FF4D3D] to-[#FFAE00] flex items-center justify-center text-white font-black text-[10px] shadow-2xs group-hover:scale-105 transition-transform">
-                ⚡
-              </div>
+              <img
+                src="/rdx-r-logo.png"
+                alt="Rohith Digital X"
+                className="h-5 sm:h-5.5 w-auto object-contain transition-transform group-hover:scale-105"
+              />
               <span className="font-extrabold tracking-tight">Rohith Digital X</span>
             </button>
 
             <div className="h-4 w-[1px] bg-zinc-200 dark:bg-zinc-800 hidden md:block" />
 
-            {/* Links in Center (Desktop) */}
-            <div className="hidden md:flex items-center gap-0.5">
+            {/* Links in Center (Desktop) with Limelight Effect */}
+            <div className="hidden md:flex items-center gap-0.5 relative">
               {[
                 { id: "home" as PageRoute, label: "Home" },
                 { id: "services" as PageRoute, label: "Services" },
@@ -92,13 +94,22 @@ export const Navbar: React.FC = () => {
                     key={link.id}
                     onClick={() => handleNavClick(link.id)}
                     className={cn(
-                      "relative px-3 py-1.5 text-xs font-semibold rounded-full transition-colors cursor-pointer select-none",
+                      "relative px-3.5 py-1.5 text-xs font-semibold rounded-full transition-colors cursor-pointer select-none",
                       isActive
-                        ? "text-zinc-950 dark:text-white font-bold bg-zinc-100 dark:bg-zinc-800 shadow-2xs"
+                        ? "text-zinc-950 dark:text-white font-bold bg-zinc-100/90 dark:bg-zinc-800/90 shadow-2xs"
                         : "text-zinc-600 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-white"
                     )}
                   >
                     <span>{link.label}</span>
+                    {isActive && (
+                      <motion.div
+                        layoutId="limelight-beam"
+                        className="absolute -top-[7px] left-1/2 -translate-x-1/2 w-7 h-[3px] rounded-full bg-[#FF3B30] shadow-[0_10px_12px_#FF3B30]"
+                        transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                      >
+                        <div className="absolute left-[-40%] top-[3px] w-[180%] h-7 [clip-path:polygon(15%_100%,35%_0,65%_0,85%_100%)] bg-gradient-to-b from-[#FF3B30]/25 to-transparent pointer-events-none" />
+                      </motion.div>
+                    )}
                   </button>
                 )
               })}
