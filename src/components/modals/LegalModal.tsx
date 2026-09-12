@@ -40,7 +40,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({ type, isOpen, onClose })
             </p>
             <h4 className="font-bold text-zinc-900 pt-2">4. Contact Us</h4>
             <p>
-              For privacy-related questions, contact Rohith E at <code>e.rohit3130@gmail.com</code> or <code>+91 96554 83130</code>.
+              For privacy-related questions, contact Rohith E at <code>e.rohith3130@gmail.com</code> or <code>+91 96554 83130</code>.
             </p>
           </>
         ) : (

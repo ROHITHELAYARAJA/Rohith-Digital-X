@@ -81,7 +81,7 @@ const AUTHENTIC_APP_TOOLS: DockItem[] = [
     category: "Cloud CLI & Docker",
     icon: (
       <div className="w-full h-full rounded-[10px] bg-[#0A84FF] shadow-md flex items-center justify-center border border-blue-400/50">
-        <span className="font-mono font-black text-white text-sm tracking-tighter">
+        <span className="font-mono font-bold text-white text-sm tracking-tighter">
           &gt;_
         </span>
       </div>
@@ -224,7 +224,7 @@ const DockIcon: React.FC<DockIconProps> = ({ item, mouseX }) => {
             transition={{ duration: 0.14, ease: "easeOut" }}
             className="absolute left-1/2 -translate-x-1/2 pointer-events-none z-50 whitespace-nowrap px-3.5 py-1.5 rounded-xl bg-zinc-950 text-white shadow-2xl border border-zinc-700/90 flex flex-col items-center gap-0.5 min-w-[100px]"
           >
-            <span className="font-extrabold text-white text-xs tracking-tight font-sans leading-none">{item.title}</span>
+            <span className="font-bold text-white text-xs tracking-tight font-sans leading-none">{item.title}</span>
             <span className="text-[10px] text-zinc-400 font-mono font-medium leading-none">{item.category}</span>
             {/* Tooltip caret arrow */}
             <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-zinc-950 border-r border-b border-zinc-700/90 rotate-45" />

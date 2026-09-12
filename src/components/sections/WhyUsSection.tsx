@@ -34,10 +34,10 @@ export const WhyUsSection: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-zinc-950 leading-tight"
+            className="text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight text-zinc-950 leading-tight"
           >
             The advantages of a dedicated,{" "}
-            <span className="text-accent-crimson font-black">
+            <span className="text-accent-crimson font-bold">
               senior engineering partner.
             </span>
           </motion.h2>
@@ -95,8 +95,7 @@ export const WhyUsSection: React.FC = () => {
                         </div>
                         <div className="flex items-center gap-2">
                           {isFeatured && (
-                            <span className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-zinc-900 border border-zinc-800 text-emerald-400 text-[11px] font-mono font-semibold">
-                              <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                            <span className="flex items-center px-3 py-1 rounded-full bg-zinc-900 border border-zinc-800 text-emerald-400 text-[11px] font-mono font-semibold">
                               <span>24h Founder SLA</span>
                             </span>
                           )}

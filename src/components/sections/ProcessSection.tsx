@@ -1,36 +1,27 @@
 import React from "react"
 import { motion } from "framer-motion"
 import { processSteps } from "@/data/process"
-import { Search, Compass, Hammer, Rocket, CheckCircle2, Sparkles } from "lucide-react"
+import { Search, Compass, Hammer, Rocket, CheckCircle2 } from "lucide-react"
 import { TiltCard } from "@/components/ui/tilt-card"
 
 const STEP_ICONS = [Search, Compass, Hammer, Rocket]
 
 export const ProcessSection: React.FC = () => {
   return (
-    <section id="process" className="py-16 sm:py-24 bg-white border-t border-zinc-200/70 relative overflow-hidden">
+    <section id="process" className="py-14 sm:py-18 bg-[#070708] border-t border-zinc-800/80 relative overflow-hidden text-white">
       <div className="container max-w-6xl mx-auto px-4 sm:px-6">
         
         {/* Section Header with Editorial Typography */}
-        <div className="max-w-3xl mb-12 sm:mb-16 space-y-3">
-          <motion.span
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-accent-crimson font-mono inline-flex items-center gap-1.5"
-          >
-            <Sparkles className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
-            <span>Disciplined Delivery Workflow</span>
-          </motion.span>
+        <div className="max-w-3xl mb-10 sm:mb-12 space-y-3">
           <motion.h2
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-zinc-950 leading-tight"
+            className="text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white leading-tight font-manrope"
           >
             From initial concept to launch in{" "}
-            <span className="text-accent-crimson font-black">
+            <span className="text-white font-bold">
               4 disciplined phases.
             </span>
           </motion.h2>
@@ -39,7 +30,7 @@ export const ProcessSection: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-xs sm:text-sm md:text-base text-zinc-600 leading-relaxed font-normal"
+            className="text-xs sm:text-sm md:text-base text-zinc-400 leading-relaxed font-normal font-dmsans"
           >
             A predictable, milestone-driven roadmap ensures zero surprises, honest timelines, and seamless execution.
           </motion.p>
@@ -56,7 +47,7 @@ export const ProcessSection: React.FC = () => {
                 y1="50%"
                 x2="95%"
                 y2="50%"
-                stroke="#E4E4E7"
+                stroke="#27272A"
                 strokeWidth="2"
                 strokeDasharray="6 6"
               />
@@ -65,7 +56,7 @@ export const ProcessSection: React.FC = () => {
                 y1="50%"
                 x2="95%"
                 y2="50%"
-                stroke="#DC2626"
+                stroke="#71717A"
                 strokeWidth="2"
                 strokeDasharray="12 180"
                 animate={{ strokeDashoffset: [200, 0] }}
@@ -88,41 +79,41 @@ export const ProcessSection: React.FC = () => {
                   className="h-full"
                 >
                   <TiltCard tiltMaxAngleX={6} tiltMaxAngleY={6} scale={1.02} className="h-full">
-                    <div className="group relative rounded-3xl border border-zinc-200/90 bg-zinc-50/90 p-6 sm:p-7 shadow-subtle hover:bg-white hover:border-accent-crimson hover:shadow-card transition-all duration-300 flex flex-col justify-between h-full cursor-default">
+                    <div className="group relative rounded-3xl border border-zinc-800 bg-[#0C0D11] p-6 sm:p-7 shadow-subtle hover:bg-zinc-900 hover:border-zinc-500 hover:shadow-[0_0_30px_rgba(255,255,255,0.08)] transition-all duration-300 flex flex-col justify-between h-full cursor-default backdrop-blur-sm">
                       <div>
                         {/* Step Header */}
                         <div className="flex items-center justify-between mb-5">
-                          <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white border border-zinc-200 text-zinc-900 group-hover:text-accent-crimson group-hover:border-red-200 group-hover:bg-red-50/60 group-hover:scale-110 transition-all duration-300 shadow-xs">
+                          <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-zinc-950 border border-zinc-800 text-zinc-300 group-hover:text-white group-hover:border-zinc-600 group-hover:bg-zinc-900 group-hover:scale-110 transition-all duration-300 shadow-xs">
                             <Icon className="h-6 w-6" />
                           </div>
-                          <span className="font-mono text-xs font-extrabold text-accent-crimson tracking-wider px-2.5 py-1 rounded-full bg-red-50/80 border border-red-100">
+                          <span className="font-mono text-xs font-bold tracking-wider px-2.5 py-1 rounded-full text-zinc-300 bg-zinc-950 border border-zinc-800 group-hover:border-zinc-700">
                             {step.step}
                           </span>
                         </div>
 
                         {/* Title & Tagline */}
-                        <h3 className="text-lg font-bold tracking-tight text-zinc-950 mb-1 group-hover:text-accent-crimson transition-colors">
+                        <h3 className="text-lg font-bold tracking-tight text-white mb-1 transition-colors font-sans group-hover:text-zinc-100">
                           {step.title}
                         </h3>
-                        <div className="text-[11px] font-semibold text-zinc-500 mb-3">
+                        <div className="text-[11px] font-semibold text-zinc-400 mb-3 font-dmsans">
                           {step.tagline}
                         </div>
 
                         {/* Description */}
-                        <p className="text-xs text-zinc-600 leading-relaxed mb-6 font-normal">
+                        <p className="text-xs text-zinc-400 leading-relaxed mb-6 font-normal font-dmsans">
                           {step.description}
                         </p>
                       </div>
 
                       {/* Key Deliverables */}
-                      <div className="pt-4 border-t border-zinc-200/60">
-                        <span className="text-[10px] font-bold uppercase tracking-wider text-zinc-400 block mb-2 font-mono">
+                      <div className="pt-4 border-t border-zinc-800/80">
+                        <span className="text-[10px] font-bold uppercase tracking-wider text-zinc-500 block mb-2 font-mono">
                           Key Deliverables
                         </span>
                         <ul className="space-y-1.5">
                           {step.deliverables.map((item, dIdx) => (
-                            <li key={dIdx} className="flex items-center gap-2 text-xs text-zinc-700">
-                              <CheckCircle2 className="h-3.5 w-3.5 text-accent-crimson shrink-0" />
+                            <li key={dIdx} className="flex items-center gap-2 text-xs text-zinc-300">
+                              <CheckCircle2 className="h-3.5 w-3.5 shrink-0 text-zinc-400 group-hover:text-white transition-colors" />
                               <span className="leading-tight">{item}</span>
                             </li>
                           ))}

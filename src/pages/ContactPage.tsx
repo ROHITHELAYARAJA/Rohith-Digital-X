@@ -1,43 +1,151 @@
-import React from "react"
+import React, { useState } from "react"
 import { motion } from "framer-motion"
-import { ContactSection } from "@/components/sections/ContactSection"
+import { Phone, Mail, MapPin, MessageSquare, Calendar, Send, CheckCircle2, ShieldCheck, Sparkles } from "lucide-react"
 import { useNavigation } from "@/context/NavigationContext"
+import { ContactSection } from "@/components/sections/ContactSection"
+import { CalBookingWidget } from "@/components/ui/CalBookingWidget"
+import { HeyDigitalButton } from "@/components/ui/HeyDigitalButton"
 
 export const ContactPage: React.FC = () => {
   const { contactPrefill } = useNavigation()
+  const [activeTab, setActiveTab] = useState<"calendar" | "form">("calendar")
 
   return (
-    <div className="pt-24 sm:pt-32 pb-20 space-y-12">
-      <div className="container max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-4">
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="inline-flex items-center gap-1.5 text-xs font-mono font-bold uppercase tracking-widest text-zinc-600"
-        >
-          <span className="text-accent-crimson font-black text-sm">✦</span>
-          <span>INITIATE PROJECT SPRINT</span>
-        </motion.div>
+    <div className="min-h-screen bg-[#070708] text-white selection:bg-purple-600 selection:text-white">
+      {/* Hero Header Section - Clean Modern Fastlane / Home Architecture */}
+      <section className="relative pt-32 sm:pt-40 pb-16 border-b border-zinc-800/80 overflow-hidden">
+        {/* Subtle background grid */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-purple-600/10 blur-[120px] rounded-full pointer-events-none" />
 
-        <motion.h1
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-4xl sm:text-6xl font-extrabold tracking-[-0.04em] text-zinc-950 font-display"
-        >
-          Let's build together<span className="text-accent-crimson">.</span>
-        </motion.h1>
+        <div className="container max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
+          <div className="space-y-6 max-w-3xl">
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.08] font-display">
+              Bring the brief. We will ship the{" "}
+              <span className="font-boska italic font-light text-purple-400">
+                product
+              </span>
+              <span className="text-[#FF4D3D]">.</span>
+            </h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-base sm:text-lg text-zinc-600 max-w-xl mx-auto font-normal leading-relaxed"
-        >
-          Share your project requirements for a detailed scope breakdown, transparent quote, and architecture plan within 24 hours.
-        </motion.p>
-      </div>
+            <p className="text-base sm:text-lg text-zinc-400 font-normal leading-relaxed max-w-2xl font-sans">
+              Direct founder communication with Rohith E. Zero agency fluff or account managers. Schedule a 30-min discovery call or submit your project details below.
+            </p>
 
-      <ContactSection initialFormData={contactPrefill} />
+            {/* Direct Founder Contact Pills */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+              <a
+                href="tel:+919655483130"
+                className="flex items-center gap-3 p-3.5 rounded-2xl bg-zinc-900/90 border border-zinc-800 hover:border-sky-500/60 hover:shadow-[0_0_20px_rgba(14,165,233,0.2)] transition-all group shadow-xs"
+              >
+                <div className="h-8 w-8 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center font-bold">
+                  <Phone className="h-4 w-4" />
+                </div>
+                <div>
+                  <div className="text-[10px] font-mono text-zinc-500 uppercase">Call / WhatsApp</div>
+                  <div className="text-xs font-mono font-bold text-white group-hover:text-sky-300 transition-colors">
+                    +91 96554 83130
+                  </div>
+                </div>
+              </a>
+
+              <a
+                href="mailto:e.rohith3130@gmail.com"
+                className="flex items-center gap-3 p-3.5 rounded-2xl bg-zinc-900/90 border border-zinc-800 hover:border-purple-500/60 hover:shadow-purple-glow transition-all group shadow-xs"
+              >
+                <div className="h-8 w-8 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center font-bold">
+                  <Mail className="h-4 w-4" />
+                </div>
+                <div>
+                  <div className="text-[10px] font-mono text-zinc-500 uppercase">Founder Email</div>
+                  <div className="text-xs font-mono font-bold text-white group-hover:text-purple-300 transition-colors truncate">
+                    e.rohith3130@gmail.com
+                  </div>
+                </div>
+              </a>
+
+              <div className="flex items-center gap-3 p-3.5 rounded-2xl bg-zinc-900/90 border border-zinc-800 shadow-xs">
+                <div className="h-8 w-8 rounded-xl bg-[#FF4D3D]/10 text-[#FF4D3D] flex items-center justify-center font-bold">
+                  <MapPin className="h-4 w-4" />
+                </div>
+                <div>
+                  <div className="text-[10px] font-mono text-zinc-500 uppercase">Studio Location</div>
+                  <div className="text-xs font-mono font-bold text-white">
+                    Tamil Nadu, India
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Toggle Between Interactive Calendar & Inquiry Form */}
+            <div className="flex items-center gap-2 pt-4">
+              <button
+                onClick={() => setActiveTab("calendar")}
+                className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold transition-all cursor-pointer ${
+                  activeTab === "calendar"
+                    ? "bg-sky-500 text-white shadow-md shadow-sky-500/30 ring-1 ring-sky-400"
+                    : "bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-white"
+                }`}
+              >
+                <Calendar className="h-3.5 w-3.5" />
+                <span>30-Min Discovery Calendar</span>
+              </button>
+
+              <button
+                onClick={() => setActiveTab("form")}
+                className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold transition-all cursor-pointer ${
+                  activeTab === "form"
+                    ? "bg-purple-600 text-white shadow-md shadow-purple-600/30 ring-1 ring-purple-400"
+                    : "bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-white"
+                }`}
+              >
+                <Send className="h-3.5 w-3.5" />
+                <span>Detailed Project Brief Form</span>
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Main Interactive Booking / Brief Area */}
+      <section className="py-16">
+        <div className="container max-w-5xl mx-auto px-4 sm:px-6">
+          {activeTab === "calendar" ? (
+            <div className="space-y-6">
+              <div className="text-center space-y-2 mb-8">
+                <span className="text-[11px] font-mono font-bold tracking-widest uppercase text-sky-400">
+                  SELECT YOUR TIME
+                </span>
+                <h2 className="text-2xl sm:text-4xl font-bold text-white font-display">
+                  Book a 30-minute sprint with Rohith E
+                </h2>
+                <p className="text-zinc-400 text-xs sm:text-sm max-w-lg mx-auto">
+                  Immediate confirmation sent to your email and WhatsApp. No sales pitch, strictly technical &amp; scope planning.
+                </p>
+              </div>
+              <CalBookingWidget />
+            </div>
+          ) : (
+            <div className="space-y-6">
+              <div className="text-center space-y-2 mb-8">
+                <span className="text-[11px] font-mono font-bold tracking-widest uppercase text-purple-400">
+                  SPECIFY YOUR SCOPE
+                </span>
+                <h2 className="text-2xl sm:text-4xl font-bold text-white font-display">
+                  Send your project requirements
+                </h2>
+                <p className="text-zinc-400 text-xs sm:text-sm max-w-lg mx-auto">
+                  Receive an architectural scope breakdown, timeline estimate, and price quote within 24 hours.
+                </p>
+              </div>
+              <div className="rounded-3xl bg-zinc-950/90 border border-zinc-800 p-6 sm:p-10 shadow-2xl">
+                <ContactSection initialFormData={contactPrefill} />
+              </div>
+            </div>
+          )}
+        </div>
+      </section>
     </div>
   )
 }

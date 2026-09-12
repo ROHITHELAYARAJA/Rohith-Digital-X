@@ -40,7 +40,7 @@ export const ShadedBrandWatermark: React.FC<ShadedBrandWatermarkProps> = ({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className={`font-khand font-black tracking-tight uppercase text-center whitespace-nowrap leading-[0.74] block ${
+          className={`font-khand font-bold tracking-tight uppercase text-center whitespace-nowrap leading-[0.74] block ${
             isLight
               ? "bg-gradient-to-b from-zinc-400 via-zinc-300/40 to-transparent bg-clip-text text-transparent"
               : "bg-gradient-to-b from-zinc-600 via-zinc-800/30 to-transparent bg-clip-text text-transparent"

@@ -238,12 +238,11 @@ I built a custom project scope on the Rohith Digital X estimator:
 
 Please let me know how we can discuss requirements and schedule a kickoff call!`
     }
-
     return `https://wa.me/919655483130?text=${encodeURIComponent(text)}`
   }
 
   return (
-    <section id="estimator" className="py-16 sm:py-24 bg-white border-t border-zinc-200/70 relative overflow-hidden">
+    <section id="estimator" className="py-10 sm:py-16 bg-transparent text-white relative overflow-hidden">
       {/* Confetti celebration on applying estimate */}
       <Confetti trigger={showConfetti} onComplete={() => setShowConfetti(false)} />
 
@@ -255,21 +254,21 @@ Please let me know how we can discuss requirements and schedule a kickoff call!`
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-xs font-bold uppercase tracking-widest text-accent-crimson font-mono inline-flex items-center gap-1.5"
+            className="text-xs font-bold uppercase tracking-widest text-purple-400 font-mono inline-flex items-center gap-1.5"
           >
             <Sparkles className="h-3.5 w-3.5" />
-            <span>Interactive Scope & Investment Estimator</span>
+            <span>Interactive Scope &amp; Investment Estimator</span>
           </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-zinc-950 leading-tight"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white leading-tight font-display"
           >
-            Calculate your scope &{" "}
-            <span className="text-accent-crimson font-black">
-              estimated investment.
+            Calculate your scope &amp;{" "}
+            <span className="text-purple-400 font-bold">
+              estimated investment<span className="text-[#FF4D3D]">.</span>
             </span>
           </motion.h2>
           <motion.p
@@ -277,7 +276,7 @@ Please let me know how we can discuss requirements and schedule a kickoff call!`
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-base text-zinc-600 leading-relaxed font-normal"
+            className="text-base text-zinc-400 leading-relaxed font-normal"
           >
             Choose a standard turnkey package (Pack 1, 2, 3) or build a custom modular scope with your exact feature checklist.
           </motion.p>
@@ -285,38 +284,38 @@ Please let me know how we can discuss requirements and schedule a kickoff call!`
 
         {/* Mode Selector Tabs with Morphing Spring Indicator */}
         <div className="flex mb-8">
-          <div className="inline-flex p-1.5 rounded-2xl bg-zinc-100 border border-zinc-200/80 shadow-xs gap-1.5 relative">
+          <div className="inline-flex p-1.5 rounded-2xl bg-zinc-900 border border-zinc-800 shadow-xs gap-1.5 relative">
             <button
               onClick={() => setEstimateMode("packages")}
               className={`relative flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-colors duration-200 cursor-pointer z-10 ${
-                estimateMode === "packages" ? "text-white" : "text-zinc-600 hover:text-zinc-950"
+                estimateMode === "packages" ? "text-white" : "text-zinc-400 hover:text-white"
               }`}
             >
               {estimateMode === "packages" && (
                 <motion.div
                   layoutId="activeEstimatorTab"
-                  className="absolute inset-0 rounded-xl bg-zinc-950 shadow-sm ring-1 ring-zinc-900"
+                  className="absolute inset-0 rounded-xl bg-purple-600 shadow-md ring-1 ring-purple-400"
                   transition={{ type: "spring", stiffness: 400, damping: 30 }}
                 />
               )}
-              <PackageCheck className={`relative z-10 h-4 w-4 ${estimateMode === "packages" ? "text-accent-crimson" : ""}`} />
+              <PackageCheck className="relative z-10 h-4 w-4" />
               <span className="relative z-10">Standard Package Selection (Pack 1, 2, 3)</span>
             </button>
 
             <button
               onClick={() => setEstimateMode("custom")}
               className={`relative flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-colors duration-200 cursor-pointer z-10 ${
-                estimateMode === "custom" ? "text-white" : "text-zinc-600 hover:text-zinc-950"
+                estimateMode === "custom" ? "text-white" : "text-zinc-400 hover:text-white"
               }`}
             >
               {estimateMode === "custom" && (
                 <motion.div
                   layoutId="activeEstimatorTab"
-                  className="absolute inset-0 rounded-xl bg-zinc-950 shadow-sm ring-1 ring-zinc-900"
+                  className="absolute inset-0 rounded-xl bg-purple-600 shadow-md ring-1 ring-purple-400"
                   transition={{ type: "spring", stiffness: 400, damping: 30 }}
                 />
               )}
-              <Sliders className={`relative z-10 h-4 w-4 ${estimateMode === "custom" ? "text-accent-crimson" : ""}`} />
+              <Sliders className="relative z-10 h-4 w-4" />
               <span className="relative z-10">Custom Modular Builder</span>
             </button>
           </div>
@@ -336,9 +335,9 @@ Please let me know how we can discuss requirements and schedule a kickoff call!`
                 transition={{ duration: 0.3 }}
                 className="space-y-3"
               >
-                <label className="text-xs font-bold uppercase tracking-wider text-zinc-900 flex items-center justify-between">
+                <label className="text-xs font-bold uppercase tracking-wider text-zinc-300 flex items-center justify-between">
                   <span>Select a Pre-Configured Package</span>
-                  <span className="text-zinc-400 font-mono text-[11px]">Instant Pricing</span>
+                  <span className="text-zinc-500 font-mono text-[11px]">Instant Pricing</span>
                 </label>
 
                 <div className="grid grid-cols-1 gap-3">
@@ -352,15 +351,15 @@ Please let me know how we can discuss requirements and schedule a kickoff call!`
                         onClick={() => setSelectedPresetId(pkg.id)}
                         className={`group p-4 sm:p-5 rounded-2xl border transition-all duration-200 cursor-pointer flex flex-col sm:flex-row sm:items-center justify-between gap-3 ${
                           isSelected
-                            ? "bg-zinc-950 text-white border-zinc-900 shadow-lg ring-2 ring-accent-crimson"
-                            : "bg-zinc-50/90 text-zinc-900 border-zinc-200 hover:border-accent-crimson hover:bg-white active:border-accent-crimson"
+                            ? "bg-zinc-900 text-white border-purple-500 shadow-2xl ring-2 ring-purple-500"
+                            : "bg-zinc-950/80 text-white border-zinc-800 hover:border-purple-500/60 hover:bg-zinc-900/60"
                         }`}
                       >
                         <div className="space-y-1 flex-1">
                           <div className="flex items-center gap-2">
                             <span
                               className={`text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded transition-colors ${
-                                isSelected ? "bg-zinc-800 text-accent-crimson" : "bg-zinc-200 text-zinc-700 group-hover:bg-red-100 group-hover:text-accent-crimson"
+                                isSelected ? "bg-purple-900/60 text-purple-200 border border-purple-700/60" : "bg-zinc-800 text-zinc-300"
                               }`}
                             >
                               {pkg.tier}
@@ -369,24 +368,24 @@ Please let me know how we can discuss requirements and schedule a kickoff call!`
                               {pkg.category}
                             </span>
                             {pkg.popular && (
-                              <span className="text-[10px] font-bold bg-accent-crimson text-white px-2 py-0.5 rounded-full">
+                              <span className="text-[10px] font-bold bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-2 py-0.5 rounded-full shadow-xs">
                                 Popular
                               </span>
                             )}
                           </div>
-                          <h4 className={`text-base font-bold transition-colors ${isSelected ? "text-white" : "text-zinc-950 group-hover:text-accent-crimson"}`}>
+                          <h4 className="text-base font-bold transition-colors text-white font-display">
                             {pkg.name}
                           </h4>
-                          <p className={`text-xs ${isSelected ? "text-zinc-300" : "text-zinc-500"}`}>
+                          <p className="text-xs text-zinc-400">
                             {pkg.description}
                           </p>
                         </div>
 
-                        <div className="text-left sm:text-right shrink-0 pt-2 sm:pt-0 border-t sm:border-t-0 border-zinc-200 dark:border-zinc-800">
-                          <div className={`text-xl sm:text-2xl font-extrabold tracking-tight ${isSelected ? "text-white" : "text-zinc-950"}`}>
+                        <div className="text-left sm:text-right shrink-0 pt-2 sm:pt-0 border-t sm:border-t-0 border-zinc-800">
+                          <div className="text-xl sm:text-2xl font-bold tracking-tight text-white font-trench">
                             {pkg.priceLabel}
                           </div>
-                          <div className={`text-[11px] font-medium ${isSelected ? "text-emerald-400" : "text-zinc-500"}`}>
+                          <div className="text-[11px] font-medium text-emerald-400">
                             ~{pkg.weeks}
                           </div>
                         </div>
@@ -406,10 +405,10 @@ Please let me know how we can discuss requirements and schedule a kickoff call!`
                 className="space-y-6"
               >
                 {/* Step 1: Select Service Type */}
-                <div className="p-6 rounded-2xl bg-zinc-50 border border-zinc-200 space-y-3">
-                  <label className="text-xs font-bold uppercase tracking-wider text-zinc-900 flex items-center justify-between">
+                <div className="p-6 rounded-2xl bg-zinc-950/80 border border-zinc-800 space-y-3">
+                  <label className="text-xs font-bold uppercase tracking-wider text-zinc-300 flex items-center justify-between">
                     <span>1. Select Primary Service Type</span>
-                    <span className="text-zinc-400 font-mono">Required</span>
+                    <span className="text-zinc-500 font-mono">Required</span>
                   </label>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                     {SERVICE_TYPES.map((service) => {
@@ -420,17 +419,17 @@ Please let me know how we can discuss requirements and schedule a kickoff call!`
                           onClick={() => setSelectedService(service.id)}
                           className={`flex items-center gap-3 p-3.5 rounded-xl border text-left transition-all cursor-pointer ${
                             isSelected
-                              ? "bg-white border-zinc-900 shadow-sm ring-1 ring-zinc-900"
-                              : "bg-white/80 border-zinc-200 hover:border-accent-crimson hover:bg-white active:bg-red-50"
+                              ? "bg-purple-950/40 border-purple-500 shadow-md ring-1 ring-purple-500"
+                              : "bg-zinc-900 border-zinc-800 hover:border-purple-500/50 hover:bg-zinc-900/80 text-zinc-300"
                           }`}
                         >
                           <span className="text-xl">{service.icon}</span>
                           <div className="flex-1">
-                            <div className="text-xs font-bold text-zinc-900">{service.label}</div>
-                            <div className="text-[11px] text-zinc-500">From ₹{service.basePrice.toLocaleString("en-IN")}</div>
+                            <div className="text-xs font-bold text-white">{service.label}</div>
+                            <div className="text-[11px] text-zinc-400">From ₹{service.basePrice.toLocaleString("en-IN")}</div>
                           </div>
                           {isSelected && (
-                            <span className="h-2 w-2 rounded-full bg-accent-crimson shrink-0" />
+                            <Check className="h-4 w-4 text-purple-400 shrink-0" />
                           )}
                         </button>
                       )
@@ -439,10 +438,10 @@ Please let me know how we can discuss requirements and schedule a kickoff call!`
                 </div>
 
                 {/* Step 2: Select Feature Add-ons */}
-                <div className="p-6 rounded-2xl bg-zinc-50 border border-zinc-200 space-y-3">
-                  <label className="text-xs font-bold uppercase tracking-wider text-zinc-900 flex items-center justify-between">
+                <div className="p-6 rounded-2xl bg-zinc-950/80 border border-zinc-800 space-y-3">
+                  <label className="text-xs font-bold uppercase tracking-wider text-zinc-300 flex items-center justify-between">
                     <span>2. Select Key Feature Add-ons</span>
-                    <span className="text-zinc-400 font-mono">Optional</span>
+                    <span className="text-zinc-500 font-mono">Optional</span>
                   </label>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                     {FEATURE_ADDONS.map((addon) => {
@@ -453,22 +452,22 @@ Please let me know how we can discuss requirements and schedule a kickoff call!`
                           onClick={() => toggleFeature(addon.id)}
                           className={`flex items-center gap-3 p-3 rounded-xl border text-left transition-all cursor-pointer ${
                             isChecked
-                              ? "bg-white border-red-300 shadow-xs ring-1 ring-red-300"
-                              : "bg-white/80 border-zinc-200 hover:border-accent-crimson hover:bg-white active:bg-red-50"
+                              ? "bg-purple-950/40 border-purple-500 shadow-xs ring-1 ring-purple-500"
+                              : "bg-zinc-900 border-zinc-800 hover:border-purple-500/50 text-zinc-300"
                           }`}
                         >
                           <motion.div
                             animate={{ scale: isChecked ? 1.1 : 1 }}
                             className={`h-5 w-5 rounded-md flex items-center justify-center border transition-colors ${
                               isChecked
-                                ? "bg-accent-crimson border-accent-crimson text-white"
-                                : "bg-zinc-100 border-zinc-300 text-transparent"
+                                ? "bg-purple-600 border-purple-500 text-white"
+                                : "bg-zinc-800 border-zinc-700 text-transparent"
                             }`}
                           >
                             <Check className="h-3.5 w-3.5 stroke-[3]" />
                           </motion.div>
                           <div className="flex-1">
-                            <span className="text-xs font-medium text-zinc-800 leading-snug block">
+                            <span className="text-xs font-medium text-white leading-snug block">
                               {addon.label}
                             </span>
                             <span className="text-[10px] text-zinc-400 font-mono">
@@ -482,9 +481,9 @@ Please let me know how we can discuss requirements and schedule a kickoff call!`
                 </div>
 
                 {/* Step 3: Timeline Urgency */}
-                <div className="p-5 rounded-2xl bg-zinc-50 border border-zinc-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <div className="p-5 rounded-2xl bg-zinc-950/80 border border-zinc-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                   <div>
-                    <h4 className="text-xs font-bold uppercase tracking-wider text-zinc-900">
+                    <h4 className="text-xs font-bold uppercase tracking-wider text-zinc-300">
                       3. Timeline Preference
                     </h4>
                     <p className="text-xs text-zinc-500">
@@ -496,8 +495,8 @@ Please let me know how we can discuss requirements and schedule a kickoff call!`
                       onClick={() => setTimelineUrgency("standard")}
                       className={`px-3 py-1.5 rounded-lg text-xs font-semibold border transition-all cursor-pointer ${
                         timelineUrgency === "standard"
-                          ? "bg-zinc-900 text-white border-zinc-900 shadow-xs"
-                          : "bg-white text-zinc-700 border-zinc-300 hover:bg-zinc-50"
+                          ? "bg-purple-600 text-white border-purple-500 shadow-xs"
+                          : "bg-zinc-900 text-zinc-400 border-zinc-800 hover:bg-zinc-800 hover:text-white"
                       }`}
                     >
                       Standard
@@ -506,8 +505,8 @@ Please let me know how we can discuss requirements and schedule a kickoff call!`
                       onClick={() => setTimelineUrgency("urgent")}
                       className={`px-3 py-1.5 rounded-lg text-xs font-semibold border transition-all cursor-pointer ${
                         timelineUrgency === "urgent"
-                          ? "bg-accent-crimson text-white border-accent-crimson shadow-xs"
-                          : "bg-white text-zinc-700 border-zinc-300 hover:bg-zinc-50"
+                          ? "bg-[#FF4D3D] text-white border-[#FF4D3D] shadow-xs"
+                          : "bg-zinc-900 text-zinc-400 border-zinc-800 hover:bg-zinc-800 hover:text-white"
                       }`}
                     >
                       Fast-Track (+15%)
@@ -526,12 +525,12 @@ Please let me know how we can discuss requirements and schedule a kickoff call!`
                 
                 <div className="flex items-center justify-between pb-4 border-b border-zinc-800">
                   <div className="flex items-center gap-2">
-                    <Calculator className="h-5 w-5 text-accent-crimson" />
+                    <Calculator className="h-5 w-5 text-purple-400" />
                     <span className="text-xs font-mono font-bold uppercase tracking-widest text-zinc-300">
                       Estimate Summary
                     </span>
                   </div>
-                  <Badge variant="dark" className="text-[10px] bg-zinc-800 text-zinc-300 border-zinc-700">
+                  <Badge variant="dark" className="text-[10px] bg-zinc-800 text-purple-300 border-zinc-700">
                     {estimateMode === "packages" ? "Turnkey Package" : "Custom Scope"}
                   </Badge>
                 </div>
@@ -546,7 +545,7 @@ Please let me know how we can discuss requirements and schedule a kickoff call!`
                       </div>
                       <div className="flex items-center justify-between text-xs">
                         <span className="text-zinc-400">Package Tier:</span>
-                        <span className="font-bold text-accent-crimson">{activePreset.tier}</span>
+                        <span className="font-bold text-purple-400">{activePreset.tier}</span>
                       </div>
                       <div className="flex items-center justify-between text-xs">
                         <span className="text-zinc-400">Category:</span>
@@ -576,7 +575,7 @@ Please let me know how we can discuss requirements and schedule a kickoff call!`
                   <span className="text-[11px] font-bold uppercase tracking-wider text-zinc-400">
                     Estimated Investment
                   </span>
-                  <div className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+                  <div className="text-2xl sm:text-3xl font-bold text-white tracking-tight font-trench">
                     {estimateMode === "packages" ? (
                       <AnimatedNumber value={activePreset.price} prefix="₹" />
                     ) : (
@@ -588,7 +587,7 @@ Please let me know how we can discuss requirements and schedule a kickoff call!`
                     )}
                   </div>
                   <div className="flex items-center gap-2 text-xs text-emerald-400 font-medium pt-1">
-                    <Clock className="h-3.5 w-3.5 text-accent-crimson" />
+                    <Clock className="h-3.5 w-3.5 text-purple-400" />
                     <span>
                       Estimated Delivery:{" "}
                       {estimateMode === "packages" ? activePreset.weeks : customCalculation.timeline}
@@ -615,10 +614,9 @@ Please let me know how we can discuss requirements and schedule a kickoff call!`
                   </a>
 
                   <Button
-                    variant="crimson"
                     size="default"
                     onClick={handleApply}
-                    className="w-full gap-2 text-xs sm:text-sm font-bold shadow-crimson-md justify-center hover:scale-[1.02] active:scale-[0.98] transition-transform"
+                    className="w-full gap-2 text-xs sm:text-sm font-bold justify-center bg-purple-600 hover:bg-purple-500 text-white shadow-md shadow-purple-600/30 hover:scale-[1.02] active:scale-[0.98] transition-transform"
                   >
                     <span>Apply Estimate to Online Form</span>
                     <ArrowRight className="h-4 w-4" />

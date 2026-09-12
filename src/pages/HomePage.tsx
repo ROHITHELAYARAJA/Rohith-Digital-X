@@ -1,20 +1,19 @@
 import React from "react"
 import { HeroSection } from "@/components/sections/HeroSection"
-import { TrustSection } from "@/components/sections/TrustSection"
+import { FastlaneSpotlightSection } from "@/components/sections/FastlaneSpotlightSection"
+import { ThreeReasonsSection } from "@/components/sections/ThreeReasonsSection"
+import { DigitalProductCapabilitiesSection } from "@/components/sections/DigitalProductCapabilitiesSection"
 import { ServicesSection } from "@/components/sections/ServicesSection"
 import { PackagesSection } from "@/components/sections/PackagesSection"
 import { WorkSection } from "@/components/sections/WorkSection"
-import { WhyUsSection } from "@/components/sections/WhyUsSection"
-import { ProcessSection } from "@/components/sections/ProcessSection"
-import { AboutSection } from "@/components/sections/AboutSection"
-import { ProjectEstimator } from "@/components/sections/ProjectEstimator"
+import { CalBookingWidget } from "@/components/ui/CalBookingWidget"
 import { FaqSection } from "@/components/sections/FaqSection"
-import { ContactSection } from "@/components/sections/ContactSection"
 import { DetailedPackage } from "@/data/packages"
 import { useNavigation } from "@/context/NavigationContext"
+import { HeyDigitalButton } from "@/components/ui/HeyDigitalButton"
 
 export const HomePage: React.FC = () => {
-  const { contactPrefill, setContactPrefill, navigate } = useNavigation()
+  const { setContactPrefill, navigate } = useNavigation()
 
   const handleSelectServiceForInquiry = (serviceId: string) => {
     let serviceName = "Business Website Development"
@@ -60,33 +59,53 @@ export const HomePage: React.FC = () => {
     navigate("contact", "contact")
   }
 
-  const handleApplyEstimate = (estimateData: {
-    service: string
-    budgetRange: string
-    features: string[]
-    description: string
-  }) => {
-    setContactPrefill({
-      service: estimateData.service,
-      budgetRange: estimateData.budgetRange,
-      description: estimateData.description,
-    })
-    navigate("contact", "contact")
-  }
-
   return (
-    <>
+    <div className="bg-[#070708] text-white selection:bg-purple-600 selection:text-white">
+      {/* 1. Fastlane-Inspired Light Hero Section */}
       <HeroSection />
-      <TrustSection />
-      <ServicesSection onSelectServiceForInquiry={handleSelectServiceForInquiry} />
-      <PackagesSection onSelectPackage={handleSelectPackage} />
-      <WhyUsSection />
-      <ProcessSection />
+
+      {/* 2. Fastlane Spotlight Section (Matching Image 5 with Signature Glowing Orange Box Button) */}
+      <FastlaneSpotlightSection />
+
+      {/* 3. Signature "Three Reasons They Stay" Section */}
+      <ThreeReasonsSection />
+
+      {/* 2.5. Fastlane-Inspired Proprietary Architecture & Bento Capabilities */}
+      <DigitalProductCapabilitiesSection />
+
+      {/* 3. Featured Flagship Work Section (JSBuilders + Catalog) */}
       <WorkSection onDiscussSimilar={handleDiscussSimilar} />
-      <AboutSection />
-      <ProjectEstimator onApplyEstimate={handleApplyEstimate} />
+
+      {/* 4. Core Services Breakdown */}
+      <ServicesSection onSelectServiceForInquiry={handleSelectServiceForInquiry} />
+
+      {/* 5. Transparent Packages & Pricing Section */}
+      <PackagesSection onSelectPackage={handleSelectPackage} />
+
+      {/* 7. Interactive Cal.com-Style 30-Min Discovery Booking Suite */}
+      <section className="py-14 sm:py-18 bg-[#070708] border-t border-zinc-800 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
+
+        <div className="container max-w-5xl mx-auto px-4 sm:px-6 relative z-10 space-y-8">
+          <div className="text-center space-y-4 max-w-2xl mx-auto">
+            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight font-manrope leading-[1.08]">
+              Let's build something{" "}
+              <span className="font-playfair italic font-medium text-[#FF3B30]">
+                extraordinary
+              </span>
+              .
+            </h2>
+            <p className="text-sm sm:text-base text-zinc-400 font-normal leading-relaxed font-dmsans">
+              Book a 30-minute technical discovery call directly with founder Rohith E. We will map your system architecture, scope, and sprint timeline with zero fluff.
+            </p>
+          </div>
+
+          <CalBookingWidget />
+        </div>
+      </section>
+
+      {/* 8. Frequently Asked Questions Section (Crisp White Accordion) */}
       <FaqSection />
-      <ContactSection initialFormData={contactPrefill} />
-    </>
+    </div>
   )
 }

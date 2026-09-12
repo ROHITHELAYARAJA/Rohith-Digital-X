@@ -76,7 +76,7 @@ export function Dialog({
 
             {title && (
               <div className="mb-5 pr-10">
-                <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight text-zinc-950 leading-tight">
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight text-zinc-950 leading-tight">
                   {title}
                 </h2>
                 {description && (

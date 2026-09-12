@@ -18,14 +18,13 @@ export const ArchitectureOrbit: React.FC = () => {
         className="relative z-20 flex h-20 w-20 sm:h-24 sm:w-24 items-center justify-center rounded-3xl bg-zinc-900 border-2 border-accent-crimson shadow-[0_0_35px_-5px_rgba(220,38,38,0.6)] p-3 text-center"
       >
         <div className="flex flex-col items-center justify-center">
-          <span className="text-[10px] sm:text-xs font-mono font-extrabold uppercase tracking-wider text-zinc-400">
+          <span className="text-[10px] sm:text-xs font-mono font-bold uppercase tracking-wider text-zinc-400">
             RDX
           </span>
-          <span className="text-xs sm:text-sm font-black text-white">
+          <span className="text-xs sm:text-sm font-bold text-white">
             ENGINE
           </span>
-          <span className="text-[9px] font-mono text-emerald-400 font-bold flex items-center gap-1 mt-0.5">
-            <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+          <span className="text-[9px] font-mono text-emerald-400 font-bold mt-0.5 tracking-wider">
             LIVE
           </span>
         </div>
@@ -42,7 +41,7 @@ export const ArchitectureOrbit: React.FC = () => {
           <Code className="h-4 w-4 text-accent-crimson" />
         </div>
         <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-zinc-900 border border-zinc-700 text-white shadow-md hover:scale-115 hover:border-accent-crimson transition-transform cursor-pointer" title="Spring Boot Backend">
-          <Server className="h-4 w-4 text-amber-400" />
+          <Server className="h-4 w-4 text-purple-400" />
         </div>
         <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-zinc-900 border border-zinc-700 text-white shadow-md hover:scale-115 hover:border-accent-crimson transition-transform cursor-pointer" title="PostgreSQL / SQL">
           <Database className="h-4 w-4 text-blue-400" />

@@ -20,7 +20,7 @@ const SEARCH_ITEMS: SearchItem[] = [
   { id: "about", title: "About, Methodology & Software Dock", category: "Profile", icon: <Layers className="h-4 w-4 text-blue-400" /> },
   { id: "services", title: "Core Services: Web, Mobile, AI Agents", category: "Capabilities", icon: <Code2 className="h-4 w-4 text-emerald-400" /> },
   { id: "work", title: "Selected Work & Case Studies", category: "Portfolio", icon: <Smartphone className="h-4 w-4 text-purple-400" /> },
-  { id: "packages", title: "Transparent Pricing & Production Packages", category: "Investment", icon: <ShieldCheck className="h-4 w-4 text-amber-400" /> },
+  { id: "packages", title: "Transparent Pricing & Production Packages", category: "Investment", icon: <ShieldCheck className="h-4 w-4 text-purple-400" /> },
   { id: "estimator", title: "Interactive Project Scope & Cost Estimator", category: "Calculator", icon: <Cpu className="h-4 w-4 text-sky-400" /> },
   { id: "guestbook", title: "Digital Guestbook & Community Signatures", category: "Community", icon: <BookOpen className="h-4 w-4 text-pink-400" /> },
   { id: "attribution", title: "System Architecture & Tech Attribution", category: "Blueprint", icon: <Code2 className="h-4 w-4 text-emerald-400" /> },
@@ -85,6 +85,11 @@ export const CommandSearchModal: React.FC<CommandSearchModalProps> = ({ isOpen, 
                 placeholder="Search pages, services, packages, tools..."
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" && filteredItems.length > 0) {
+                    handleSelect(filteredItems[0].id)
+                  }
+                }}
                 className="w-full bg-transparent text-sm text-white placeholder-zinc-500 focus:outline-none font-sans"
               />
               <span className="text-[10px] font-mono text-zinc-400 bg-zinc-900 border border-zinc-800 px-1.5 py-0.5 rounded">
@@ -98,37 +103,43 @@ export const CommandSearchModal: React.FC<CommandSearchModalProps> = ({ isOpen, 
               </button>
             </div>
 
-            {/* Results List */}
-            <div className="max-h-80 overflow-y-auto p-2 space-y-1 divide-y divide-zinc-900">
-              {filteredItems.length > 0 ? (
-                filteredItems.map((item) => (
-                  <button
-                    key={item.id}
-                    onClick={() => handleSelect(item.id)}
-                    className="w-full text-left p-3 rounded-2xl hover:bg-zinc-900/90 flex items-center justify-between group transition-all cursor-pointer"
-                  >
-                    <div className="flex items-center gap-3 min-w-0">
-                      <div className="h-8 w-8 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center shrink-0">
-                        {item.icon}
+            {/* Results List: Only shown when searching */}
+            {query.trim().length > 0 ? (
+              <div className="max-h-80 overflow-y-auto p-2 space-y-1 divide-y divide-zinc-900">
+                {filteredItems.length > 0 ? (
+                  filteredItems.map((item) => (
+                    <button
+                      key={item.id}
+                      onClick={() => handleSelect(item.id)}
+                      className="w-full text-left p-3 rounded-2xl hover:bg-zinc-900/90 flex items-center justify-between group transition-all cursor-pointer"
+                    >
+                      <div className="flex items-center gap-3 min-w-0">
+                        <div className="h-8 w-8 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center shrink-0">
+                          {item.icon}
+                        </div>
+                        <div className="min-w-0">
+                          <p className="text-xs sm:text-sm font-bold text-zinc-200 group-hover:text-white truncate font-sans">
+                            {item.title}
+                          </p>
+                          <p className="text-xs text-zinc-500 font-mono">
+                            {item.category}
+                          </p>
+                        </div>
                       </div>
-                      <div className="min-w-0">
-                        <p className="text-xs font-bold text-zinc-200 group-hover:text-white truncate font-sans">
-                          {item.title}
-                        </p>
-                        <p className="text-[10px] text-zinc-500 font-mono">
-                          {item.category}
-                        </p>
-                      </div>
-                    </div>
-                    <ArrowRight className="h-3.5 w-3.5 text-zinc-600 group-hover:text-accent-crimson group-hover:translate-x-1 transition-all" />
-                  </button>
-                ))
-              ) : (
-                <div className="p-8 text-center text-xs text-zinc-500 font-sans">
-                  No matching pages found for "{query}"
-                </div>
-              )}
-            </div>
+                      <ArrowRight className="h-3.5 w-3.5 text-zinc-600 group-hover:text-accent-crimson group-hover:translate-x-1 transition-all" />
+                    </button>
+                  ))
+                ) : (
+                  <div className="p-8 text-center text-xs sm:text-sm text-zinc-500 font-sans">
+                    No matching results found for "{query}"
+                  </div>
+                )}
+              </div>
+            ) : (
+              <div className="p-5 text-center text-xs text-zinc-500 font-manrope">
+                Type keywords to search across all services, case studies, packages, and pages
+              </div>
+            )}
           </motion.div>
         </div>
       )}

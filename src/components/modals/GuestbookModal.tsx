@@ -106,7 +106,7 @@ export const GuestbookModal: React.FC<GuestbookModalProps> = ({ isOpen, onClose 
                   <Heart className="h-5 w-5 fill-accent-crimson/30" />
                 </div>
                 <div>
-                  <h3 className="text-lg sm:text-xl font-black font-display text-white">
+                  <h3 className="text-lg sm:text-xl font-bold font-display text-white">
                     Digital Guestbook<span className="text-accent-crimson">.</span>
                   </h3>
                   <p className="text-xs text-zinc-400 font-mono">
@@ -168,7 +168,7 @@ export const GuestbookModal: React.FC<GuestbookModalProps> = ({ isOpen, onClose 
                 <div key={item.id} className="pt-3 first:pt-0 space-y-1.5">
                   <div className="flex items-center justify-between text-xs">
                     <div className="flex items-center gap-2 font-bold text-zinc-200">
-                      <span className={`h-6 w-6 rounded-full ${item.avatarColor} text-white flex items-center justify-center text-[10px] font-black`}>
+                      <span className={`h-6 w-6 rounded-full ${item.avatarColor} text-white flex items-center justify-center text-[10px] font-bold`}>
                         {item.name.charAt(0)}
                       </span>
                       <span>{item.name}</span>

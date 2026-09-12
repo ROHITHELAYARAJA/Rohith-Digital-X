@@ -45,31 +45,22 @@ const ATTRIBUTIONS = [
 
 export const AttributionPage: React.FC = () => {
   return (
-    <div className="pt-24 sm:pt-32 pb-20 space-y-12">
+    <div className="min-h-screen bg-[#070708] text-white selection:bg-purple-600 selection:text-white pt-24 sm:pt-32 pb-20 space-y-12">
       <div className="container max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-4">
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="inline-flex items-center gap-1.5 text-xs font-mono font-bold uppercase tracking-widest text-zinc-600"
-        >
-          <span className="text-accent-crimson font-black text-sm">✦</span>
-          <span>SYSTEM BLUEPRINT</span>
-        </motion.div>
-
         <motion.h1
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-4xl sm:text-6xl font-extrabold tracking-[-0.04em] text-zinc-950 font-display"
+          className="text-4xl sm:text-6xl font-bold tracking-tight text-white font-display"
         >
-          Attribution & Stack<span className="text-accent-crimson">.</span>
+          Attribution &amp; Stack<span className="text-[#FF4D3D]">.</span>
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-base sm:text-lg text-zinc-600 max-w-xl mx-auto font-normal leading-relaxed"
+          className="text-base sm:text-lg text-zinc-400 max-w-xl mx-auto font-normal leading-relaxed font-sans"
         >
           Transparent acknowledgment of all design tokens, typefaces, and engineering libraries powering Rohith Digital X.
         </motion.p>
@@ -82,21 +73,20 @@ export const AttributionPage: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: idx * 0.1 }}
-            className="p-6 sm:p-8 rounded-3xl bg-white border border-zinc-200/90 shadow-card space-y-4 text-left"
+            className="p-6 sm:p-8 rounded-3xl bg-zinc-950/80 border border-zinc-800 shadow-2xl space-y-4 text-left"
           >
             <div>
-              <h3 className="text-lg font-bold text-zinc-950 font-display">{section.title}</h3>
-              <p className="text-xs text-zinc-500">{section.description}</p>
+              <h3 className="text-lg font-bold text-white font-display">{section.title}</h3>
+              <p className="text-xs text-zinc-400">{section.description}</p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
               {section.items.map((item) => (
-                <div key={item.name} className="p-3 rounded-xl bg-zinc-50 border border-zinc-200/80 space-y-1">
+                <div key={item.name} className="p-3 rounded-xl bg-zinc-900/90 border border-zinc-800 space-y-1">
                   <div className="flex items-center justify-between">
-                    <span className="text-xs font-bold text-zinc-900 font-mono">{item.name}</span>
-                    <span className="h-1.5 w-1.5 rounded-full bg-accent-crimson" />
+                    <span className="text-xs font-bold text-purple-300 font-mono">{item.name}</span>
                   </div>
-                  <p className="text-[11px] text-zinc-600 leading-tight">{item.purpose}</p>
+                  <p className="text-[11px] text-zinc-400 leading-tight">{item.purpose}</p>
                 </div>
               ))}
             </div>

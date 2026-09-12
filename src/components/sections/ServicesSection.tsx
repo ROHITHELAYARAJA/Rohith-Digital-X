@@ -26,42 +26,33 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
   }
 
   return (
-    <section id="services" className="py-16 sm:py-24 bg-[#FAFAFA] relative overflow-hidden">
+    <section id="services" className="py-14 sm:py-18 bg-[#FAFAFA] relative overflow-hidden">
       <div className="container max-w-6xl mx-auto px-4 sm:px-6">
         
         {/* Section Header with Editorial Typography */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-10 gap-6">
           <div className="max-w-2xl space-y-3">
-            <motion.span
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-accent-crimson font-mono inline-flex items-center gap-1.5"
-            >
-              <Sparkles className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
-              <span>Core Capabilities & Solutions</span>
-            </motion.span>
             <motion.h2
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-zinc-950 leading-tight"
+              className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-zinc-950 leading-[1.08] font-manrope"
             >
-              Engineered digital services built for{" "}
-              <span className="text-accent-crimson font-black">
-                business outcomes.
-              </span>
+              End-to-end solutions built for{" "}
+              <span className="font-playfair italic font-medium text-[#FF3B30]">
+                revenue
+              </span>{" "}
+              and speed.
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-xs sm:text-sm md:text-base text-zinc-600 leading-relaxed font-normal"
+              className="text-sm sm:text-base text-zinc-600 leading-relaxed font-normal font-dmsans"
             >
-              Whether you are launching a high-converting company website, an iOS/Android mobile app,
-              or an automated backend pipeline, we deliver clean, modular, and robust technology.
+              Whether you are launching a high-converting web platform, a native iOS/Android application, or an autonomous AI agent, we deliver modular, scalable architecture with zero bloat.
             </motion.p>
           </div>
 

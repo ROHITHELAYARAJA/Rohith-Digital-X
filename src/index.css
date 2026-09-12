@@ -26,15 +26,15 @@
     --muted: 240 4.8% 95.9%;
     --muted-foreground: 240 3.8% 46.1%; /* #71717A */
     
-    --accent: 0 84.2% 60.2%;       /* Crimson Red */
-    --accent-foreground: 0 0% 98%;
+    --accent: 262 83% 58%;         /* Electric Purple #8B5CF6 */
+    --accent-foreground: 0 0% 100%;
     
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     
     --border: 240 5.9% 90%;        /* #E4E4E7 */
     --input: 240 5.9% 90%;
-    --ring: 0 84.2% 50%;
+    --ring: 262 83% 58%;
     
     --radius: 0.75rem;
   }
@@ -52,13 +52,13 @@
     --secondary-foreground: 0 0% 98%;
     --muted: 240 3.7% 15.9%;
     --muted-foreground: 240 5% 64.9%;
-    --accent: 0 84.2% 60.2%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 262 83% 58%;         /* Electric Purple #8B5CF6 */
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
-    --ring: 0 84.2% 60.2%;
+    --ring: 262 83% 58%;
   }
 }
 
@@ -68,7 +68,7 @@
   }
   body {
     @apply bg-background text-foreground font-sans tracking-tight;
-    font-feature-settings: "rlig" 1, "calt" 1, "cv02" 1, "cv03" 1, "cv04" 1, "cv11" 1;
+    font-feature-settings: "rlig" 1, "calt" 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
@@ -91,11 +91,6 @@
   background-image: 
     linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
-}
-
-.subtle-dots {
-  background-image: radial-gradient(rgba(0, 0, 0, 0.08) 1px, transparent 1px);
-  background-size: 24px 24px;
 }
 
 /* 3D Perspective and Transform Utilities */
@@ -192,22 +187,79 @@
   animation: gradient-shimmer 4s ease infinite;
 }
 
-/* Crimson accent gradient borders & glows */
-.crimson-border-glow {
+/* Purple Flame accent gradient borders & glows */
+.purple-border-glow, .amber-border-glow, .crimson-border-glow {
   position: relative;
 }
-.crimson-border-glow::before {
+.purple-border-glow::before, .amber-border-glow::before, .crimson-border-glow::before {
   content: '';
   position: absolute;
   inset: -1px;
   border-radius: inherit;
   padding: 1px;
-  background: linear-gradient(135deg, rgba(220, 38, 38, 0.4), transparent 50%, rgba(220, 38, 38, 0.1));
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.5), transparent 50%, rgba(139, 92, 246, 0.15));
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   pointer-events: none;
+}
+
+/* Vertical Side Label (HeyDigital signature edge tracker) */
+.vertical-side-label {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  letter-spacing: 0.28em;
+  font-family: var(--font-mono, monospace);
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* HeyDigital Pill Button Styling */
+.heydigital-pill-purple,
+.heydigital-pill-amber {
+  background: #8B5CF6;
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.heydigital-pill-purple:hover,
+.heydigital-pill-amber:hover {
+  background: #7C3AED;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px -5px rgba(139, 92, 246, 0.45);
+}
+
+.heydigital-pill-orange {
+  background: #FF4D3D;
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.heydigital-pill-orange:hover {
+  background: #E03E30;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px -5px rgba(255, 77, 61, 0.45);
+}
+
+.heydigital-pill-dark {
+  background: rgba(255, 255, 255, 0.06);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.heydigital-pill-dark:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.35);
+  transform: translateY(-2px);
 }
 
 /* Custom Scrollbar */
@@ -242,3 +294,25 @@ html.lenis, html.lenis body {
 .lenis.lenis-smooth iframe {
   pointer-events: none;
 }
+
+/* Continuous Horizontal Hero Ticker */
+@keyframes hero-ticker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-hero-ticker {
+  display: flex;
+  width: max-content;
+  animation: hero-ticker 25s linear infinite;
+  will-change: transform;
+}
+
+.animate-hero-ticker:hover {
+  animation-play-state: paused;
+}
+

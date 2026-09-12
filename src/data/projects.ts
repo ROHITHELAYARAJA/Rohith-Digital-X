@@ -18,6 +18,31 @@ export interface ProjectItem {
 
 export const projectsData: ProjectItem[] = [
   {
+    id: 'jsbuilders-civil',
+    title: 'JSBuilders — High-Converting Architecture & Civil Engineering Web Platform',
+    badge: 'Project Preview',
+    category: 'websites',
+    categoryLabel: 'Flagship Web App',
+    summary: 'A sub-0.4s lightning-fast web experience with interactive architectural galleries, 1-click WhatsApp quotes, and 100/100 Lighthouse performance.',
+    problemSolved: 'Replaced a slow 4.8s WordPress site with a high-performance React/Vite platform that increased monthly client inquiries by +340%.',
+    keyFeatures: [
+      'Sub-0.4s initial load speed with 100/100 Google Lighthouse audit score',
+      'One-click direct WhatsApp quote routing with prefilled scope details',
+      'Interactive architectural portfolio with fluid full-screen project inspect',
+      'Interactive structural consultation & site booking scheduler',
+      'Full SEO metadata optimization with local Tamil Nadu search dominance'
+    ],
+    technologies: ['React', 'Vite', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Vercel Edge'],
+    architectureHighlights: [
+      'Edge CDN caching with sub-320ms First Contentful Paint',
+      'Zero-layout-shift (0.00 CLS) responsive typography',
+      'Automated lead qualification webhook connected directly to founder WhatsApp'
+    ],
+    targetIndustry: 'Civil Engineering & Construction',
+    timelineEstimate: '2 Weeks',
+    themeGradient: 'from-purple-950/40 via-zinc-900 to-black',
+  },
+  {
     id: 'healthcare-portal',
     title: 'CarePulse — Healthcare Clinic & Doctor Booking System',
     badge: 'Project Preview',

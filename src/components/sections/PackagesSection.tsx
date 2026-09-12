@@ -18,7 +18,6 @@ import {
   MessageCircle,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { BorderBeam } from "@/components/ui/border-beam"
 import { TiltCard } from "@/components/ui/tilt-card"
 import { scrollToSection } from "@/lib/utils"
 
@@ -69,46 +68,40 @@ Please let me know the kickoff process and timeline to get started!`
   }
 
   return (
-    <section id="packages" className="py-16 sm:py-24 bg-white border-t border-zinc-200/70 relative overflow-hidden">
-      <div className="container max-w-7xl mx-auto px-4 sm:px-6">
+    <section id="packages" className="py-14 sm:py-18 bg-[#070708] border-t border-zinc-800 relative overflow-hidden text-white">
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
+
+      <div className="container max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         
         {/* Section Header with Clean Typography */}
-        <div className="max-w-3xl mx-auto text-center mb-10 sm:mb-12 space-y-3">
-          <motion.span
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-accent-crimson font-mono inline-block"
-          >
-            Transparent Pricing & Production Packages
-          </motion.span>
+        <div className="max-w-3xl mx-auto text-center mb-8 space-y-3">
           <motion.h2
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-zinc-950 leading-tight"
+            className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white leading-[1.08] font-manrope"
           >
-            Tailored digital{" "}
-            <span className="text-accent-crimson font-black">
-              service packages.
+            Clear investment with{" "}
+            <span className="font-playfair italic font-medium text-[#FF4D3D]">
+              zero surprises
             </span>
+            .
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-xs sm:text-sm md:text-base text-zinc-600 leading-relaxed font-normal"
+            className="text-sm sm:text-base text-zinc-400 leading-relaxed font-normal font-dmsans max-w-2xl mx-auto"
           >
-            Clear, transparent scope and pricing designed for businesses, clinics, retail shops, startups, and institutions.
-            Tap any package to inquire instantly on WhatsApp or book online.
+            No hourly bill padding or bloated agency overhead. Transparent milestones, guaranteed delivery sprints, and direct founder-level architecture.
           </motion.p>
         </div>
 
-        {/* Category Switcher Tabs with Morphing Background Indicator */}
+        {/* Category Switcher Tabs with Sleek Black & White Indicator */}
         <div className="flex justify-center mb-12">
-          <div className="inline-flex p-1.5 rounded-2xl bg-zinc-100/90 border border-zinc-200/80 shadow-xs gap-1.5 flex-wrap justify-center relative">
+          <div className="inline-flex p-1.5 rounded-2xl bg-zinc-900/90 border border-zinc-800 shadow-xs gap-1.5 flex-wrap justify-center relative">
             {packageCategories.map((cat) => {
               const Icon = CATEGORY_ICONS[cat.id]
               const isSelected = selectedCategory === cat.id
@@ -118,17 +111,17 @@ Please let me know the kickoff process and timeline to get started!`
                   key={cat.id}
                   onClick={() => setSelectedCategory(cat.id)}
                   className={`relative flex items-center gap-2.5 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-colors duration-200 cursor-pointer select-none z-10 ${
-                    isSelected ? "text-white" : "text-zinc-600 hover:text-zinc-950"
+                    isSelected ? "text-zinc-950 font-bold" : "text-zinc-400 hover:text-white"
                   }`}
                 >
                   {isSelected && (
                     <motion.div
                       layoutId="activePackageCategoryTab"
-                      className="absolute inset-0 rounded-xl bg-zinc-950 shadow-sm ring-1 ring-zinc-900"
+                      className="absolute inset-0 rounded-xl bg-white shadow-sm"
                       transition={{ type: "spring", stiffness: 380, damping: 30 }}
                     />
                   )}
-                  <Icon className={`relative z-10 h-4 w-4 ${isSelected ? "text-accent-crimson" : ""}`} />
+                  <Icon className={`relative z-10 h-4 w-4 ${isSelected ? "text-zinc-950" : ""}`} />
                   <span className="relative z-10">{cat.label}</span>
                 </button>
               )
@@ -138,12 +131,12 @@ Please let me know the kickoff process and timeline to get started!`
 
         {/* Category Description Banner */}
         <div className="text-center mb-10 max-w-xl mx-auto">
-          <p className="text-xs sm:text-sm text-zinc-500 font-medium">
+          <p className="text-xs sm:text-sm text-zinc-400 font-medium">
             {currentCategoryMeta.subtitle}
           </p>
         </div>
 
-        {/* 3 Packages Cards Grid - Fully Height Aligned & Clear-Cut */}
+        {/* 3 Packages Cards Grid - Professional Black & White with Red/Orange Hover Border */}
         <AnimatePresence mode="wait">
           <motion.div
             key={selectedCategory}
@@ -167,24 +160,17 @@ Please let me know the kickoff process and timeline to get started!`
                   className="h-full flex flex-col"
                 >
                   <div
-                    className={`group relative rounded-3xl p-6 sm:p-7 flex flex-col justify-between transition-all duration-300 cursor-default h-full ${
+                    className={`group relative rounded-3xl p-6 sm:p-7 flex flex-col justify-between transition-all duration-300 cursor-default h-full border ${
                       isPopular
-                        ? "bg-zinc-950 text-white shadow-2xl ring-2 ring-accent-crimson z-10 hover:shadow-crimson-md"
-                        : "bg-zinc-50/90 text-zinc-900 border border-zinc-200 hover:border-accent-crimson hover:bg-white hover:shadow-card"
+                        ? "bg-[#111114] text-white border-zinc-700/80 shadow-2xl hover:border-[#FF4D3D] hover:shadow-[0_0_35px_rgba(255,77,61,0.25)] z-10"
+                        : "bg-[#090A0D] text-white border-zinc-800/80 hover:border-[#FF4D3D] hover:shadow-[0_0_35px_rgba(255,77,61,0.22)]"
                     }`}
                   >
-                    {/* Popular Card Animated Laser Border Beam */}
-                    {isPopular && (
-                      <div className="absolute inset-0 rounded-3xl overflow-hidden pointer-events-none">
-                        <BorderBeam size={180} duration={7} colorFrom="#DC2626" colorTo="#EF4444" borderWidth={2} />
-                      </div>
-                    )}
-
-                    {/* Popular Illuminated Header Pill Banner (Cleanly Integrated, Never Clipped) */}
+                    {/* Popular Pill Banner: Clean Black & White with subtle orange spark */}
                     {isPopular && (
                       <div className="mb-4 -mt-1 flex items-center justify-center">
-                        <span className="w-full py-1 px-3 rounded-full bg-accent-crimson text-white text-[11px] font-bold shadow-crimson-sm uppercase tracking-wider text-center flex items-center justify-center gap-1.5 animate-pulse-glow">
-                          <Sparkles className="h-3 w-3" />
+                        <span className="w-full py-1.5 px-3 rounded-full bg-zinc-900 border border-zinc-700 text-white text-[11px] font-bold uppercase tracking-wider text-center flex items-center justify-center gap-1.5 shadow-sm">
+                          <Sparkles className="h-3 w-3 text-[#FF4D3D]" />
                           <span>{pkg.badge || "Most Popular Choice"}</span>
                         </span>
                       </div>
@@ -194,20 +180,12 @@ Please let me know the kickoff process and timeline to get started!`
                       {/* Top: Icon, Tier Number */}
                       <div className="flex items-center justify-between mb-4">
                         <div
-                          className={`flex h-11 w-11 items-center justify-center rounded-2xl border transition-all duration-300 ${
-                            isPopular
-                              ? "bg-zinc-900 border-zinc-800 text-accent-crimson group-hover:scale-110"
-                              : "bg-white border-zinc-200 text-zinc-900 group-hover:border-accent-crimson group-hover:text-accent-crimson group-hover:bg-red-50/60 group-hover:scale-110"
-                          }`}
+                          className="flex h-11 w-11 items-center justify-center rounded-2xl border transition-all duration-300 bg-zinc-900 border-zinc-800 text-white group-hover:border-[#FF4D3D]/50 group-hover:text-[#FF4D3D] group-hover:scale-105"
                         >
                           <Icon className="h-5 w-5" />
                         </div>
                         <span
-                          className={`text-xs font-pilcrow font-bold uppercase tracking-wider px-2.5 py-1 rounded-full transition-colors ${
-                            isPopular
-                              ? "bg-zinc-800 text-zinc-300"
-                              : "bg-zinc-200/80 text-zinc-700 group-hover:bg-red-100 group-hover:text-accent-crimson"
-                          }`}
+                          className="text-xs font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-zinc-900 text-zinc-300 border border-zinc-800 transition-colors"
                         >
                           Tier {pkg.tierNumber}
                         </span>
@@ -216,105 +194,61 @@ Please let me know the kickoff process and timeline to get started!`
                       {/* Title & Tagline with standardized min-height for horizontal lockstep alignment */}
                       <div className="min-h-[66px] flex flex-col justify-start mb-2">
                         <h3
-                          className={`text-xl font-bold tracking-tight leading-snug transition-colors font-bonny ${
-                            isPopular ? "text-white" : "text-zinc-950 group-hover:text-accent-crimson"
-                          }`}
+                          className="text-xl sm:text-2xl font-bold tracking-tight leading-snug font-manrope text-white group-hover:text-white"
                         >
                           {pkg.name}
                         </h3>
-                        <p
-                          className={`text-xs font-semibold mt-1 font-general ${
-                            isPopular ? "text-red-400" : "text-accent-crimson"
-                          }`}
-                        >
+                        <p className="text-xs font-medium mt-1 font-mono text-zinc-400">
                           {pkg.tagline}
                         </p>
                       </div>
 
                       {/* Price Tag with standardized height */}
-                      <div className="h-[60px] flex items-baseline gap-2 pb-4 mb-4 border-b border-zinc-200/60 dark:border-zinc-800">
-                        <span
-                          className={`text-3xl sm:text-4xl font-extrabold tracking-tight transition-colors font-trench ${
-                            isPopular ? "text-white" : "text-zinc-950"
-                          }`}
-                        >
+                      <div className="h-[60px] flex items-baseline gap-2 pb-4 mb-4 border-b border-zinc-800">
+                        <span className="text-3xl sm:text-4xl font-extrabold tracking-tight font-manrope text-white">
                           {pkg.price}
                         </span>
-                        <span
-                          className={`text-xs font-medium font-general ${
-                            isPopular ? "text-zinc-400" : "text-zinc-500"
-                          }`}
-                        >
+                        <span className="text-xs font-medium font-sans text-zinc-400">
                           turnkey investment
                         </span>
                       </div>
 
                       {/* Scope & Delivery Info Pills (Locked to 40px each) */}
                       <div className="space-y-2 mb-4">
-                        <div
-                          className={`h-[40px] flex items-center gap-2 px-3 rounded-lg text-xs font-semibold transition-all duration-200 ${
-                            isPopular
-                              ? "bg-zinc-900 text-zinc-200 border border-zinc-800"
-                              : "bg-white text-zinc-800 border border-zinc-200 group-hover:border-red-200"
-                          }`}
-                        >
-                          <Clock className="h-3.5 w-3.5 text-accent-crimson shrink-0" />
+                        <div className="h-[40px] flex items-center gap-2 px-3 rounded-lg text-xs font-semibold bg-zinc-900/90 text-zinc-200 border border-zinc-800">
+                          <Clock className="h-3.5 w-3.5 text-zinc-400 shrink-0" />
                           <span className="line-clamp-1">Scope: {pkg.pagesOrScreens}</span>
                         </div>
 
-                        <div
-                          className={`h-[40px] flex items-center gap-2 px-3 rounded-lg text-xs font-semibold transition-all duration-200 ${
-                            isPopular
-                              ? "bg-zinc-900 text-emerald-400 border border-zinc-800"
-                              : "bg-white text-emerald-700 border border-zinc-200"
-                          }`}
-                        >
-                          <CheckCircle2 className="h-3.5 w-3.5 text-emerald-500 shrink-0" />
+                        <div className="h-[40px] flex items-center gap-2 px-3 rounded-lg text-xs font-semibold bg-zinc-900/90 text-emerald-400 border border-zinc-800">
+                          <CheckCircle2 className="h-3.5 w-3.5 text-emerald-400 shrink-0" />
                           <span className="line-clamp-1">{pkg.supportDays}</span>
                         </div>
                       </div>
 
                       {/* Perfect For Box (Locked min-height for uniform horizontal alignment) */}
-                      <div
-                        className={`min-h-[82px] p-3 rounded-xl mb-5 text-xs transition-all duration-200 flex flex-col justify-start ${
-                          isPopular
-                            ? "bg-zinc-900 border border-zinc-800 text-zinc-300"
-                            : "bg-white border border-zinc-200 text-zinc-700"
-                        }`}
-                      >
-                        <span className="font-bold block mb-0.5 text-[11px] text-zinc-400 uppercase tracking-wider">
+                      <div className="min-h-[82px] p-3.5 rounded-xl mb-5 text-xs transition-all duration-200 flex flex-col justify-start bg-zinc-900/70 border border-zinc-800/80 text-zinc-300">
+                        <span className="font-bold block mb-1 text-[11px] text-zinc-400 uppercase tracking-wider">
                           Perfect For:
                         </span>
-                        <p className="leading-relaxed line-clamp-3 text-xs">{pkg.idealFor}</p>
+                        <p className="leading-relaxed line-clamp-3 text-xs font-sans">{pkg.idealFor}</p>
                       </div>
 
                       {/* Features List (Flex 1 to occupy remaining height uniformly) */}
                       <div className="flex-1 space-y-2 mb-5">
-                        <span
-                          className={`text-xs font-bold uppercase tracking-wider block mb-2 ${
-                            isPopular ? "text-zinc-400" : "text-zinc-500"
-                          }`}
-                        >
+                        <span className="text-xs font-bold uppercase tracking-wider block mb-2 text-zinc-400 font-sans">
                           Included In This Package:
                         </span>
                         <ul className="space-y-1.5 text-xs">
                           {pkg.features.map((feature, fIdx) => (
                             <li
                               key={fIdx}
-                              className={`flex items-start gap-2 p-1 rounded-md transition-colors duration-150 group/feat ${
-                                isPopular
-                                  ? "hover:bg-zinc-900 hover:text-white"
-                                  : "hover:bg-red-50/70 hover:text-accent-crimson"
-                              }`}
+                              className="flex items-start gap-2 p-1 rounded-md transition-colors duration-150 group/feat hover:bg-zinc-900 hover:text-white"
                             >
                               <Check
-                                className="h-4 w-4 shrink-0 mt-0.5 text-accent-crimson group-hover/feat:scale-125 transition-transform"
+                                className="h-4 w-4 shrink-0 mt-0.5 text-zinc-300 group-hover/feat:text-[#FF4D3D] group-hover/feat:scale-125 transition-transform"
                               />
-                              <span
-                                className={`leading-relaxed text-xs ${
-                                  isPopular ? "text-zinc-300" : "text-zinc-700"
-                                }`}
-                              >
+                              <span className="leading-relaxed text-xs text-zinc-300 font-sans">
                                 {feature}
                               </span>
                             </li>
@@ -324,38 +258,30 @@ Please let me know the kickoff process and timeline to get started!`
                     </div>
 
                     {/* Card Bottom: WhatsApp Direct & Online Booking CTAs (Perfect baseline alignment across all cards) */}
-                    <div className="pt-4 border-t border-zinc-200/60 dark:border-zinc-800 space-y-2.5 mt-auto">
+                    <div className="pt-4 border-t border-zinc-800 space-y-2.5 mt-auto">
                       {/* WhatsApp Action */}
                       <a
                         href={whatsappUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white text-xs sm:text-sm font-bold shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer hover:scale-[1.02] active:scale-[0.98]"
+                        className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-white hover:bg-zinc-200 active:bg-zinc-300 text-zinc-950 text-xs sm:text-sm font-bold shadow-md transition-all duration-200 cursor-pointer hover:scale-[1.01] active:scale-[0.99]"
                       >
-                        <MessageCircle className="h-4 w-4 shrink-0 fill-current" />
+                        <MessageCircle className="h-4 w-4 shrink-0 text-emerald-600 fill-current" />
                         <span>Inquire on WhatsApp ({pkg.price})</span>
                       </a>
 
                       {/* Online Customization CTA */}
                       <Button
-                        variant={isPopular ? "outline" : "default"}
+                        variant="outline"
                         size="sm"
                         onClick={() => handleChoosePackage(pkg)}
-                        className={`w-full justify-center gap-2 text-xs font-bold hover:scale-[1.02] active:scale-[0.98] transition-transform ${
-                          isPopular
-                            ? "bg-zinc-900 text-white border-zinc-700 hover:bg-zinc-800"
-                            : "bg-zinc-950 text-white hover:bg-zinc-900"
-                        }`}
+                        className="w-full justify-center gap-2 text-xs font-bold bg-zinc-900 hover:bg-zinc-800 text-white border border-zinc-700 hover:border-zinc-500 hover:scale-[1.01] active:scale-[0.99] transition-all cursor-pointer"
                       >
-                        <span>Customize Online & Book</span>
-                        <ArrowRight className="h-3.5 w-3.5 text-accent-crimson" />
+                        <span>Customize Online &amp; Book</span>
+                        <ArrowRight className="h-3.5 w-3.5 text-zinc-400 group-hover:text-white group-hover:translate-x-0.5 transition-all" />
                       </Button>
 
-                      <p
-                        className={`text-[10px] leading-relaxed text-center pt-1 ${
-                          isPopular ? "text-zinc-400" : "text-zinc-500"
-                        }`}
-                      >
+                      <p className="text-[10px] leading-relaxed text-center pt-1 text-zinc-400">
                         {pkg.thirdPartyNotes}
                       </p>
                     </div>
@@ -371,9 +297,9 @@ Please let me know the kickoff process and timeline to get started!`
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-14 p-5 rounded-2xl bg-zinc-50 border border-zinc-200 text-center max-w-3xl mx-auto text-xs text-zinc-600 space-y-1 shadow-xs"
+          className="mt-14 p-5 rounded-2xl bg-zinc-900/70 border border-zinc-800 text-center max-w-3xl mx-auto text-xs text-zinc-400 space-y-1 shadow-xs"
         >
-          <p className="font-semibold text-zinc-900">
+          <p className="font-semibold text-zinc-200">
             Transparent Pricing & Direct WhatsApp Kickoff:
           </p>
           <p>

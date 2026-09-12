@@ -87,7 +87,7 @@ Please let me know how we can schedule an initial consultation!`
             <ul className="space-y-2 text-xs text-zinc-600">
               {service.targetAudience.map((audience, i) => (
                 <li key={i} className="flex items-start gap-2">
-                  <span className="h-1.5 w-1.5 rounded-full bg-accent-crimson mt-1.5 shrink-0" />
+                  <CheckCircle2 className="h-3.5 w-3.5 text-accent-crimson mt-0.5 shrink-0" />
                   <span className="leading-snug">{audience}</span>
                 </li>
               ))}

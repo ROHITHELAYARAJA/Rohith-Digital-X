@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { motion } from "framer-motion"
 import { faqsData } from "@/data/faqs"
 import { AccordionItem } from "@/components/ui/accordion"
 import { ArrowRight } from "lucide-react"
@@ -13,24 +14,28 @@ export const FaqSection: React.FC = () => {
   }
 
   return (
-    <section id="faq" className="py-16 sm:py-24 bg-[#FAFAFA] border-t border-zinc-200/70 relative">
+    <section id="faq" className="py-14 sm:py-18 bg-[#070708] border-t border-zinc-800 relative text-white">
       <div className="container max-w-4xl mx-auto px-4 sm:px-6">
         
-        {/* Section Header with Editorial Typography */}
-        <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16 space-y-3">
-          <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-accent-crimson font-mono">
-            Common Questions & Answers
-          </span>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-zinc-950 leading-tight">
-            Frequently asked{" "}
-            <span className="text-accent-crimson font-black">
-              questions & candid answers.
+        {/* Header with Scroll Animation */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+          className="text-center max-w-2xl mx-auto mb-8 sm:mb-10 space-y-3"
+        >
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.08] font-manrope">
+            Everything you need to{" "}
+            <span className="font-playfair italic font-medium text-[#FF3B30]">
+              know
             </span>
+            .
           </h2>
-          <p className="text-xs sm:text-sm md:text-base text-zinc-600 leading-relaxed font-normal">
-            Direct, candid answers about how we build, communicate, and deliver digital systems for clients.
+          <p className="text-sm sm:text-base text-zinc-400 leading-relaxed font-normal font-dmsans">
+            Direct, candid answers about sprint timelines, founder communication, code ownership, and post-launch guarantees.
           </p>
-        </div>
+        </motion.div>
 
         {/* Accordion List */}
         <div className="space-y-3.5">
@@ -49,23 +54,22 @@ export const FaqSection: React.FC = () => {
         </div>
 
         {/* Bottom Help CTA */}
-        <div className="mt-14 p-6 rounded-2xl bg-white border border-zinc-200 text-center space-y-3 shadow-subtle">
-          <h3 className="text-base font-bold text-zinc-900">
-            Have a specific requirement not covered here?
+        <div className="mt-14 p-8 rounded-3xl bg-zinc-950 text-white border border-zinc-800 text-center space-y-4 shadow-xl">
+          <h3 className="text-lg sm:text-xl font-bold font-display text-white">
+            Have a specific question not covered here?
           </h3>
-          <p className="text-xs text-zinc-600 max-w-md mx-auto">
-            We are always happy to review technical constraints and recommend the ideal architecture.
+          <p className="text-xs sm:text-sm text-zinc-400 max-w-md mx-auto">
+            Founder Rohith E is available on WhatsApp and email to review your technical requirements.
           </p>
-          <div className="pt-1">
-            <Button
-              variant="default"
-              size="sm"
-              onClick={() => scrollToSection("contact")}
-              className="gap-1.5 text-xs font-bold"
+          <div className="pt-2 flex justify-center">
+            <a
+              href="https://wa.me/919655483130?text=Hello%20Rohith,%20I%20have%20a%20question%20regarding%20a%20project."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-purple-600 text-white font-bold text-xs shadow-[0_0_24px_rgba(139,92,246,0.35)] hover:bg-purple-500 transition-all cursor-pointer"
             >
-              <span>Ask Rohith Directly</span>
-              <ArrowRight className="h-3.5 w-3.5" />
-            </Button>
+              <span>Chat with Rohith E on WhatsApp ↗</span>
+            </a>
           </div>
         </div>
 

@@ -117,7 +117,7 @@ const StackedCard: React.FC<{
         className={`relative rounded-[2rem] sm:rounded-[2.5rem] p-6 sm:p-10 lg:p-12 border ${card.borderColor} ${card.bgColor} shadow-2xl transition-all duration-300 overflow-hidden`}
       >
         {/* Subtle decorative watermark */}
-        <div className="absolute top-4 right-8 font-trench text-[90px] sm:text-[140px] font-black text-black/[0.03] select-none pointer-events-none leading-none">
+        <div className="absolute top-4 right-8 font-trench text-[90px] sm:text-[140px] font-bold text-black/[0.03] select-none pointer-events-none leading-none">
           0{index + 1}
         </div>
 
@@ -132,25 +132,25 @@ const StackedCard: React.FC<{
                 <React.Fragment key={tIdx}>
                   <span className="hover:text-zinc-950 transition-colors">{tag}</span>
                   {tIdx < card.tags.length - 1 && (
-                    <span className="text-accent-crimson font-black">✦</span>
+                    <span className="text-zinc-400">·</span>
                   )}
                 </React.Fragment>
               ))}
             </div>
 
-            {/* Brand Title with Crimson Period */}
+            {/* Brand Title with Amber Period */}
             <div>
-              <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-zinc-950 leading-tight font-display">
+              <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-zinc-950 leading-tight font-manrope">
                 {card.brandName}
-                <span className="text-accent-crimson">.</span>
+                <span className="text-[#FF3B30]">.</span>
               </h3>
-              <p className="text-sm sm:text-base font-bold text-zinc-800 mt-1 font-bonny">
+              <p className="text-sm sm:text-base font-bold text-zinc-800 mt-1 font-playfair">
                 {card.title}
               </p>
             </div>
 
             {/* Description Body */}
-            <p className="text-xs sm:text-sm md:text-base text-zinc-700 leading-relaxed font-normal font-general">
+            <p className="text-xs sm:text-sm md:text-base text-zinc-700 leading-relaxed font-normal font-dmsans">
               {card.description}
             </p>
 
@@ -159,7 +159,7 @@ const StackedCard: React.FC<{
               {card.fullProject.technologies.map((tech, techIdx) => (
                 <span
                   key={techIdx}
-                  className="px-2.5 py-1 rounded-full bg-white/90 border border-zinc-200/90 text-[10px] sm:text-[11px] font-pilcrow text-zinc-800 font-semibold shadow-2xs"
+                  className="text-[10px] sm:text-xs font-mono font-medium px-2.5 py-1 rounded-md bg-white border border-zinc-200/80 text-zinc-700"
                 >
                   {tech}
                 </span>
@@ -170,10 +170,10 @@ const StackedCard: React.FC<{
             <div className="pt-2 sm:pt-4">
               <button
                 onClick={() => onOpenModal(card.fullProject)}
-                className="inline-flex items-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-zinc-950 text-white font-bold text-xs sm:text-sm shadow-md hover:bg-accent-crimson transition-all duration-300 group/btn cursor-pointer active:scale-95"
+                className="inline-flex items-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-zinc-950 text-white font-bold text-xs sm:text-sm shadow-md hover:bg-purple-600 hover:text-white transition-all duration-300 group/btn cursor-pointer active:scale-95"
               >
                 <span>PREVIEW THE UI</span>
-                <ArrowUpRight className="h-4 w-4 transition-transform group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 text-accent-crimson group-hover/btn:text-white" />
+                <ArrowUpRight className="h-4 w-4 transition-transform group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 text-purple-400 group-hover/btn:text-white" />
               </button>
             </div>
 
@@ -223,33 +223,33 @@ export const WorkSection: React.FC<WorkSectionProps> = ({ onDiscussSimilar }) =>
   }
 
   return (
-    <section id="work" className="py-16 sm:py-24 bg-white border-t border-zinc-200/70 relative">
-      <div className="container max-w-6xl mx-auto px-4 sm:px-6 space-y-12">
+    <section id="work" className="py-14 sm:py-18 bg-white border-t border-zinc-200/70 relative">
+      <div className="container max-w-6xl mx-auto px-4 sm:px-6 space-y-8">
         
         {/* Section Header with Exact Match to User Reference Screenshot */}
         <div className="text-center space-y-4 max-w-4xl mx-auto">
           
-          {/* Centered Top Badge: ✦ WORKS */}
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="inline-flex items-center gap-1.5 text-xs font-pilcrow font-bold uppercase tracking-widest text-zinc-600"
-          >
-            <span className="text-accent-crimson font-black text-sm">✦</span>
-            <span>WORKS</span>
-          </motion.div>
-
-          {/* Bold Lowercase Headline with Signature Crimson Period */}
+          {/* High-Impact Headline with Playfair Display Italic Contrast */}
           <motion.h2
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-[-0.04em] text-zinc-950 lowercase max-w-4xl mx-auto leading-tight font-display"
+            className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-zinc-950 max-w-4xl mx-auto leading-[1.08] font-manrope"
           >
-            crafting <span className="font-boska italic font-normal text-zinc-500">the finest</span> of all<span className="text-accent-crimson">.</span>
+            Engineered for <span className="font-playfair italic font-medium text-[#FF3B30]">scale</span> and measurable growth<span className="text-[#FF3B30]">.</span>
           </motion.h2>
+
+          {/* Clean Subtitle */}
+          <motion.p
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.18 }}
+            className="text-sm sm:text-base text-zinc-600 max-w-2xl mx-auto font-normal leading-relaxed font-dmsans"
+          >
+            Every product below was architected, coded, and deployed directly by Rohith E. Zero template bloat, sub-0.4s load times, and custom full-stack infrastructure.
+          </motion.p>
         </div>
 
         {/* Filter Navigation Capsule Bar (Exact Match to User Reference Screenshot) */}

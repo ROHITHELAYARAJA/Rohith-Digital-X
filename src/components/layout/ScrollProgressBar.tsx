@@ -98,7 +98,7 @@ export const ScrollProgressBar: React.FC = () => {
                 >
                   <div className="px-2.5 py-1 text-[10px] uppercase font-bold text-zinc-400 border-b border-zinc-800/80 mb-1 flex items-center justify-between">
                     <span>Jump to Section</span>
-                    <Compass className="h-3 w-3 text-accent-crimson" />
+                    <Compass className="h-3 w-3 text-[#FF4D3D]" />
                   </div>
                   {SECTIONS.map((sec) => (
                     <button
@@ -109,7 +109,7 @@ export const ScrollProgressBar: React.FC = () => {
                       }}
                       className={`w-full flex items-center justify-between px-2.5 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
                         activeSection === sec.id
-                          ? "bg-red-950/80 text-white border border-accent-crimson/50 font-bold"
+                          ? "bg-[#FF4D3D]/15 text-white border border-[#FF4D3D]/40 font-bold"
                           : "text-zinc-400 hover:text-white hover:bg-zinc-900"
                       }`}
                     >
@@ -117,9 +117,6 @@ export const ScrollProgressBar: React.FC = () => {
                         <span className="text-[10px] text-zinc-500 font-bold">{sec.short}</span>
                         <span>{sec.label}</span>
                       </div>
-                      {activeSection === sec.id && (
-                        <span className="h-1.5 w-1.5 rounded-full bg-accent-crimson" />
-                      )}
                     </button>
                   ))}
                 </motion.div>
@@ -129,7 +126,7 @@ export const ScrollProgressBar: React.FC = () => {
             {/* Main Floating Capsule Pill */}
             <div
               onClick={() => setIsExpanded(!isExpanded)}
-              className="flex items-center gap-3 px-3.5 py-2 rounded-full bg-zinc-950/90 backdrop-blur-md border border-zinc-800 shadow-2xl text-white hover:border-accent-crimson transition-all duration-200 cursor-pointer group hover:scale-[1.03] active:scale-[0.98]"
+              className="flex items-center gap-3 px-3.5 py-2 rounded-full bg-zinc-950/90 backdrop-blur-md border border-zinc-800 shadow-[0_8px_32px_rgba(0,0,0,0.5)] text-white hover:border-[#FF4D3D]/60 hover:shadow-[0_0_24px_rgba(255,77,61,0.22)] transition-all duration-200 cursor-pointer group hover:scale-[1.03] active:scale-[0.98]"
             >
               {/* Circular SVG Micro Progress Meter */}
               <div className="relative flex items-center justify-center h-6 w-6">
@@ -138,7 +135,8 @@ export const ScrollProgressBar: React.FC = () => {
                     cx="12"
                     cy="12"
                     r={radius}
-                    className="stroke-zinc-800"
+                    stroke="currentColor"
+                    className="text-zinc-800"
                     strokeWidth="2.5"
                     fill="transparent"
                   />
@@ -146,12 +144,14 @@ export const ScrollProgressBar: React.FC = () => {
                     cx="12"
                     cy="12"
                     r={radius}
-                    className="stroke-accent-crimson transition-all duration-150"
+                    stroke="#FF4D3D"
+                    className="transition-all duration-150"
                     strokeWidth="2.5"
                     strokeDasharray={circumference}
                     strokeDashoffset={strokeDashoffset}
                     strokeLinecap="round"
                     fill="transparent"
+                    style={{ filter: "drop-shadow(0 0 4px rgba(255, 77, 61, 0.45))" }}
                   />
                 </svg>
                 <span className="absolute text-[8px] font-bold text-zinc-300 font-mono">
@@ -159,15 +159,15 @@ export const ScrollProgressBar: React.FC = () => {
                 </span>
               </div>
 
-              {/* Active Section Label with Crimson Indicator */}
+              {/* Active Section Label with Vivid Racing Orange Indicator */}
               <div className="flex items-center gap-1.5 text-xs font-semibold pr-1">
-                <span className="text-[10px] text-accent-crimson font-bold">{activeNumber}</span>
-                <span className="text-zinc-500">•</span>
+                <span className="text-[11px] text-[#FF4D3D] font-bold font-mono">{activeNumber}</span>
+                <span className="text-zinc-500">/</span>
                 <span className="text-zinc-200 group-hover:text-white transition-colors">{activeLabel}</span>
               </div>
 
               {/* Quick Jump / Scroll to Top Icon */}
-              <div className="h-5 w-5 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-400 group-hover:text-white group-hover:border-zinc-700 transition-colors">
+              <div className="h-5 w-5 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-400 group-hover:text-[#FF4D3D] group-hover:border-[#FF4D3D]/40 transition-colors">
                 <ChevronRight className={`h-3 w-3 transition-transform duration-200 ${isExpanded ? "rotate-90" : ""}`} />
               </div>
             </div>
