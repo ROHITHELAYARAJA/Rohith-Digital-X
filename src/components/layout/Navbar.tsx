@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react"
+import React, { useState, useEffect, useLayoutEffect, useRef } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import { Menu, X as CloseIcon, ArrowUpRight, Phone, Mail, MapPin, ChevronDown, Package, Wrench, CreditCard, BookOpen, Heart, Search } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -22,6 +22,34 @@ export const Navbar: React.FC = () => {
     tab: "assets",
   })
   const moreDropdownRef = useRef<HTMLDivElement>(null)
+  const navItemRefs = useRef<{ [key: string]: HTMLButtonElement | null }>({})
+  const limelightRef = useRef<HTMLDivElement | null>(null)
+  const [isLimelightReady, setIsLimelightReady] = useState(false)
+
+  useLayoutEffect(() => {
+    const updateLimelight = () => {
+      const activeBtn = navItemRefs.current[currentPage]
+      const limelight = limelightRef.current
+      if (activeBtn && limelight) {
+        const newLeft = activeBtn.offsetLeft + activeBtn.offsetWidth / 2 - limelight.offsetWidth / 2
+        limelight.style.left = `${newLeft}px`
+        limelight.style.opacity = "1"
+        if (!isLimelightReady) {
+          setIsLimelightReady(true)
+        }
+      } else if (limelight) {
+        limelight.style.opacity = "0"
+      }
+    }
+
+    updateLimelight()
+    const timer = setTimeout(updateLimelight, 40)
+    window.addEventListener("resize", updateLimelight)
+    return () => {
+      clearTimeout(timer)
+      window.removeEventListener("resize", updateLimelight)
+    }
+  }, [currentPage, isLimelightReady])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -67,7 +95,7 @@ export const Navbar: React.FC = () => {
             {/* Logo on Left: Aerodynamic R Logo (Fastlane Racing Style) */}
             <button
               onClick={() => handleNavClick("home")}
-              className="flex items-center gap-2.5 pr-2 text-xs sm:text-sm font-manrope font-extrabold tracking-tight text-zinc-950 dark:text-white hover:text-[#FF3B30] transition-colors cursor-pointer group"
+              className="flex items-center gap-2.5 pr-2 text-xs sm:text-sm font-manrope font-extrabold tracking-tight text-zinc-950 dark:text-white hover:text-[#0066FF] transition-colors cursor-pointer group"
             >
               <img
                 src="/rdx-r-logo.png"
@@ -79,8 +107,20 @@ export const Navbar: React.FC = () => {
 
             <div className="h-4 w-[1px] bg-zinc-200 dark:bg-zinc-800 hidden md:block" />
 
-            {/* Links in Center (Desktop) with Limelight Effect */}
+            {/* Links in Center (Desktop) with Centered Limelight Effect */}
             <div className="hidden md:flex items-center gap-0.5 relative">
+              {/* Dynamic Limelight Beam - 100% Dead Center Above Active Tab */}
+              <div
+                ref={limelightRef}
+                className={cn(
+                  "absolute -top-[7px] pointer-events-none z-10 w-9 h-[3.5px] rounded-full bg-[#0066FF] shadow-[0_10px_20px_rgba(0,102,255,0.7)]",
+                  isLimelightReady ? "transition-[left] duration-300 ease-in-out" : "opacity-0"
+                )}
+                style={{ left: "-999px" }}
+              >
+                <div className="absolute left-[-45%] top-[3.5px] w-[190%] h-8 [clip-path:polygon(15%_100%,35%_0,65%_0,85%_100%)] bg-gradient-to-b from-[#0066FF]/35 to-transparent pointer-events-none" />
+              </div>
+
               {[
                 { id: "home" as PageRoute, label: "Home" },
                 { id: "services" as PageRoute, label: "Services" },
@@ -92,6 +132,7 @@ export const Navbar: React.FC = () => {
                 return (
                   <button
                     key={link.id}
+                    ref={(el) => (navItemRefs.current[link.id] = el)}
                     onClick={() => handleNavClick(link.id)}
                     className={cn(
                       "relative px-3.5 py-1.5 text-xs font-semibold rounded-full transition-colors cursor-pointer select-none",
@@ -101,15 +142,6 @@ export const Navbar: React.FC = () => {
                     )}
                   >
                     <span>{link.label}</span>
-                    {isActive && (
-                      <motion.div
-                        layoutId="limelight-beam"
-                        className="absolute -top-[7px] left-1/2 -translate-x-1/2 w-7 h-[3px] rounded-full bg-[#FF3B30] shadow-[0_10px_12px_#FF3B30]"
-                        transition={{ type: "spring", stiffness: 380, damping: 30 }}
-                      >
-                        <div className="absolute left-[-40%] top-[3px] w-[180%] h-7 [clip-path:polygon(15%_100%,35%_0,65%_0,85%_100%)] bg-gradient-to-b from-[#FF3B30]/25 to-transparent pointer-events-none" />
-                      </motion.div>
-                    )}
                   </button>
                 )
               })}
@@ -146,9 +178,9 @@ export const Navbar: React.FC = () => {
             {/* Right: Fastlane-Style Action Button */}
             <button
               onClick={() => handleNavClick("contact")}
-              className="hidden sm:flex items-center gap-1.5 px-4 py-2 text-xs font-bold font-manrope rounded-full bg-zinc-950 text-white dark:bg-white dark:text-zinc-950 hover:bg-zinc-800 dark:hover:bg-zinc-100 transition-all shadow-xs active:scale-95 cursor-pointer ml-1"
+              className="hidden sm:flex items-center gap-1.5 px-4 py-2 text-xs font-bold font-manrope rounded-full bg-zinc-950 text-white dark:bg-white dark:text-zinc-950 hover:bg-[#0066FF] dark:hover:bg-[#0066FF] dark:hover:text-white transition-all shadow-xs active:scale-95 cursor-pointer ml-1 whitespace-nowrap"
             >
-              <span>Book a Sprint</span>
+              <span>Get Started for Free</span>
               <ArrowUpRight className="h-3.5 w-3.5" />
             </button>
 
@@ -192,7 +224,7 @@ export const Navbar: React.FC = () => {
                   <div className="flex items-baseline font-sans text-lg font-extrabold tracking-tight text-zinc-950 leading-none">
                     <span className="font-black">Rohith</span>
                     <span className="text-zinc-500 font-medium ml-1.5 tracking-tight">Digital</span>
-                    <span className="font-black text-[#FFAE00] ml-1.5">
+                    <span className="font-black text-[#0066FF] ml-1.5">
                       X
                     </span>
                   </div>
@@ -200,7 +232,7 @@ export const Navbar: React.FC = () => {
                     Digital Product Studio
                   </div>
                 </div>
-                <span className="px-2.5 py-1 rounded-full bg-amber-50 text-amber-800 border border-amber-200 text-[10px] font-bold">
+                <span className="px-2.5 py-1 rounded-full bg-blue-50 text-blue-800 border border-blue-200 text-[10px] font-bold">
                   Available for Projects
                 </span>
               </div>
@@ -259,9 +291,9 @@ export const Navbar: React.FC = () => {
               <div className="mt-5">
                 <Button
                   onClick={() => handleNavClick("contact")}
-                  className="w-full justify-center gap-2 text-sm font-black h-11 bg-[#FFAE00] hover:bg-[#FFB800] text-black shadow-md"
+                  className="w-full justify-center gap-2 text-sm font-black h-11 bg-[#111111] hover:bg-black text-white shadow-md rounded-full font-manrope cursor-pointer"
                 >
-                  <span>Start a Project</span>
+                  <span>Get Started for Free</span>
                   <ArrowUpRight className="h-4 w-4" />
                 </Button>
               </div>
