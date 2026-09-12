@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useLayoutEffect, useRef } from "react"
 import { AnimatePresence, motion } from "framer-motion"
-import { Menu, X as CloseIcon, ArrowUpRight, Phone, Mail, MapPin, ChevronDown, Package, Wrench, CreditCard, BookOpen, Heart, Search } from "lucide-react"
+import { Menu, X as CloseIcon, ArrowUpRight, Phone, Mail, MapPin, Package, Wrench, CreditCard, BookOpen, Heart, Search } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { cn, scrollToSection } from "@/lib/utils"
@@ -14,14 +14,12 @@ export const Navbar: React.FC = () => {
   const { navigate, currentPage } = useNavigation()
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const [isMoreOpen, setIsMoreOpen] = useState(false)
   const [isGuestbookOpen, setIsGuestbookOpen] = useState(false)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
   const [assetsModalState, setAssetsModalState] = useState<{ isOpen: boolean; tab: "assets" | "bucketlist" | "attribution" }>({
     isOpen: false,
     tab: "assets",
   })
-  const moreDropdownRef = useRef<HTMLDivElement>(null)
   const navItemRefs = useRef<{ [key: string]: HTMLButtonElement | null }>({})
   const limelightRef = useRef<HTMLDivElement | null>(null)
   const [isLimelightReady, setIsLimelightReady] = useState(false)
@@ -64,19 +62,8 @@ export const Navbar: React.FC = () => {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  useEffect(() => {
-    const handleClickOutside = (e: MouseEvent) => {
-      if (moreDropdownRef.current && !moreDropdownRef.current.contains(e.target as Node)) {
-        setIsMoreOpen(false)
-      }
-    }
-    document.addEventListener("mousedown", handleClickOutside)
-    return () => document.removeEventListener("mousedown", handleClickOutside)
-  }, [])
-
   const handleNavClick = (route: PageRoute, targetId?: string) => {
     setIsMobileMenuOpen(false)
-    setIsMoreOpen(false)
     navigate(route, targetId)
   }
 
@@ -88,7 +75,7 @@ export const Navbar: React.FC = () => {
           isScrolled ? "translate-y-0" : "translate-y-0.5"
         )}
       >
-        <div className="pointer-events-auto relative" ref={moreDropdownRef}>
+        <div className="pointer-events-auto relative">
           {/* Fastlane-style Single Unified Floating Glass Pill */}
           <nav className="flex items-center gap-2 sm:gap-3 bg-white/95 dark:bg-zinc-950/90 backdrop-blur-xl py-1.5 pl-4 pr-1.5 rounded-full border border-zinc-200/90 dark:border-zinc-800/90 shadow-[0_16px_40px_rgba(0,0,0,0.12)] dark:shadow-[0_16px_40px_rgba(0,0,0,0.5)]">
             
@@ -146,24 +133,7 @@ export const Navbar: React.FC = () => {
                 )
               })}
 
-              {/* "More ⌄" Mega Menu Trigger */}
-              <button
-                onClick={() => setIsMoreOpen(!isMoreOpen)}
-                className={cn(
-                  "flex items-center gap-1 px-3 py-1.5 text-xs font-semibold rounded-full transition-colors cursor-pointer select-none",
-                  isMoreOpen
-                    ? "bg-zinc-100 dark:bg-zinc-800 text-zinc-950 dark:text-white font-bold"
-                    : "text-zinc-600 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-white"
-                )}
-              >
-                <span>More</span>
-                <ChevronDown
-                  className={cn(
-                    "h-3 w-3 transition-transform duration-200",
-                    isMoreOpen ? "rotate-180 text-[#FF4D3D]" : ""
-                  )}
-                />
-              </button>
+
 
               {/* Standalone Search Trigger */}
               <button

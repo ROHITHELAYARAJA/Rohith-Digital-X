@@ -134,14 +134,14 @@ export const FastlaneSpotlightSection: React.FC = () => {
                 
                 {/* Image 5 Style SPOTLIGHT Tag without any blinking dots */}
                 <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white border border-zinc-200 shadow-xs text-xs font-manrope font-bold tracking-wider text-zinc-800">
-                  <span className="uppercase text-[11px] font-extrabold text-[#FF3B30] tracking-widest">
+                  <span className="uppercase text-[11px] font-bold text-[#FF3B30] tracking-widest">
                     SPOTLIGHT
                   </span>
                   <span className="text-zinc-500 font-semibold">{currentStory.category}</span>
                 </div>
 
                 {/* Giant Bold Headline */}
-                <h3 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-zinc-950 font-manrope tracking-tight leading-[1.08] text-balance">
+                <h3 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-zinc-950 font-manrope tracking-tight leading-[1.08] text-balance">
                   {currentStory.metricHeadline}
                 </h3>
 
@@ -182,7 +182,7 @@ export const FastlaneSpotlightSection: React.FC = () => {
                 {/* 3 Metric Mini-Counters */}
                 <div className="grid grid-cols-3 gap-3">
                   <div className="p-4 rounded-2xl bg-white border border-zinc-200/90 shadow-xs text-center">
-                    <div className="text-xl sm:text-2xl font-black text-zinc-950 font-manrope">
+                    <div className="text-xl sm:text-2xl font-bold text-zinc-950 font-manrope">
                       {currentStory.stat1.value}
                     </div>
                     <div className="text-[10px] sm:text-xs text-zinc-500 font-dmsans font-medium mt-1 leading-tight">
@@ -191,7 +191,7 @@ export const FastlaneSpotlightSection: React.FC = () => {
                   </div>
 
                   <div className="p-4 rounded-2xl bg-white border border-zinc-200/90 shadow-xs text-center">
-                    <div className="text-xl sm:text-2xl font-black text-[#FF3B30] font-manrope">
+                    <div className="text-xl sm:text-2xl font-bold text-[#FF3B30] font-manrope">
                       {currentStory.stat2.value}
                     </div>
                     <div className="text-[10px] sm:text-xs text-zinc-500 font-dmsans font-medium mt-1 leading-tight">
@@ -200,7 +200,7 @@ export const FastlaneSpotlightSection: React.FC = () => {
                   </div>
 
                   <div className="p-4 rounded-2xl bg-white border border-zinc-200/90 shadow-xs text-center">
-                    <div className="text-xl sm:text-2xl font-black text-purple-600 font-manrope">
+                    <div className="text-xl sm:text-2xl font-bold text-purple-600 font-manrope">
                       {currentStory.stat3.value}
                     </div>
                     <div className="text-[10px] sm:text-xs text-zinc-500 font-dmsans font-medium mt-1 leading-tight">

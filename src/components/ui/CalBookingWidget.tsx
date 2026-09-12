@@ -297,7 +297,7 @@ export const CalBookingWidget: React.FC<CalBookingWidgetProps> = ({
               {/* Left Info Panel */}
               <div className="lg:col-span-4 p-6 sm:p-8 space-y-6 bg-[#090A0D]">
                 <div className="flex items-center gap-3">
-                  <div className="h-10 w-10 rounded-full bg-gradient-to-tr from-blue-700 to-blue-500 flex items-center justify-center text-white font-black text-sm shadow-md shadow-blue-600/30">
+                  <div className="h-10 w-10 rounded-full bg-gradient-to-tr from-blue-700 to-blue-500 flex items-center justify-center text-white font-bold text-sm shadow-md shadow-blue-600/30">
                     ✋
                   </div>
                   <div>
@@ -310,7 +310,7 @@ export const CalBookingWidget: React.FC<CalBookingWidgetProps> = ({
                 </div>
 
                 <div>
-                  <h3 className="text-xl sm:text-2xl font-black text-white tracking-tight">
+                  <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
                     30 min meeting
                   </h3>
                   <p className="text-xs text-zinc-400 mt-2 leading-relaxed font-dmsans">
@@ -346,7 +346,7 @@ export const CalBookingWidget: React.FC<CalBookingWidgetProps> = ({
               <div className="lg:col-span-5 p-6 sm:p-8 space-y-5 bg-[#0C0D11]">
                 {/* Month Navigation Header */}
                 <div className="flex items-center justify-between">
-                  <span className="text-base font-extrabold text-white tracking-tight tabular-nums font-manrope">
+                  <span className="text-base font-bold text-white tracking-tight tabular-nums font-manrope">
                     {currentMonthLabel}
                   </span>
                   <div className="flex items-center gap-1.5">
@@ -406,7 +406,7 @@ export const CalBookingWidget: React.FC<CalBookingWidgetProps> = ({
                           relative h-9 sm:h-10 w-full rounded-full text-xs font-bold font-manrope flex items-center justify-center transition-all cursor-pointer
                           ${
                             isSelected
-                              ? "bg-blue-600 text-white font-black shadow-[0_0_16px_rgba(37,99,235,0.6)] scale-105 z-10"
+                              ? "bg-blue-600 text-white font-bold shadow-[0_0_16px_rgba(37,99,235,0.6)] scale-105 z-10"
                               : "text-zinc-300 hover:bg-zinc-800 hover:text-white"
                           }
                         `}
@@ -485,7 +485,7 @@ export const CalBookingWidget: React.FC<CalBookingWidgetProps> = ({
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.97 }}
                   onClick={handleProceedToForm}
-                  className="w-full py-3.5 px-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-black text-xs uppercase tracking-wider transition-all shadow-lg shadow-blue-600/30 flex items-center justify-center gap-1.5 cursor-pointer"
+                  className="w-full py-3.5 px-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs uppercase tracking-wider transition-all shadow-lg shadow-blue-600/30 flex items-center justify-center gap-1.5 cursor-pointer"
                 >
                   <span>Next: Details</span>
                   <span>→</span>
@@ -516,7 +516,7 @@ export const CalBookingWidget: React.FC<CalBookingWidgetProps> = ({
 
               {/* Header */}
               <div className="space-y-1.5 text-left">
-                <h3 className="text-xl sm:text-2xl font-black text-white tracking-tight font-manrope">
+                <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight font-manrope">
                   Enter Your Discovery Details
                 </h3>
                 <p className="text-xs text-blue-400 font-medium">
@@ -649,7 +649,7 @@ export const CalBookingWidget: React.FC<CalBookingWidgetProps> = ({
                   </button>
                   <button
                     type="submit"
-                    className="px-7 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-black text-xs uppercase tracking-wider transition-all shadow-lg shadow-blue-600/30 active:scale-95 cursor-pointer"
+                    className="px-7 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs uppercase tracking-wider transition-all shadow-lg shadow-blue-600/30 active:scale-95 cursor-pointer"
                   >
                     Confirm 30-Min Sprint →
                   </button>
@@ -672,7 +672,7 @@ export const CalBookingWidget: React.FC<CalBookingWidgetProps> = ({
               </div>
 
               <div className="space-y-2">
-                <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight font-manrope">
+                <h3 className="text-2xl sm:text-3xl font-bold text-white tracking-tight font-manrope">
                   Meeting Scheduled!
                 </h3>
                 <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed font-dmsans">
@@ -689,7 +689,7 @@ export const CalBookingWidget: React.FC<CalBookingWidgetProps> = ({
                 </div>
                 <div className="flex items-center justify-between text-zinc-400">
                   <span>Time:</span>
-                  <span className="text-blue-400 font-extrabold tabular-nums">{selectedTime} IST</span>
+                  <span className="text-blue-400 font-bold tabular-nums">{selectedTime} IST</span>
                 </div>
                 <div className="flex items-center justify-between text-zinc-400">
                   <span>Focus:</span>

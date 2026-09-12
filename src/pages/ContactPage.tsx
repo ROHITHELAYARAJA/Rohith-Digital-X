@@ -117,7 +117,7 @@ export const ContactPage: React.FC = () => {
                 <span className="text-[11px] font-mono font-bold tracking-widest uppercase text-purple-400">
                   SELECT YOUR TIME
                 </span>
-                <h2 className="text-2xl sm:text-4xl font-extrabold text-white font-display">
+                <h2 className="text-2xl sm:text-4xl font-bold text-white font-display">
                   Book a 30-minute sprint with Rohith E
                 </h2>
                 <p className="text-zinc-400 text-xs sm:text-sm max-w-lg mx-auto">
@@ -132,7 +132,7 @@ export const ContactPage: React.FC = () => {
                 <span className="text-[11px] font-mono font-bold tracking-widest uppercase text-purple-400">
                   SPECIFY YOUR SCOPE
                 </span>
-                <h2 className="text-2xl sm:text-4xl font-extrabold text-white font-display">
+                <h2 className="text-2xl sm:text-4xl font-bold text-white font-display">
                   Send your project requirements
                 </h2>
                 <p className="text-zinc-400 text-xs sm:text-sm max-w-lg mx-auto">

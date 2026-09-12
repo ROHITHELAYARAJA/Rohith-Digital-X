@@ -50,7 +50,7 @@ export const AboutSection: React.FC = () => {
                 A SUMMARY
               </span>
 
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white font-display">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white font-display">
                 Know <span className="font-boska italic font-normal text-zinc-400">me</span> as I am<span className="text-[#FF4D3D]">.</span>
               </h2>
 
@@ -121,7 +121,7 @@ export const AboutSection: React.FC = () => {
             <span>ABOUT &amp; METHODOLOGY</span>
           </div>
 
-          <h3 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-[-0.04em] text-white max-w-4xl mx-auto leading-tight font-display">
+          <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white max-w-4xl mx-auto leading-tight font-display">
             Building Apps<span className="text-[#FF4D3D]">.</span> Designing Products<span className="text-[#FF4D3D]">.</span> Crafting Systems<span className="text-[#FF4D3D]">.</span>
           </h3>
 
@@ -290,7 +290,7 @@ export const AboutSection: React.FC = () => {
               </span>
 
               <div className="flex items-center gap-3">
-                <h3 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-white">
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-white">
                   Little about myself<span className="text-[#FF4D3D]">.</span>
                 </h3>
                 <span className="text-2xl sm:text-3xl select-none" role="img" aria-label="Developer emoji">
@@ -313,7 +313,7 @@ export const AboutSection: React.FC = () => {
             <div className="lg:col-span-5 grid grid-cols-3 gap-4 text-center lg:text-left border-t lg:border-t-0 lg:border-l border-zinc-800 pt-6 lg:pt-0 lg:pl-8">
               
               <div className="space-y-1">
-                <div className="text-3xl sm:text-4xl md:text-5xl font-black text-purple-400 tracking-tight font-trench">
+                <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-purple-400 tracking-tight font-trench">
                   03
                 </div>
                 <p className="text-[9px] sm:text-[10px] uppercase font-mono font-bold text-zinc-500 leading-tight">
@@ -322,7 +322,7 @@ export const AboutSection: React.FC = () => {
               </div>
 
               <div className="space-y-1">
-                <div className="text-3xl sm:text-4xl md:text-5xl font-black text-[#FF4D3D] tracking-tight font-trench">
+                <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#FF4D3D] tracking-tight font-trench">
                   15+
                 </div>
                 <p className="text-[9px] sm:text-[10px] uppercase font-mono font-bold text-zinc-500 leading-tight">
@@ -331,7 +331,7 @@ export const AboutSection: React.FC = () => {
               </div>
 
               <div className="space-y-1">
-                <div className="text-3xl sm:text-4xl md:text-5xl font-black text-purple-400 tracking-tight font-trench">
+                <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-purple-400 tracking-tight font-trench">
                   100%
                 </div>
                 <p className="text-[9px] sm:text-[10px] uppercase font-mono font-bold text-zinc-500 leading-tight">
@@ -351,7 +351,7 @@ export const AboutSection: React.FC = () => {
               <Sparkles className="h-3.5 w-3.5" />
               <span>Production Architecture &amp; Engineering Standards</span>
             </span>
-            <h3 className="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight text-white mt-1">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight text-white mt-1">
               Production-grade technologies we employ<span className="text-[#FF4D3D]">.</span>
             </h3>
           </div>

@@ -52,7 +52,7 @@ export const HeroSection: React.FC = () => {
             transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
             className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/95 border border-zinc-200/90 text-xs font-dmsans text-zinc-700 shadow-[0_2px_12px_rgba(0,0,0,0.04)] backdrop-blur-md hover:border-zinc-300 transition-colors"
           >
-            <span className="px-2 py-0.5 rounded-full bg-[#FF3B30] text-white font-extrabold text-[10px] tracking-wide uppercase">
+            <span className="px-2 py-0.5 rounded-full bg-[#FF3B30] text-white font-bold text-[10px] tracking-wide uppercase">
               New
             </span>
             <span className="font-medium text-zinc-700 sm:text-xs text-[11px]">
@@ -65,7 +65,7 @@ export const HeroSection: React.FC = () => {
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
-            className="text-4xl sm:text-6xl md:text-7xl lg:text-[5rem] font-extrabold tracking-[-0.035em] text-zinc-950 leading-[1.07] font-manrope text-balance"
+            className="text-4xl sm:text-6xl md:text-7xl lg:text-[5rem] font-bold tracking-tight text-zinc-950 leading-[1.07] font-manrope text-balance"
           >
             Ship{" "}
             <span className="font-playfair italic font-medium text-zinc-950 inline-block px-1">
@@ -165,10 +165,10 @@ export const HeroSection: React.FC = () => {
                 onClick={() => navigate(item.route)}
                 className="flex items-center gap-2.5 px-3 py-1.5 rounded-xl hover:bg-zinc-200/70 transition-all cursor-pointer select-none shrink-0 group"
               >
-                <span className="text-xs sm:text-sm font-black font-mono text-blue-600 bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-900 px-2.5 py-0.5 rounded-md shadow-2xs">
+                <span className="text-xs sm:text-sm font-bold font-mono text-blue-600 bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-900 px-2.5 py-0.5 rounded-md shadow-2xs">
                   {item.number}
                 </span>
-                <span className="text-xs sm:text-sm md:text-base font-extrabold font-manrope text-zinc-950 group-hover:text-blue-600 transition-colors">
+                <span className="text-xs sm:text-sm md:text-base font-bold font-manrope text-zinc-950 group-hover:text-blue-600 transition-colors">
                   {item.title}
                 </span>
                 <span className="text-xs sm:text-sm font-medium text-zinc-500">
@@ -186,10 +186,10 @@ export const HeroSection: React.FC = () => {
                 onClick={() => navigate(item.route)}
                 className="flex items-center gap-2.5 px-3 py-1.5 rounded-xl hover:bg-zinc-200/70 transition-all cursor-pointer select-none shrink-0 group"
               >
-                <span className="text-xs sm:text-sm font-black font-mono text-blue-600 bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-900 px-2.5 py-0.5 rounded-md shadow-2xs">
+                <span className="text-xs sm:text-sm font-bold font-mono text-blue-600 bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-900 px-2.5 py-0.5 rounded-md shadow-2xs">
                   {item.number}
                 </span>
-                <span className="text-xs sm:text-sm md:text-base font-extrabold font-manrope text-zinc-950 group-hover:text-blue-600 transition-colors">
+                <span className="text-xs sm:text-sm md:text-base font-bold font-manrope text-zinc-950 group-hover:text-blue-600 transition-colors">
                   {item.title}
                 </span>
                 <span className="text-xs sm:text-sm font-medium text-zinc-500">

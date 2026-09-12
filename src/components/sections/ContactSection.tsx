@@ -161,7 +161,7 @@ Looking forward to hearing from you!`
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-tight font-display"
+            className="text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white leading-tight font-display"
           >
             Ready to turn your idea into a digital product that{" "}
             <span className="text-purple-400">

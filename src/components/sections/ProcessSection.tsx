@@ -27,10 +27,10 @@ export const ProcessSection: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-tight font-manrope"
+            className="text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white leading-tight font-manrope"
           >
             From initial concept to launch in{" "}
-            <span className="text-[#FF4D3D] font-black">
+            <span className="text-[#FF4D3D] font-bold">
               4 disciplined phases.
             </span>
           </motion.h2>
@@ -95,7 +95,7 @@ export const ProcessSection: React.FC = () => {
                           <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-zinc-950 border border-zinc-800 text-white group-hover:text-purple-400 group-hover:border-purple-500/50 group-hover:bg-purple-950/40 group-hover:scale-110 transition-all duration-300 shadow-xs">
                             <Icon className="h-6 w-6" />
                           </div>
-                          <span className="font-mono text-xs font-extrabold text-purple-400 tracking-wider px-2.5 py-1 rounded-full bg-purple-950/60 border border-purple-800/60">
+                          <span className="font-mono text-xs font-bold text-purple-400 tracking-wider px-2.5 py-1 rounded-full bg-purple-950/60 border border-purple-800/60">
                             {step.step}
                           </span>
                         </div>

@@ -264,10 +264,10 @@ Please let me know how we can discuss requirements and schedule a kickoff call!`
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-tight font-display"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white leading-tight font-display"
           >
             Calculate your scope &amp;{" "}
-            <span className="text-purple-400 font-black">
+            <span className="text-purple-400 font-bold">
               estimated investment<span className="text-[#FF4D3D]">.</span>
             </span>
           </motion.h2>
@@ -382,7 +382,7 @@ Please let me know how we can discuss requirements and schedule a kickoff call!`
                         </div>
 
                         <div className="text-left sm:text-right shrink-0 pt-2 sm:pt-0 border-t sm:border-t-0 border-zinc-800">
-                          <div className="text-xl sm:text-2xl font-extrabold tracking-tight text-white font-trench">
+                          <div className="text-xl sm:text-2xl font-bold tracking-tight text-white font-trench">
                             {pkg.priceLabel}
                           </div>
                           <div className="text-[11px] font-medium text-emerald-400">
@@ -575,7 +575,7 @@ Please let me know how we can discuss requirements and schedule a kickoff call!`
                   <span className="text-[11px] font-bold uppercase tracking-wider text-zinc-400">
                     Estimated Investment
                   </span>
-                  <div className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight font-trench">
+                  <div className="text-2xl sm:text-3xl font-bold text-white tracking-tight font-trench">
                     {estimateMode === "packages" ? (
                       <AnimatedNumber value={activePreset.price} prefix="₹" />
                     ) : (

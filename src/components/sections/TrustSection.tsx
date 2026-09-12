@@ -70,7 +70,7 @@ export const TrustSection: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-white leading-tight font-display"
+            className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-white leading-tight font-display"
           >
             Turning ambitious ideas into{" "}
             <span className="font-boska italic font-normal text-purple-400">reliable digital products<span className="text-[#FF4D3D]">.</span></span>
@@ -106,7 +106,7 @@ export const TrustSection: React.FC = () => {
                         <div className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-300 group-hover:text-purple-400 group-hover:border-purple-500/50 group-hover:scale-110 transition-all duration-300 shadow-xs">
                           <Icon className="h-4 w-4 sm:h-5 sm:w-5" />
                         </div>
-                        <span className="text-xs font-mono font-extrabold text-zinc-500 group-hover:text-purple-400 transition-colors">
+                        <span className="text-xs font-mono font-bold text-zinc-500 group-hover:text-purple-400 transition-colors">
                           0{index + 1}
                         </span>
                       </div>

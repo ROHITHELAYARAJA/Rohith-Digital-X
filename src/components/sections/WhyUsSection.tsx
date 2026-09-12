@@ -34,10 +34,10 @@ export const WhyUsSection: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-zinc-950 leading-tight"
+            className="text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight text-zinc-950 leading-tight"
           >
             The advantages of a dedicated,{" "}
-            <span className="text-accent-crimson font-black">
+            <span className="text-accent-crimson font-bold">
               senior engineering partner.
             </span>
           </motion.h2>

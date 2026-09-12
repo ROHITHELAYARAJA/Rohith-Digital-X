@@ -249,7 +249,7 @@ export const WorkPage: React.FC = () => {
       {/* Bottom CTA */}
       <section className="py-14 sm:py-18 bg-[#090A0D] border-t border-zinc-800 text-center">
         <div className="container max-w-4xl mx-auto px-4 sm:px-6 space-y-6">
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-white font-manrope">
+          <h2 className="text-3xl sm:text-5xl font-bold text-white font-manrope">
             Have a project in mind?
           </h2>
           <p className="text-zinc-400 text-sm sm:text-base max-w-xl mx-auto font-dmsans">

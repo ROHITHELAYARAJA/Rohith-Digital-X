@@ -243,7 +243,7 @@ export const ServicesPage: React.FC = () => {
             <span className="text-[11px] font-mono font-bold tracking-widest uppercase text-purple-400">
               DIRECT CALENDAR ACCESS
             </span>
-            <h2 className="text-3xl sm:text-5xl font-extrabold text-white font-manrope">
+            <h2 className="text-3xl sm:text-5xl font-bold text-white font-manrope">
               Let's schedule your 30-minute discovery call.
             </h2>
             <p className="text-zinc-400 text-sm sm:text-base max-w-xl mx-auto font-dmsans">

@@ -167,7 +167,7 @@ export const AutomationPage: React.FC = () => {
       {/* CTA Strip */}
       <section className="py-16 bg-zinc-950/60 border-t border-zinc-800 text-center">
         <div className="container max-w-4xl mx-auto px-4 sm:px-6 space-y-6">
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-white font-display">
+          <h2 className="text-3xl sm:text-5xl font-bold text-white font-display">
             Automate your operational bottleneck today<span className="text-[#FF4D3D]">.</span>
           </h2>
           <p className="text-zinc-400 text-sm sm:text-base max-w-xl mx-auto">
