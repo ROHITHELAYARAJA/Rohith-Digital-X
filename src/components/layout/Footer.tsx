@@ -108,13 +108,18 @@ export const Footer: React.FC = () => {
               >
                 <div className="flex items-baseline font-sans text-2xl font-black tracking-tight text-white leading-none">
                   <span className="font-outfit">RDX</span>
-                  <span className="text-accent-crimson text-xl font-bold ml-0.5">.</span>
+                  <span className="text-[#FFAE00] text-xl font-bold ml-0.5">.</span>
                 </div>
               </button>
 
               <p className="text-sm text-zinc-400 font-normal leading-relaxed max-w-sm">
-                I'm Rohith — a full-stack engineer, product builder & problem solver. Thanks for checking out my site!
+                I'm <strong className="text-white font-bold">Rohith E</strong> — full-stack engineer, product architect &amp; founder of Rohith Digital X. Based in Tamil Nadu, India.
               </p>
+
+              <div className="space-y-1.5 text-xs text-zinc-400 font-mono">
+                <div>Phone: <a href="tel:+919655483130" className="text-white hover:text-[#FFAE00]">+91 96554 83130</a></div>
+                <div>Email: <a href="mailto:e.rohith3130@gmail.com" className="text-white hover:text-[#FFAE00]">e.rohith3130@gmail.com</a></div>
+              </div>
             </div>
 
             {/* Vertical Divider for large screens */}
@@ -125,7 +130,7 @@ export const Footer: React.FC = () => {
               
               {/* Column 1: GENERAL */}
               <div className="space-y-4">
-                <p className="text-[11px] font-mono font-bold uppercase tracking-wider text-zinc-400">
+                <p className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#FFAE00]">
                   GENERAL
                 </p>
                 <ul className="space-y-1.5 text-xs">
@@ -135,53 +140,56 @@ export const Footer: React.FC = () => {
                     isActive={currentPage === "home"}
                   />
                   <CapsuleFooterItem
-                    label="About"
-                    onClick={() => navigate("about")}
-                    isActive={currentPage === "about"}
+                    label="Services"
+                    onClick={() => navigate("services")}
+                    isActive={currentPage === "services"}
                   />
                   <CapsuleFooterItem
-                    label="Projects"
+                    label="Portfolio"
                     onClick={() => navigate("work")}
                     isActive={currentPage === "work"}
                   />
                   <CapsuleFooterItem
-                    label="Packages"
+                    label="Pricing"
                     onClick={() => navigate("packages")}
                     isActive={currentPage === "packages"}
                   />
                 </ul>
               </div>
 
-              {/* Column 2: SPECIFICS */}
+              {/* Column 2: SERVICES */}
               <div className="space-y-4">
-                <p className="text-[11px] font-mono font-bold uppercase tracking-wider text-zinc-400">
-                  SPECIFICS
+                <p className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#FFAE00]">
+                  SPECIALTIES
                 </p>
                 <ul className="space-y-1.5 text-xs">
                   <CapsuleFooterItem
-                    label="Guest Book"
-                    onClick={() => setIsGuestbookOpen(true)}
+                    label="Web Development"
+                    onClick={() => navigate("services-web")}
+                    isActive={currentPage === "services-web"}
                   />
                   <CapsuleFooterItem
-                    label="Bucket List"
-                    onClick={() => setAssetsModalState({ isOpen: true, tab: "bucketlist" })}
+                    label="Mobile Apps"
+                    onClick={() => navigate("services-mobile")}
+                    isActive={currentPage === "services-mobile"}
                   />
                   <CapsuleFooterItem
-                    label="Uses"
-                    onClick={() => navigate("about", "about")}
+                    label="AI & Automation"
+                    onClick={() => navigate("services-automation")}
+                    isActive={currentPage === "services-automation"}
                   />
                   <CapsuleFooterItem
-                    label="Attribution"
-                    onClick={() => navigate("attribution")}
-                    isActive={currentPage === "attribution"}
+                    label="Case Studies"
+                    onClick={() => navigate("case-study-web")}
+                    isActive={currentPage === "case-study-web"}
                   />
                 </ul>
               </div>
 
-              {/* Column 3: MORE */}
+              {/* Column 3: CONNECT */}
               <div className="space-y-4">
-                <p className="text-[11px] font-mono font-bold uppercase tracking-wider text-zinc-400">
-                  MORE
+                <p className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#FFAE00]">
+                  CONNECT
                 </p>
                 <ul className="space-y-1.5 text-xs">
                   <CapsuleFooterItem
@@ -190,22 +198,18 @@ export const Footer: React.FC = () => {
                     isActive={currentPage === "contact"}
                   />
                   <CapsuleFooterItem
-                    label="WhatsApp"
+                    label="WhatsApp Direct"
                     href="https://wa.me/919655483130"
                     isExternal
                   />
                   <CapsuleFooterItem
-                    label="GitHub"
-                    href="https://github.com/Rohith-Digital-X"
-                    isExternal
+                    label="About Rohith"
+                    onClick={() => navigate("about")}
+                    isActive={currentPage === "about"}
                   />
                   <CapsuleFooterItem
-                    label="Privacy"
-                    onClick={() => setLegalModalType("privacy")}
-                  />
-                  <CapsuleFooterItem
-                    label="Terms"
-                    onClick={() => setLegalModalType("terms")}
+                    label="Guestbook"
+                    onClick={() => setIsGuestbookOpen(true)}
                   />
                 </ul>
               </div>

@@ -36,20 +36,20 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-accent-crimson font-mono inline-flex items-center gap-1.5"
+              className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#FFAE00] font-mono inline-flex items-center gap-1.5"
             >
               <Sparkles className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
-              <span>Core Capabilities & Solutions</span>
+              <span>Core Capabilities &amp; Solutions</span>
             </motion.span>
             <motion.h2
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-zinc-950 leading-tight"
+              className="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-zinc-950 leading-tight font-display"
             >
               Engineered digital services built for{" "}
-              <span className="text-accent-crimson font-black">
+              <span className="text-[#FFAE00]">
                 business outcomes.
               </span>
             </motion.h2>

@@ -13,22 +13,22 @@ export const FaqSection: React.FC = () => {
   }
 
   return (
-    <section id="faq" className="py-16 sm:py-24 bg-[#FAFAFA] border-t border-zinc-200/70 relative">
+    <section id="faq" className="py-20 sm:py-28 bg-white border-t border-zinc-200 relative text-zinc-950">
       <div className="container max-w-4xl mx-auto px-4 sm:px-6">
         
         {/* Section Header with Editorial Typography */}
         <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16 space-y-3">
-          <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-accent-crimson font-mono">
-            Common Questions & Answers
+          <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#FFAE00] font-mono">
+            TRANSPARENT ANSWERS
           </span>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-zinc-950 leading-tight">
+          <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-zinc-950 leading-tight font-display">
             Frequently asked{" "}
-            <span className="text-accent-crimson font-black">
-              questions & candid answers.
-            </span>
+            <span className="text-[#FFAE00]">
+              questions
+            </span>.
           </h2>
           <p className="text-xs sm:text-sm md:text-base text-zinc-600 leading-relaxed font-normal">
-            Direct, candid answers about how we build, communicate, and deliver digital systems for clients.
+            Direct, candid answers about pricing, speed, communication, and post-launch guarantees.
           </p>
         </div>
 
@@ -49,23 +49,22 @@ export const FaqSection: React.FC = () => {
         </div>
 
         {/* Bottom Help CTA */}
-        <div className="mt-14 p-6 rounded-2xl bg-white border border-zinc-200 text-center space-y-3 shadow-subtle">
-          <h3 className="text-base font-bold text-zinc-900">
-            Have a specific requirement not covered here?
+        <div className="mt-14 p-8 rounded-3xl bg-zinc-950 text-white border border-zinc-800 text-center space-y-4 shadow-xl">
+          <h3 className="text-lg sm:text-xl font-bold font-display text-white">
+            Have a specific question not covered here?
           </h3>
-          <p className="text-xs text-zinc-600 max-w-md mx-auto">
-            We are always happy to review technical constraints and recommend the ideal architecture.
+          <p className="text-xs sm:text-sm text-zinc-400 max-w-md mx-auto">
+            Founder Rohith E is available on WhatsApp and email to review your technical requirements.
           </p>
-          <div className="pt-1">
-            <Button
-              variant="default"
-              size="sm"
-              onClick={() => scrollToSection("contact")}
-              className="gap-1.5 text-xs font-bold"
+          <div className="pt-2 flex justify-center">
+            <a
+              href="https://wa.me/919655483130?text=Hello%20Rohith,%20I%20have%20a%20question%20regarding%20a%20project."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#FFAE00] text-black font-extrabold text-xs shadow-md hover:bg-[#FFB800] transition-all"
             >
-              <span>Ask Rohith Directly</span>
-              <ArrowRight className="h-3.5 w-3.5" />
-            </Button>
+              <span>Chat with Rohith E on WhatsApp ↗</span>
+            </a>
           </div>
         </div>
 

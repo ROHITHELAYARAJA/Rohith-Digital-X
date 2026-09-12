@@ -132,17 +132,17 @@ const StackedCard: React.FC<{
                 <React.Fragment key={tIdx}>
                   <span className="hover:text-zinc-950 transition-colors">{tag}</span>
                   {tIdx < card.tags.length - 1 && (
-                    <span className="text-accent-crimson font-black">✦</span>
+                    <span className="text-[#FFAE00] font-black">✦</span>
                   )}
                 </React.Fragment>
               ))}
             </div>
 
-            {/* Brand Title with Crimson Period */}
+            {/* Brand Title with Amber Period */}
             <div>
               <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-zinc-950 leading-tight font-display">
                 {card.brandName}
-                <span className="text-accent-crimson">.</span>
+                <span className="text-[#FFAE00]">.</span>
               </h3>
               <p className="text-sm sm:text-base font-bold text-zinc-800 mt-1 font-bonny">
                 {card.title}
@@ -159,7 +159,7 @@ const StackedCard: React.FC<{
               {card.fullProject.technologies.map((tech, techIdx) => (
                 <span
                   key={techIdx}
-                  className="px-2.5 py-1 rounded-full bg-white/90 border border-zinc-200/90 text-[10px] sm:text-[11px] font-pilcrow text-zinc-800 font-semibold shadow-2xs"
+                  className="text-[10px] sm:text-xs font-mono font-medium px-2.5 py-1 rounded-md bg-white border border-zinc-200/80 text-zinc-700"
                 >
                   {tech}
                 </span>
@@ -170,10 +170,10 @@ const StackedCard: React.FC<{
             <div className="pt-2 sm:pt-4">
               <button
                 onClick={() => onOpenModal(card.fullProject)}
-                className="inline-flex items-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-zinc-950 text-white font-bold text-xs sm:text-sm shadow-md hover:bg-accent-crimson transition-all duration-300 group/btn cursor-pointer active:scale-95"
+                className="inline-flex items-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-zinc-950 text-white font-bold text-xs sm:text-sm shadow-md hover:bg-[#FFAE00] hover:text-black transition-all duration-300 group/btn cursor-pointer active:scale-95"
               >
                 <span>PREVIEW THE UI</span>
-                <ArrowUpRight className="h-4 w-4 transition-transform group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 text-accent-crimson group-hover/btn:text-white" />
+                <ArrowUpRight className="h-4 w-4 transition-transform group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 text-[#FFAE00] group-hover/btn:text-black" />
               </button>
             </div>
 
@@ -236,7 +236,7 @@ export const WorkSection: React.FC<WorkSectionProps> = ({ onDiscussSimilar }) =>
             viewport={{ once: true }}
             className="inline-flex items-center gap-1.5 text-xs font-pilcrow font-bold uppercase tracking-widest text-zinc-600"
           >
-            <span className="text-accent-crimson font-black text-sm">✦</span>
+            <span className="text-[#FFAE00] font-black text-sm">✦</span>
             <span>WORKS</span>
           </motion.div>
 
@@ -248,7 +248,7 @@ export const WorkSection: React.FC<WorkSectionProps> = ({ onDiscussSimilar }) =>
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-[-0.04em] text-zinc-950 lowercase max-w-4xl mx-auto leading-tight font-display"
           >
-            crafting <span className="font-boska italic font-normal text-zinc-500">the finest</span> of all<span className="text-accent-crimson">.</span>
+            crafting <span className="font-boska italic font-normal text-zinc-500">the finest</span> of all<span className="text-[#FFAE00]">.</span>
           </motion.h2>
         </div>
 

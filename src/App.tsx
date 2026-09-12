@@ -13,6 +13,10 @@ import { AboutPage } from "@/pages/AboutPage"
 import { WorkPage } from "@/pages/WorkPage"
 import { PackagesPage } from "@/pages/PackagesPage"
 import { ServicesPage } from "@/pages/ServicesPage"
+import { WebDevelopmentPage } from "@/pages/WebDevelopmentPage"
+import { MobileAppPage } from "@/pages/MobileAppPage"
+import { AutomationPage } from "@/pages/AutomationPage"
+import { CaseStudyDetailPage } from "@/pages/CaseStudyDetailPage"
 import { EstimatorPage } from "@/pages/EstimatorPage"
 import { GuestbookPage } from "@/pages/GuestbookPage"
 import { AttributionPage } from "@/pages/AttributionPage"
@@ -27,10 +31,18 @@ function AppContent() {
         return <AboutPage />
       case "work":
         return <WorkPage />
+      case "case-study-web":
+        return <CaseStudyDetailPage />
       case "packages":
         return <PackagesPage />
       case "services":
         return <ServicesPage />
+      case "services-web":
+        return <WebDevelopmentPage />
+      case "services-mobile":
+        return <MobileAppPage />
+      case "services-automation":
+        return <AutomationPage />
       case "estimator":
         return <EstimatorPage />
       case "guestbook":
@@ -46,7 +58,7 @@ function AppContent() {
   }
 
   return (
-    <div className="relative min-h-screen bg-[#FAFAFA] text-zinc-900 flex flex-col font-sans selection:bg-accent-crimson selection:text-white">
+    <div className="relative min-h-screen bg-[#070708] text-white flex flex-col font-sans selection:bg-[#FFAE00] selection:text-black">
       {/* Sticky Navigation Bar */}
       <Navbar />
 

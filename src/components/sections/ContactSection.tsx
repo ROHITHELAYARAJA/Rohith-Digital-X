@@ -128,7 +128,7 @@ Project Scope: ${formData.description}`
       `Estimated Budget: ${formData.budgetRange}\n\n` +
       `Project Details:\n${formData.description}\n\nBest regards,\n${formData.name}`
     )
-    return `mailto:e.rohit3130@gmail.com?subject=${subject}&body=${body}`
+    return `mailto:e.rohith3130@gmail.com?subject=${subject}&body=${body}`
   }
 
   return (
@@ -144,7 +144,7 @@ Project Scope: ${formData.description}`
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-accent-crimson font-mono inline-flex items-center gap-1.5"
+            className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#FFAE00] font-mono inline-flex items-center gap-1.5"
           >
             <Sparkles className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
             <span>Direct Founder Consultation</span>
@@ -154,10 +154,10 @@ Project Scope: ${formData.description}`
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-zinc-950 leading-tight"
+            className="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-zinc-950 leading-tight font-display"
           >
             Ready to turn your idea into a digital product that{" "}
-            <span className="text-accent-crimson font-black">
+            <span className="text-[#FFAE00]">
               actually performs?
             </span>
           </motion.h2>
@@ -187,42 +187,42 @@ Project Scope: ${formData.description}`
             <TiltCard tiltMaxAngleX={4} tiltMaxAngleY={4} scale={1.015}>
               <div className="p-6 sm:p-8 rounded-3xl bg-zinc-950 text-white shadow-card space-y-6 border border-zinc-800">
                 <div>
-                  <span className="text-[10px] sm:text-[11px] font-mono uppercase tracking-widest text-accent-crimson font-bold">
+                  <span className="text-[10px] sm:text-[11px] font-mono uppercase tracking-widest text-[#FFAE00] font-bold">
                     Direct Communication
                   </span>
                   <h3 className="text-lg sm:text-xl font-bold text-white mt-1">
                     Contact Rohith E Directly
                   </h3>
                   <p className="text-xs text-zinc-400 mt-1">
-                    Founder & Principal Developer at Rohith Digital X
+                    Founder &amp; Principal Developer at Rohith Digital X
                   </p>
                 </div>
 
                 <div className="space-y-4 pt-2 text-sm">
                   <div className="flex items-start gap-3.5">
-                    <div className="h-10 w-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-accent-crimson shrink-0 shadow-xs">
+                    <div className="h-10 w-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-[#FFAE00] shrink-0 shadow-xs">
                       <Mail className="h-4 w-4" />
                     </div>
                     <div>
                       <span className="text-xs text-zinc-400 block font-mono">Email Address</span>
                       <a
-                        href="mailto:e.rohit3130@gmail.com"
-                        className="font-medium text-white hover:text-red-300 transition-colors font-mono text-xs sm:text-sm"
+                        href="mailto:e.rohith3130@gmail.com"
+                        className="font-medium text-white hover:text-[#FFAE00] transition-colors font-mono text-xs sm:text-sm"
                       >
-                        e.rohit3130@gmail.com
+                        e.rohith3130@gmail.com
                       </a>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3.5">
-                    <div className="h-10 w-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-accent-crimson shrink-0 shadow-xs">
+                    <div className="h-10 w-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-[#FFAE00] shrink-0 shadow-xs">
                       <Phone className="h-4 w-4" />
                     </div>
                     <div>
                       <span className="text-xs text-zinc-400 block font-mono">Phone / WhatsApp</span>
                       <a
                         href="tel:+919655483130"
-                        className="font-medium text-white hover:text-red-300 transition-colors font-mono text-xs sm:text-sm"
+                        className="font-medium text-white hover:text-[#FFAE00] transition-colors font-mono text-xs sm:text-sm"
                       >
                         +91 96554 83130
                       </a>
@@ -230,13 +230,13 @@ Project Scope: ${formData.description}`
                   </div>
 
                   <div className="flex items-start gap-3.5">
-                    <div className="h-10 w-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-accent-crimson shrink-0 shadow-xs">
+                    <div className="h-10 w-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-[#FFAE00] shrink-0 shadow-xs">
                       <MapPin className="h-4 w-4" />
                     </div>
                     <div>
                       <span className="text-xs text-zinc-400 block font-mono">Agency Location</span>
                       <span className="font-medium text-white text-xs sm:text-sm">
-                        Namakkal, Tamil Nadu, India
+                        Tamil Nadu, India
                       </span>
                     </div>
                   </div>

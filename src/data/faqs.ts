@@ -32,7 +32,7 @@ export const faqsData: FaqItem[] = [
   },
   {
     question: 'How do I start a project?',
-    answer: 'You can start by filling out the project inquiry form on this website, emailing me directly at e.rohit3130@gmail.com, or messaging on WhatsApp at +91 96554 83130. We will schedule a short discovery call to discuss your goals, requirements, timeline, and provide a clear quote.',
+    answer: 'You can start by filling out the project inquiry form on this website, emailing me directly at e.rohith3130@gmail.com, or messaging on WhatsApp at +91 96554 83130. We will schedule a short discovery call to discuss your goals, requirements, timeline, and provide a clear quote.',
     category: 'Process'
   },
   {

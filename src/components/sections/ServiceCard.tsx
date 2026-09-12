@@ -32,27 +32,27 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, onOpen
     >
       <TiltCard tiltMaxAngleX={6} tiltMaxAngleY={6} scale={1.02} className="h-full">
         <CardSpotlight
-          spotlightColor="rgba(220, 38, 38, 0.08)"
-          className="h-full group relative rounded-3xl border border-zinc-200/90 bg-white p-6 sm:p-8 shadow-subtle hover:shadow-card-hover hover:border-accent-crimson transition-all duration-300 flex flex-col justify-between"
+          spotlightColor="rgba(255, 174, 0, 0.08)"
+          className="h-full group relative rounded-3xl border border-zinc-200/90 bg-white p-6 sm:p-8 shadow-subtle hover:shadow-card-hover hover:border-[#FFAE00] transition-all duration-300 flex flex-col justify-between"
         >
           <div>
             {/* Card Header: Icon, Number & Badge */}
             <div className="flex items-center justify-between mb-6">
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-zinc-50 border border-zinc-200 text-zinc-900 group-hover:bg-red-50 group-hover:text-accent-crimson group-hover:border-red-200 group-hover:scale-110 transition-all duration-300 shadow-xs">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-zinc-50 border border-zinc-200 text-zinc-900 group-hover:bg-amber-50 group-hover:text-[#FFAE00] group-hover:border-amber-200 group-hover:scale-110 transition-all duration-300 shadow-xs">
                 <IconComponent className="h-7 w-7" />
               </div>
               <div className="flex items-center gap-2">
-                <span className="text-xs font-mono font-extrabold text-zinc-400 group-hover:text-accent-crimson transition-colors">
+                <span className="text-xs font-mono font-extrabold text-zinc-400 group-hover:text-[#FFAE00] transition-colors">
                   {service.number}
                 </span>
               </div>
             </div>
 
             {/* Title & Tagline */}
-            <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-zinc-950 group-hover:text-accent-crimson transition-colors">
+            <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-zinc-950 group-hover:text-[#FFAE00] transition-colors font-display">
               {service.title}
             </h3>
-            <p className="text-xs font-semibold uppercase tracking-wider text-accent-crimson mt-1 mb-3">
+            <p className="text-xs font-semibold uppercase tracking-wider text-[#FFAE00] mt-1 mb-3 font-mono">
               {service.tagline}
             </p>
 
@@ -69,7 +69,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, onOpen
               <ul className="space-y-2 text-xs text-zinc-700">
                 {service.keyFeatures.slice(0, 3).map((feature, idx) => (
                   <li key={idx} className="flex items-start gap-2 group/item">
-                    <CheckCircle2 className="h-4 w-4 text-accent-crimson shrink-0 mt-0.5 group-hover/item:scale-110 transition-transform" />
+                    <CheckCircle2 className="h-4 w-4 text-[#FFAE00] shrink-0 mt-0.5 group-hover/item:scale-110 transition-transform" />
                     <span className="line-clamp-1 leading-snug">{feature}</span>
                   </li>
                 ))}
@@ -84,7 +84,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, onOpen
                 <Badge
                   key={tech}
                   variant="secondary"
-                  className="text-[10px] py-0.5 px-2 bg-zinc-100 border border-zinc-200 hover:bg-red-50 hover:text-accent-crimson transition-colors cursor-default"
+                  className="text-[10px] py-0.5 px-2 bg-zinc-100 border border-zinc-200 hover:bg-amber-50 hover:text-amber-700 transition-colors cursor-default"
                 >
                   {tech}
                 </Badge>
@@ -98,10 +98,10 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, onOpen
 
             <button
               onClick={() => onOpenDetails(service)}
-              className="inline-flex items-center gap-1.5 text-xs font-bold text-zinc-900 group-hover:text-accent-crimson transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-crimson rounded py-1 cursor-pointer group/btn"
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-zinc-900 group-hover:text-[#FFAE00] transition-colors focus:outline-none rounded py-1 cursor-pointer group/btn"
             >
-              <span>Learn more & specs</span>
-              <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover/btn:translate-x-1.5 text-accent-crimson" />
+              <span>Learn more &amp; specs</span>
+              <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover/btn:translate-x-1.5 text-[#FFAE00]" />
             </button>
           </div>
         </CardSpotlight>

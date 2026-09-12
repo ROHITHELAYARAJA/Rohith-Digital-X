@@ -4,7 +4,11 @@ export type PageRoute =
   | "home"
   | "about"
   | "work"
+  | "case-study-web"
   | "services"
+  | "services-web"
+  | "services-mobile"
+  | "services-automation"
   | "packages"
   | "estimator"
   | "guestbook"
@@ -34,7 +38,11 @@ const pathToRoute = (pathname: string): PageRoute => {
   const clean = pathname.replace(/^\//, "").toLowerCase()
   if (clean === "about") return "about"
   if (clean === "work" || clean === "projects") return "work"
+  if (clean === "work/jsbuilders" || clean === "case-study" || clean === "case-study-web") return "case-study-web"
   if (clean === "services") return "services"
+  if (clean === "services/web" || clean === "services-web" || clean === "web-development") return "services-web"
+  if (clean === "services/mobile" || clean === "services-mobile" || clean === "mobile-apps") return "services-mobile"
+  if (clean === "services/automation" || clean === "services-automation" || clean === "ai-automation") return "services-automation"
   if (clean === "packages" || clean === "pricing") return "packages"
   if (clean === "estimator" || clean === "calculator") return "estimator"
   if (clean === "guestbook") return "guestbook"
@@ -45,6 +53,10 @@ const pathToRoute = (pathname: string): PageRoute => {
 
 const routeToPath = (route: PageRoute): string => {
   if (route === "home") return "/"
+  if (route === "case-study-web") return "/work/jsbuilders"
+  if (route === "services-web") return "/services/web"
+  if (route === "services-mobile") return "/services/mobile"
+  if (route === "services-automation") return "/services/automation"
   return `/${route}`
 }
 

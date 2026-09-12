@@ -78,19 +78,19 @@ Please let me know the kickoff process and timeline to get started!`
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-accent-crimson font-mono inline-block"
+            className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#FFAE00] font-mono inline-block"
           >
-            Transparent Pricing & Production Packages
+            TRANSPARENT PRICING &amp; PACKAGES
           </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-zinc-950 leading-tight"
+            className="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-zinc-950 leading-tight font-display"
           >
             Tailored digital{" "}
-            <span className="text-accent-crimson font-black">
+            <span className="text-[#FFAE00]">
               service packages.
             </span>
           </motion.h2>
@@ -99,7 +99,7 @@ Please let me know the kickoff process and timeline to get started!`
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-xs sm:text-sm md:text-base text-zinc-600 leading-relaxed font-normal"
+            className="text-xs sm:text-sm md:text-base text-zinc-600 leading-relaxed font-normal font-sans"
           >
             Clear, transparent scope and pricing designed for businesses, clinics, retail shops, startups, and institutions.
             Tap any package to inquire instantly on WhatsApp or book online.
@@ -118,17 +118,17 @@ Please let me know the kickoff process and timeline to get started!`
                   key={cat.id}
                   onClick={() => setSelectedCategory(cat.id)}
                   className={`relative flex items-center gap-2.5 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-colors duration-200 cursor-pointer select-none z-10 ${
-                    isSelected ? "text-white" : "text-zinc-600 hover:text-zinc-950"
+                    isSelected ? "text-white font-extrabold" : "text-zinc-600 hover:text-zinc-950"
                   }`}
                 >
                   {isSelected && (
                     <motion.div
                       layoutId="activePackageCategoryTab"
-                      className="absolute inset-0 rounded-xl bg-zinc-950 shadow-sm ring-1 ring-zinc-900"
+                      className="absolute inset-0 rounded-xl bg-zinc-950 shadow-sm ring-1 ring-[#FFAE00]/50"
                       transition={{ type: "spring", stiffness: 380, damping: 30 }}
                     />
                   )}
-                  <Icon className={`relative z-10 h-4 w-4 ${isSelected ? "text-accent-crimson" : ""}`} />
+                  <Icon className={`relative z-10 h-4 w-4 ${isSelected ? "text-[#FFAE00]" : ""}`} />
                   <span className="relative z-10">{cat.label}</span>
                 </button>
               )
@@ -169,22 +169,22 @@ Please let me know the kickoff process and timeline to get started!`
                   <div
                     className={`group relative rounded-3xl p-6 sm:p-7 flex flex-col justify-between transition-all duration-300 cursor-default h-full ${
                       isPopular
-                        ? "bg-zinc-950 text-white shadow-2xl ring-2 ring-accent-crimson z-10 hover:shadow-crimson-md"
-                        : "bg-zinc-50/90 text-zinc-900 border border-zinc-200 hover:border-accent-crimson hover:bg-white hover:shadow-card"
+                        ? "bg-zinc-950 text-white shadow-2xl ring-2 ring-[#FFAE00] z-10 hover:shadow-lg"
+                        : "bg-zinc-50/90 text-zinc-900 border border-zinc-200 hover:border-[#FFAE00] hover:bg-white hover:shadow-card"
                     }`}
                   >
                     {/* Popular Card Animated Laser Border Beam */}
                     {isPopular && (
                       <div className="absolute inset-0 rounded-3xl overflow-hidden pointer-events-none">
-                        <BorderBeam size={180} duration={7} colorFrom="#DC2626" colorTo="#EF4444" borderWidth={2} />
+                        <BorderBeam size={180} duration={7} colorFrom="#FFAE00" colorTo="#FFB800" borderWidth={2} />
                       </div>
                     )}
 
                     {/* Popular Illuminated Header Pill Banner (Cleanly Integrated, Never Clipped) */}
                     {isPopular && (
                       <div className="mb-4 -mt-1 flex items-center justify-center">
-                        <span className="w-full py-1 px-3 rounded-full bg-accent-crimson text-white text-[11px] font-bold shadow-crimson-sm uppercase tracking-wider text-center flex items-center justify-center gap-1.5 animate-pulse-glow">
-                          <Sparkles className="h-3 w-3" />
+                        <span className="w-full py-1 px-3 rounded-full bg-[#FFAE00] text-black text-[11px] font-black uppercase tracking-wider text-center flex items-center justify-center gap-1.5 shadow-sm">
+                          <Sparkles className="h-3 w-3 fill-black" />
                           <span>{pkg.badge || "Most Popular Choice"}</span>
                         </span>
                       </div>
@@ -196,17 +196,17 @@ Please let me know the kickoff process and timeline to get started!`
                         <div
                           className={`flex h-11 w-11 items-center justify-center rounded-2xl border transition-all duration-300 ${
                             isPopular
-                              ? "bg-zinc-900 border-zinc-800 text-accent-crimson group-hover:scale-110"
-                              : "bg-white border-zinc-200 text-zinc-900 group-hover:border-accent-crimson group-hover:text-accent-crimson group-hover:bg-red-50/60 group-hover:scale-110"
+                              ? "bg-zinc-900 border-zinc-800 text-[#FFAE00] group-hover:scale-110"
+                              : "bg-white border-zinc-200 text-zinc-900 group-hover:border-[#FFAE00] group-hover:text-[#FFAE00] group-hover:bg-amber-50/60 group-hover:scale-110"
                           }`}
                         >
                           <Icon className="h-5 w-5" />
                         </div>
                         <span
-                          className={`text-xs font-pilcrow font-bold uppercase tracking-wider px-2.5 py-1 rounded-full transition-colors ${
+                          className={`text-xs font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-full transition-colors ${
                             isPopular
                               ? "bg-zinc-800 text-zinc-300"
-                              : "bg-zinc-200/80 text-zinc-700 group-hover:bg-red-100 group-hover:text-accent-crimson"
+                              : "bg-zinc-200/80 text-zinc-700 group-hover:bg-amber-100 group-hover:text-amber-800"
                           }`}
                         >
                           Tier {pkg.tierNumber}
@@ -216,15 +216,15 @@ Please let me know the kickoff process and timeline to get started!`
                       {/* Title & Tagline with standardized min-height for horizontal lockstep alignment */}
                       <div className="min-h-[66px] flex flex-col justify-start mb-2">
                         <h3
-                          className={`text-xl font-bold tracking-tight leading-snug transition-colors font-bonny ${
-                            isPopular ? "text-white" : "text-zinc-950 group-hover:text-accent-crimson"
+                          className={`text-xl font-bold tracking-tight leading-snug transition-colors font-display ${
+                            isPopular ? "text-white" : "text-zinc-950 group-hover:text-[#FFAE00]"
                           }`}
                         >
                           {pkg.name}
                         </h3>
                         <p
-                          className={`text-xs font-semibold mt-1 font-general ${
-                            isPopular ? "text-red-400" : "text-accent-crimson"
+                          className={`text-xs font-semibold mt-1 font-mono ${
+                            isPopular ? "text-[#FFAE00]" : "text-[#FFAE00]"
                           }`}
                         >
                           {pkg.tagline}
@@ -255,10 +255,10 @@ Please let me know the kickoff process and timeline to get started!`
                           className={`h-[40px] flex items-center gap-2 px-3 rounded-lg text-xs font-semibold transition-all duration-200 ${
                             isPopular
                               ? "bg-zinc-900 text-zinc-200 border border-zinc-800"
-                              : "bg-white text-zinc-800 border border-zinc-200 group-hover:border-red-200"
+                              : "bg-white text-zinc-800 border border-zinc-200 group-hover:border-amber-200"
                           }`}
                         >
-                          <Clock className="h-3.5 w-3.5 text-accent-crimson shrink-0" />
+                          <Clock className="h-3.5 w-3.5 text-[#FFAE00] shrink-0" />
                           <span className="line-clamp-1">Scope: {pkg.pagesOrScreens}</span>
                         </div>
 
@@ -304,11 +304,11 @@ Please let me know the kickoff process and timeline to get started!`
                               className={`flex items-start gap-2 p-1 rounded-md transition-colors duration-150 group/feat ${
                                 isPopular
                                   ? "hover:bg-zinc-900 hover:text-white"
-                                  : "hover:bg-red-50/70 hover:text-accent-crimson"
+                                  : "hover:bg-amber-50/70 hover:text-amber-900"
                               }`}
                             >
                               <Check
-                                className="h-4 w-4 shrink-0 mt-0.5 text-accent-crimson group-hover/feat:scale-125 transition-transform"
+                                className="h-4 w-4 shrink-0 mt-0.5 text-[#FFAE00] group-hover/feat:scale-125 transition-transform"
                               />
                               <span
                                 className={`leading-relaxed text-xs ${
@@ -347,8 +347,8 @@ Please let me know the kickoff process and timeline to get started!`
                             : "bg-zinc-950 text-white hover:bg-zinc-900"
                         }`}
                       >
-                        <span>Customize Online & Book</span>
-                        <ArrowRight className="h-3.5 w-3.5 text-accent-crimson" />
+                        <span>Customize Online &amp; Book</span>
+                        <ArrowRight className="h-3.5 w-3.5 text-[#FFAE00]" />
                       </Button>
 
                       <p
