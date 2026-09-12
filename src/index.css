@@ -278,3 +278,25 @@ html.lenis, html.lenis body {
 .lenis.lenis-smooth iframe {
   pointer-events: none;
 }
+
+/* Continuous Horizontal Hero Ticker */
+@keyframes hero-ticker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-hero-ticker {
+  display: flex;
+  width: max-content;
+  animation: hero-ticker 25s linear infinite;
+  will-change: transform;
+}
+
+.animate-hero-ticker:hover {
+  animation-play-state: paused;
+}
+

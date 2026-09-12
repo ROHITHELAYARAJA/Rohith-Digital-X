@@ -223,8 +223,8 @@ export const WorkSection: React.FC<WorkSectionProps> = ({ onDiscussSimilar }) =>
   }
 
   return (
-    <section id="work" className="py-16 sm:py-24 bg-white border-t border-zinc-200/70 relative">
-      <div className="container max-w-6xl mx-auto px-4 sm:px-6 space-y-12">
+    <section id="work" className="py-14 sm:py-18 bg-white border-t border-zinc-200/70 relative">
+      <div className="container max-w-6xl mx-auto px-4 sm:px-6 space-y-8">
         
         {/* Section Header with Exact Match to User Reference Screenshot */}
         <div className="text-center space-y-4 max-w-4xl mx-auto">

@@ -3,8 +3,7 @@ import Lenis from "lenis"
 
 export function useLenis() {
   useEffect(() => {
-    // Only activate smooth scroll on larger screens to preserve native fluid momentum on touch devices
-    if (typeof window === "undefined" || window.innerWidth < 768) return
+    if (typeof window === "undefined") return
 
     const lenis = new Lenis({
       duration: 1.2,
@@ -12,7 +11,8 @@ export function useLenis() {
       orientation: "vertical",
       gestureOrientation: "vertical",
       smoothWheel: true,
-      wheelMultiplier: 0.9,
+      wheelMultiplier: 1.0,
+      touchMultiplier: 1.5,
     })
 
     function raf(time: number) {
@@ -22,9 +22,13 @@ export function useLenis() {
 
     const rafId = requestAnimationFrame(raf)
 
+    // Expose lenis globally for any programatic smooth scroll actions
+    ;(window as any).lenis = lenis
+
     return () => {
       cancelAnimationFrame(rafId)
       lenis.destroy()
+      delete (window as any).lenis
     }
   }, [])
 }

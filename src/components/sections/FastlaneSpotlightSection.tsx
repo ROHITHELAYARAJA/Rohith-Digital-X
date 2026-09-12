@@ -75,11 +75,11 @@ export const FastlaneSpotlightSection: React.FC = () => {
   const currentStory = SPOTLIGHT_STORIES[activeStoryIdx]
 
   return (
-    <section className="py-24 sm:py-32 bg-white text-zinc-950 relative overflow-hidden border-b border-zinc-200">
+    <section className="py-14 sm:py-18 bg-white text-zinc-950 relative overflow-hidden border-b border-zinc-200">
       {/* Background Soft Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] sm:w-[950px] h-[400px] bg-gradient-to-r from-[#FF4D3D]/6 via-[#FFAE00]/6 to-transparent rounded-full blur-[100px] pointer-events-none" />
 
-      <div className="container max-w-6xl mx-auto px-4 sm:px-6 relative z-10 space-y-12">
+      <div className="container max-w-6xl mx-auto px-4 sm:px-6 relative z-10 space-y-8">
         
         {/* Story Selector Pills */}
         <motion.div

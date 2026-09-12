@@ -14,16 +14,16 @@ export const FaqSection: React.FC = () => {
   }
 
   return (
-    <section id="faq" className="py-20 sm:py-28 bg-white border-t border-zinc-200 relative text-zinc-950">
+    <section id="faq" className="py-14 sm:py-18 bg-white border-t border-zinc-200 relative text-zinc-950">
       <div className="container max-w-4xl mx-auto px-4 sm:px-6">
         
         {/* Header with Scroll Animation */}
         <motion.div
-          initial={{ opacity: 0, y: 24 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-          className="text-center max-w-2xl mx-auto mb-12 sm:mb-16 space-y-4"
+          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+          className="text-center max-w-2xl mx-auto mb-8 sm:mb-10 space-y-3"
         >
           <div className="inline-flex items-center px-3.5 py-1 rounded-full bg-zinc-100 border border-zinc-250 text-xs font-semibold text-zinc-700 shadow-xs">
             <span className="font-manrope font-bold text-[11px] uppercase tracking-wider text-zinc-600">

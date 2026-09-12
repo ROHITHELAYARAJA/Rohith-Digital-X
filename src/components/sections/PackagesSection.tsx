@@ -69,11 +69,11 @@ Please let me know the kickoff process and timeline to get started!`
   }
 
   return (
-    <section id="packages" className="py-16 sm:py-24 bg-white border-t border-zinc-200/70 relative overflow-hidden">
+    <section id="packages" className="py-14 sm:py-18 bg-white border-t border-zinc-200/70 relative overflow-hidden">
       <div className="container max-w-7xl mx-auto px-4 sm:px-6">
         
         {/* Section Header with Clean Typography */}
-        <div className="max-w-3xl mx-auto text-center mb-10 sm:mb-12 space-y-4">
+        <div className="max-w-3xl mx-auto text-center mb-8 space-y-3">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}

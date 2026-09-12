@@ -155,20 +155,20 @@ export const HeroSection: React.FC = () => {
       </div>
 
       {/* 4th image: Continuous Horizontal Scrolling Marquee Ticker with Larger Font Size */}
-      <div className="mt-8 sm:mt-10 py-3.5 border-t border-zinc-200/80 bg-zinc-50/80 backdrop-blur-md overflow-hidden relative group">
-        <div className="flex items-center">
-          {/* Animated Marquee Strip: Loops Infinitely */}
-          <div className="flex shrink-0 items-center gap-8 sm:gap-12 animate-marquee group-hover:[animation-play-state:paused]">
-            {[...SERVICE_TICKER_ITEMS, ...SERVICE_TICKER_ITEMS, ...SERVICE_TICKER_ITEMS].map((item, idx) => (
+      <div className="mt-8 sm:mt-10 py-3.5 border-t border-zinc-200/80 bg-zinc-50/80 backdrop-blur-md overflow-hidden relative">
+        <div className="animate-hero-ticker">
+          {/* Half 1 */}
+          <div className="flex items-center gap-8 sm:gap-14 pr-8 sm:pr-14 shrink-0">
+            {SERVICE_TICKER_ITEMS.map((item, idx) => (
               <button
-                key={`ticker-${idx}`}
+                key={`ticker-1-${idx}`}
                 onClick={() => navigate(item.route)}
-                className="flex items-center gap-2.5 px-3 py-1.5 rounded-xl hover:bg-zinc-200/60 transition-all cursor-pointer select-none shrink-0"
+                className="flex items-center gap-2.5 px-3 py-1.5 rounded-xl hover:bg-zinc-200/70 transition-all cursor-pointer select-none shrink-0 group"
               >
-                <span className="text-xs sm:text-sm font-black font-mono text-blue-600 bg-blue-50 border border-blue-200/70 px-2 py-0.5 rounded-md shadow-2xs">
+                <span className="text-xs sm:text-sm font-black font-mono text-blue-600 bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-900 px-2.5 py-0.5 rounded-md shadow-2xs">
                   {item.number}
                 </span>
-                <span className="text-xs sm:text-sm md:text-base font-extrabold font-manrope text-zinc-900 group-hover:text-blue-600 transition-colors">
+                <span className="text-xs sm:text-sm md:text-base font-extrabold font-manrope text-zinc-950 group-hover:text-blue-600 transition-colors">
                   {item.title}
                 </span>
                 <span className="text-xs sm:text-sm font-medium text-zinc-500">
@@ -178,21 +178,18 @@ export const HeroSection: React.FC = () => {
             ))}
           </div>
 
-          {/* Duplicate set for seamless continuous scrolling */}
-          <div
-            className="flex shrink-0 items-center gap-8 sm:gap-12 animate-marquee group-hover:[animation-play-state:paused]"
-            aria-hidden="true"
-          >
-            {[...SERVICE_TICKER_ITEMS, ...SERVICE_TICKER_ITEMS, ...SERVICE_TICKER_ITEMS].map((item, idx) => (
+          {/* Half 2 (Exact duplicate for seamless -50% loop) */}
+          <div className="flex items-center gap-8 sm:gap-14 pr-8 sm:pr-14 shrink-0" aria-hidden="true">
+            {SERVICE_TICKER_ITEMS.map((item, idx) => (
               <button
-                key={`ticker-dup-${idx}`}
+                key={`ticker-2-${idx}`}
                 onClick={() => navigate(item.route)}
-                className="flex items-center gap-2.5 px-3 py-1.5 rounded-xl hover:bg-zinc-200/60 transition-all cursor-pointer select-none shrink-0"
+                className="flex items-center gap-2.5 px-3 py-1.5 rounded-xl hover:bg-zinc-200/70 transition-all cursor-pointer select-none shrink-0 group"
               >
-                <span className="text-xs sm:text-sm font-black font-mono text-blue-600 bg-blue-50 border border-blue-200/70 px-2 py-0.5 rounded-md shadow-2xs">
+                <span className="text-xs sm:text-sm font-black font-mono text-blue-600 bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-900 px-2.5 py-0.5 rounded-md shadow-2xs">
                   {item.number}
                 </span>
-                <span className="text-xs sm:text-sm md:text-base font-extrabold font-manrope text-zinc-900 group-hover:text-blue-600 transition-colors">
+                <span className="text-xs sm:text-sm md:text-base font-extrabold font-manrope text-zinc-950 group-hover:text-blue-600 transition-colors">
                   {item.title}
                 </span>
                 <span className="text-xs sm:text-sm font-medium text-zinc-500">

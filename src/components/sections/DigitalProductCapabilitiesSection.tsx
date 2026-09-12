@@ -30,11 +30,11 @@ export const DigitalProductCapabilitiesSection: React.FC = () => {
   }
 
   return (
-    <section className="py-28 sm:py-36 bg-[#FAF7F2] text-zinc-950 border-t border-b border-[#E8DFC8]/60 relative overflow-hidden font-sans">
+    <section className="py-14 sm:py-18 bg-[#FAF7F2] text-zinc-950 border-t border-b border-[#E8DFC8]/60 relative overflow-hidden font-sans">
       {/* Subtle background grid inspired by editorial Swiss design */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000008_1px,transparent_1px),linear-gradient(to_bottom,#00000008_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none" />
 
-      <div className="container max-w-7xl mx-auto px-4 sm:px-6 relative z-10 space-y-16">
+      <div className="container max-w-7xl mx-auto px-4 sm:px-6 relative z-10 space-y-10">
         
         {/* Section Header with Scroll Animation */}
         <motion.div

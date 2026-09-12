@@ -7,8 +7,8 @@ export const ThreeReasonsSection: React.FC = () => {
   const { navigate } = useNavigation()
 
   return (
-    <section className="py-24 sm:py-32 bg-white text-zinc-950 relative overflow-hidden border-b border-zinc-200">
-      <div className="container max-w-6xl mx-auto px-4 sm:px-6 space-y-16">
+    <section className="py-14 sm:py-18 bg-white text-zinc-950 relative overflow-hidden border-b border-zinc-200">
+      <div className="container max-w-6xl mx-auto px-4 sm:px-6 space-y-10">
         
         {/* Section Header with Scroll Animation */}
         <motion.div

@@ -26,11 +26,11 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
   }
 
   return (
-    <section id="services" className="py-16 sm:py-24 bg-[#FAFAFA] relative overflow-hidden">
+    <section id="services" className="py-14 sm:py-18 bg-[#FAFAFA] relative overflow-hidden">
       <div className="container max-w-6xl mx-auto px-4 sm:px-6">
         
         {/* Section Header with Editorial Typography */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-10 gap-6">
           <div className="max-w-2xl space-y-3">
             <motion.div
               initial={{ opacity: 0, y: 10 }}

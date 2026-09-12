@@ -20,11 +20,11 @@ export const HeyDigitalTestimonialsSection: React.FC = () => {
   const activeReview = testimonialsData[currentIndex]
 
   return (
-    <section className="py-24 sm:py-32 bg-[#070708] text-white relative overflow-hidden border-b border-zinc-800/80">
+    <section className="py-14 sm:py-18 bg-[#070708] text-white relative overflow-hidden border-b border-zinc-800/80">
       {/* Ambient Grid Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
 
-      <div className="container max-w-6xl mx-auto px-4 sm:px-6 relative z-10 space-y-16">
+      <div className="container max-w-6xl mx-auto px-4 sm:px-6 relative z-10 space-y-10">
         
         {/* Section Header with Left Vertical Indicator */}
         <div className="flex items-start gap-6 sm:gap-10">
