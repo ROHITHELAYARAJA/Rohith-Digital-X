@@ -77,7 +77,7 @@ export const FastlaneSpotlightSection: React.FC = () => {
   return (
     <section className="py-14 sm:py-18 bg-white text-zinc-950 relative overflow-hidden border-b border-zinc-200">
       {/* Background Soft Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] sm:w-[950px] h-[400px] bg-gradient-to-r from-[#FF4D3D]/6 via-[#FFAE00]/6 to-transparent rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] sm:w-[950px] h-[400px] bg-gradient-to-r from-[#FF4D3D]/6 via-purple-500/6 to-transparent rounded-full blur-[100px] pointer-events-none" />
 
       <div className="container max-w-6xl mx-auto px-4 sm:px-6 relative z-10 space-y-8">
         
@@ -200,7 +200,7 @@ export const FastlaneSpotlightSection: React.FC = () => {
                   </div>
 
                   <div className="p-4 rounded-2xl bg-white border border-zinc-200/90 shadow-xs text-center">
-                    <div className="text-xl sm:text-2xl font-black text-[#FFAE00] font-manrope">
+                    <div className="text-xl sm:text-2xl font-black text-purple-600 font-manrope">
                       {currentStory.stat3.value}
                     </div>
                     <div className="text-[10px] sm:text-xs text-zinc-500 font-dmsans font-medium mt-1 leading-tight">
@@ -211,7 +211,7 @@ export const FastlaneSpotlightSection: React.FC = () => {
 
                 {/* Client Quote Card */}
                 <div className="p-6 rounded-2xl bg-white border border-zinc-200/90 shadow-sm space-y-4">
-                  <div className="flex items-center gap-1 text-[#FFAE00]">
+                  <div className="flex items-center gap-1 text-purple-500">
                     {[...Array(5)].map((_, i) => (
                       <Star key={i} className="h-4 w-4 fill-current" />
                     ))}
@@ -239,10 +239,10 @@ export const FastlaneSpotlightSection: React.FC = () => {
                 {/* Micro Guarantee Tag */}
                 <div className="p-4 rounded-xl bg-gradient-to-r from-zinc-900 to-zinc-950 text-white flex items-center justify-between text-xs font-dmsans">
                   <div className="flex items-center gap-2">
-                    <Zap className="h-4 w-4 text-[#FFAE00]" />
+                    <Zap className="h-4 w-4 text-purple-400" />
                     <span>Next Sprint Kickoff</span>
                   </div>
-                  <span className="font-bold font-mono text-[#FFAE00]">Available This Week</span>
+                  <span className="font-bold font-mono text-purple-400">Available This Week</span>
                 </div>
 
               </div>

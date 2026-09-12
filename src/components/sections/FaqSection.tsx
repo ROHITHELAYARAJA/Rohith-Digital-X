@@ -14,7 +14,7 @@ export const FaqSection: React.FC = () => {
   }
 
   return (
-    <section id="faq" className="py-14 sm:py-18 bg-white border-t border-zinc-200 relative text-zinc-950">
+    <section id="faq" className="py-14 sm:py-18 bg-[#070708] border-t border-zinc-800 relative text-white">
       <div className="container max-w-4xl mx-auto px-4 sm:px-6">
         
         {/* Header with Scroll Animation */}
@@ -25,19 +25,19 @@ export const FaqSection: React.FC = () => {
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
           className="text-center max-w-2xl mx-auto mb-8 sm:mb-10 space-y-3"
         >
-          <div className="inline-flex items-center px-3.5 py-1 rounded-full bg-zinc-100 border border-zinc-250 text-xs font-semibold text-zinc-700 shadow-xs">
-            <span className="font-manrope font-bold text-[11px] uppercase tracking-wider text-zinc-600">
+          <div className="inline-flex items-center px-3.5 py-1 rounded-full bg-zinc-900 border border-zinc-800 text-xs font-semibold text-zinc-300 shadow-xs">
+            <span className="font-manrope font-bold text-[11px] uppercase tracking-wider text-zinc-400">
               TRANSPARENT ANSWERS
             </span>
           </div>
-          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-zinc-950 leading-[1.08] font-manrope">
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.08] font-manrope">
             Everything you need to{" "}
             <span className="font-playfair italic font-medium text-[#FF3B30]">
               know
             </span>
             .
           </h2>
-          <p className="text-sm sm:text-base text-zinc-600 leading-relaxed font-normal font-dmsans">
+          <p className="text-sm sm:text-base text-zinc-400 leading-relaxed font-normal font-dmsans">
             Direct, candid answers about sprint timelines, founder communication, code ownership, and post-launch guarantees.
           </p>
         </motion.div>
@@ -71,7 +71,7 @@ export const FaqSection: React.FC = () => {
               href="https://wa.me/919655483130?text=Hello%20Rohith,%20I%20have%20a%20question%20regarding%20a%20project."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#FFAE00] text-black font-extrabold text-xs shadow-md hover:bg-[#FFB800] transition-all"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-purple-600 text-white font-extrabold text-xs shadow-[0_0_24px_rgba(139,92,246,0.35)] hover:bg-purple-500 transition-all cursor-pointer"
             >
               <span>Chat with Rohith E on WhatsApp ↗</span>
             </a>

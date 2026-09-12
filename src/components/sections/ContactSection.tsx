@@ -98,7 +98,7 @@ Phone: ${formData.phone}
 Business Type: ${formData.businessType}
 Service: ${formData.service}
 Budget: ${formData.budgetRange}
-Project Scope: ${formData.description}`
+Details: ${formData.description}`
 
     navigator.clipboard.writeText(summaryText)
     setCopiedSummary(true)
@@ -106,15 +106,22 @@ Project Scope: ${formData.description}`
   }
 
   const generateWhatsAppUrl = () => {
-    const text = encodeURIComponent(
-      `Hello Rohith, I would like to discuss a project:\n` +
-      `• Name: ${formData.name || 'Client'}\n` +
-      `• Service: ${formData.service}\n` +
-      `• Business Type: ${formData.businessType}\n` +
-      `• Budget: ${formData.budgetRange}\n` +
-      `• Notes: ${formData.description || 'Discussing project scope'}`
-    )
-    return `https://wa.me/919655483130?text=${text}`
+    const message = `Hi Rohith! 👋
+
+I would like to start a project consultation:
+
+👤 *Name:* ${formData.name || "Client"}
+🏢 *Business:* ${formData.businessType}
+🎯 *Service:* ${formData.service}
+💰 *Budget:* ${formData.budgetRange}
+📞 *Contact:* ${formData.phone || "Not provided"}
+
+*Requirements:*
+${formData.description || "Looking to discuss development scope, timeline, and deliverables."}
+
+Looking forward to hearing from you!`
+
+    return `https://wa.me/919655483130?text=${encodeURIComponent(message)}`
   }
 
   const generateMailtoUrl = () => {
@@ -132,7 +139,7 @@ Project Scope: ${formData.description}`
   }
 
   return (
-    <section id="contact" className="py-16 sm:py-24 bg-white border-t border-zinc-200/70 relative overflow-hidden">
+    <section id="contact" className="py-12 sm:py-16 bg-transparent text-white relative overflow-hidden">
       {/* Confetti Explosion on Submission */}
       <Confetti trigger={showConfetti} onComplete={() => setShowConfetti(false)} />
 
@@ -144,7 +151,7 @@ Project Scope: ${formData.description}`
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#FFAE00] font-mono inline-flex items-center gap-1.5"
+            className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-purple-400 font-mono inline-flex items-center gap-1.5"
           >
             <Sparkles className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
             <span>Direct Founder Consultation</span>
@@ -154,11 +161,11 @@ Project Scope: ${formData.description}`
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-zinc-950 leading-tight font-display"
+            className="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-tight font-display"
           >
             Ready to turn your idea into a digital product that{" "}
-            <span className="text-[#FFAE00]">
-              actually performs?
+            <span className="text-purple-400">
+              actually performs<span className="text-[#FF4D3D]">?</span>
             </span>
           </motion.h2>
           <motion.p
@@ -166,7 +173,7 @@ Project Scope: ${formData.description}`
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-xs sm:text-sm md:text-base text-zinc-600 leading-relaxed font-normal"
+            className="text-xs sm:text-sm md:text-base text-zinc-400 leading-relaxed font-normal"
           >
             Book a free strategy call or send a project inquiry. We will analyze your requirements, recommend the optimal tech stack, and deliver a clear plan for your next build.
           </motion.p>
@@ -185,12 +192,12 @@ Project Scope: ${formData.description}`
           >
             {/* Contact Channels Card with 3D Tilt */}
             <TiltCard tiltMaxAngleX={4} tiltMaxAngleY={4} scale={1.015}>
-              <div className="p-6 sm:p-8 rounded-3xl bg-zinc-950 text-white shadow-card space-y-6 border border-zinc-800">
+              <div className="p-6 sm:p-8 rounded-3xl bg-zinc-950/90 text-white shadow-2xl space-y-6 border border-zinc-800">
                 <div>
-                  <span className="text-[10px] sm:text-[11px] font-mono uppercase tracking-widest text-[#FFAE00] font-bold">
+                  <span className="text-[10px] sm:text-[11px] font-mono uppercase tracking-widest text-purple-400 font-bold">
                     Direct Communication
                   </span>
-                  <h3 className="text-lg sm:text-xl font-bold text-white mt-1">
+                  <h3 className="text-lg sm:text-xl font-bold text-white mt-1 font-display">
                     Contact Rohith E Directly
                   </h3>
                   <p className="text-xs text-zinc-400 mt-1">
@@ -200,14 +207,14 @@ Project Scope: ${formData.description}`
 
                 <div className="space-y-4 pt-2 text-sm">
                   <div className="flex items-start gap-3.5">
-                    <div className="h-10 w-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-[#FFAE00] shrink-0 shadow-xs">
+                    <div className="h-10 w-10 rounded-xl bg-purple-950/60 border border-purple-800/80 flex items-center justify-center text-purple-400 shrink-0 shadow-xs">
                       <Mail className="h-4 w-4" />
                     </div>
                     <div>
-                      <span className="text-xs text-zinc-400 block font-mono">Email Address</span>
+                      <span className="text-xs text-zinc-500 block font-mono">Email Address</span>
                       <a
                         href="mailto:e.rohith3130@gmail.com"
-                        className="font-medium text-white hover:text-[#FFAE00] transition-colors font-mono text-xs sm:text-sm"
+                        className="font-medium text-white hover:text-purple-400 transition-colors font-mono text-xs sm:text-sm"
                       >
                         e.rohith3130@gmail.com
                       </a>
@@ -215,14 +222,14 @@ Project Scope: ${formData.description}`
                   </div>
 
                   <div className="flex items-start gap-3.5">
-                    <div className="h-10 w-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-[#FFAE00] shrink-0 shadow-xs">
+                    <div className="h-10 w-10 rounded-xl bg-purple-950/60 border border-purple-800/80 flex items-center justify-center text-purple-400 shrink-0 shadow-xs">
                       <Phone className="h-4 w-4" />
                     </div>
                     <div>
-                      <span className="text-xs text-zinc-400 block font-mono">Phone / WhatsApp</span>
+                      <span className="text-xs text-zinc-500 block font-mono">Phone / WhatsApp</span>
                       <a
                         href="tel:+919655483130"
-                        className="font-medium text-white hover:text-[#FFAE00] transition-colors font-mono text-xs sm:text-sm"
+                        className="font-medium text-white hover:text-purple-400 transition-colors font-mono text-xs sm:text-sm"
                       >
                         +91 96554 83130
                       </a>
@@ -230,11 +237,11 @@ Project Scope: ${formData.description}`
                   </div>
 
                   <div className="flex items-start gap-3.5">
-                    <div className="h-10 w-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-[#FFAE00] shrink-0 shadow-xs">
+                    <div className="h-10 w-10 rounded-xl bg-purple-950/60 border border-purple-800/80 flex items-center justify-center text-purple-400 shrink-0 shadow-xs">
                       <MapPin className="h-4 w-4" />
                     </div>
                     <div>
-                      <span className="text-xs text-zinc-400 block font-mono">Agency Location</span>
+                      <span className="text-xs text-zinc-500 block font-mono">Agency Location</span>
                       <span className="font-medium text-white text-xs sm:text-sm">
                         Tamil Nadu, India
                       </span>
@@ -258,10 +265,10 @@ Project Scope: ${formData.description}`
             </TiltCard>
 
             {/* Privacy & Response Guarantee */}
-            <div className="p-4 sm:p-5 rounded-2xl bg-zinc-50 border border-zinc-200 text-xs text-zinc-600 space-y-2 shadow-xs">
-              <div className="flex items-center gap-2 font-bold text-zinc-900">
-                <CheckCircle2 className="h-4 w-4 text-accent-crimson" />
-                <span>Zero Spam & Confidentiality Promise</span>
+            <div className="p-4 sm:p-5 rounded-2xl bg-zinc-950/80 border border-zinc-800 text-xs text-zinc-400 space-y-2 shadow-xs">
+              <div className="flex items-center gap-2 font-bold text-white">
+                <CheckCircle2 className="h-4 w-4 text-purple-400" />
+                <span>Zero Spam &amp; Confidentiality Promise</span>
               </div>
               <p className="leading-relaxed">
                 Your project ideas and contact details are kept strictly confidential. No marketing spam, no third-party sales calls.
@@ -278,7 +285,7 @@ Project Scope: ${formData.description}`
             transition={{ duration: 0.5, delay: 0.15 }}
             className="lg:col-span-7"
           >
-            <div className="p-5 sm:p-8 rounded-3xl bg-zinc-50/80 border border-zinc-200/90 shadow-card">
+            <div className="p-5 sm:p-8 rounded-3xl bg-zinc-950/90 border border-zinc-800 shadow-2xl text-white">
               
               {status === "success" ? (
                 <motion.div
@@ -290,20 +297,20 @@ Project Scope: ${formData.description}`
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
                     transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                    className="h-14 w-14 sm:h-16 sm:w-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto shadow-sm"
+                    className="h-14 w-14 sm:h-16 sm:w-16 rounded-full bg-emerald-950/60 border border-emerald-700/60 text-emerald-400 flex items-center justify-center mx-auto shadow-sm"
                   >
                     <CheckCircle2 className="h-7 w-7 sm:h-8 sm:w-8" />
                   </motion.div>
                   
                   <div className="space-y-2 max-w-md mx-auto">
-                    <h3 className="text-xl sm:text-2xl font-bold text-zinc-900">Inquiry Prepared Successfully!</h3>
-                    <p className="text-xs sm:text-sm text-zinc-600 leading-relaxed">
-                      Thank you, <strong>{formData.name}</strong>. Rohith will review your project details and respond to <strong>{formData.email}</strong> within 24 hours.
+                    <h3 className="text-xl sm:text-2xl font-bold text-white font-display">Inquiry Prepared Successfully!</h3>
+                    <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed">
+                      Thank you, <strong className="text-white">{formData.name}</strong>. Rohith will review your project details and respond to <strong className="text-white">{formData.email}</strong> within 24 hours.
                     </p>
                   </div>
 
-                  <div className="p-4 rounded-xl bg-white border border-zinc-200 text-left text-xs text-zinc-700 space-y-2 max-w-md mx-auto shadow-xs">
-                    <span className="font-bold text-zinc-900 block">Next Instant Steps:</span>
+                  <div className="p-4 rounded-xl bg-zinc-900 border border-zinc-800 text-left text-xs text-zinc-300 space-y-2 max-w-md mx-auto shadow-xs">
+                    <span className="font-bold text-white block">Next Instant Steps:</span>
                     <div className="flex flex-col sm:flex-row gap-2 pt-1">
                       <a
                         href={generateWhatsAppUrl()}
@@ -316,7 +323,7 @@ Project Scope: ${formData.description}`
                       </a>
                       <a
                         href={generateMailtoUrl()}
-                        className="flex-1 inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-white font-bold text-xs transition-all hover:scale-105"
+                        className="flex-1 inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs transition-all hover:scale-105"
                       >
                         <span>Open Mail App</span>
                         <ArrowUpRight className="h-3.5 w-3.5" />
@@ -339,7 +346,7 @@ Project Scope: ${formData.description}`
                         description: "",
                       })
                     }}
-                    className="text-xs"
+                    className="text-xs bg-zinc-900 text-zinc-300 border-zinc-700 hover:bg-zinc-800 hover:text-white"
                   >
                     Submit Another Inquiry
                   </Button>
@@ -349,7 +356,7 @@ Project Scope: ${formData.description}`
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                     {/* Name */}
                     <div className="space-y-1.5">
-                      <label className="text-xs font-bold uppercase tracking-wider text-zinc-700">
+                      <label className="text-xs font-bold uppercase tracking-wider text-zinc-300">
                         Your Name *
                       </label>
                       <Input
@@ -357,13 +364,13 @@ Project Scope: ${formData.description}`
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         error={errors.name}
-                        className="transition-all focus:border-accent-crimson text-xs sm:text-sm"
+                        className="bg-zinc-900/90 border-zinc-800 text-white placeholder:text-zinc-500 focus:border-purple-500 focus:ring-purple-500 text-xs sm:text-sm"
                       />
                     </div>
 
                     {/* Email */}
                     <div className="space-y-1.5">
-                      <label className="text-xs font-bold uppercase tracking-wider text-zinc-700">
+                      <label className="text-xs font-bold uppercase tracking-wider text-zinc-300">
                         Email Address *
                       </label>
                       <Input
@@ -372,7 +379,7 @@ Project Scope: ${formData.description}`
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         error={errors.email}
-                        className="transition-all focus:border-accent-crimson text-xs sm:text-sm"
+                        className="bg-zinc-900/90 border-zinc-800 text-white placeholder:text-zinc-500 focus:border-purple-500 focus:ring-purple-500 text-xs sm:text-sm"
                       />
                     </div>
                   </div>
@@ -380,7 +387,7 @@ Project Scope: ${formData.description}`
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                     {/* Phone */}
                     <div className="space-y-1.5">
-                      <label className="text-xs font-bold uppercase tracking-wider text-zinc-700">
+                      <label className="text-xs font-bold uppercase tracking-wider text-zinc-300">
                         Phone / WhatsApp *
                       </label>
                       <Input
@@ -388,26 +395,26 @@ Project Scope: ${formData.description}`
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         error={errors.phone}
-                        className="transition-all focus:border-accent-crimson text-xs sm:text-sm"
+                        className="bg-zinc-900/90 border-zinc-800 text-white placeholder:text-zinc-500 focus:border-purple-500 focus:ring-purple-500 text-xs sm:text-sm"
                       />
                     </div>
 
                     {/* Business Type */}
                     <div className="space-y-1.5">
-                      <label className="text-xs font-bold uppercase tracking-wider text-zinc-700">
+                      <label className="text-xs font-bold uppercase tracking-wider text-zinc-300">
                         Organization / Client Type
                       </label>
                       <Select
                         value={formData.businessType}
                         onChange={(e) => setFormData({ ...formData, businessType: e.target.value })}
-                        className="transition-all focus:border-accent-crimson text-xs sm:text-sm"
+                        className="bg-zinc-900/90 border-zinc-800 text-white focus:border-purple-500 focus:ring-purple-500 text-xs sm:text-sm"
                       >
-                        <option value="Clinic / Hospital / Healthcare">Clinic / Hospital / Healthcare</option>
-                        <option value="Retail Shop / Supermarket">Retail Shop / Supermarket</option>
-                        <option value="Startup / Tech Venture">Startup / Tech Venture</option>
-                        <option value="Local Business / Service Provider">Local Business / Service Provider</option>
-                        <option value="Educational / Institution">Educational / Institution</option>
-                        <option value="Individual / Professional">Individual / Professional</option>
+                        <option value="Clinic / Hospital / Healthcare" className="bg-zinc-950 text-white">Clinic / Hospital / Healthcare</option>
+                        <option value="Retail Shop / Supermarket" className="bg-zinc-950 text-white">Retail Shop / Supermarket</option>
+                        <option value="Startup / Tech Venture" className="bg-zinc-950 text-white">Startup / Tech Venture</option>
+                        <option value="Local Business / Service Provider" className="bg-zinc-950 text-white">Local Business / Service Provider</option>
+                        <option value="Educational / Institution" className="bg-zinc-950 text-white">Educational / Institution</option>
+                        <option value="Individual / Professional" className="bg-zinc-950 text-white">Individual / Professional</option>
                       </Select>
                     </div>
                   </div>
@@ -415,45 +422,45 @@ Project Scope: ${formData.description}`
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                     {/* Service Required */}
                     <div className="space-y-1.5">
-                      <label className="text-xs font-bold uppercase tracking-wider text-zinc-700">
+                      <label className="text-xs font-bold uppercase tracking-wider text-zinc-300">
                         Primary Service Needed
                       </label>
                       <Select
                         value={formData.service}
                         onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                        className="transition-all focus:border-accent-crimson text-xs sm:text-sm"
+                        className="bg-zinc-900/90 border-zinc-800 text-white focus:border-purple-500 focus:ring-purple-500 text-xs sm:text-sm"
                       >
-                        <option value="Business Website Development">Business Website Development</option>
-                        <option value="Mobile App Development">Mobile App Development (Android/iOS)</option>
-                        <option value="Backend, Storage & Authentication">Backend, Storage & Authentication</option>
-                        <option value="AI Automation Agents">AI Automation Agents & Bots</option>
-                        <option value="Full-Stack Custom Project">Full-Stack Custom Project</option>
+                        <option value="Business Website Development" className="bg-zinc-950 text-white">Business Website Development</option>
+                        <option value="Mobile App Development" className="bg-zinc-950 text-white">Mobile App Development (Android/iOS)</option>
+                        <option value="Backend, Storage & Authentication" className="bg-zinc-950 text-white">Backend, Storage &amp; Authentication</option>
+                        <option value="AI Automation Agents" className="bg-zinc-950 text-white">AI Automation Agents &amp; Bots</option>
+                        <option value="Full-Stack Custom Project" className="bg-zinc-950 text-white">Full-Stack Custom Project</option>
                       </Select>
                     </div>
 
                     {/* Budget Range */}
                     <div className="space-y-1.5">
-                      <label className="text-xs font-bold uppercase tracking-wider text-zinc-700">
+                      <label className="text-xs font-bold uppercase tracking-wider text-zinc-300">
                         Estimated Budget Range
                       </label>
                       <Select
                         value={formData.budgetRange}
                         onChange={(e) => setFormData({ ...formData, budgetRange: e.target.value })}
-                        className="transition-all focus:border-accent-crimson text-xs sm:text-sm"
+                        className="bg-zinc-900/90 border-zinc-800 text-white focus:border-purple-500 focus:ring-purple-500 text-xs sm:text-sm"
                       >
-                        <option value="< ₹25,000">&lt; ₹25,000 (Basic Landing / Bot)</option>
-                        <option value="₹25,000 - ₹50,000">₹25,000 - ₹50,000 (Standard Website / Service App)</option>
-                        <option value="₹50,000 - ₹1,00,000">₹50,000 - ₹1,00,000 (Full Mobile App / Custom Backend)</option>
-                        <option value="₹1,00,000+">₹1,00,000+ (Comprehensive Platform)</option>
-                        <option value="Flexible / Needs Quote">Flexible / Needs Discussion</option>
+                        <option value="< ₹25,000" className="bg-zinc-950 text-white">&lt; ₹25,000 (Basic Landing / Bot)</option>
+                        <option value="₹25,000 - ₹50,000" className="bg-zinc-950 text-white">₹25,000 - ₹50,000 (Standard Website / Service App)</option>
+                        <option value="₹50,000 - ₹1,00,000" className="bg-zinc-950 text-white">₹50,000 - ₹1,00,000 (Full Mobile App / Custom Backend)</option>
+                        <option value="₹1,00,000+" className="bg-zinc-950 text-white">₹1,00,000+ (Comprehensive Platform)</option>
+                        <option value="Flexible / Needs Quote" className="bg-zinc-950 text-white">Flexible / Needs Discussion</option>
                       </Select>
                     </div>
                   </div>
 
                   {/* Project Description */}
                   <div className="space-y-1.5">
-                    <label className="text-xs font-bold uppercase tracking-wider text-zinc-700">
-                      Project Goals & Requirements *
+                    <label className="text-xs font-bold uppercase tracking-wider text-zinc-300">
+                      Project Goals &amp; Requirements *
                     </label>
                     <Textarea
                       placeholder="Briefly describe your goals, required pages/features, target timeline, or any reference links..."
@@ -461,7 +468,7 @@ Project Scope: ${formData.description}`
                       value={formData.description}
                       onChange={(e) => setFormData({ ...formData, description: e.target.value })}
                       error={errors.description}
-                      className="transition-all focus:border-accent-crimson text-xs sm:text-sm"
+                      className="bg-zinc-900/90 border-zinc-800 text-white placeholder:text-zinc-500 focus:border-purple-500 focus:ring-purple-500 text-xs sm:text-sm"
                     />
                   </div>
 
@@ -470,7 +477,7 @@ Project Scope: ${formData.description}`
                     <ShimmerButton
                       type="submit"
                       disabled={status === "loading"}
-                      className="w-full sm:w-auto text-xs sm:text-sm font-bold justify-center px-8 py-3"
+                      className="w-full sm:w-auto text-xs sm:text-sm font-bold justify-center px-8 py-3 bg-purple-600 hover:bg-purple-500 text-white"
                     >
                       {status === "loading" ? (
                         <span>Submitting...</span>
@@ -485,13 +492,13 @@ Project Scope: ${formData.description}`
                     <button
                       type="button"
                       onClick={handleCopySummary}
-                      className="inline-flex items-center gap-1.5 text-xs text-zinc-500 hover:text-zinc-900 transition-colors p-2 cursor-pointer"
+                      className="inline-flex items-center gap-1.5 text-xs text-zinc-400 hover:text-white transition-colors p-2 cursor-pointer"
                     >
                       {copiedSummary ? (
                         <motion.div
                           initial={{ scale: 0.8 }}
                           animate={{ scale: 1 }}
-                          className="flex items-center gap-1.5 text-emerald-600 font-medium"
+                          className="flex items-center gap-1.5 text-emerald-400 font-medium"
                         >
                           <Check className="h-3.5 w-3.5" />
                           <span>Summary Copied!</span>

@@ -32,58 +32,52 @@ export const PackagesPage: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-[#070708] text-white selection:bg-[#FFAE00] selection:text-black">
-      {/* Top Page Header */}
+    <div className="min-h-screen bg-[#070708] text-white selection:bg-purple-600 selection:text-white">
+      {/* Top Page Header - Matching Modern HomePage Architecture */}
       <section className="relative pt-32 sm:pt-40 pb-16 border-b border-zinc-800/80 overflow-hidden">
         {/* Subtle background grid */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
+        
+        {/* Subtle radial glow */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-purple-600/10 blur-[120px] rounded-full pointer-events-none" />
 
         <div className="container max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
-          <div className="flex items-start gap-6 sm:gap-10">
-            {/* Left Vertical Indicator */}
-            <div className="hidden sm:flex flex-col items-center gap-4 pt-2">
-              <span className="vertical-side-label text-[11px] font-mono font-bold tracking-[0.25em] text-[#FFAE00]">
-                PRICING
+          <div className="space-y-6 max-w-3xl">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/25 text-xs font-semibold text-purple-300">
+              <span className="h-1.5 w-1.5 rounded-full bg-purple-400 animate-pulse" />
+              <span className="font-mono font-bold text-[11px] uppercase tracking-wider">
+                TRANSPARENT FIXED ENGAGEMENT TIERS
               </span>
-              <div className="w-[1px] h-20 bg-gradient-to-b from-[#FFAE00] to-transparent" />
             </div>
 
-            <div className="flex-1 space-y-6 max-w-3xl">
-              <div className="inline-flex items-center px-3.5 py-1 rounded-full bg-zinc-900/90 border border-zinc-700/80 text-xs font-semibold text-zinc-300">
-                <span className="font-sans font-bold text-[11px] uppercase tracking-wider text-zinc-400">
-                  TRANSPARENT FIXED ENGAGEMENT TIERS
-                </span>
-              </div>
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white leading-[1.08] font-display">
+              Clear packages<span className="text-[#FF4D3D]">.</span> Zero{" "}
+              <span className="font-boska italic font-light text-purple-400">
+                hidden fees
+              </span>
+              .
+            </h1>
 
-              <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white leading-[1.08] font-display">
-                Clear packages<span className="text-[#FFAE00]">.</span> Zero{" "}
-                <span className="font-boska italic font-light text-[#FFAE00]">
-                  hidden fees
-                </span>
-                .
-              </h1>
+            <p className="text-base sm:text-lg text-zinc-400 font-normal leading-relaxed max-w-2xl font-sans">
+              Flat, predictable pricing with 100% source code ownership, rapid turnaround, and direct founder sprint delivery by Rohith E.
+            </p>
 
-              <p className="text-base sm:text-lg text-zinc-400 font-normal leading-relaxed max-w-2xl font-sans">
-                Flat, predictable pricing with 100% source code ownership, rapid turnaround, and direct founder sprint delivery.
-              </p>
+            <div className="flex flex-wrap items-center gap-3 pt-2">
+              <HeyDigitalButton
+                variant="purple"
+                size="lg"
+                onClick={() => navigate("contact")}
+              >
+                Book Discovery Sprint ↗
+              </HeyDigitalButton>
 
-              <div className="flex flex-wrap items-center gap-3 pt-2">
-                <HeyDigitalButton
-                  variant="amber"
-                  size="lg"
-                  onClick={() => navigate("contact")}
-                >
-                  Book Discovery Sprint ↗
-                </HeyDigitalButton>
-
-                <HeyDigitalButton
-                  variant="dark"
-                  size="lg"
-                  onClick={() => navigate("estimator")}
-                >
-                  Custom Cost Estimator
-                </HeyDigitalButton>
-              </div>
+              <HeyDigitalButton
+                variant="dark"
+                size="lg"
+                onClick={() => navigate("estimator")}
+              >
+                Custom Cost Estimator
+              </HeyDigitalButton>
             </div>
           </div>
         </div>

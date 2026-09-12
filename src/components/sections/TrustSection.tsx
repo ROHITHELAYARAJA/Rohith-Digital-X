@@ -49,8 +49,10 @@ const TECH_ITEMS_ROW_2 = [
 
 export const TrustSection: React.FC = () => {
   return (
-    <section className="py-16 sm:py-24 bg-white border-y border-zinc-200/70 relative overflow-hidden">
-      <div className="container max-w-6xl mx-auto px-4 sm:px-6 space-y-12">
+    <section className="py-16 sm:py-24 bg-[#070708] text-white border-y border-zinc-800 relative overflow-hidden">
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
+
+      <div className="container max-w-6xl mx-auto px-4 sm:px-6 space-y-12 relative z-10">
         
         {/* Clean Centered Header */}
         <div className="max-w-3xl mx-auto text-center space-y-3">
@@ -58,7 +60,7 @@ export const TrustSection: React.FC = () => {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-accent-crimson font-pilcrow inline-flex items-center gap-1.5"
+            className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-purple-400 font-mono inline-flex items-center gap-1.5"
           >
             <Sparkles className="h-3 w-3" />
             <span>FOUNDATIONAL ENGINEERING PRINCIPLES</span>
@@ -68,17 +70,17 @@ export const TrustSection: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-zinc-950 leading-tight font-display"
+            className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-white leading-tight font-display"
           >
             Turning ambitious ideas into{" "}
-            <span className="font-boska italic font-normal text-accent-crimson">reliable digital products.</span>
+            <span className="font-boska italic font-normal text-purple-400">reliable digital products<span className="text-[#FF4D3D]">.</span></span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-sm sm:text-base text-zinc-600 leading-relaxed font-normal max-w-2xl mx-auto font-general"
+            className="text-sm sm:text-base text-zinc-400 leading-relaxed font-normal max-w-2xl mx-auto font-sans"
           >
             We build with speed, scalability, and clean modular code for founders and growing businesses.
           </motion.p>
@@ -98,26 +100,26 @@ export const TrustSection: React.FC = () => {
                 className="h-full"
               >
                 <TiltCard tiltMaxAngleX={6} tiltMaxAngleY={6} scale={1.02} className="h-full">
-                  <div className="group relative p-5 sm:p-6 rounded-2xl bg-zinc-50/90 border border-zinc-200/90 hover:border-accent-crimson hover:bg-white hover:shadow-card transition-all duration-300 flex flex-col justify-between h-full cursor-default">
+                  <div className="group relative p-5 sm:p-6 rounded-2xl bg-zinc-950/80 border border-zinc-800/90 hover:border-purple-500/60 hover:bg-zinc-900/60 transition-all duration-300 flex flex-col justify-between h-full cursor-default shadow-2xl">
                     <div>
                       <div className="flex items-center justify-between mb-3.5">
-                        <div className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-xl bg-white border border-zinc-200 text-zinc-900 group-hover:text-accent-crimson group-hover:border-red-200 group-hover:bg-red-50/60 group-hover:scale-110 transition-all duration-300 shadow-xs">
+                        <div className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-300 group-hover:text-purple-400 group-hover:border-purple-500/50 group-hover:scale-110 transition-all duration-300 shadow-xs">
                           <Icon className="h-4 w-4 sm:h-5 sm:w-5" />
                         </div>
-                        <span className="text-xs font-trench font-extrabold text-zinc-400 group-hover:text-accent-crimson transition-colors">
+                        <span className="text-xs font-mono font-extrabold text-zinc-500 group-hover:text-purple-400 transition-colors">
                           0{index + 1}
                         </span>
                       </div>
-                      <h3 className="text-base sm:text-lg font-bold text-zinc-900 group-hover:text-accent-crimson transition-colors mb-1.5 font-bonny">
+                      <h3 className="text-base sm:text-lg font-bold text-white group-hover:text-purple-300 transition-colors mb-1.5 font-display">
                         {pillar.title}
                       </h3>
-                      <p className="text-xs sm:text-sm text-zinc-600 leading-relaxed font-normal font-general">
+                      <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed font-normal font-sans">
                         {pillar.description}
                       </p>
                     </div>
 
-                    <div className="mt-4 pt-3 border-t border-zinc-200/60 flex items-center gap-1.5 text-[10px] sm:text-[11px] font-semibold text-zinc-500 font-pilcrow">
-                      <CheckCircle2 className="h-3 w-3 sm:h-3.5 sm:w-3.5 text-accent-crimson shrink-0" />
+                    <div className="mt-4 pt-3 border-t border-zinc-800/80 flex items-center gap-1.5 text-[10px] sm:text-[11px] font-semibold text-zinc-400 font-mono">
+                      <CheckCircle2 className="h-3 w-3 sm:h-3.5 sm:w-3.5 text-purple-400 shrink-0" />
                       <span>Standard Quality SLA</span>
                     </div>
                   </div>
@@ -128,10 +130,10 @@ export const TrustSection: React.FC = () => {
         </div>
 
         {/* Dual Opposing Direction Marquees */}
-        <div className="mt-14 sm:mt-16 pt-8 sm:pt-10 border-t border-zinc-100 space-y-3.5">
+        <div className="mt-14 sm:mt-16 pt-8 sm:pt-10 border-t border-zinc-800/80 space-y-3.5">
           <div className="text-center mb-2">
-            <span className="text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-widest text-zinc-400">
-              Modern Enterprise Tech Stack & Production SLAs
+            <span className="text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-widest text-zinc-500">
+              Modern Enterprise Tech Stack &amp; Production SLAs
             </span>
           </div>
 
@@ -141,10 +143,10 @@ export const TrustSection: React.FC = () => {
               {TECH_ITEMS_ROW_1.map((tech, i) => (
                 <div
                   key={i}
-                  className="flex items-center gap-2 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-xl bg-zinc-50 border border-zinc-200/80 text-[11px] sm:text-xs font-mono font-semibold text-zinc-800 hover:border-accent-crimson hover:bg-white hover:text-accent-crimson transition-all shadow-xs cursor-default hover:scale-105"
+                  className="flex items-center gap-2 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-xl bg-zinc-950/90 border border-zinc-800 text-[11px] sm:text-xs font-mono font-semibold text-zinc-300 hover:border-purple-500/50 hover:bg-zinc-900 hover:text-purple-300 transition-all shadow-xs cursor-default hover:scale-105"
                 >
                   <span>{tech.name}</span>
-                  <span className="text-[10px] text-zinc-400 font-normal">({tech.category})</span>
+                  <span className="text-[10px] text-zinc-500 font-normal">({tech.category})</span>
                 </div>
               ))}
             </Marquee>
@@ -158,9 +160,9 @@ export const TrustSection: React.FC = () => {
                 return (
                   <div
                     key={i}
-                    className="flex items-center gap-2 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-xl bg-zinc-950 border border-zinc-800 text-[11px] sm:text-xs font-mono font-semibold text-zinc-200 hover:border-accent-crimson hover:bg-zinc-900 transition-all shadow-xs cursor-default hover:scale-105"
+                    className="flex items-center gap-2 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-xl bg-zinc-950/90 border border-zinc-800 text-[11px] sm:text-xs font-mono font-semibold text-zinc-200 hover:border-purple-500/50 hover:bg-zinc-900 hover:text-purple-300 transition-all shadow-xs cursor-default hover:scale-105"
                   >
-                    <IconComponent className="h-3.5 w-3.5 text-accent-crimson" />
+                    <IconComponent className="h-3.5 w-3.5 text-purple-400" />
                     <span>{item.name}</span>
                   </div>
                 )

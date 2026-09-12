@@ -118,7 +118,7 @@ interface WireframePolyhedronCanvasProps {
 
 export const WireframePolyhedronCanvas: React.FC<WireframePolyhedronCanvasProps> = ({
   className = "",
-  accentColor = "#FFAE00",
+  accentColor = "#8B5CF6",
   opacity = 1,
   polyhedron = "dodecahedron",
   size,

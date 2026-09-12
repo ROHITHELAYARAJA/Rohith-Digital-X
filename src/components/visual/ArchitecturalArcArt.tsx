@@ -92,8 +92,8 @@ export const ArchitecturalArcArt: React.FC<ArchitecturalArcArtProps> = ({ classN
           { x: 260, y: 760 },
         ].map((pt, i) => (
           <g key={i}>
-            <line x1={pt.x - 4} y1={pt.y} x2={pt.x + 4} y2={pt.y} stroke="#FFAE00" strokeWidth="1" />
-            <line x1={pt.x} y1={pt.y - 4} x2={pt.x} y2={pt.y + 4} stroke="#FFAE00" strokeWidth="1" />
+            <line x1={pt.x - 4} y1={pt.y} x2={pt.x + 4} y2={pt.y} stroke="#8B5CF6" strokeWidth="1" />
+            <line x1={pt.x} y1={pt.y - 4} x2={pt.x} y2={pt.y + 4} stroke="#8B5CF6" strokeWidth="1" />
           </g>
         ))}
 

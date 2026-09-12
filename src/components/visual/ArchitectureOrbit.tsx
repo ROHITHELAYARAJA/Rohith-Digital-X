@@ -41,7 +41,7 @@ export const ArchitectureOrbit: React.FC = () => {
           <Code className="h-4 w-4 text-accent-crimson" />
         </div>
         <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-zinc-900 border border-zinc-700 text-white shadow-md hover:scale-115 hover:border-accent-crimson transition-transform cursor-pointer" title="Spring Boot Backend">
-          <Server className="h-4 w-4 text-amber-400" />
+          <Server className="h-4 w-4 text-purple-400" />
         </div>
         <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-zinc-900 border border-zinc-700 text-white shadow-md hover:scale-115 hover:border-accent-crimson transition-transform cursor-pointer" title="PostgreSQL / SQL">
           <Database className="h-4 w-4 text-blue-400" />

@@ -84,7 +84,7 @@ export const DigitalProductCapabilitiesSection: React.FC = () => {
                     selected: activeChip === 0,
                   },
                   {
-                    icon: <Sparkles className="h-4 w-4 text-amber-500" />,
+                    icon: <Sparkles className="h-4 w-4 text-purple-500" />,
                     text: "Here's where your brand stands out",
                     selected: activeChip === 1,
                   },
@@ -335,10 +335,10 @@ export const DigitalProductCapabilitiesSection: React.FC = () => {
                 <div className="p-4 rounded-2xl bg-zinc-50 border border-zinc-200/70 space-y-2">
                   <div className="flex items-center justify-between text-xs font-bold text-zinc-900 font-manrope">
                     <span>AI & Automation</span>
-                    <Bot className="h-3.5 w-3.5 text-[#FFAE00]" />
+                    <Bot className="h-3.5 w-3.5 text-purple-600" />
                   </div>
                   <div className="space-y-1">
-                    <div className="px-2 py-1 rounded-md bg-white border border-zinc-200 text-[11px] font-bold text-amber-700 font-mono">
+                    <div className="px-2 py-1 rounded-md bg-white border border-zinc-200 text-[11px] font-bold text-purple-700 font-mono">
                       Automated Pipeline
                     </div>
                     <div className="px-2 py-1 rounded-md bg-white border border-zinc-200 text-[11px] font-bold text-zinc-800 font-mono">

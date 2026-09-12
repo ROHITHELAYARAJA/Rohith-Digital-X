@@ -132,7 +132,7 @@ const StackedCard: React.FC<{
                 <React.Fragment key={tIdx}>
                   <span className="hover:text-zinc-950 transition-colors">{tag}</span>
                   {tIdx < card.tags.length - 1 && (
-                    <span className="text-[#FFAE00] font-black">✦</span>
+                    <span className="text-purple-500 font-black">✦</span>
                   )}
                 </React.Fragment>
               ))}
@@ -170,10 +170,10 @@ const StackedCard: React.FC<{
             <div className="pt-2 sm:pt-4">
               <button
                 onClick={() => onOpenModal(card.fullProject)}
-                className="inline-flex items-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-zinc-950 text-white font-bold text-xs sm:text-sm shadow-md hover:bg-[#FFAE00] hover:text-black transition-all duration-300 group/btn cursor-pointer active:scale-95"
+                className="inline-flex items-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-zinc-950 text-white font-bold text-xs sm:text-sm shadow-md hover:bg-purple-600 hover:text-white transition-all duration-300 group/btn cursor-pointer active:scale-95"
               >
                 <span>PREVIEW THE UI</span>
-                <ArrowUpRight className="h-4 w-4 transition-transform group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 text-[#FFAE00] group-hover/btn:text-black" />
+                <ArrowUpRight className="h-4 w-4 transition-transform group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 text-purple-400 group-hover/btn:text-white" />
               </button>
             </div>
 

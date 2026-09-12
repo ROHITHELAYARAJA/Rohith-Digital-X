@@ -25,102 +25,92 @@ export const WorkPage: React.FC = () => {
   })
 
   return (
-    <div className="min-h-screen bg-[#070708] text-white selection:bg-[#FFAE00] selection:text-black">
+    <div className="min-h-screen bg-[#070708] text-white selection:bg-purple-600 selection:text-white">
       {/* Hero Header Section */}
-      <section className="relative pt-32 sm:pt-40 pb-16 border-b border-zinc-800/80 overflow-hidden">
-        {/* Subtle background grid */}
+      <section className="relative pt-28 sm:pt-36 pb-16 border-b border-zinc-800/80 overflow-hidden bg-[#070708]">
+        {/* Ambient Gradient Glow */}
+        <div className="absolute -top-24 sm:-top-32 left-1/2 -translate-x-1/2 w-[700px] sm:w-[1000px] h-[340px] sm:h-[450px] bg-gradient-to-b from-purple-600/15 via-[#FF4D3D]/10 to-transparent rounded-full blur-[100px] pointer-events-none -z-0" />
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
 
-        <div className="container max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
-          <div className="flex items-start gap-6 sm:gap-10">
-            {/* Left Vertical Indicator */}
-            <div className="hidden sm:flex flex-col items-center gap-4 pt-2">
-              <span className="vertical-side-label text-[11px] font-mono font-bold tracking-[0.25em] text-[#FFAE00]">
-                WORK
-              </span>
-              <div className="w-[1px] h-20 bg-gradient-to-b from-[#FFAE00] to-transparent" />
-            </div>
+        <div className="container max-w-5xl mx-auto px-4 sm:px-6 relative z-10 text-center space-y-6">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-zinc-900 border border-zinc-800 text-xs font-semibold text-zinc-300 shadow-xs">
+            <span className="h-2 w-2 rounded-full bg-purple-400 animate-pulse" />
+            <span className="font-mono text-[11px] uppercase tracking-wider text-purple-300">
+              SHIPPED ARCHITECTURES
+            </span>
+          </div>
 
-            <div className="flex-1 space-y-6 max-w-3xl">
-              <div className="inline-flex items-center px-3.5 py-1 rounded-full bg-zinc-900/90 border border-zinc-700/80 text-xs font-semibold text-zinc-300">
-                <span className="font-sans font-bold text-[11px] uppercase tracking-wider text-zinc-400">
-                  SHIPPED ARCHITECTURES &amp; CLIENT SYSTEMS
-                </span>
-              </div>
+          <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white leading-[1.08] font-manrope max-w-4xl mx-auto text-balance">
+            Digital systems we've{" "}
+            <span className="font-playfair italic font-medium text-purple-400">
+              shipped
+            </span>
+            .
+          </h1>
 
-              <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white leading-[1.08] font-display">
-                Digital systems we've{" "}
-                <span className="font-boska italic font-light text-[#FFAE00]">
-                  shipped
-                </span>
-                .
-              </h1>
+          <p className="text-base sm:text-lg text-zinc-400 font-normal leading-relaxed max-w-2xl mx-auto font-dmsans">
+            Every project is crafted with obsessive attention to sub-second load times, fluid micro-interactions, and high-converting user journeys.
+          </p>
 
-              <p className="text-base sm:text-lg text-zinc-400 font-normal leading-relaxed max-w-2xl font-sans">
-                Every project is crafted with obsessive attention to sub-second load times, fluid interactions, and high-converting user journeys.
-              </p>
-
-              {/* Category Filter Tabs */}
-              <div className="flex flex-wrap items-center gap-2 pt-2">
-                {[
-                  { id: "all", label: "All Projects" },
-                  { id: "websites", label: "Web Applications" },
-                  { id: "mobile", label: "Mobile Apps" },
-                  { id: "backend", label: "Backend Systems" },
-                  { id: "ai", label: "AI & Automation" },
-                ].map((tab) => {
-                  const isActive = selectedCategory === tab.id
-                  return (
-                    <button
-                      key={tab.id}
-                      onClick={() => setSelectedCategory(tab.id as ProjectCategory)}
-                      className={`px-4 py-2 rounded-full text-xs font-bold transition-all cursor-pointer select-none ${
-                        isActive
-                          ? "bg-[#FFAE00] text-black shadow-lg scale-105"
-                          : "bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-white hover:border-zinc-700"
-                      }`}
-                    >
-                      {tab.label}
-                    </button>
-                  )
-                })}
-              </div>
-            </div>
+          {/* Category Filter Tabs */}
+          <div className="flex flex-wrap items-center justify-center gap-2 pt-2">
+            {[
+              { id: "all", label: "All Projects" },
+              { id: "websites", label: "Web Applications" },
+              { id: "mobile", label: "Mobile Apps" },
+              { id: "backend", label: "Backend Systems" },
+              { id: "ai", label: "AI & Automation" },
+            ].map((tab) => {
+              const isActive = selectedCategory === tab.id
+              return (
+                <button
+                  key={tab.id}
+                  onClick={() => setSelectedCategory(tab.id as ProjectCategory)}
+                  className={`px-4 py-2 rounded-full text-xs font-bold font-manrope transition-all cursor-pointer select-none ${
+                    isActive
+                      ? "bg-purple-600 text-white shadow-purple-glow scale-105"
+                      : "bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-white hover:border-zinc-700"
+                  }`}
+                >
+                  {tab.label}
+                </button>
+              )
+            })}
           </div>
         </div>
       </section>
 
       {/* Featured Case Study Hero Card (JSBuilders) */}
-      <section className="py-12 bg-[#0C0C0E] border-b border-zinc-800">
+      <section className="py-14 bg-[#090A0D] border-b border-zinc-800/80">
         <div className="container max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="p-6 sm:p-10 rounded-3xl bg-gradient-to-br from-zinc-900 via-black to-zinc-950 border border-zinc-800 hover:border-[#FFAE00]/60 transition-all shadow-2xl relative overflow-hidden group">
+          <div className="p-6 sm:p-10 rounded-3xl bg-gradient-to-br from-zinc-900/90 via-black to-zinc-950 border border-zinc-800 hover:border-purple-500/60 transition-all shadow-2xl relative overflow-hidden group">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
               <div className="lg:col-span-7 space-y-4">
                 <div className="flex items-center gap-2">
-                  <span className="px-3 py-1 rounded-full bg-amber-500/20 border border-amber-500/40 text-[10px] font-mono font-black text-[#FFAE00]">
+                  <span className="px-3 py-1 rounded-full bg-purple-950/60 border border-purple-800/60 text-[10px] font-mono font-black text-purple-300">
                     ★ FEATURED CASE STUDY
                   </span>
                   <span className="text-xs font-mono text-zinc-400">100/100 LIGHTHOUSE</span>
                 </div>
 
-                <h2 className="text-2xl sm:text-4xl font-extrabold text-white font-display leading-snug">
+                <h2 className="text-2xl sm:text-4xl font-extrabold text-white font-manrope leading-snug">
                   JSBuilders: Civil Engineering &amp; High-Converting Architectural Platform
                 </h2>
 
-                <p className="text-sm sm:text-base text-zinc-400 leading-relaxed max-w-xl">
+                <p className="text-sm sm:text-base text-zinc-400 leading-relaxed max-w-xl font-dmsans">
                   Replaced an outdated 4.8s WordPress site with a custom Vite/React architecture that boots in 0.32s, delivers sub-second WhatsApp quote routing, and boosted client inquiries by +340%.
                 </p>
 
                 <div className="grid grid-cols-3 gap-4 pt-2">
-                  <div className="border-l-2 border-[#FFAE00] pl-3">
-                    <div className="text-xl font-bold font-mono text-[#FFAE00]">+340%</div>
+                  <div className="border-l-2 border-purple-500 pl-3">
+                    <div className="text-xl font-bold font-mono text-purple-400">+340%</div>
                     <div className="text-[11px] text-zinc-500">Inquiry Volume</div>
                   </div>
-                  <div className="border-l-2 border-[#FFAE00] pl-3">
+                  <div className="border-l-2 border-[#FF4D3D] pl-3">
                     <div className="text-xl font-bold font-mono text-white">0.32s</div>
                     <div className="text-[11px] text-zinc-500">Page Load Time</div>
                   </div>
-                  <div className="border-l-2 border-[#FFAE00] pl-3">
+                  <div className="border-l-2 border-purple-500 pl-3">
                     <div className="text-xl font-bold font-mono text-white">100/100</div>
                     <div className="text-[11px] text-zinc-500">Core Web Vitals</div>
                   </div>
@@ -128,7 +118,7 @@ export const WorkPage: React.FC = () => {
 
                 <div className="pt-4 flex flex-wrap items-center gap-3">
                   <HeyDigitalButton
-                    variant="amber"
+                    variant="purple"
                     size="md"
                     onClick={() => navigate("case-study-web")}
                   >
@@ -137,7 +127,7 @@ export const WorkPage: React.FC = () => {
 
                   <button
                     onClick={() => handleDiscussSimilar("JSBuilders Web Experience")}
-                    className="px-5 py-2.5 rounded-full border border-zinc-700 hover:border-white text-white text-xs font-bold transition-all cursor-pointer"
+                    className="px-5 py-2.5 rounded-full border border-zinc-700 hover:border-white text-white text-xs font-bold transition-all cursor-pointer font-manrope"
                   >
                     Build Something Similar
                   </button>
@@ -149,7 +139,7 @@ export const WorkPage: React.FC = () => {
                   <div className="flex items-center justify-between pb-3 border-b border-zinc-850">
                     <div className="flex items-center gap-1.5">
                       <span className="h-2.5 w-2.5 rounded-full bg-red-500" />
-                      <span className="h-2.5 w-2.5 rounded-full bg-amber-500" />
+                      <span className="h-2.5 w-2.5 rounded-full bg-purple-500" />
                       <span className="h-2.5 w-2.5 rounded-full bg-emerald-500" />
                     </div>
                     <span className="text-[11px] font-mono text-zinc-500">jsbuilders.in / lighthouse audit</span>
@@ -179,19 +169,19 @@ export const WorkPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Projects Grid (White Background for Rhythm Contrast) */}
-      <section className="py-20 bg-white text-zinc-950">
+      {/* Projects Grid (Deep Dark Background) */}
+      <section className="py-14 sm:py-18 bg-[#070708] text-white">
         <div className="container max-w-6xl mx-auto px-4 sm:px-6 space-y-10">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-6 border-b border-zinc-200">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-6 border-b border-zinc-800">
             <div>
-              <span className="text-[11px] font-mono font-bold tracking-widest uppercase text-[#FFAE00]">
+              <span className="text-[11px] font-mono font-bold tracking-widest uppercase text-purple-400">
                 PORTFOLIO CATALOG
               </span>
-              <h2 className="text-3xl sm:text-5xl font-black text-zinc-950 tracking-tight font-display mt-2">
+              <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight font-manrope mt-2">
                 Production-ready systems.
               </h2>
             </div>
-            <p className="text-sm text-zinc-600 max-w-md">
+            <p className="text-sm text-zinc-400 max-w-md font-dmsans">
               Click any project to inspect full architectural specifications, key features, and technology stack.
             </p>
           </div>
@@ -207,11 +197,11 @@ export const WorkPage: React.FC = () => {
                   exit={{ opacity: 0, scale: 0.95 }}
                   transition={{ duration: 0.3 }}
                   onClick={() => setActiveProject(project)}
-                  className="p-6 rounded-3xl bg-zinc-50 border border-zinc-200/90 hover:border-[#FFAE00] hover:shadow-xl transition-all cursor-pointer flex flex-col justify-between group"
+                  className="p-6 rounded-3xl bg-zinc-950/80 border border-zinc-800 hover:border-purple-500/70 hover:shadow-purple-glow transition-all cursor-pointer flex flex-col justify-between group backdrop-blur-sm"
                 >
                   <div className="space-y-4">
                     <div className="flex items-center justify-between">
-                      <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-amber-500/10 text-amber-700 border border-amber-500/20">
+                      <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-purple-950/60 text-purple-300 border border-purple-800/60">
                         {project.categoryLabel}
                       </span>
                       <span className="text-[11px] font-mono text-zinc-400">
@@ -219,11 +209,11 @@ export const WorkPage: React.FC = () => {
                       </span>
                     </div>
 
-                    <h3 className="text-xl font-bold text-zinc-950 group-hover:text-[#FFAE00] transition-colors leading-snug">
+                    <h3 className="text-xl font-bold text-white group-hover:text-purple-400 transition-colors leading-snug font-manrope">
                       {project.title}
                     </h3>
 
-                    <p className="text-xs text-zinc-600 leading-relaxed line-clamp-3">
+                    <p className="text-xs text-zinc-400 leading-relaxed line-clamp-3 font-dmsans">
                       {project.summary}
                     </p>
 
@@ -231,20 +221,20 @@ export const WorkPage: React.FC = () => {
                       {project.technologies.slice(0, 3).map((tech) => (
                         <span
                           key={tech}
-                          className="px-2 py-0.5 rounded-md bg-white border border-zinc-200 text-[10px] font-mono font-semibold text-zinc-700"
+                          className="px-2 py-0.5 rounded-md bg-zinc-900 border border-zinc-800 text-[10px] font-mono font-semibold text-zinc-300"
                         >
                           {tech}
                         </span>
                       ))}
                       {project.technologies.length > 3 && (
-                        <span className="px-2 py-0.5 rounded-md bg-white border border-zinc-200 text-[10px] font-mono font-semibold text-zinc-400">
+                        <span className="px-2 py-0.5 rounded-md bg-zinc-900 border border-zinc-800 text-[10px] font-mono font-semibold text-zinc-500">
                           +{project.technologies.length - 3}
                         </span>
                       )}
                     </div>
                   </div>
 
-                  <div className="pt-6 border-t border-zinc-200/80 mt-6 flex items-center justify-between text-xs font-bold text-zinc-900 group-hover:text-[#FFAE00] transition-colors">
+                  <div className="pt-6 border-t border-zinc-800/80 mt-6 flex items-center justify-between text-xs font-bold text-zinc-300 group-hover:text-purple-400 transition-colors">
                     <span>Inspect Architecture</span>
                     <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </div>
@@ -264,16 +254,16 @@ export const WorkPage: React.FC = () => {
       />
 
       {/* Bottom CTA */}
-      <section className="py-16 bg-[#070708] border-t border-zinc-800 text-center">
+      <section className="py-14 sm:py-18 bg-[#090A0D] border-t border-zinc-800 text-center">
         <div className="container max-w-4xl mx-auto px-4 sm:px-6 space-y-6">
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-white font-display">
+          <h2 className="text-3xl sm:text-5xl font-extrabold text-white font-manrope">
             Have a project in mind?
           </h2>
-          <p className="text-zinc-400 text-sm sm:text-base max-w-xl mx-auto">
+          <p className="text-zinc-400 text-sm sm:text-base max-w-xl mx-auto font-dmsans">
             Direct access to founder Rohith E with zero agency bureaucracy. Let's build something exceptional together.
           </p>
           <div className="pt-2">
-            <HeyDigitalButton variant="amber" size="lg" onClick={() => navigate("contact")}>
+            <HeyDigitalButton variant="purple" size="lg" onClick={() => navigate("contact")}>
               Book a 30-Min Discovery Sprint ↗
             </HeyDigitalButton>
           </div>

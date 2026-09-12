@@ -40,7 +40,7 @@ export const projectsData: ProjectItem[] = [
     ],
     targetIndustry: 'Civil Engineering & Construction',
     timelineEstimate: '2 Weeks',
-    themeGradient: 'from-amber-950/40 via-zinc-900 to-black',
+    themeGradient: 'from-purple-950/40 via-zinc-900 to-black',
   },
   {
     id: 'healthcare-portal',

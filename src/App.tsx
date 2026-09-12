@@ -58,7 +58,7 @@ function AppContent() {
   }
 
   return (
-    <div className="relative min-h-screen bg-[#070708] text-white flex flex-col font-sans selection:bg-[#FFAE00] selection:text-black">
+    <div className="relative min-h-screen bg-[#070708] text-white flex flex-col font-sans selection:bg-purple-600 selection:text-white">
       {/* Sticky Navigation Bar */}
       <Navbar />
 

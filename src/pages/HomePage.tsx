@@ -61,7 +61,7 @@ export const HomePage: React.FC = () => {
   }
 
   return (
-    <div className="bg-[#070708] text-white selection:bg-[#FFAE00] selection:text-black">
+    <div className="bg-[#070708] text-white selection:bg-purple-600 selection:text-white">
       {/* 1. Fastlane-Inspired Light Hero Section */}
       <HeroSection />
 

@@ -224,7 +224,7 @@ export const Navbar: React.FC = () => {
                   <div className="flex items-baseline font-sans text-lg font-extrabold tracking-tight text-zinc-950 leading-none">
                     <span className="font-black">Rohith</span>
                     <span className="text-zinc-500 font-medium ml-1.5 tracking-tight">Digital</span>
-                    <span className="font-black text-[#FFAE00] ml-1.5">
+                    <span className="font-black text-purple-600 ml-1.5">
                       X
                     </span>
                   </div>
@@ -232,7 +232,7 @@ export const Navbar: React.FC = () => {
                     Digital Product Studio
                   </div>
                 </div>
-                <span className="px-2.5 py-1 rounded-full bg-amber-50 text-amber-800 border border-amber-200 text-[10px] font-bold">
+                <span className="px-2.5 py-1 rounded-full bg-purple-50 text-purple-800 border border-purple-200 text-[10px] font-bold">
                   Available for Projects
                 </span>
               </div>
@@ -255,13 +255,13 @@ export const Navbar: React.FC = () => {
                     className={cn(
                       "flex items-center justify-between p-3 rounded-xl text-left text-xs font-bold transition-all duration-200 cursor-pointer select-none",
                       currentPage === link.id
-                        ? "bg-amber-50 text-amber-900 border border-amber-200 shadow-xs"
-                        : "text-zinc-700 hover:text-amber-600 hover:bg-amber-50/50 active:bg-amber-100"
+                        ? "bg-purple-50 text-purple-900 border border-purple-200 shadow-xs"
+                        : "text-zinc-700 hover:text-purple-600 hover:bg-purple-50/50 active:bg-purple-100"
                     )}
                   >
                     <span>{link.label}</span>
                     {currentPage === link.id && (
-                      <span className="text-[10px] font-mono font-bold text-amber-700 uppercase">Active</span>
+                      <span className="text-[10px] font-mono font-bold text-purple-700 uppercase">Active</span>
                     )}
                   </button>
                 ))}
@@ -270,19 +270,19 @@ export const Navbar: React.FC = () => {
               {/* Contact Info Snippet with Exact User Details */}
               <div className="mt-2 pt-4 border-t border-zinc-100 space-y-2.5 text-xs text-zinc-600">
                 <div className="flex items-center gap-2">
-                  <Phone className="h-3.5 w-3.5 text-[#FFAE00]" />
-                  <a href="tel:+919655483130" className="hover:text-amber-600 font-bold transition-colors font-mono">
+                  <Phone className="h-3.5 w-3.5 text-purple-600" />
+                  <a href="tel:+919655483130" className="hover:text-purple-600 font-bold transition-colors font-mono">
                     +91 96554 83130
                   </a>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Mail className="h-3.5 w-3.5 text-[#FFAE00]" />
-                  <a href="mailto:e.rohith3130@gmail.com" className="hover:text-amber-600 font-bold transition-colors font-mono">
+                  <Mail className="h-3.5 w-3.5 text-purple-600" />
+                  <a href="mailto:e.rohith3130@gmail.com" className="hover:text-purple-600 font-bold transition-colors font-mono">
                     e.rohith3130@gmail.com
                   </a>
                 </div>
                 <div className="flex items-center gap-2">
-                  <MapPin className="h-3.5 w-3.5 text-[#FFAE00]" />
+                  <MapPin className="h-3.5 w-3.5 text-purple-600" />
                   <span>Tamil Nadu, India</span>
                 </div>
               </div>

@@ -51,7 +51,7 @@ export const DeviceMockup: React.FC<DeviceMockupProps> = ({ type, variant }) => 
                   <p className="text-[9px] text-zinc-500">Master Technician</p>
                 </div>
               </div>
-              <div className="flex items-center gap-0.5 text-amber-500 text-[10px] font-bold">
+              <div className="flex items-center gap-0.5 text-purple-600 text-[10px] font-bold">
                 <Star className="h-3 w-3 fill-current" />
                 <span>4.9</span>
               </div>

@@ -26,46 +26,37 @@ export const HeyDigitalTestimonialsSection: React.FC = () => {
 
       <div className="container max-w-6xl mx-auto px-4 sm:px-6 relative z-10 space-y-10">
         
-        {/* Section Header with Left Vertical Indicator */}
-        <div className="flex items-start gap-6 sm:gap-10">
-          <div className="hidden sm:flex flex-col items-center gap-4 pt-2">
-            <span className="vertical-side-label text-[11px] font-mono font-bold tracking-[0.25em] text-[#FFAE00]">
-              TESTIMONIALS
-            </span>
-            <div className="w-[1px] h-20 bg-gradient-to-b from-[#FFAE00] to-transparent" />
+        {/* Section Header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-zinc-800">
+          <div>
+            <div className="inline-flex items-center px-3 py-1 rounded-full bg-zinc-900 border border-zinc-700/80 text-[11px] font-mono font-bold text-zinc-300">
+              <span>CLIENT SUCCESS &amp; REPUTATION</span>
+            </div>
+            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight font-manrope mt-3 leading-[1.08]">
+              From founders we've{" "}
+              <span className="font-playfair italic font-medium text-[#FF3B30]">
+                partnered with
+              </span>
+              .
+            </h2>
           </div>
 
-          <div className="flex-1 flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-zinc-800">
-            <div>
-              <div className="inline-flex items-center px-3 py-1 rounded-full bg-zinc-900 border border-zinc-700/80 text-[11px] font-mono font-bold text-zinc-300">
-                <span>CLIENT SUCCESS &amp; REPUTATION</span>
-              </div>
-              <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight font-manrope mt-3 leading-[1.08]">
-                From founders we've{" "}
-                <span className="font-playfair italic font-medium text-[#FF3B30]">
-                  partnered with
-                </span>
-                .
-              </h2>
-            </div>
-
-            {/* Navigation Arrows */}
-            <div className="flex items-center gap-2">
-              <button
-                onClick={handlePrev}
-                aria-label="Previous testimonial"
-                className="h-10 w-10 rounded-full border border-zinc-800 bg-zinc-900/90 hover:bg-[#FFAE00] text-zinc-300 hover:text-black flex items-center justify-center transition-all cursor-pointer active:scale-95"
-              >
-                <ChevronLeft className="h-5 w-5" />
-              </button>
-              <button
-                onClick={handleNext}
-                aria-label="Next testimonial"
-                className="h-10 w-10 rounded-full border border-zinc-800 bg-zinc-900/90 hover:bg-[#FFAE00] text-zinc-300 hover:text-black flex items-center justify-center transition-all cursor-pointer active:scale-95"
-              >
-                <ChevronRight className="h-5 w-5" />
-              </button>
-            </div>
+          {/* Navigation Arrows */}
+          <div className="flex items-center gap-2">
+            <button
+              onClick={handlePrev}
+              aria-label="Previous testimonial"
+              className="h-10 w-10 rounded-full border border-zinc-800 bg-zinc-900/90 hover:bg-purple-600 text-zinc-300 hover:text-white flex items-center justify-center transition-all cursor-pointer active:scale-95"
+            >
+              <ChevronLeft className="h-5 w-5" />
+            </button>
+            <button
+              onClick={handleNext}
+              aria-label="Next testimonial"
+              className="h-10 w-10 rounded-full border border-zinc-800 bg-zinc-900/90 hover:bg-purple-600 text-zinc-300 hover:text-white flex items-center justify-center transition-all cursor-pointer active:scale-95"
+            >
+              <ChevronRight className="h-5 w-5" />
+            </button>
           </div>
         </div>
 
@@ -76,12 +67,12 @@ export const HeyDigitalTestimonialsSection: React.FC = () => {
             <div className="lg:col-span-8 space-y-6">
               {/* Star Rating & Metric Badge */}
               <div className="flex flex-wrap items-center gap-4">
-                <div className="flex items-center gap-1 text-[#FFAE00]">
+                <div className="flex items-center gap-1 text-purple-400">
                   {[...Array(activeReview.stars)].map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-[#FFAE00]" />
+                    <Star key={i} className="h-4 w-4 fill-purple-400 text-purple-400" />
                   ))}
                 </div>
-                <span className="px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-[11px] font-mono font-bold text-[#FFAE00]">
+                <span className="px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/30 text-[11px] font-mono font-bold text-purple-400">
                   {activeReview.metricBadge}
                 </span>
                 <span className="text-xs font-mono text-zinc-500">VERIFIED CLIENT PARTNER</span>
@@ -104,7 +95,7 @@ export const HeyDigitalTestimonialsSection: React.FC = () => {
                     {activeReview.clientName}
                   </div>
                   <div className="text-xs text-zinc-400 font-mono">
-                    {activeReview.role} • <span className="text-[#FFAE00]">{activeReview.company}</span>
+                    {activeReview.role} • <span className="text-purple-400">{activeReview.company}</span>
                   </div>
                 </div>
               </div>
@@ -112,7 +103,7 @@ export const HeyDigitalTestimonialsSection: React.FC = () => {
 
             {/* Right Mini Matrix */}
             <div className="lg:col-span-4 p-6 rounded-2xl bg-zinc-900/60 border border-zinc-800/80 space-y-4 text-xs font-mono text-zinc-400">
-              <div className="text-white font-bold pb-2 border-b border-zinc-800 uppercase text-[11px] tracking-wider text-[#FFAE00]">
+              <div className="font-bold pb-2 border-b border-zinc-800 uppercase text-[11px] tracking-wider text-purple-400">
                 Client Engagement Specs
               </div>
               <div className="flex justify-between">
@@ -129,13 +120,13 @@ export const HeyDigitalTestimonialsSection: React.FC = () => {
               </div>
               <div className="flex justify-between">
                 <span>Support Period:</span>
-                <span className="text-[#FFAE00] font-bold">14-Day Post-Launch</span>
+                <span className="text-purple-400 font-bold">14-Day Post-Launch</span>
               </div>
 
               <div className="pt-4 border-t border-zinc-800">
                 <button
                   onClick={() => navigate("contact")}
-                  className="w-full py-2.5 rounded-xl bg-zinc-800 hover:bg-[#FFAE00] text-white hover:text-black font-bold text-xs transition-all flex items-center justify-center gap-2 cursor-pointer"
+                  className="w-full py-2.5 rounded-xl bg-zinc-800 hover:bg-purple-600 text-white hover:text-white font-bold text-xs transition-all flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <span>Book Your Project</span>
                   <span>↗</span>

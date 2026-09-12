@@ -122,8 +122,8 @@ export const Footer: React.FC = () => {
               </p>
 
               <div className="space-y-1.5 text-xs text-zinc-400 font-mono">
-                <div>Phone: <a href="tel:+919655483130" className="text-white hover:text-[#FFAE00]">+91 96554 83130</a></div>
-                <div>Email: <a href="mailto:e.rohith3130@gmail.com" className="text-white hover:text-[#FFAE00]">e.rohith3130@gmail.com</a></div>
+                <div>Phone: <a href="tel:+919655483130" className="text-white hover:text-purple-400">+91 96554 83130</a></div>
+                <div>Email: <a href="mailto:e.rohith3130@gmail.com" className="text-white hover:text-purple-400">e.rohith3130@gmail.com</a></div>
               </div>
             </div>
 
@@ -135,7 +135,7 @@ export const Footer: React.FC = () => {
               
               {/* Column 1: GENERAL */}
               <div className="space-y-4">
-                <p className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#FFAE00]">
+                <p className="text-[11px] font-mono font-bold uppercase tracking-wider text-purple-400">
                   GENERAL
                 </p>
                 <ul className="space-y-1.5 text-xs">
@@ -164,7 +164,7 @@ export const Footer: React.FC = () => {
 
               {/* Column 2: SERVICES */}
               <div className="space-y-4">
-                <p className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#FFAE00]">
+                <p className="text-[11px] font-mono font-bold uppercase tracking-wider text-purple-400">
                   SPECIALTIES
                 </p>
                 <ul className="space-y-1.5 text-xs">
@@ -193,7 +193,7 @@ export const Footer: React.FC = () => {
 
               {/* Column 3: CONNECT */}
               <div className="space-y-4">
-                <p className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#FFAE00]">
+                <p className="text-[11px] font-mono font-bold uppercase tracking-wider text-purple-400">
                   CONNECT
                 </p>
                 <ul className="space-y-1.5 text-xs">

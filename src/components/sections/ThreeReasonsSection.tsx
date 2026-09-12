@@ -76,21 +76,21 @@ export const ThreeReasonsSection: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.55, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-            className="p-8 sm:p-10 rounded-3xl bg-zinc-50 border border-zinc-200/90 hover:border-[#FFAE00] hover:shadow-xl transition-all flex flex-col justify-between group"
+            className="p-8 sm:p-10 rounded-3xl bg-zinc-50 border border-zinc-200/90 hover:border-purple-500 hover:shadow-xl transition-all flex flex-col justify-between group"
           >
             <div className="space-y-6">
               <div className="flex items-center justify-between">
-                <span className="px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-[11px] font-manrope font-bold text-[#FFAE00] uppercase tracking-wider">
+                <span className="px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/30 text-[11px] font-manrope font-bold text-purple-600 uppercase tracking-wider">
                   02 / HIGH TASTE
                 </span>
-                <div className="h-10 w-10 rounded-xl bg-amber-500/10 text-[#FFAE00] flex items-center justify-center font-bold group-hover:scale-110 transition-transform">
+                <div className="h-10 w-10 rounded-xl bg-purple-500/10 text-purple-600 flex items-center justify-center font-bold group-hover:scale-110 transition-transform">
                   <Eye className="h-5 w-5" />
                 </div>
               </div>
 
               <div>
                 <h3 className="text-3xl sm:text-4xl font-black text-zinc-950 font-manrope">
-                  <span className="font-playfair italic font-normal">Taste</span><span className="text-[#FFAE00]">.</span>
+                  <span className="font-playfair italic font-normal">Taste</span><span className="text-purple-600">.</span>
                 </h3>
                 <p className="text-sm text-zinc-600 mt-3 leading-relaxed font-dmsans">
                   Obsession with typography, 60fps micro-animations, and visual balance. We don't build generic websites; we create memorable digital storefronts.
@@ -159,7 +159,7 @@ export const ThreeReasonsSection: React.FC = () => {
 
           <button
             onClick={() => navigate("contact")}
-            className="px-6 py-3 rounded-full bg-gradient-to-r from-[#FF3B30] to-[#FFAE00] text-white font-manrope font-bold text-sm shadow-md hover:opacity-95 active:scale-95 transition-all flex items-center gap-2 cursor-pointer"
+            className="px-6 py-3 rounded-full bg-gradient-to-r from-[#FF4D3D] to-purple-600 text-white font-manrope font-bold text-sm shadow-md hover:opacity-95 active:scale-95 transition-all flex items-center gap-2 cursor-pointer"
           >
             <span>Let's build something good</span>
             <ArrowRight className="h-4 w-4" />

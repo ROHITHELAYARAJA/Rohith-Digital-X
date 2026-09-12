@@ -3,7 +3,6 @@ import { motion } from "framer-motion"
 import { Bot, CheckCircle2, ArrowRight, Zap, MessageSquare, Cpu, Workflow, GitBranch } from "lucide-react"
 import { useNavigation } from "@/context/NavigationContext"
 import { HeyDigitalButton } from "@/components/ui/HeyDigitalButton"
-import { ArchitecturalArcArt } from "@/components/visual/ArchitecturalArcArt"
 
 export const AutomationPage: React.FC = () => {
   const { navigate, setContactPrefill } = useNavigation()
@@ -18,80 +17,72 @@ export const AutomationPage: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-[#070708] text-white selection:bg-[#FFAE00] selection:text-black">
+    <div className="min-h-screen bg-[#070708] text-white selection:bg-purple-600 selection:text-white">
       {/* Hero Header Section */}
       <section className="relative pt-32 sm:pt-40 pb-20 border-b border-zinc-800/80 overflow-hidden">
         {/* Subtle background grid */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-purple-600/10 blur-[120px] rounded-full pointer-events-none" />
 
         <div className="container max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
-          <div className="flex items-start gap-6 sm:gap-10">
-            {/* Left Vertical Indicator */}
-            <div className="hidden sm:flex flex-col items-center gap-4 pt-2">
-              <span className="vertical-side-label text-[11px] font-mono font-bold tracking-[0.25em] text-[#FFAE00]">
-                SERVICE / 03
+          <div className="space-y-6 max-w-3xl">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/25 text-xs font-semibold text-purple-300">
+              <span className="h-1.5 w-1.5 rounded-full bg-purple-400 animate-pulse" />
+              <span className="font-mono font-bold text-[11px] uppercase tracking-wider">
+                INTELLIGENT SYSTEMS ENGINEERING • 03
               </span>
-              <div className="w-[1px] h-20 bg-gradient-to-b from-[#FFAE00] to-transparent" />
             </div>
 
-            <div className="flex-1 space-y-6 max-w-3xl">
-              <div className="inline-flex items-center px-3.5 py-1 rounded-full bg-zinc-900/90 border border-zinc-700/80 text-xs font-semibold text-zinc-300">
-                <span className="font-sans font-bold text-[11px] uppercase tracking-wider text-zinc-400">
-                  INTELLIGENT SYSTEMS ENGINEERING
-                </span>
-              </div>
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white leading-[1.08] font-display">
+              Autonomous workflows &amp;{" "}
+              <span className="font-boska italic font-light text-purple-400">
+                AI Agents
+              </span>
+              <span className="text-[#FF4D3D]">.</span>
+            </h1>
 
-              <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white leading-[1.08] font-display">
-                Autonomous workflows &amp;{" "}
-                <span className="font-boska italic font-light text-[#FFAE00]">
-                  AI Agents
-                </span>
-                .
-              </h1>
+            <p className="text-base sm:text-lg text-zinc-400 font-normal leading-relaxed max-w-2xl font-sans">
+              Cut 20+ hours of repetitive manual operations every week. We build automated WhatsApp bots, AI customer support reps, and autonomous pipeline syncs that run 24/7.
+            </p>
 
-              <p className="text-base sm:text-lg text-zinc-400 font-normal leading-relaxed max-w-2xl font-sans">
-                Cut 20+ hours of repetitive manual operations every week. We build automated WhatsApp bots, AI customer support reps, and autonomous pipeline syncs that run 24/7.
-              </p>
+            <div className="flex flex-wrap items-center gap-3 pt-2">
+              <HeyDigitalButton
+                variant="purple"
+                size="lg"
+                onClick={handleBookService}
+              >
+                Book Automation Consultation ↗
+              </HeyDigitalButton>
 
-              <div className="flex flex-wrap items-center gap-3 pt-2">
-                <HeyDigitalButton
-                  variant="amber"
-                  size="lg"
-                  onClick={handleBookService}
-                >
-                  Book Automation Consultation ↗
-                </HeyDigitalButton>
-
-                <HeyDigitalButton
-                  variant="dark"
-                  size="lg"
-                  onClick={() => navigate("work")}
-                >
-                  Explore Automation Case Studies
-                </HeyDigitalButton>
-              </div>
+              <HeyDigitalButton
+                variant="dark"
+                size="lg"
+                onClick={() => navigate("work")}
+              >
+                Explore Automation Case Studies
+              </HeyDigitalButton>
             </div>
           </div>
         </div>
       </section>
 
       {/* Highlights Strip */}
-      <section className="bg-[#0C0C0E] border-b border-zinc-800 py-8">
+      <section className="bg-zinc-950/80 border-b border-zinc-800 py-8">
         <div className="container max-w-6xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center md:text-left">
-            <div className="border-l-2 border-[#FFAE00] pl-4">
+            <div className="border-l-2 border-purple-500 pl-4">
               <div className="text-2xl sm:text-3xl font-black font-mono text-white">24/7/365</div>
               <div className="text-xs text-zinc-400 mt-1">Autonomous Uptime</div>
             </div>
-            <div className="border-l-2 border-[#FFAE00] pl-4">
+            <div className="border-l-2 border-[#FF4D3D] pl-4">
               <div className="text-2xl sm:text-3xl font-black font-mono text-white">&lt;5 Sec</div>
               <div className="text-xs text-zinc-400 mt-1">WhatsApp Lead Response</div>
             </div>
-            <div className="border-l-2 border-[#FFAE00] pl-4">
+            <div className="border-l-2 border-purple-500 pl-4">
               <div className="text-2xl sm:text-3xl font-black font-mono text-white">0 Human Errors</div>
               <div className="text-xs text-zinc-400 mt-1">Automated Data Capture</div>
             </div>
-            <div className="border-l-2 border-[#FFAE00] pl-4">
+            <div className="border-l-2 border-[#FF4D3D] pl-4">
               <div className="text-2xl sm:text-3xl font-black font-mono text-white">10x ROI</div>
               <div className="text-xs text-zinc-400 mt-1">Operational Hours Saved</div>
             </div>
@@ -99,79 +90,79 @@ export const AutomationPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Automation Architecture (Crisp White Card Contrast) */}
-      <section className="py-20 bg-white text-zinc-950">
+      {/* Automation Architecture (Deep Black Background with Glass Cards) */}
+      <section className="py-20 bg-[#070708] text-white">
         <div className="container max-w-6xl mx-auto px-4 sm:px-6 space-y-12">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-zinc-200">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-zinc-800">
             <div>
-              <span className="text-[11px] font-mono font-bold tracking-widest uppercase text-[#FFAE00]">
+              <span className="text-[11px] font-mono font-bold tracking-widest uppercase text-purple-400">
                 CORE WORKFLOWS
               </span>
-              <h2 className="text-3xl sm:text-5xl font-black text-zinc-950 tracking-tight font-display mt-2">
-                Replace manual chaos with software.
+              <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight font-display mt-2">
+                Replace manual chaos with software<span className="text-[#FF4D3D]">.</span>
               </h2>
             </div>
-            <p className="text-sm text-zinc-600 max-w-md">
+            <p className="text-sm text-zinc-400 max-w-md">
               Custom integrations that bridge WhatsApp, Google Sheets, Supabase, Stripe, and your custom backend seamlessly.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="p-6 rounded-2xl bg-zinc-50 border border-zinc-200/90 hover:border-[#FFAE00] transition-all space-y-4">
-              <div className="h-10 w-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center font-bold">
+            <div className="p-6 rounded-2xl bg-zinc-950/80 border border-zinc-800/90 hover:border-purple-500/60 transition-all space-y-4">
+              <div className="h-10 w-10 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center font-bold">
                 <MessageSquare className="h-5 w-5" />
               </div>
-              <h3 className="text-xl font-bold text-zinc-950">WhatsApp Business Automation</h3>
-              <p className="text-sm text-zinc-600 leading-relaxed">
+              <h3 className="text-xl font-bold text-white">WhatsApp Business Automation</h3>
+              <p className="text-sm text-zinc-400 leading-relaxed">
                 Automatically reply to customer inquiries, capture lead qualification data, verify phone numbers, and push customer profiles straight into your CRM.
               </p>
-              <ul className="space-y-2 text-xs text-zinc-700 pt-2">
+              <ul className="space-y-2 text-xs text-zinc-300 pt-2">
                 <li className="flex items-center gap-2">
-                  <CheckCircle2 className="h-3.5 w-3.5 text-amber-500" />
+                  <CheckCircle2 className="h-3.5 w-3.5 text-purple-400" />
                   <span>Official WhatsApp Cloud API verification</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle2 className="h-3.5 w-3.5 text-amber-500" />
+                  <CheckCircle2 className="h-3.5 w-3.5 text-purple-400" />
                   <span>Instant PDF brochure &amp; catalog dispatch</span>
                 </li>
               </ul>
             </div>
 
-            <div className="p-6 rounded-2xl bg-zinc-50 border border-zinc-200/90 hover:border-[#FFAE00] transition-all space-y-4">
-              <div className="h-10 w-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center font-bold">
+            <div className="p-6 rounded-2xl bg-zinc-950/80 border border-zinc-800/90 hover:border-purple-500/60 transition-all space-y-4">
+              <div className="h-10 w-10 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center font-bold">
                 <Bot className="h-5 w-5" />
               </div>
-              <h3 className="text-xl font-bold text-zinc-950">Custom GenAI Customer Agents</h3>
-              <p className="text-sm text-zinc-600 leading-relaxed">
+              <h3 className="text-xl font-bold text-white">Custom GenAI Customer Agents</h3>
+              <p className="text-sm text-zinc-400 leading-relaxed">
                 Trained exclusively on your business documentation, pricing guides, and FAQs to answer technical and commercial inquiries with 100% brand voice accuracy.
               </p>
-              <ul className="space-y-2 text-xs text-zinc-700 pt-2">
+              <ul className="space-y-2 text-xs text-zinc-300 pt-2">
                 <li className="flex items-center gap-2">
-                  <CheckCircle2 className="h-3.5 w-3.5 text-amber-500" />
+                  <CheckCircle2 className="h-3.5 w-3.5 text-purple-400" />
                   <span>Grounded in your private business data (RAG)</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle2 className="h-3.5 w-3.5 text-amber-500" />
+                  <CheckCircle2 className="h-3.5 w-3.5 text-purple-400" />
                   <span>Seamless human fallback escalation</span>
                 </li>
               </ul>
             </div>
 
-            <div className="p-6 rounded-2xl bg-zinc-50 border border-zinc-200/90 hover:border-[#FFAE00] transition-all space-y-4">
-              <div className="h-10 w-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center font-bold">
+            <div className="p-6 rounded-2xl bg-zinc-950/80 border border-zinc-800/90 hover:border-purple-500/60 transition-all space-y-4">
+              <div className="h-10 w-10 rounded-xl bg-[#FF4D3D]/10 text-[#FF4D3D] flex items-center justify-center font-bold">
                 <Workflow className="h-5 w-5" />
               </div>
-              <h3 className="text-xl font-bold text-zinc-950">Multi-Service Webhook Relays</h3>
-              <p className="text-sm text-zinc-600 leading-relaxed">
+              <h3 className="text-xl font-bold text-white">Multi-Service Webhook Relays</h3>
+              <p className="text-sm text-zinc-400 leading-relaxed">
                 Connect payment gateways like Razorpay and Stripe to automatically provision user accounts, trigger invoices, and alert your staff via Telegram / Discord.
               </p>
-              <ul className="space-y-2 text-xs text-zinc-700 pt-2">
+              <ul className="space-y-2 text-xs text-zinc-300 pt-2">
                 <li className="flex items-center gap-2">
-                  <CheckCircle2 className="h-3.5 w-3.5 text-amber-500" />
+                  <CheckCircle2 className="h-3.5 w-3.5 text-[#FF4D3D]" />
                   <span>Real-time webhook signature verification</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle2 className="h-3.5 w-3.5 text-amber-500" />
+                  <CheckCircle2 className="h-3.5 w-3.5 text-[#FF4D3D]" />
                   <span>Automated invoice &amp; receipt generation</span>
                 </li>
               </ul>
@@ -181,16 +172,16 @@ export const AutomationPage: React.FC = () => {
       </section>
 
       {/* CTA Strip */}
-      <section className="py-16 bg-[#070708] border-t border-zinc-800 text-center">
+      <section className="py-16 bg-zinc-950/60 border-t border-zinc-800 text-center">
         <div className="container max-w-4xl mx-auto px-4 sm:px-6 space-y-6">
           <h2 className="text-3xl sm:text-5xl font-extrabold text-white font-display">
-            Automate your operational bottleneck today.
+            Automate your operational bottleneck today<span className="text-[#FF4D3D]">.</span>
           </h2>
           <p className="text-zinc-400 text-sm sm:text-base max-w-xl mx-auto">
             Book a 30-minute discovery call directly with Rohith E to blueprint your automated pipeline.
           </p>
           <div className="pt-2">
-            <HeyDigitalButton variant="amber" size="lg" onClick={handleBookService}>
+            <HeyDigitalButton variant="purple" size="lg" onClick={handleBookService}>
               Book Automation Discovery Call ↗
             </HeyDigitalButton>
           </div>

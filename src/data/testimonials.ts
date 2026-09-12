@@ -17,7 +17,7 @@ export const testimonialsData: TestimonialItem[] = [
     role: "Managing Director",
     company: "JSBuilders Civil & Architecture",
     avatarText: "JS",
-    avatarColor: "from-[#FFAE00] to-amber-700",
+    avatarColor: "from-purple-600 to-indigo-600",
     quote:
       "Rohith completely revolutionized our commercial pipeline. Our previous site took 5 seconds to load on mobile and lost inquiries daily. Rohith rebuilt it to load in 0.3 seconds with direct WhatsApp quoting. Inquiries tripled in the first 30 days.",
     metricBadge: "+340% Inquiries",

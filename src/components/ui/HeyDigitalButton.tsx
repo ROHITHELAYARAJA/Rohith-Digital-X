@@ -6,7 +6,7 @@ interface HeyDigitalButtonProps {
   children: React.ReactNode
   onClick?: () => void
   href?: string
-  variant?: "amber" | "dark" | "white"
+  variant?: "purple" | "orange" | "dark" | "white" | "amber"
   size?: "sm" | "md" | "lg"
   direction?: "right" | "down"
   className?: string
@@ -18,14 +18,15 @@ export const HeyDigitalButton: React.FC<HeyDigitalButtonProps> = ({
   children,
   onClick,
   href,
-  variant = "amber",
+  variant = "purple",
   size = "md",
   direction = "right",
   className = "",
   disabled = false,
   type = "button",
 }) => {
-  const isAmber = variant === "amber"
+  const isPurple = variant === "purple" || variant === "amber"
+  const isOrange = variant === "orange"
   const isDark = variant === "dark"
   const isWhite = variant === "white"
 
@@ -41,8 +42,10 @@ export const HeyDigitalButton: React.FC<HeyDigitalButtonProps> = ({
     font-sans font-bold uppercase tracking-wider select-none cursor-pointer
     transition-all duration-300 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed
     ${
-      isAmber
-        ? "bg-[#FFAE00] hover:bg-[#FFB800] text-[#070708] shadow-[0_8px_25px_-5px_rgba(255,174,0,0.45)] hover:shadow-[0_12px_32px_-4px_rgba(255,174,0,0.6)]"
+      isOrange
+        ? "bg-[#FF4D3D] hover:bg-[#FF3B2B] text-white shadow-[0_8px_25px_-5px_rgba(255,77,61,0.45)] hover:shadow-[0_12px_32px_-4px_rgba(255,77,61,0.6)]"
+        : isPurple
+        ? "bg-purple-600 hover:bg-purple-500 text-white shadow-[0_8px_25px_-5px_rgba(139,92,246,0.45)] hover:shadow-[0_12px_32px_-4px_rgba(139,92,246,0.6)]"
         : isDark
         ? "bg-white/5 hover:bg-white/10 text-white border border-white/20 hover:border-white/40 shadow-sm"
         : "bg-white hover:bg-zinc-100 text-zinc-950 border border-zinc-200 shadow-md"
@@ -64,10 +67,12 @@ export const HeyDigitalButton: React.FC<HeyDigitalButtonProps> = ({
               : "group-hover:translate-y-1"
           }
           ${
-            isAmber
-              ? "bg-[#070708] text-[#FFAE00]"
+            isOrange
+              ? "bg-white text-[#FF4D3D]"
+              : isPurple
+              ? "bg-white text-purple-700"
               : isDark
-              ? "bg-white/10 text-white group-hover:bg-[#FFAE00] group-hover:text-black"
+              ? "bg-white/10 text-white group-hover:bg-purple-600 group-hover:text-white"
               : "bg-zinc-950 text-white"
           }
         `}
