@@ -229,7 +229,7 @@ export const Navbar: React.FC = () => {
                   >
                     <span>{link.label}</span>
                     {currentPage === link.id && (
-                      <span className="h-1.5 w-1.5 rounded-full bg-[#FFAE00]" />
+                      <span className="text-[10px] font-mono font-bold text-amber-700 uppercase">Active</span>
                     )}
                   </button>
                 ))}

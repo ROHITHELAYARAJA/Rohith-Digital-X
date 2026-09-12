@@ -94,7 +94,6 @@ export const AttributionPage: React.FC = () => {
                 <div key={item.name} className="p-3 rounded-xl bg-zinc-50 border border-zinc-200/80 space-y-1">
                   <div className="flex items-center justify-between">
                     <span className="text-xs font-bold text-zinc-900 font-mono">{item.name}</span>
-                    <span className="h-1.5 w-1.5 rounded-full bg-accent-crimson" />
                   </div>
                   <p className="text-[11px] text-zinc-600 leading-tight">{item.purpose}</p>
                 </div>

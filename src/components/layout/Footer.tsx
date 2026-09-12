@@ -101,14 +101,19 @@ export const Footer: React.FC = () => {
             
             {/* Left Bio Section (Col 5) */}
             <div className="lg:col-span-5 space-y-5">
-              {/* Brand Monogram Logo */}
+              {/* Brand Monogram Logo with Aerodynamic R */}
               <button
                 onClick={() => navigate("home")}
-                className="flex items-center gap-2 group cursor-pointer text-left"
+                className="flex items-center gap-2.5 group cursor-pointer text-left"
               >
+                <img
+                  src="/rdx-r-logo.png"
+                  alt="Rohith Digital X"
+                  className="h-7 w-auto object-contain invert transition-transform group-hover:scale-105"
+                />
                 <div className="flex items-baseline font-sans text-2xl font-black tracking-tight text-white leading-none">
-                  <span className="font-outfit">RDX</span>
-                  <span className="text-[#FFAE00] text-xl font-bold ml-0.5">.</span>
+                  <span className="font-manrope font-extrabold">Rohith Digital X</span>
+                  <span className="text-[#FF3B30] text-xl font-bold ml-0.5">.</span>
                 </div>
               </button>
 
@@ -229,14 +234,14 @@ export const Footer: React.FC = () => {
               >
                 Privacy Policy
               </button>
-              <span>•</span>
+              <span className="text-zinc-700">/</span>
               <button
                 onClick={() => setLegalModalType("terms")}
                 className="hover:text-white transition-colors cursor-pointer"
               >
                 Terms of Use
               </button>
-              <span>•</span>
+              <span className="text-zinc-700">/</span>
               <button
                 onClick={() => navigate("attribution")}
                 className="hover:text-white transition-colors cursor-pointer"

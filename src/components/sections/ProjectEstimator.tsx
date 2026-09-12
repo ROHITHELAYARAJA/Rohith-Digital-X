@@ -430,7 +430,7 @@ Please let me know how we can discuss requirements and schedule a kickoff call!`
                             <div className="text-[11px] text-zinc-500">From ₹{service.basePrice.toLocaleString("en-IN")}</div>
                           </div>
                           {isSelected && (
-                            <span className="h-2 w-2 rounded-full bg-accent-crimson shrink-0" />
+                            <Check className="h-4 w-4 text-zinc-950 shrink-0" />
                           )}
                         </button>
                       )

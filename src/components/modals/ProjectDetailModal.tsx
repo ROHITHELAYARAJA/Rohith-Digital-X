@@ -58,7 +58,6 @@ Please let me know how we can discuss requirements and architectural feasibility
         {/* Status notice */}
         <div className="flex items-center justify-between p-3.5 rounded-xl bg-zinc-900 text-white text-xs">
           <div className="flex items-center gap-2">
-            <span className="h-2 w-2 rounded-full bg-accent-crimson" />
             <span className="font-semibold">{project.badge}</span>
             <span className="text-zinc-400">| Designed by Rohith Digital X</span>
           </div>
@@ -115,7 +114,7 @@ Please let me know how we can discuss requirements and architectural feasibility
             <ul className="space-y-2 text-xs text-zinc-600">
               {project.architectureHighlights.map((arch, i) => (
                 <li key={i} className="flex items-start gap-2">
-                  <span className="h-1.5 w-1.5 rounded-full bg-accent-crimson mt-1.5 shrink-0" />
+                  <CheckCircle2 className="h-3.5 w-3.5 text-accent-crimson mt-0.5 shrink-0" />
                   <span className="leading-snug">{arch}</span>
                 </li>
               ))}

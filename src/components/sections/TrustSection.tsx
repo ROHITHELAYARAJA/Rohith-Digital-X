@@ -143,7 +143,6 @@ export const TrustSection: React.FC = () => {
                   key={i}
                   className="flex items-center gap-2 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-xl bg-zinc-50 border border-zinc-200/80 text-[11px] sm:text-xs font-mono font-semibold text-zinc-800 hover:border-accent-crimson hover:bg-white hover:text-accent-crimson transition-all shadow-xs cursor-default hover:scale-105"
                 >
-                  <span className="h-1.5 w-1.5 rounded-full bg-accent-crimson" />
                   <span>{tech.name}</span>
                   <span className="text-[10px] text-zinc-400 font-normal">({tech.category})</span>
                 </div>

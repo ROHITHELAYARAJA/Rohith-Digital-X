@@ -37,8 +37,7 @@ export const ServicesPage: React.FC = () => {
             </div>
 
             <div className="flex-1 space-y-6 max-w-3xl">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-zinc-900/90 border border-zinc-700/80 text-xs font-semibold text-zinc-300">
-                <span className="h-2 w-2 rounded-full bg-[#FFAE00]" />
+              <div className="inline-flex items-center px-3.5 py-1 rounded-full bg-zinc-900/90 border border-zinc-700/80 text-xs font-semibold text-zinc-300">
                 <span className="font-sans font-bold text-[11px] uppercase tracking-wider text-zinc-400">
                   WHAT WE BUILD &amp; SHIP
                 </span>

@@ -311,8 +311,8 @@ export const AboutSection: React.FC = () => {
 
               <div className="pt-2 flex items-center gap-4 text-xs font-medium text-zinc-500 font-mono">
                 <span>📍 Namakkal, Tamil Nadu, India</span>
-                <span>•</span>
-                <span className="text-emerald-600 font-bold">● Available for Projects</span>
+                <span className="text-zinc-300">/</span>
+                <span className="text-emerald-600 font-bold">Available for Projects</span>
               </div>
             </div>
 

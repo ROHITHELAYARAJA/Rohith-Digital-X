@@ -360,9 +360,6 @@ export const CalBookingWidget: React.FC<CalBookingWidgetProps> = ({ onSuccess })
                       `}
                     >
                       <span>{day}</span>
-                      {day === 12 && !isSelected && (
-                        <span className="absolute bottom-1 h-1 w-1 rounded-full bg-[#FFAE00]" />
-                      )}
                     </button>
                   )
                 })}

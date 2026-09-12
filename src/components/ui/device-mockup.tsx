@@ -10,11 +10,8 @@ export const DeviceMockup: React.FC<DeviceMockupProps> = ({ type, variant }) => 
   if (type === "phone") {
     return (
       <div className="relative mx-auto w-[240px] sm:w-[270px] aspect-[9/18] rounded-[44px] bg-zinc-950 p-2.5 shadow-2xl ring-1 ring-zinc-800/80">
-        {/* Dynamic Island / Speaker Notch */}
-        <div className="absolute top-4 left-1/2 -translate-x-1/2 h-5 w-24 rounded-full bg-zinc-900 z-30 flex items-center justify-between px-2.5">
-          <div className="h-2.5 w-2.5 rounded-full bg-zinc-800" />
-          <div className="h-2 w-2 rounded-full bg-emerald-500/80" />
-        </div>
+        {/* Dynamic Island Notch */}
+        <div className="absolute top-4 left-1/2 -translate-x-1/2 h-4 w-20 rounded-full bg-zinc-900 z-30" />
 
         {/* Screen Bezel & Content */}
         <div className="relative h-full w-full rounded-[36px] bg-white overflow-hidden flex flex-col justify-between pt-7 pb-4 px-3.5 text-zinc-900 select-none border border-zinc-100">
@@ -37,9 +34,8 @@ export const DeviceMockup: React.FC<DeviceMockupProps> = ({ type, variant }) => 
               <span className="text-accent-crimson font-bold">EN ROUTE</span>
             </div>
             <p className="text-xs font-bold leading-tight">AC Repair & Maintenance</p>
-            <div className="flex items-center gap-2 text-[10px] text-zinc-300">
-              <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-              <span>Arriving in 12 mins • Namakkal</span>
+            <div className="flex items-center gap-1.5 text-[10px] text-zinc-300">
+              <span>Arriving in 12 mins / Namakkal</span>
             </div>
           </div>
 
@@ -114,7 +110,7 @@ export const DeviceMockup: React.FC<DeviceMockupProps> = ({ type, variant }) => 
                     <span className="font-bold text-xs text-zinc-900">CarePulse Health Portal</span>
                   </div>
                   <span className="text-[10px] font-mono font-bold text-emerald-600 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full">
-                    ● Live Schedule Sync
+                    Live Schedule Sync
                   </span>
                 </div>
 

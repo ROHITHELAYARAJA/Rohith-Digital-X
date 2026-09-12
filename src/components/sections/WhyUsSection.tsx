@@ -95,8 +95,7 @@ export const WhyUsSection: React.FC = () => {
                         </div>
                         <div className="flex items-center gap-2">
                           {isFeatured && (
-                            <span className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-zinc-900 border border-zinc-800 text-emerald-400 text-[11px] font-mono font-semibold">
-                              <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                            <span className="flex items-center px-3 py-1 rounded-full bg-zinc-900 border border-zinc-800 text-emerald-400 text-[11px] font-mono font-semibold">
                               <span>24h Founder SLA</span>
                             </span>
                           )}

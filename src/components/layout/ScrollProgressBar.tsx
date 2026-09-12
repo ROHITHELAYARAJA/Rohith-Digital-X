@@ -117,9 +117,6 @@ export const ScrollProgressBar: React.FC = () => {
                         <span className="text-[10px] text-zinc-500 font-bold">{sec.short}</span>
                         <span>{sec.label}</span>
                       </div>
-                      {activeSection === sec.id && (
-                        <span className="h-1.5 w-1.5 rounded-full bg-accent-crimson" />
-                      )}
                     </button>
                   ))}
                 </motion.div>
@@ -162,7 +159,7 @@ export const ScrollProgressBar: React.FC = () => {
               {/* Active Section Label with Crimson Indicator */}
               <div className="flex items-center gap-1.5 text-xs font-semibold pr-1">
                 <span className="text-[10px] text-accent-crimson font-bold">{activeNumber}</span>
-                <span className="text-zinc-500">•</span>
+                <span className="text-zinc-500">/</span>
                 <span className="text-zinc-200 group-hover:text-white transition-colors">{activeLabel}</span>
               </div>
 

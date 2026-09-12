@@ -24,8 +24,7 @@ export const ArchitectureOrbit: React.FC = () => {
           <span className="text-xs sm:text-sm font-black text-white">
             ENGINE
           </span>
-          <span className="text-[9px] font-mono text-emerald-400 font-bold flex items-center gap-1 mt-0.5">
-            <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+          <span className="text-[9px] font-mono text-emerald-400 font-bold mt-0.5 tracking-wider">
             LIVE
           </span>
         </div>
