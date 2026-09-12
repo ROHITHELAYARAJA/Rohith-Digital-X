@@ -54,7 +54,7 @@ export const WorkPage: React.FC = () => {
 
             <div className="flex-1 space-y-6 max-w-3xl">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900/90 border border-zinc-700/80 text-[11px] font-mono font-semibold text-zinc-300">
-                <span className="h-2 w-2 rounded-full bg-[#FFAE00] animate-pulse" />
+                <span className="h-2 w-2 rounded-full bg-[#FFAE00]" />
                 <span>SHIPPED ARCHITECTURES &amp; CLIENT SYSTEMS</span>
               </div>
 

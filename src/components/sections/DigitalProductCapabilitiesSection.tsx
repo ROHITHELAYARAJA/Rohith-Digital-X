@@ -40,7 +40,7 @@ export const DigitalProductCapabilitiesSection: React.FC = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 max-w-4xl">
           <div className="space-y-3">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white border border-[#E5DDD0] text-xs font-semibold text-zinc-700 shadow-xs">
-              <span className="h-2 w-2 rounded-full bg-[#FF4D3D] animate-pulse" />
+              <span className="h-2 w-2 rounded-full bg-[#FF4D3D]" />
               <span className="font-sans uppercase tracking-wider text-[11px] font-bold text-zinc-600">
                 PROPRIETARY ARCHITECTURE
               </span>
@@ -128,7 +128,7 @@ export const DigitalProductCapabilitiesSection: React.FC = () => {
             {/* Inner Floating White Modal */}
             <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-5 border border-white/60 shadow-md space-y-4">
               <div className="flex items-center gap-2 text-[11px] font-semibold text-zinc-600">
-                <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+                <span className="h-2 w-2 rounded-full bg-emerald-500" />
                 <span>Bespoke Engineering Studio</span>
               </div>
 

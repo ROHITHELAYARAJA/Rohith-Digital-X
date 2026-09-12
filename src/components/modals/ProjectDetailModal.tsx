@@ -58,7 +58,7 @@ Please let me know how we can discuss requirements and architectural feasibility
         {/* Status notice */}
         <div className="flex items-center justify-between p-3.5 rounded-xl bg-zinc-900 text-white text-xs">
           <div className="flex items-center gap-2">
-            <span className="h-2 w-2 rounded-full bg-accent-crimson animate-pulse" />
+            <span className="h-2 w-2 rounded-full bg-accent-crimson" />
             <span className="font-semibold">{project.badge}</span>
             <span className="text-zinc-400">| Designed by Rohith Digital X</span>
           </div>

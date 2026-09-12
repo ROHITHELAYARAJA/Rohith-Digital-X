@@ -13,7 +13,7 @@ export const DeviceMockup: React.FC<DeviceMockupProps> = ({ type, variant }) => 
         {/* Dynamic Island / Speaker Notch */}
         <div className="absolute top-4 left-1/2 -translate-x-1/2 h-5 w-24 rounded-full bg-zinc-900 z-30 flex items-center justify-between px-2.5">
           <div className="h-2.5 w-2.5 rounded-full bg-zinc-800" />
-          <div className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+          <div className="h-2 w-2 rounded-full bg-emerald-500/80" />
         </div>
 
         {/* Screen Bezel & Content */}

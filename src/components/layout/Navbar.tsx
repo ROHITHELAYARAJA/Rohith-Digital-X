@@ -68,7 +68,7 @@ export const Navbar: React.FC = () => {
               onClick={() => handleNavClick("home")}
               className="flex items-center gap-2 bg-white/95 backdrop-blur-md border border-zinc-200/90 py-2 px-4 rounded-full shadow-sm hover:border-[#FFAE00] transition-all active:scale-95 cursor-pointer"
             >
-              <span className="h-2 w-2 rounded-full bg-[#FFAE00] animate-pulse" />
+              <span className="h-2 w-2 rounded-full bg-[#FFAE00]" />
               <div className="flex items-baseline font-sans text-xs sm:text-sm font-extrabold tracking-tight text-zinc-950 leading-none">
                 <span className="font-black">Rohith</span>
                 <span className="text-zinc-500 font-medium ml-1 tracking-tight">Digital</span>
