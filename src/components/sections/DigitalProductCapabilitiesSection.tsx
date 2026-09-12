@@ -36,31 +36,40 @@ export const DigitalProductCapabilitiesSection: React.FC = () => {
 
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 relative z-10 space-y-16">
         
-        {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 max-w-4xl">
+        {/* Section Header with Scroll Animation */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+          className="flex flex-col md:flex-row md:items-end justify-between gap-6 max-w-4xl"
+        >
           <div className="space-y-3">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white border border-[#E5DDD0] text-xs font-semibold text-zinc-700 shadow-xs">
-              <span className="h-2 w-2 rounded-full bg-[#FF4D3D]" />
-              <span className="font-sans uppercase tracking-wider text-[11px] font-bold text-zinc-600">
+              <span className="h-2 w-2 rounded-full bg-[#FF3B30]" />
+              <span className="font-manrope uppercase tracking-wider text-[11px] font-bold text-zinc-600">
                 PROPRIETARY ARCHITECTURE
               </span>
             </div>
-            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-zinc-950 leading-[1.08]">
-              Engineered with <span className="font-boska italic font-light text-[#FF4D3D]">taste</span> and microsecond speed.
+            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-zinc-950 leading-[1.08] font-manrope">
+              Engineered with <span className="font-playfair italic font-medium text-[#FF3B30]">taste</span> and microsecond speed.
             </h2>
           </div>
-          <p className="text-sm sm:text-base text-zinc-600 max-w-md leading-relaxed font-sans">
+          <p className="text-sm sm:text-base text-zinc-600 max-w-md leading-relaxed font-dmsans">
             Every digital product built by Rohith Digital X blends editorial elegance with rock-solid full-stack code. Inspired by modern fast-lane workflows.
           </p>
-        </div>
+        </motion.div>
 
         {/* Bento Grid: 3-column top row, 2-column bottom row */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           
           {/* Card 1: Coral Red Company Profile Card */}
           <motion.div
+            initial={{ opacity: 0, y: 28 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ duration: 0.5, delay: 0.05, ease: [0.22, 1, 0.36, 1] }}
             whileHover={{ y: -4 }}
-            transition={{ duration: 0.2 }}
             className="rounded-[2rem] bg-gradient-to-br from-[#FF5C4D] via-[#FF4D3D] to-[#E6392A] p-6 sm:p-8 text-white shadow-xl flex flex-col justify-between min-h-[380px] relative overflow-hidden"
           >
             {/* Subtle glow overlay */}
@@ -121,8 +130,11 @@ export const DigitalProductCapabilitiesSection: React.FC = () => {
 
           {/* Card 2: Warm Sand Oatmeal Studio Card */}
           <motion.div
+            initial={{ opacity: 0, y: 28 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ duration: 0.5, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
             whileHover={{ y: -4 }}
-            transition={{ duration: 0.2 }}
             className="rounded-[2rem] bg-[#EFE8D8] border border-[#E2D8C7] p-6 sm:p-8 flex flex-col justify-between min-h-[380px] shadow-sm relative overflow-hidden"
           >
             {/* Inner Floating White Modal */}
@@ -132,8 +144,8 @@ export const DigitalProductCapabilitiesSection: React.FC = () => {
                 <span>Bespoke Engineering Studio</span>
               </div>
 
-              <div className="text-2xl sm:text-3xl font-black text-zinc-950 tracking-tight">
-                Create with <span className="font-bonny italic text-[#FF4D3D]">RDX</span>
+              <div className="text-2xl sm:text-3xl font-black text-zinc-950 tracking-tight font-manrope">
+                Create with <span className="font-playfair italic text-[#FF3B30]">RDX</span>
               </div>
 
               {/* Action Chips */}
@@ -155,19 +167,22 @@ export const DigitalProductCapabilitiesSection: React.FC = () => {
             </div>
 
             <div className="pt-6">
-              <h3 className="text-xl font-bold text-zinc-950 tracking-tight">
+              <h3 className="text-xl font-bold text-zinc-950 tracking-tight font-manrope">
                 Crafted Without Templates
               </h3>
-              <p className="text-xs text-zinc-600 mt-1 leading-relaxed">
-                Enter our digital workshop. Hand-coded interfaces with bespoke 3D wireframe visuals and modern API endpoints.
+              <p className="text-xs text-zinc-600 mt-1 leading-relaxed font-dmsans">
+                Enter our digital workshop. Hand-coded interfaces with bespoke visuals and modern API endpoints.
               </p>
             </div>
           </motion.div>
 
           {/* Card 3: Minimalist Schedule & Sprint Calendar Card */}
           <motion.div
+            initial={{ opacity: 0, y: 28 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ duration: 0.5, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
             whileHover={{ y: -4 }}
-            transition={{ duration: 0.2 }}
             className="rounded-[2rem] bg-white border border-zinc-200/80 p-6 sm:p-8 flex flex-col justify-between min-h-[380px] shadow-sm relative"
           >
             {/* Calendar UI Mockup */}
@@ -238,8 +253,11 @@ export const DigitalProductCapabilitiesSection: React.FC = () => {
           
           {/* Card 4: Advanced Analytics Dashboard (7 cols) */}
           <motion.div
+            initial={{ opacity: 0, y: 28 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ duration: 0.5, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
             whileHover={{ y: -4 }}
-            transition={{ duration: 0.2 }}
             className="lg:col-span-8 rounded-[2rem] bg-white border border-zinc-200/80 p-6 sm:p-8 flex flex-col justify-between shadow-sm"
           >
             <div className="space-y-6">
@@ -248,7 +266,7 @@ export const DigitalProductCapabilitiesSection: React.FC = () => {
                 <div className="flex items-center gap-2">
                   <button
                     onClick={() => setActiveTab("performance")}
-                    className={`px-3 py-1 rounded-full text-xs font-bold transition-all cursor-pointer ${
+                    className={`px-3 py-1 rounded-full text-xs font-bold transition-all cursor-pointer font-manrope ${
                       activeTab === "performance"
                         ? "bg-zinc-950 text-white shadow-xs"
                         : "text-zinc-500 hover:text-zinc-900"
@@ -258,7 +276,7 @@ export const DigitalProductCapabilitiesSection: React.FC = () => {
                   </button>
                   <button
                     onClick={() => setActiveTab("security")}
-                    className={`px-3 py-1 rounded-full text-xs font-bold transition-all cursor-pointer ${
+                    className={`px-3 py-1 rounded-full text-xs font-bold transition-all cursor-pointer font-manrope ${
                       activeTab === "security"
                         ? "bg-zinc-950 text-white shadow-xs"
                         : "text-zinc-500 hover:text-zinc-900"
@@ -268,8 +286,8 @@ export const DigitalProductCapabilitiesSection: React.FC = () => {
                   </button>
                 </div>
 
-                <div className="flex items-center gap-1.5 text-xs text-zinc-500 font-semibold">
-                  <Activity className="h-3.5 w-3.5 text-[#FF4D3D]" />
+                <div className="flex items-center gap-1.5 text-xs text-zinc-500 font-semibold font-dmsans">
+                  <Activity className="h-3.5 w-3.5 text-[#FF3B30]" />
                   <span>Realtime Telemetry</span>
                 </div>
               </div>
@@ -279,18 +297,18 @@ export const DigitalProductCapabilitiesSection: React.FC = () => {
                 
                 {/* Metric 1 */}
                 <div className="p-4 rounded-2xl bg-zinc-50 border border-zinc-200/70 space-y-2">
-                  <div className="flex items-center justify-between text-xs font-bold text-zinc-900">
+                  <div className="flex items-center justify-between text-xs font-bold text-zinc-900 font-manrope">
                     <span>Web Core Vitals</span>
-                    <Globe className="h-3.5 w-3.5 text-[#FF4D3D]" />
+                    <Globe className="h-3.5 w-3.5 text-[#FF3B30]" />
                   </div>
                   <div className="space-y-1">
-                    <div className="px-2 py-1 rounded-md bg-white border border-zinc-200 text-[11px] font-bold text-emerald-700">
+                    <div className="px-2 py-1 rounded-md bg-white border border-zinc-200 text-[11px] font-bold text-emerald-700 font-mono">
                       100/100 Lighthouse
                     </div>
-                    <div className="px-2 py-1 rounded-md bg-white border border-zinc-200 text-[11px] font-bold text-zinc-800">
+                    <div className="px-2 py-1 rounded-md bg-white border border-zinc-200 text-[11px] font-bold text-zinc-800 font-mono">
                       &lt;0.38s Page Load
                     </div>
-                    <div className="text-[10px] text-zinc-500 pt-0.5">
+                    <div className="text-[10px] text-zinc-500 pt-0.5 font-dmsans">
                       Zero cumulative layout shift
                     </div>
                   </div>
@@ -298,18 +316,18 @@ export const DigitalProductCapabilitiesSection: React.FC = () => {
 
                 {/* Metric 2 */}
                 <div className="p-4 rounded-2xl bg-zinc-50 border border-zinc-200/70 space-y-2">
-                  <div className="flex items-center justify-between text-xs font-bold text-zinc-900">
+                  <div className="flex items-center justify-between text-xs font-bold text-zinc-900 font-manrope">
                     <span>Mobile Native</span>
                     <Smartphone className="h-3.5 w-3.5 text-indigo-600" />
                   </div>
                   <div className="space-y-1">
-                    <div className="px-2 py-1 rounded-md bg-white border border-zinc-200 text-[11px] font-bold text-indigo-700">
+                    <div className="px-2 py-1 rounded-md bg-white border border-zinc-200 text-[11px] font-bold text-indigo-700 font-mono">
                       60 FPS Fluidity
                     </div>
-                    <div className="px-2 py-1 rounded-md bg-white border border-zinc-200 text-[11px] font-bold text-zinc-800">
+                    <div className="px-2 py-1 rounded-md bg-white border border-zinc-200 text-[11px] font-bold text-zinc-800 font-mono">
                       iOS & Android
                     </div>
-                    <div className="text-[10px] text-zinc-500 pt-0.5">
+                    <div className="text-[10px] text-zinc-500 pt-0.5 font-dmsans">
                       Offline SQLite cache sync
                     </div>
                   </div>
@@ -317,18 +335,18 @@ export const DigitalProductCapabilitiesSection: React.FC = () => {
 
                 {/* Metric 3 */}
                 <div className="p-4 rounded-2xl bg-zinc-50 border border-zinc-200/70 space-y-2">
-                  <div className="flex items-center justify-between text-xs font-bold text-zinc-900">
+                  <div className="flex items-center justify-between text-xs font-bold text-zinc-900 font-manrope">
                     <span>AI & Automation</span>
                     <Bot className="h-3.5 w-3.5 text-[#FFAE00]" />
                   </div>
                   <div className="space-y-1">
-                    <div className="px-2 py-1 rounded-md bg-white border border-zinc-200 text-[11px] font-bold text-amber-700">
+                    <div className="px-2 py-1 rounded-md bg-white border border-zinc-200 text-[11px] font-bold text-amber-700 font-mono">
                       Automated Pipeline
                     </div>
-                    <div className="px-2 py-1 rounded-md bg-white border border-zinc-200 text-[11px] font-bold text-zinc-800">
+                    <div className="px-2 py-1 rounded-md bg-white border border-zinc-200 text-[11px] font-bold text-zinc-800 font-mono">
                       Zero Human Lag
                     </div>
-                    <div className="text-[10px] text-zinc-500 pt-0.5">
+                    <div className="text-[10px] text-zinc-500 pt-0.5 font-dmsans">
                       WhatsApp, CRM & webhooks
                     </div>
                   </div>
@@ -342,9 +360,9 @@ export const DigitalProductCapabilitiesSection: React.FC = () => {
                   type="text"
                   readOnly
                   value="Ready to scale: Web apps, mobile systems & automation"
-                  className="w-full bg-transparent px-3 text-xs text-zinc-700 font-medium focus:outline-none"
+                  className="w-full bg-transparent px-3 text-xs text-zinc-700 font-medium focus:outline-none font-dmsans"
                 />
-                <button className="shrink-0 px-4 py-2 rounded-xl bg-[#FF4D3D] hover:bg-[#E03627] text-white text-xs font-bold transition-all shadow-sm flex items-center gap-1.5 cursor-pointer">
+                <button className="shrink-0 px-4 py-2 rounded-xl bg-[#FF3B30] hover:bg-[#E03627] text-white text-xs font-bold transition-all shadow-sm flex items-center gap-1.5 cursor-pointer font-manrope">
                   <span>Explore Stack</span>
                   <ArrowUpRight className="h-3.5 w-3.5" />
                 </button>
@@ -352,10 +370,10 @@ export const DigitalProductCapabilitiesSection: React.FC = () => {
             </div>
 
             <div className="pt-6">
-              <h3 className="text-xl font-bold text-zinc-950 tracking-tight">
+              <h3 className="text-xl font-bold text-zinc-950 tracking-tight font-manrope">
                 Observability & Production Quality
               </h3>
-              <p className="text-xs text-zinc-600 mt-1 leading-relaxed">
+              <p className="text-xs text-zinc-600 mt-1 leading-relaxed font-dmsans">
                 Real-time telemetry, automated testing, and performance metrics built into every single deployment.
               </p>
             </div>
@@ -363,8 +381,11 @@ export const DigitalProductCapabilitiesSection: React.FC = () => {
 
           {/* Card 5: Live Traffic & Surge Growth Card (5 cols) */}
           <motion.div
+            initial={{ opacity: 0, y: 28 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ duration: 0.5, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
             whileHover={{ y: -4 }}
-            transition={{ duration: 0.2 }}
             className="lg:col-span-4 rounded-[2rem] bg-white border border-zinc-200/80 p-6 sm:p-8 flex flex-col justify-between shadow-sm relative overflow-hidden"
           >
             <div className="space-y-4">

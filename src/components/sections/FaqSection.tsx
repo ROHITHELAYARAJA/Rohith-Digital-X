@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { motion } from "framer-motion"
 import { faqsData } from "@/data/faqs"
 import { AccordionItem } from "@/components/ui/accordion"
 import { ArrowRight } from "lucide-react"
@@ -16,25 +17,31 @@ export const FaqSection: React.FC = () => {
     <section id="faq" className="py-20 sm:py-28 bg-white border-t border-zinc-200 relative text-zinc-950">
       <div className="container max-w-4xl mx-auto px-4 sm:px-6">
         
-        {/* Section Header with Editorial Typography */}
-        <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16 space-y-4">
+        {/* Header with Scroll Animation */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+          className="text-center max-w-2xl mx-auto mb-12 sm:mb-16 space-y-4"
+        >
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-zinc-100 border border-zinc-250 text-xs font-semibold text-zinc-700 shadow-xs">
-            <span className="h-2 w-2 rounded-full bg-[#FFAE00]" />
-            <span className="font-sans font-bold text-[11px] uppercase tracking-wider text-zinc-600">
+            <span className="h-2 w-2 rounded-full bg-[#FF3B30]" />
+            <span className="font-manrope font-bold text-[11px] uppercase tracking-wider text-zinc-600">
               TRANSPARENT ANSWERS
             </span>
           </div>
-          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-zinc-950 leading-[1.08] font-display">
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-zinc-950 leading-[1.08] font-manrope">
             Everything you need to{" "}
-            <span className="font-boska italic font-light text-[#FF4D3D]">
+            <span className="font-playfair italic font-medium text-[#FF3B30]">
               know
             </span>
             .
           </h2>
-          <p className="text-sm sm:text-base text-zinc-600 leading-relaxed font-normal font-sans">
+          <p className="text-sm sm:text-base text-zinc-600 leading-relaxed font-normal font-dmsans">
             Direct, candid answers about sprint timelines, founder communication, code ownership, and post-launch guarantees.
           </p>
-        </div>
+        </motion.div>
 
         {/* Accordion List */}
         <div className="space-y-3.5">

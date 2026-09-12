@@ -140,17 +140,17 @@ const StackedCard: React.FC<{
 
             {/* Brand Title with Amber Period */}
             <div>
-              <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-zinc-950 leading-tight font-display">
+              <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-zinc-950 leading-tight font-manrope">
                 {card.brandName}
-                <span className="text-[#FFAE00]">.</span>
+                <span className="text-[#FF3B30]">.</span>
               </h3>
-              <p className="text-sm sm:text-base font-bold text-zinc-800 mt-1 font-bonny">
+              <p className="text-sm sm:text-base font-bold text-zinc-800 mt-1 font-playfair">
                 {card.title}
               </p>
             </div>
 
             {/* Description Body */}
-            <p className="text-xs sm:text-sm md:text-base text-zinc-700 leading-relaxed font-normal font-general">
+            <p className="text-xs sm:text-sm md:text-base text-zinc-700 leading-relaxed font-normal font-dmsans">
               {card.description}
             </p>
 
@@ -242,15 +242,15 @@ export const WorkSection: React.FC<WorkSectionProps> = ({ onDiscussSimilar }) =>
             </span>
           </motion.div>
 
-          {/* High-Impact Headline with Fontshare Boska Italic Contrast */}
+          {/* High-Impact Headline with Playfair Display Italic Contrast */}
           <motion.h2
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight text-zinc-950 max-w-4xl mx-auto leading-[1.08] font-display"
+            className="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight text-zinc-950 max-w-4xl mx-auto leading-[1.08] font-manrope"
           >
-            Engineered for <span className="font-boska italic font-light text-[#FF4D3D]">scale</span> and measurable growth<span className="text-[#FFAE00]">.</span>
+            Engineered for <span className="font-playfair italic font-medium text-[#FF3B30]">scale</span> and measurable growth<span className="text-[#FF3B30]">.</span>
           </motion.h2>
 
           {/* Clean Subtitle */}
@@ -259,7 +259,7 @@ export const WorkSection: React.FC<WorkSectionProps> = ({ onDiscussSimilar }) =>
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.18 }}
-            className="text-sm sm:text-base text-zinc-600 max-w-2xl mx-auto font-normal leading-relaxed font-sans"
+            className="text-sm sm:text-base text-zinc-600 max-w-2xl mx-auto font-normal leading-relaxed font-dmsans"
           >
             Every product below was architected, coded, and deployed directly by Rohith E. Zero template bloat, sub-0.4s load times, and custom full-stack infrastructure.
           </motion.p>

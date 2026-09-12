@@ -1,5 +1,6 @@
 import React from "react"
 import { HeroSection } from "@/components/sections/HeroSection"
+import { FastlaneSpotlightSection } from "@/components/sections/FastlaneSpotlightSection"
 import { ThreeReasonsSection } from "@/components/sections/ThreeReasonsSection"
 import { DigitalProductCapabilitiesSection } from "@/components/sections/DigitalProductCapabilitiesSection"
 import { ServicesSection } from "@/components/sections/ServicesSection"
@@ -61,10 +62,13 @@ export const HomePage: React.FC = () => {
 
   return (
     <div className="bg-[#070708] text-white selection:bg-[#FFAE00] selection:text-black">
-      {/* 1. Master HeyDigital Hero Section with 3D Rotating Polyhedrons */}
+      {/* 1. Fastlane-Inspired Light Hero Section */}
       <HeroSection />
 
-      {/* 2. Signature "Three Reasons They Stay" Section (Crisp White Card Rhythm) */}
+      {/* 2. Fastlane Spotlight Section (Matching Image 5 with Signature Glowing Orange Box Button) */}
+      <FastlaneSpotlightSection />
+
+      {/* 3. Signature "Three Reasons They Stay" Section */}
       <ThreeReasonsSection />
 
       {/* 2.5. Fastlane-Inspired Proprietary Architecture & Bento Capabilities */}
@@ -94,14 +98,14 @@ export const HomePage: React.FC = () => {
                 DIRECT CALENDAR ACCESS
               </span>
             </div>
-            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight font-display leading-[1.08]">
+            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight font-manrope leading-[1.08]">
               Let's build something{" "}
-              <span className="font-boska italic font-light text-[#FFAE00]">
+              <span className="font-playfair italic font-medium text-[#FF3B30]">
                 extraordinary
               </span>
               .
             </h2>
-            <p className="text-sm sm:text-base text-zinc-400 font-normal leading-relaxed font-sans">
+            <p className="text-sm sm:text-base text-zinc-400 font-normal leading-relaxed font-dmsans">
               Book a 30-minute technical discovery call directly with founder Rohith E. We will map your system architecture, scope, and sprint timeline with zero fluff.
             </p>
           </div>

@@ -56,30 +56,29 @@ export const Navbar: React.FC = () => {
     <>
       <header
         className={cn(
-          "fixed top-4 sm:top-5 left-0 right-0 z-50 transition-all duration-300 pointer-events-none px-4 sm:px-6",
+          "fixed top-4 sm:top-5 left-0 right-0 z-50 transition-all duration-300 pointer-events-none px-4 flex justify-center",
           isScrolled ? "translate-y-0" : "translate-y-0.5"
         )}
       >
-        <div className="w-full max-w-7xl mx-auto flex items-center justify-between md:grid md:grid-cols-3 pointer-events-auto relative">
-          
-          {/* Left Column: Brand Logo Pill */}
-          <div className="flex items-center justify-start">
+        <div className="pointer-events-auto relative" ref={moreDropdownRef}>
+          {/* Fastlane-style Single Unified Floating Glass Pill */}
+          <nav className="flex items-center gap-2 sm:gap-3 bg-white/95 dark:bg-zinc-950/90 backdrop-blur-xl py-1.5 pl-4 pr-1.5 rounded-full border border-zinc-200/90 dark:border-zinc-800/90 shadow-[0_16px_40px_rgba(0,0,0,0.12)] dark:shadow-[0_16px_40px_rgba(0,0,0,0.5)]">
+            
+            {/* Logo on Left */}
             <button
               onClick={() => handleNavClick("home")}
-              className="flex items-center gap-2 bg-white/95 backdrop-blur-md border border-zinc-200/90 py-2 px-4 rounded-full shadow-sm hover:border-[#FFAE00] transition-all active:scale-95 cursor-pointer"
+              className="flex items-center gap-2 pr-1.5 text-xs sm:text-sm font-manrope font-extrabold tracking-tight text-zinc-950 dark:text-white hover:text-[#FF4D3D] transition-colors cursor-pointer group"
             >
-              <span className="h-2 w-2 rounded-full bg-[#FFAE00]" />
-              <div className="flex items-baseline font-sans text-xs sm:text-sm font-extrabold tracking-tight text-zinc-950 leading-none">
-                <span className="font-black">Rohith</span>
-                <span className="text-zinc-500 font-medium ml-1 tracking-tight">Digital</span>
-                <span className="font-black text-[#FFAE00] ml-1">X</span>
+              <div className="h-5 w-5 rounded-md bg-gradient-to-br from-[#FF4D3D] to-[#FFAE00] flex items-center justify-center text-white font-black text-[10px] shadow-2xs group-hover:scale-105 transition-transform">
+                ⚡
               </div>
+              <span className="font-extrabold tracking-tight">Rohith Digital X</span>
             </button>
-          </div>
 
-          {/* Center Column: Perfectly Dead-Centered Dark Pill Navigation */}
-          <div className="hidden md:flex items-center justify-center relative" ref={moreDropdownRef}>
-            <nav className="flex items-center gap-1 bg-zinc-950/95 backdrop-blur-md text-white p-1.5 rounded-full border border-zinc-800 shadow-2xl relative">
+            <div className="h-4 w-[1px] bg-zinc-200 dark:bg-zinc-800 hidden md:block" />
+
+            {/* Links in Center (Desktop) */}
+            <div className="hidden md:flex items-center gap-0.5">
               {[
                 { id: "home" as PageRoute, label: "Home" },
                 { id: "services" as PageRoute, label: "Services" },
@@ -93,17 +92,12 @@ export const Navbar: React.FC = () => {
                     key={link.id}
                     onClick={() => handleNavClick(link.id)}
                     className={cn(
-                      "relative px-3.5 py-1.5 text-xs font-semibold rounded-full transition-colors duration-150 cursor-pointer select-none z-10",
-                      isActive ? "text-white font-extrabold" : "text-zinc-400 hover:text-white"
+                      "relative px-3 py-1.5 text-xs font-semibold rounded-full transition-colors cursor-pointer select-none",
+                      isActive
+                        ? "text-zinc-950 dark:text-white font-bold bg-zinc-100 dark:bg-zinc-800 shadow-2xs"
+                        : "text-zinc-600 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-white"
                     )}
                   >
-                    {isActive && (
-                      <motion.div
-                        layoutId="activeNavPillTab"
-                        className="absolute inset-0 rounded-full bg-zinc-800 shadow-xs ring-1 ring-[#FFAE00]/40 -z-10"
-                        transition={{ type: "spring", stiffness: 450, damping: 32 }}
-                      />
-                    )}
                     <span>{link.label}</span>
                   </button>
                 )
@@ -114,129 +108,48 @@ export const Navbar: React.FC = () => {
                 onClick={() => setIsMoreOpen(!isMoreOpen)}
                 className={cn(
                   "flex items-center gap-1 px-3 py-1.5 text-xs font-semibold rounded-full transition-colors cursor-pointer select-none",
-                  isMoreOpen ? "bg-zinc-800 text-white font-bold" : "text-zinc-400 hover:text-white"
+                  isMoreOpen
+                    ? "bg-zinc-100 dark:bg-zinc-800 text-zinc-950 dark:text-white font-bold"
+                    : "text-zinc-600 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-white"
                 )}
               >
                 <span>More</span>
-                <ChevronDown className={cn("h-3 w-3 transition-transform duration-200", isMoreOpen ? "rotate-180 text-[#FFAE00]" : "")} />
+                <ChevronDown
+                  className={cn(
+                    "h-3 w-3 transition-transform duration-200",
+                    isMoreOpen ? "rotate-180 text-[#FF4D3D]" : ""
+                  )}
+                />
               </button>
 
-              {/* "Book a Call" Action inside Centered Pill - HeyDigital Amber Style */}
+              {/* Standalone Search Trigger */}
               <button
-                onClick={() => handleNavClick("contact")}
-                className="ml-1 flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#FFAE00] hover:bg-[#FFB800] text-black text-xs font-extrabold transition-all shadow-sm cursor-pointer active:scale-95"
+                onClick={() => setIsSearchOpen(true)}
+                aria-label="Search sections"
+                className="h-7 w-7 rounded-full text-zinc-500 hover:text-zinc-950 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800 flex items-center justify-center transition-all cursor-pointer ml-1 active:scale-90"
               >
-                <span>Book a Call</span>
-                <ArrowUpRight className="h-3 w-3 text-black stroke-[2.5]" />
+                <Search className="h-3.5 w-3.5" />
               </button>
-            </nav>
+            </div>
 
-            {/* Standalone Search Circle Floating Outside Nav Pill */}
-            <button
-              onClick={() => setIsSearchOpen(true)}
-              aria-label="Search sections"
-              className="h-9 w-9 rounded-full bg-zinc-950/95 backdrop-blur-md border border-zinc-800 shadow-2xl hover:border-[#FFAE00] hover:bg-zinc-900 text-zinc-300 hover:text-white flex items-center justify-center transition-all cursor-pointer ml-2.5 shrink-0 active:scale-90"
-            >
-              <Search className="h-4 w-4" />
-            </button>
-
-            <AnimatePresence>
-              {isMoreOpen && (
-                <motion.div
-                  initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                  transition={{ duration: 0.18, ease: "easeOut" }}
-                  className="absolute top-14 left-1/2 -translate-x-1/2 w-[620px] rounded-[2rem] bg-[#18181B] border border-zinc-700/90 shadow-[0_25px_60px_rgba(0,0,0,0.5)] p-3.5 z-50 pointer-events-auto"
-                >
-                  <div className="grid grid-cols-12 gap-3">
-                    <div
-                      onClick={() => { setIsMoreOpen(false); setIsGuestbookOpen(true); }}
-                      className="col-span-4 relative rounded-2xl overflow-hidden h-[180px] bg-gradient-to-br from-amber-950/60 to-zinc-900 border border-zinc-700/70 p-4 flex flex-col justify-end group cursor-pointer hover:border-accent-crimson transition-all shadow-md"
-                    >
-                      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-600/20 via-zinc-900/90 to-black z-0" />
-                      <div className="absolute top-3 right-3 text-amber-400/80 group-hover:scale-110 transition-transform">
-                        <BookOpen className="h-5 w-5" />
-                      </div>
-                      <div className="relative z-10 space-y-1">
-                        <h4 className="text-sm font-bold text-white group-hover:text-accent-crimson transition-colors font-display">Guestbook</h4>
-                        <p className="text-[11px] text-zinc-400 font-sans leading-tight">Let me know you were here</p>
-                      </div>
-                    </div>
-                    <div
-                      onClick={() => { setIsMoreOpen(false); setAssetsModalState({ isOpen: true, tab: "bucketlist" }); }}
-                      className="col-span-4 relative rounded-2xl overflow-hidden h-[180px] bg-gradient-to-br from-rose-950/60 to-zinc-900 border border-zinc-700/70 p-4 flex flex-col justify-end group cursor-pointer hover:border-accent-crimson transition-all shadow-md"
-                    >
-                      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-rose-600/20 via-zinc-900/90 to-black z-0" />
-                      <div className="absolute top-3 right-3 text-rose-400/80 group-hover:scale-110 transition-transform">
-                        <Heart className="h-5 w-5 fill-rose-500/30" />
-                      </div>
-                      <div className="relative z-10 space-y-1">
-                        <h4 className="text-sm font-bold text-white group-hover:text-accent-crimson transition-colors font-display">Bucket List</h4>
-                        <p className="text-[11px] text-zinc-400 font-sans leading-tight">Dreams with a deadline</p>
-                      </div>
-                    </div>
-                    <div className="col-span-4 flex flex-col justify-between gap-1.5">
-                      <button
-                        onClick={() => { setIsMoreOpen(false); setAssetsModalState({ isOpen: true, tab: "assets" }); }}
-                        className="w-full text-left p-2.5 rounded-xl bg-zinc-900/90 border border-zinc-800 hover:border-zinc-600 hover:bg-zinc-800/90 transition-all flex items-center gap-2.5 group cursor-pointer"
-                      >
-                        <div className="h-7 w-7 rounded-lg bg-zinc-800 border border-zinc-700 flex items-center justify-center text-zinc-400 group-hover:text-white shrink-0">
-                          <Package className="h-3.5 w-3.5" />
-                        </div>
-                        <div className="min-w-0">
-                          <div className="text-xs font-bold text-white truncate">Useful Assets</div>
-                          <div className="text-[10px] text-zinc-400 truncate">Design resources & code</div>
-                        </div>
-                      </button>
-                      <button
-                        onClick={() => { setIsMoreOpen(false); scrollToSection("about"); }}
-                        className="w-full text-left p-2.5 rounded-xl bg-zinc-900/90 border border-zinc-800 hover:border-zinc-600 hover:bg-zinc-800/90 transition-all flex items-center gap-2.5 group cursor-pointer"
-                      >
-                        <div className="h-7 w-7 rounded-lg bg-zinc-800 border border-zinc-700 flex items-center justify-center text-zinc-400 group-hover:text-white shrink-0">
-                          <Wrench className="h-3.5 w-3.5" />
-                        </div>
-                        <div className="min-w-0">
-                          <div className="text-xs font-bold text-white truncate">Tools Which I Use</div>
-                          <div className="text-[10px] text-zinc-400 truncate">Hardware & software stack</div>
-                        </div>
-                      </button>
-                      <button
-                        onClick={() => { setIsMoreOpen(false); setAssetsModalState({ isOpen: true, tab: "attribution" }); }}
-                        className="w-full text-left p-2.5 rounded-xl bg-zinc-900/90 border border-zinc-800 hover:border-zinc-600 hover:bg-zinc-800/90 transition-all flex items-center gap-2.5 group cursor-pointer"
-                      >
-                        <div className="h-7 w-7 rounded-lg bg-zinc-800 border border-zinc-700 flex items-center justify-center text-zinc-400 group-hover:text-white shrink-0">
-                          <CreditCard className="h-3.5 w-3.5" />
-                        </div>
-                        <div className="min-w-0">
-                          <div className="text-xs font-bold text-white truncate">Attribution</div>
-                          <div className="text-[10px] text-zinc-400 truncate">Journey to create site</div>
-                        </div>
-                      </button>
-                    </div>
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
-
-          <div className="hidden md:block" />
-
-          <div className="md:hidden flex items-center gap-2">
+            {/* Right: Fastlane-Style Action Button */}
             <button
               onClick={() => handleNavClick("contact")}
-              className="px-3.5 py-1.5 rounded-full bg-[#FFAE00] text-black text-xs font-black shadow-sm cursor-pointer"
+              className="hidden sm:flex items-center gap-1.5 px-4 py-2 text-xs font-bold font-manrope rounded-full bg-zinc-950 text-white dark:bg-white dark:text-zinc-950 hover:bg-zinc-800 dark:hover:bg-zinc-100 transition-all shadow-xs active:scale-95 cursor-pointer ml-1"
             >
-              Book a Call
+              <span>Book a Sprint</span>
+              <ArrowUpRight className="h-3.5 w-3.5" />
             </button>
+
+            {/* Mobile Menu Toggle */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="flex items-center justify-center h-9 w-9 rounded-full border border-zinc-200 bg-white/95 backdrop-blur-md text-zinc-900 shadow-sm hover:text-[#FFAE00] cursor-pointer"
+              className="flex md:hidden items-center justify-center h-8 w-8 rounded-full text-zinc-900 dark:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors cursor-pointer"
               aria-label="Toggle navigation menu"
             >
               {isMobileMenuOpen ? <CloseIcon className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
             </button>
-          </div>
+          </nav>
         </div>
       </header>
 

@@ -90,10 +90,10 @@ Please let me know the kickoff process and timeline to get started!`
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight text-zinc-950 leading-[1.08] font-display"
+            className="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight text-zinc-950 leading-[1.08] font-manrope"
           >
             Clear investment with{" "}
-            <span className="font-boska italic font-light text-[#FF4D3D]">
+            <span className="font-playfair italic font-medium text-[#FF3B30]">
               zero surprises
             </span>
             .
@@ -103,7 +103,7 @@ Please let me know the kickoff process and timeline to get started!`
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-sm sm:text-base text-zinc-600 leading-relaxed font-normal font-sans max-w-2xl mx-auto"
+            className="text-sm sm:text-base text-zinc-600 leading-relaxed font-normal font-dmsans max-w-2xl mx-auto"
           >
             No hourly bill padding or bloated agency overhead. Transparent milestones, guaranteed delivery sprints, and direct founder-level architecture.
           </motion.p>

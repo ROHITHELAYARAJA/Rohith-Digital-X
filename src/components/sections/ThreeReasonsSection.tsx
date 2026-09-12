@@ -2,7 +2,6 @@ import React from "react"
 import { motion } from "framer-motion"
 import { Zap, Eye, ShieldCheck, ArrowRight } from "lucide-react"
 import { useNavigation } from "@/context/NavigationContext"
-import { HeyDigitalButton } from "@/components/ui/HeyDigitalButton"
 
 export const ThreeReasonsSection: React.FC = () => {
   const { navigate } = useNavigation()
@@ -11,60 +10,78 @@ export const ThreeReasonsSection: React.FC = () => {
     <section className="py-24 sm:py-32 bg-white text-zinc-950 relative overflow-hidden border-b border-zinc-200">
       <div className="container max-w-6xl mx-auto px-4 sm:px-6 space-y-16">
         
-        {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 pb-8 border-b border-zinc-200">
+        {/* Section Header with Scroll Animation */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+          className="flex flex-col md:flex-row md:items-end justify-between gap-8 pb-8 border-b border-zinc-200"
+        >
           <div className="space-y-3 max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-100 border border-zinc-300/80 text-[11px] font-mono font-bold text-zinc-700">
-              <span className="h-2 w-2 rounded-full bg-[#FFAE00]" />
+              <span className="h-2 w-2 rounded-full bg-[#FF3B30]" />
               <span>THE FOUNDER GUARANTEE</span>
             </div>
 
-            <h2 className="text-4xl sm:text-6xl font-black text-zinc-950 tracking-tight font-display leading-[1.08]">
-              Three reasons they <span className="font-boska italic font-light text-[#FF4D3D]">stay</span>.
+            <h2 className="text-4xl sm:text-6xl font-black text-zinc-950 tracking-tight font-manrope leading-[1.08]">
+              Three reasons they <span className="font-playfair italic font-medium text-[#FF3B30]">stay</span>.
             </h2>
           </div>
 
-          <p className="text-sm sm:text-base text-zinc-600 max-w-md font-normal leading-relaxed font-sans">
-            Most agencies overpromise, pad estimates with account-manager overhead, and ship bloated templates. We do things differently.
+          <p className="text-sm sm:text-base text-zinc-600 max-w-md font-normal leading-relaxed font-dmsans">
+            No endless meetings or account-manager bureaucracy. Just high-velocity engineering, direct access to founder Rohith E, and code you actually own.
           </p>
-        </div>
+        </motion.div>
 
-        {/* 3 Reason Cards */}
+        {/* 3 Reason Cards with Staggered Scroll Animation */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           
           {/* Card 1: Speed. */}
-          <div className="p-8 sm:p-10 rounded-3xl bg-zinc-50 border border-zinc-200/90 hover:border-[#FF4D3D] hover:shadow-2xl transition-all flex flex-col justify-between group">
+          <motion.div
+            initial={{ opacity: 0, y: 28 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.55, delay: 0.05, ease: [0.22, 1, 0.36, 1] }}
+            className="p-8 sm:p-10 rounded-3xl bg-zinc-50 border border-zinc-200/90 hover:border-[#FF3B30] hover:shadow-xl transition-all flex flex-col justify-between group"
+          >
             <div className="space-y-6">
               <div className="flex items-center justify-between">
-                <span className="px-3 py-1 rounded-full bg-[#FF4D3D]/10 border border-[#FF4D3D]/20 text-[11px] font-sans font-bold text-[#FF4D3D] uppercase tracking-wider">
-                  01 / 2 TO 4 WEEKS
+                <span className="px-3 py-1 rounded-full bg-[#FF3B30]/10 border border-[#FF3B30]/20 text-[11px] font-manrope font-bold text-[#FF3B30] uppercase tracking-wider">
+                  01 / 14-DAY SPRINTS
                 </span>
-                <div className="h-10 w-10 rounded-xl bg-[#FF4D3D]/10 text-[#FF4D3D] flex items-center justify-center font-bold group-hover:scale-110 transition-transform">
+                <div className="h-10 w-10 rounded-xl bg-[#FF3B30]/10 text-[#FF3B30] flex items-center justify-center font-bold group-hover:scale-110 transition-transform">
                   <Zap className="h-5 w-5" />
                 </div>
               </div>
 
               <div>
-                <h3 className="text-3xl sm:text-4xl font-black text-zinc-950 font-display">
-                  Speed<span className="text-[#FF4D3D]">.</span>
+                <h3 className="text-3xl sm:text-4xl font-black text-zinc-950 font-manrope">
+                  Speed<span className="text-[#FF3B30]">.</span>
                 </h3>
-                <p className="text-sm text-zinc-600 mt-3 leading-relaxed font-sans">
-                  Turnaround in 2 to 4 weeks, not endless quarters. You talk directly with engineer &amp; founder Rohith E with zero bureaucracy, instant WhatsApp updates, and rapid build iterations.
+                <p className="text-sm text-zinc-600 mt-3 leading-relaxed font-dmsans">
+                  Shipped in 14 days, not quarters. Direct WhatsApp updates with founder Rohith E, rapid iterations, and immediate deployment.
                 </p>
               </div>
             </div>
 
-            <div className="pt-8 border-t border-zinc-200/80 mt-8 text-xs font-sans text-zinc-500 flex items-center justify-between">
-              <span>Rapid Prototyping</span>
-              <span className="text-zinc-900 font-bold font-khand text-base tracking-wide text-[#FF4D3D]">&lt;0.4s Web Vitals</span>
+            <div className="pt-8 border-t border-zinc-200/80 mt-8 text-xs font-dmsans text-zinc-500 flex items-center justify-between">
+              <span>Rapid Deployment</span>
+              <span className="text-zinc-900 font-bold font-mono text-sm tracking-wide text-[#FF3B30]">&lt;0.4s Web Vitals</span>
             </div>
-          </div>
+          </motion.div>
 
           {/* Card 2: Taste. */}
-          <div className="p-8 sm:p-10 rounded-3xl bg-zinc-50 border border-zinc-200/90 hover:border-[#FFAE00] hover:shadow-2xl transition-all flex flex-col justify-between group">
+          <motion.div
+            initial={{ opacity: 0, y: 28 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.55, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+            className="p-8 sm:p-10 rounded-3xl bg-zinc-50 border border-zinc-200/90 hover:border-[#FFAE00] hover:shadow-xl transition-all flex flex-col justify-between group"
+          >
             <div className="space-y-6">
               <div className="flex items-center justify-between">
-                <span className="px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-[11px] font-sans font-bold text-[#FFAE00] uppercase tracking-wider">
+                <span className="px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-[11px] font-manrope font-bold text-[#FFAE00] uppercase tracking-wider">
                   02 / HIGH TASTE
                 </span>
                 <div className="h-10 w-10 rounded-xl bg-amber-500/10 text-[#FFAE00] flex items-center justify-center font-bold group-hover:scale-110 transition-transform">
@@ -73,26 +90,32 @@ export const ThreeReasonsSection: React.FC = () => {
               </div>
 
               <div>
-                <h3 className="text-3xl sm:text-4xl font-black text-zinc-950 font-display">
-                  <span className="font-boska italic font-normal">Taste</span><span className="text-[#FFAE00]">.</span>
+                <h3 className="text-3xl sm:text-4xl font-black text-zinc-950 font-manrope">
+                  <span className="font-playfair italic font-normal">Taste</span><span className="text-[#FFAE00]">.</span>
                 </h3>
-                <p className="text-sm text-zinc-600 mt-3 leading-relaxed font-sans">
-                  Obsession with typography, 60fps micro-animations, and visual balance. We don't build generic websites; we create memorable digital storefronts that stand out in crowded industries.
+                <p className="text-sm text-zinc-600 mt-3 leading-relaxed font-dmsans">
+                  Obsession with typography, 60fps micro-animations, and visual balance. We don't build generic websites; we create memorable digital storefronts.
                 </p>
               </div>
             </div>
 
-            <div className="pt-8 border-t border-zinc-200/80 mt-8 text-xs font-sans text-zinc-500 flex items-center justify-between">
-              <span>Bespoke 3D &amp; Motion</span>
-              <span className="text-zinc-900 font-bold">Award-Grade Craft</span>
+            <div className="pt-8 border-t border-zinc-200/80 mt-8 text-xs font-dmsans text-zinc-500 flex items-center justify-between">
+              <span>Modern Aesthetics</span>
+              <span className="text-zinc-900 font-bold font-manrope">Award-Grade Craft</span>
             </div>
-          </div>
+          </motion.div>
 
           {/* Card 3: Stay. */}
-          <div className="p-8 sm:p-10 rounded-3xl bg-zinc-50 border border-zinc-200/90 hover:border-emerald-500 hover:shadow-2xl transition-all flex flex-col justify-between group">
+          <motion.div
+            initial={{ opacity: 0, y: 28 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.55, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
+            className="p-8 sm:p-10 rounded-3xl bg-zinc-50 border border-zinc-200/90 hover:border-emerald-500 hover:shadow-xl transition-all flex flex-col justify-between group"
+          >
             <div className="space-y-6">
               <div className="flex items-center justify-between">
-                <span className="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-[11px] font-sans font-bold text-emerald-600 uppercase tracking-wider">
+                <span className="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-[11px] font-manrope font-bold text-emerald-600 uppercase tracking-wider">
                   03 / 14-DAY SUPPORT
                 </span>
                 <div className="h-10 w-10 rounded-xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center font-bold group-hover:scale-110 transition-transform">
@@ -101,42 +124,48 @@ export const ThreeReasonsSection: React.FC = () => {
               </div>
 
               <div>
-                <h3 className="text-3xl sm:text-4xl font-black text-zinc-950 font-display">
+                <h3 className="text-3xl sm:text-4xl font-black text-zinc-950 font-manrope">
                   Stay<span className="text-emerald-500">.</span>
                 </h3>
-                <p className="text-sm text-zinc-600 mt-3 leading-relaxed font-sans">
-                  Launch day isn't the finish line. Every sprint comes with a 14-day warranty, full performance audits, DNS configuration, and continuous optimization so you never feel abandoned.
+                <p className="text-sm text-zinc-600 mt-3 leading-relaxed font-dmsans">
+                  Launch day isn't the finish line. Every sprint includes a 14-day warranty, DNS setup, and live performance auditing.
                 </p>
               </div>
             </div>
 
-            <div className="pt-8 border-t border-zinc-200/80 mt-8 text-xs font-sans text-zinc-500 flex items-center justify-between">
+            <div className="pt-8 border-t border-zinc-200/80 mt-8 text-xs font-dmsans text-zinc-500 flex items-center justify-between">
               <span>Post-Launch Warranty</span>
-              <span className="text-zinc-900 font-bold">100% Code Handover</span>
+              <span className="text-zinc-900 font-bold font-manrope">100% Code Handover</span>
             </div>
-          </div>
+          </motion.div>
 
         </div>
 
-        {/* Action Callout */}
-        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-6 p-8 rounded-3xl bg-zinc-950 text-white border border-zinc-800">
+        {/* Action Callout with Scroll Animation */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+          className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-6 p-8 rounded-3xl bg-zinc-950 text-white border border-zinc-800"
+        >
           <div>
-            <h4 className="text-xl font-bold font-display text-white">
-              Ready to work with a partner who cares about your product as much as you do?
+            <h4 className="text-xl font-bold font-manrope text-white">
+              Ready to work with a dedicated technical partner?
             </h4>
-            <p className="text-xs text-zinc-400 mt-1">
-              Direct founder availability • Transparent fixed pricing from ₹5,000 • Zero fluff.
+            <p className="text-xs text-zinc-400 mt-1 font-dmsans">
+              Direct founder availability • Fixed pricing from ₹5,000 • Zero fluff.
             </p>
           </div>
 
-          <HeyDigitalButton
-            variant="amber"
-            size="md"
+          <button
             onClick={() => navigate("contact")}
+            className="px-6 py-3 rounded-full bg-gradient-to-r from-[#FF3B30] to-[#FFAE00] text-white font-manrope font-bold text-sm shadow-md hover:opacity-95 active:scale-95 transition-all flex items-center gap-2 cursor-pointer"
           >
-            Let's build something good ↗
-          </HeyDigitalButton>
-        </div>
+            <span>Let's build something good</span>
+            <ArrowRight className="h-4 w-4" />
+          </button>
+        </motion.div>
 
       </div>
     </section>

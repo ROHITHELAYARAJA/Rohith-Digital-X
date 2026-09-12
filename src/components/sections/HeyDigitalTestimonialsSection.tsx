@@ -41,9 +41,9 @@ export const HeyDigitalTestimonialsSection: React.FC = () => {
                 <span className="h-2 w-2 rounded-full bg-[#FFAE00]" />
                 <span>CLIENT SUCCESS &amp; REPUTATION</span>
               </div>
-              <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight font-display mt-3 leading-[1.08]">
+              <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight font-manrope mt-3 leading-[1.08]">
                 From founders we've{" "}
-                <span className="font-boska italic font-light text-[#FFAE00]">
+                <span className="font-playfair italic font-medium text-[#FF3B30]">
                   partnered with
                 </span>
                 .

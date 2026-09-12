@@ -3,7 +3,6 @@ import { motion } from "framer-motion"
 import { Bot, CheckCircle2, ArrowRight, Zap, MessageSquare, Cpu, Workflow, GitBranch } from "lucide-react"
 import { useNavigation } from "@/context/NavigationContext"
 import { HeyDigitalButton } from "@/components/ui/HeyDigitalButton"
-import { WireframePolyhedronCanvas } from "@/components/visual/WireframePolyhedronCanvas"
 import { ArchitecturalArcArt } from "@/components/visual/ArchitecturalArcArt"
 
 export const AutomationPage: React.FC = () => {
@@ -24,16 +23,6 @@ export const AutomationPage: React.FC = () => {
       <section className="relative pt-32 sm:pt-40 pb-20 border-b border-zinc-800/80 overflow-hidden">
         {/* Subtle background grid */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
-
-        {/* 3D Wireframe Canvas */}
-        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[340px] sm:w-[480px] h-[340px] sm:h-[480px] opacity-75 pointer-events-none hidden lg:block">
-          <WireframePolyhedronCanvas
-            polyhedron="dodecahedron"
-            size={180}
-            lineColor="rgba(255, 174, 0, 0.45)"
-            glowColor="rgba(255, 174, 0, 0.15)"
-          />
-        </div>
 
         <div className="container max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
           <div className="flex items-start gap-6 sm:gap-10">
