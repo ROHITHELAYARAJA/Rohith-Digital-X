@@ -113,12 +113,12 @@ export const Navbar: React.FC = () => {
               <div
                 ref={limelightRef}
                 className={cn(
-                  "absolute -top-[7px] pointer-events-none z-10 w-9 h-[3.5px] rounded-full bg-[#FF3B30] shadow-[0_10px_20px_rgba(255,59,48,0.7)]",
+                  "absolute -top-[7px] pointer-events-none z-10 w-9 h-[3.5px] rounded-full bg-[#FF3B30] shadow-[0_10px_16px_#FF3B30]",
                   isLimelightReady ? "transition-[left] duration-300 ease-in-out" : "opacity-0"
                 )}
                 style={{ left: "-999px" }}
               >
-                <div className="absolute left-[-45%] top-[3.5px] w-[190%] h-8 [clip-path:polygon(15%_100%,35%_0,65%_0,85%_100%)] bg-gradient-to-b from-[#FF3B30]/35 to-transparent pointer-events-none" />
+                <div className="absolute left-[-45%] top-[3.5px] w-[190%] h-8 [clip-path:polygon(15%_100%,35%_0,65%_0,85%_100%)] bg-gradient-to-b from-[#FF3B30]/30 to-transparent pointer-events-none" />
               </div>
 
               {[
@@ -224,7 +224,7 @@ export const Navbar: React.FC = () => {
                   <div className="flex items-baseline font-sans text-lg font-extrabold tracking-tight text-zinc-950 leading-none">
                     <span className="font-black">Rohith</span>
                     <span className="text-zinc-500 font-medium ml-1.5 tracking-tight">Digital</span>
-                    <span className="font-black text-[#0066FF] ml-1.5">
+                    <span className="font-black text-[#FFAE00] ml-1.5">
                       X
                     </span>
                   </div>
@@ -232,7 +232,7 @@ export const Navbar: React.FC = () => {
                     Digital Product Studio
                   </div>
                 </div>
-                <span className="px-2.5 py-1 rounded-full bg-blue-50 text-blue-800 border border-blue-200 text-[10px] font-bold">
+                <span className="px-2.5 py-1 rounded-full bg-amber-50 text-amber-800 border border-amber-200 text-[10px] font-bold">
                   Available for Projects
                 </span>
               </div>

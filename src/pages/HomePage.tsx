@@ -87,10 +87,10 @@ export const HomePage: React.FC = () => {
       <PackagesSection onSelectPackage={handleSelectPackage} />
 
       {/* 7. Interactive Cal.com-Style 30-Min Discovery Booking Suite */}
-      <section className="py-14 sm:py-20 bg-[#070708] border-t border-zinc-800 relative overflow-hidden">
+      <section className="py-24 sm:py-32 bg-[#070708] border-t border-zinc-800 relative overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
 
-        <div className="container max-w-5xl mx-auto px-4 sm:px-6 relative z-10 space-y-10">
+        <div className="container max-w-5xl mx-auto px-4 sm:px-6 relative z-10 space-y-12">
           <div className="text-center space-y-4 max-w-2xl mx-auto">
             <div className="inline-flex items-center px-3.5 py-1 rounded-full bg-zinc-900 border border-zinc-800 text-xs font-semibold text-zinc-300 shadow-xs">
               <span className="font-sans font-bold text-[11px] uppercase tracking-wider text-zinc-400">
@@ -99,7 +99,7 @@ export const HomePage: React.FC = () => {
             </div>
             <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight font-manrope leading-[1.08]">
               Let's build something{" "}
-              <span className="font-playfair italic font-medium text-[#0066FF]">
+              <span className="font-playfair italic font-medium text-[#FF3B30]">
                 extraordinary
               </span>
               .

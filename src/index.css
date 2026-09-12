@@ -26,15 +26,15 @@
     --muted: 240 4.8% 95.9%;
     --muted-foreground: 240 3.8% 46.1%; /* #71717A */
     
-    --accent: 217 91% 60%;         /* Electric Tech Blue #0066FF */
-    --accent-foreground: 0 0% 100%;
+    --accent: 41 100% 50%;         /* HeyDigital Amber Flame #FFAE00 */
+    --accent-foreground: 0 0% 5%;
     
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     
     --border: 240 5.9% 90%;        /* #E4E4E7 */
     --input: 240 5.9% 90%;
-    --ring: 217 91% 60%;
+    --ring: 41 100% 50%;
     
     --radius: 0.75rem;
   }
@@ -52,20 +52,17 @@
     --secondary-foreground: 0 0% 98%;
     --muted: 240 3.7% 15.9%;
     --muted-foreground: 240 5% 64.9%;
-    --accent: 217 91% 60%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 41 100% 50%;
+    --accent-foreground: 0 0% 5%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
-    --ring: 217 91% 60%;
+    --ring: 41 100% 50%;
   }
 }
 
 @layer base {
-  html {
-    scroll-behavior: smooth;
-  }
   * {
     @apply border-border;
   }
