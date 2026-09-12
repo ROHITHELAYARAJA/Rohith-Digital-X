@@ -46,7 +46,7 @@ export const CaseStudyDetailPage: React.FC = () => {
               </span>
             </div>
 
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.08] font-display">
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.08] font-display">
               JSBuilders: Re-architected for <span className="text-purple-400">sub-0.4s speed</span> &amp; 340% more inquiries<span className="text-[#FF4D3D]">.</span>
             </h1>
 
@@ -68,19 +68,19 @@ export const CaseStudyDetailPage: React.FC = () => {
         <div className="container max-w-6xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center md:text-left">
             <div className="border-l-2 border-purple-500 pl-4">
-              <div className="text-2xl sm:text-4xl font-black font-mono text-purple-400">+340%</div>
+              <div className="text-2xl sm:text-4xl font-bold font-mono text-purple-400">+340%</div>
               <div className="text-xs text-zinc-400 mt-1">Inquiry Form Submissions</div>
             </div>
             <div className="border-l-2 border-[#FF4D3D] pl-4">
-              <div className="text-2xl sm:text-4xl font-black font-mono text-white">0.32s</div>
+              <div className="text-2xl sm:text-4xl font-bold font-mono text-white">0.32s</div>
               <div className="text-xs text-zinc-400 mt-1">First Contentful Paint</div>
             </div>
             <div className="border-l-2 border-purple-500 pl-4">
-              <div className="text-2xl sm:text-4xl font-black font-mono text-white">100/100</div>
+              <div className="text-2xl sm:text-4xl font-bold font-mono text-white">100/100</div>
               <div className="text-xs text-zinc-400 mt-1">Lighthouse Performance</div>
             </div>
             <div className="border-l-2 border-[#FF4D3D] pl-4">
-              <div className="text-2xl sm:text-4xl font-black font-mono text-white">14 Days</div>
+              <div className="text-2xl sm:text-4xl font-bold font-mono text-white">14 Days</div>
               <div className="text-xs text-zinc-400 mt-1">Turnaround from Kickoff to Launch</div>
             </div>
           </div>
@@ -96,7 +96,7 @@ export const CaseStudyDetailPage: React.FC = () => {
               <span className="text-[11px] font-mono font-bold tracking-widest uppercase text-purple-400">
                 THE CHALLENGE
               </span>
-              <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight font-display">
+              <h2 className="text-3xl sm:text-5xl font-bold text-white tracking-tight font-display">
                 High commercial traffic, high bounce rates<span className="text-[#FF4D3D]">.</span>
               </h2>
               <p className="text-base text-zinc-400 leading-relaxed font-sans">
@@ -125,7 +125,7 @@ export const CaseStudyDetailPage: React.FC = () => {
                   "Rohith completely transformed our business identity. We saw inquiries more than triple in the first month because customers can now view our projects instantly and message us on WhatsApp with one click."
                 </p>
                 <div className="pt-2 border-t border-zinc-800 flex items-center gap-3">
-                  <div className="h-10 w-10 rounded-full bg-gradient-to-br from-purple-600 to-indigo-600 flex items-center justify-center font-black text-white text-sm">
+                  <div className="h-10 w-10 rounded-full bg-gradient-to-br from-purple-600 to-indigo-600 flex items-center justify-center font-bold text-white text-sm">
                     JS
                   </div>
                   <div>
@@ -143,7 +143,7 @@ export const CaseStudyDetailPage: React.FC = () => {
               <span className="text-[11px] font-mono font-bold tracking-widest uppercase text-purple-400">
                 THE ARCHITECTURAL SOLUTION
               </span>
-              <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight font-display mt-2">
+              <h2 className="text-3xl sm:text-5xl font-bold text-white tracking-tight font-display mt-2">
                 Re-engineered with sub-second precision<span className="text-[#FF4D3D]">.</span>
               </h2>
             </div>
@@ -187,7 +187,7 @@ export const CaseStudyDetailPage: React.FC = () => {
       {/* CTA Section */}
       <section className="py-16 bg-zinc-950/60 border-t border-zinc-800 text-center">
         <div className="container max-w-4xl mx-auto px-4 sm:px-6 space-y-6">
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-white font-display">
+          <h2 className="text-3xl sm:text-5xl font-bold text-white font-display">
             Ready for similar results<span className="text-[#FF4D3D]">?</span>
           </h2>
           <p className="text-zinc-400 text-sm sm:text-base max-w-xl mx-auto">

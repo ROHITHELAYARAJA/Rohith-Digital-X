@@ -76,22 +76,12 @@ Please let me know the kickoff process and timeline to get started!`
         
         {/* Section Header with Clean Typography */}
         <div className="max-w-3xl mx-auto text-center mb-8 space-y-3">
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="inline-flex items-center px-3.5 py-1 rounded-full bg-purple-500/10 border border-purple-500/30 text-xs font-semibold text-purple-300 shadow-xs"
-          >
-            <span className="font-sans font-bold text-[11px] uppercase tracking-wider text-purple-300">
-              TRANSPARENT FIXED PRICING
-            </span>
-          </motion.div>
           <motion.h2
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight text-white leading-[1.08] font-manrope"
+            className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white leading-[1.08] font-manrope"
           >
             Clear investment with{" "}
             <span className="font-playfair italic font-medium text-[#FF4D3D]">
@@ -187,7 +177,7 @@ Please let me know the kickoff process and timeline to get started!`
                     {/* Popular Illuminated Header Pill Banner (Cleanly Integrated, Never Clipped) */}
                     {isPopular && (
                       <div className="mb-4 -mt-1 flex items-center justify-center">
-                        <span className="w-full py-1 px-3 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-[11px] font-black uppercase tracking-wider text-center flex items-center justify-center gap-1.5 shadow-sm">
+                        <span className="w-full py-1 px-3 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-[11px] font-bold uppercase tracking-wider text-center flex items-center justify-center gap-1.5 shadow-sm">
                           <Sparkles className="h-3 w-3 fill-white" />
                           <span>{pkg.badge || "Most Popular Choice"}</span>
                         </span>

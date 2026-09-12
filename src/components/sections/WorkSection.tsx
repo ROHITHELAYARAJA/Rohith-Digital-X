@@ -140,7 +140,7 @@ const StackedCard: React.FC<{
 
             {/* Brand Title with Amber Period */}
             <div>
-              <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-zinc-950 leading-tight font-manrope">
+              <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-zinc-950 leading-tight font-manrope">
                 {card.brandName}
                 <span className="text-[#FF3B30]">.</span>
               </h3>
@@ -229,25 +229,13 @@ export const WorkSection: React.FC<WorkSectionProps> = ({ onDiscussSimilar }) =>
         {/* Section Header with Exact Match to User Reference Screenshot */}
         <div className="text-center space-y-4 max-w-4xl mx-auto">
           
-          {/* Top Pill Badge */}
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="inline-flex items-center px-3.5 py-1 rounded-full bg-zinc-100 border border-zinc-250 text-xs font-semibold text-zinc-700 shadow-xs"
-          >
-            <span className="font-sans font-bold text-[11px] uppercase tracking-wider text-zinc-600">
-              PROVEN CLIENT TRACK RECORD
-            </span>
-          </motion.div>
-
           {/* High-Impact Headline with Playfair Display Italic Contrast */}
           <motion.h2
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight text-zinc-950 max-w-4xl mx-auto leading-[1.08] font-manrope"
+            className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-zinc-950 max-w-4xl mx-auto leading-[1.08] font-manrope"
           >
             Engineered for <span className="font-playfair italic font-medium text-[#FF3B30]">scale</span> and measurable growth<span className="text-[#FF3B30]">.</span>
           </motion.h2>

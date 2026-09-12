@@ -26,14 +26,7 @@ export const WebDevelopmentPage: React.FC = () => {
 
         <div className="container max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
           <div className="space-y-6 max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/25 text-xs font-semibold text-purple-300">
-              <span className="h-1.5 w-1.5 rounded-full bg-purple-400 animate-pulse" />
-              <span className="font-mono font-bold text-[11px] uppercase tracking-wider">
-                CORE ENGINEERING CAPABILITY • 01
-              </span>
-            </div>
-
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white leading-[1.08] font-display">
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.08] font-display">
               Web platforms built for{" "}
               <span className="font-boska italic font-light text-purple-400">
                 speed &amp; taste
@@ -71,19 +64,19 @@ export const WebDevelopmentPage: React.FC = () => {
         <div className="container max-w-6xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center md:text-left">
             <div className="border-l-2 border-purple-500 pl-4">
-              <div className="text-2xl sm:text-3xl font-black font-mono text-white">&lt;0.4s</div>
+              <div className="text-2xl sm:text-3xl font-bold font-mono text-white">&lt;0.4s</div>
               <div className="text-xs text-zinc-400 mt-1">Average Page Load Speed</div>
             </div>
             <div className="border-l-2 border-[#FF4D3D] pl-4">
-              <div className="text-2xl sm:text-3xl font-black font-mono text-white">100/100</div>
+              <div className="text-2xl sm:text-3xl font-bold font-mono text-white">100/100</div>
               <div className="text-xs text-zinc-400 mt-1">Lighthouse Performance</div>
             </div>
             <div className="border-l-2 border-purple-500 pl-4">
-              <div className="text-2xl sm:text-3xl font-black font-mono text-white">2 - 3 Weeks</div>
+              <div className="text-2xl sm:text-3xl font-bold font-mono text-white">2 - 3 Weeks</div>
               <div className="text-xs text-zinc-400 mt-1">Rapid Sprint Delivery</div>
             </div>
             <div className="border-l-2 border-[#FF4D3D] pl-4">
-              <div className="text-2xl sm:text-3xl font-black font-mono text-white">100%</div>
+              <div className="text-2xl sm:text-3xl font-bold font-mono text-white">100%</div>
               <div className="text-xs text-zinc-400 mt-1">Code &amp; Asset Ownership</div>
             </div>
           </div>
@@ -98,7 +91,7 @@ export const WebDevelopmentPage: React.FC = () => {
               <span className="text-[11px] font-mono font-bold tracking-widest uppercase text-purple-400">
                 WHAT WE DELIVER
               </span>
-              <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight font-display mt-2">
+              <h2 className="text-3xl sm:text-5xl font-bold text-white tracking-tight font-display mt-2">
                 Engineered from the ground up<span className="text-[#FF4D3D]">.</span>
               </h2>
             </div>

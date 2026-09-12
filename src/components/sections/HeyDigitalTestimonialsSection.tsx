@@ -29,10 +29,7 @@ export const HeyDigitalTestimonialsSection: React.FC = () => {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-zinc-800">
           <div>
-            <div className="inline-flex items-center px-3 py-1 rounded-full bg-zinc-900 border border-zinc-700/80 text-[11px] font-mono font-bold text-zinc-300">
-              <span>CLIENT SUCCESS &amp; REPUTATION</span>
-            </div>
-            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight font-manrope mt-3 leading-[1.08]">
+            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight font-manrope leading-[1.08]">
               From founders we've{" "}
               <span className="font-playfair italic font-medium text-[#FF3B30]">
                 partnered with
@@ -86,7 +83,7 @@ export const HeyDigitalTestimonialsSection: React.FC = () => {
               {/* Client Info */}
               <div className="flex items-center gap-4 pt-4 border-t border-zinc-850">
                 <div
-                  className={`h-12 w-12 rounded-2xl bg-gradient-to-br ${activeReview.avatarColor} flex items-center justify-center font-black text-black text-base shadow-md`}
+                  className={`h-12 w-12 rounded-2xl bg-gradient-to-br ${activeReview.avatarColor} flex items-center justify-center font-bold text-black text-base shadow-md`}
                 >
                   {activeReview.avatarText}
                 </div>

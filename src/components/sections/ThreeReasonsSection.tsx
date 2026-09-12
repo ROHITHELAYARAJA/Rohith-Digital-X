@@ -19,11 +19,7 @@ export const ThreeReasonsSection: React.FC = () => {
           className="flex flex-col md:flex-row md:items-end justify-between gap-8 pb-8 border-b border-zinc-200"
         >
           <div className="space-y-3 max-w-2xl">
-            <div className="inline-flex items-center px-3.5 py-1 rounded-full bg-zinc-100 border border-zinc-300/80 text-[11px] font-mono font-bold text-zinc-700">
-              <span>THE FOUNDER GUARANTEE</span>
-            </div>
-
-            <h2 className="text-4xl sm:text-6xl font-black text-zinc-950 tracking-tight font-manrope leading-[1.08]">
+            <h2 className="text-4xl sm:text-6xl font-bold text-zinc-950 tracking-tight font-manrope leading-[1.08]">
               Three reasons they <span className="font-playfair italic font-medium text-[#FF3B30]">stay</span>.
             </h2>
           </div>
@@ -55,7 +51,7 @@ export const ThreeReasonsSection: React.FC = () => {
               </div>
 
               <div>
-                <h3 className="text-3xl sm:text-4xl font-black text-zinc-950 font-manrope">
+                <h3 className="text-3xl sm:text-4xl font-bold text-zinc-950 font-manrope">
                   Speed<span className="text-[#FF3B30]">.</span>
                 </h3>
                 <p className="text-sm text-zinc-600 mt-3 leading-relaxed font-dmsans">
@@ -89,7 +85,7 @@ export const ThreeReasonsSection: React.FC = () => {
               </div>
 
               <div>
-                <h3 className="text-3xl sm:text-4xl font-black text-zinc-950 font-manrope">
+                <h3 className="text-3xl sm:text-4xl font-bold text-zinc-950 font-manrope">
                   <span className="font-playfair italic font-normal">Taste</span><span className="text-purple-600">.</span>
                 </h3>
                 <p className="text-sm text-zinc-600 mt-3 leading-relaxed font-dmsans">
@@ -123,7 +119,7 @@ export const ThreeReasonsSection: React.FC = () => {
               </div>
 
               <div>
-                <h3 className="text-3xl sm:text-4xl font-black text-zinc-950 font-manrope">
+                <h3 className="text-3xl sm:text-4xl font-bold text-zinc-950 font-manrope">
                   Stay<span className="text-emerald-500">.</span>
                 </h3>
                 <p className="text-sm text-zinc-600 mt-3 leading-relaxed font-dmsans">

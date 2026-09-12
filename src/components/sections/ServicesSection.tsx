@@ -32,22 +32,12 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
         {/* Section Header with Editorial Typography */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-10 gap-6">
           <div className="max-w-2xl space-y-3">
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="inline-flex items-center px-3.5 py-1 rounded-full bg-zinc-100 border border-zinc-250 text-xs font-semibold text-zinc-700 shadow-xs"
-            >
-              <span className="font-sans font-bold text-[11px] uppercase tracking-wider text-zinc-600">
-                FULL-STACK CAPABILITIES
-              </span>
-            </motion.div>
             <motion.h2
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight text-zinc-950 leading-[1.08] font-manrope"
+              className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-zinc-950 leading-[1.08] font-manrope"
             >
               End-to-end solutions built for{" "}
               <span className="font-playfair italic font-medium text-[#FF3B30]">

@@ -45,12 +45,7 @@ export const DigitalProductCapabilitiesSection: React.FC = () => {
           className="flex flex-col md:flex-row md:items-end justify-between gap-6 max-w-4xl"
         >
           <div className="space-y-3">
-            <div className="inline-flex items-center px-3.5 py-1 rounded-full bg-white border border-[#E5DDD0] text-xs font-semibold text-zinc-700 shadow-xs">
-              <span className="font-manrope uppercase tracking-wider text-[11px] font-bold text-zinc-600">
-                PROPRIETARY ARCHITECTURE
-              </span>
-            </div>
-            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-zinc-950 leading-[1.08] font-manrope">
+            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-zinc-950 leading-[1.08] font-manrope">
               Engineered with <span className="font-playfair italic font-medium text-[#FF3B30]">taste</span> and microsecond speed.
             </h2>
           </div>
@@ -142,7 +137,7 @@ export const DigitalProductCapabilitiesSection: React.FC = () => {
                 <span>Bespoke Engineering Studio</span>
               </div>
 
-              <div className="text-2xl sm:text-3xl font-black text-zinc-950 tracking-tight font-manrope">
+              <div className="text-2xl sm:text-3xl font-bold text-zinc-950 tracking-tight font-manrope">
                 Create with <span className="font-playfair italic text-[#FF3B30]">RDX</span>
               </div>
 
