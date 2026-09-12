@@ -32,24 +32,24 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, onOpen
     >
       <TiltCard tiltMaxAngleX={6} tiltMaxAngleY={6} scale={1.02} className="h-full">
         <CardSpotlight
-          spotlightColor="rgba(255, 174, 0, 0.08)"
-          className="h-full group relative rounded-3xl border border-zinc-200/90 bg-white p-6 sm:p-8 shadow-subtle hover:shadow-card-hover hover:border-[#FFAE00] transition-all duration-300 flex flex-col justify-between"
+          spotlightColor="rgba(255, 174, 0, 0.12)"
+          className="h-full group relative rounded-3xl border border-zinc-800 bg-zinc-900/90 p-6 sm:p-8 shadow-2xl hover:shadow-[0_0_40px_rgba(255,174,0,0.12)] hover:border-[#FFAE00] transition-all duration-300 flex flex-col justify-between text-white"
         >
           <div>
             {/* Card Header: Icon, Number & Badge */}
             <div className="flex items-center justify-between mb-6">
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-zinc-50 border border-zinc-200 text-zinc-900 group-hover:bg-amber-50 group-hover:text-[#FFAE00] group-hover:border-amber-200 group-hover:scale-110 transition-all duration-300 shadow-xs">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-zinc-950 border border-zinc-800 text-[#FFAE00] group-hover:scale-110 transition-all duration-300 shadow-sm">
                 <IconComponent className="h-7 w-7" />
               </div>
               <div className="flex items-center gap-2">
-                <span className="text-xs font-mono font-extrabold text-zinc-400 group-hover:text-[#FFAE00] transition-colors">
+                <span className="text-xs font-mono font-extrabold text-zinc-500 group-hover:text-[#FFAE00] transition-colors">
                   {service.number}
                 </span>
               </div>
             </div>
 
             {/* Title & Tagline */}
-            <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-zinc-950 group-hover:text-[#FFAE00] transition-colors font-display">
+            <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-white group-hover:text-[#FFAE00] transition-colors font-manrope">
               {service.title}
             </h3>
             <p className="text-xs font-semibold uppercase tracking-wider text-[#FFAE00] mt-1 mb-3 font-mono">
@@ -57,16 +57,16 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, onOpen
             </p>
 
             {/* Short Description */}
-            <p className="text-sm text-zinc-600 leading-relaxed font-normal mb-5">
+            <p className="text-sm text-zinc-400 leading-relaxed font-normal font-dmsans mb-5">
               {service.shortDescription}
             </p>
 
             {/* Highlight Key Capabilities */}
-            <div className="space-y-2 border-t border-zinc-100 pt-4 mb-6">
+            <div className="space-y-2 border-t border-zinc-800 pt-4 mb-6">
               <span className="text-xs font-bold uppercase tracking-wider text-zinc-400 font-mono">
                 Key Capabilities
               </span>
-              <ul className="space-y-2 text-xs text-zinc-700">
+              <ul className="space-y-2 text-xs text-zinc-300">
                 {service.keyFeatures.slice(0, 3).map((feature, idx) => (
                   <li key={idx} className="flex items-start gap-2 group/item">
                     <CheckCircle2 className="h-4 w-4 text-[#FFAE00] shrink-0 mt-0.5 group-hover/item:scale-110 transition-transform" />
@@ -78,19 +78,19 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, onOpen
           </div>
 
           {/* Card Footer: Tech tags & Action */}
-          <div className="pt-4 border-t border-zinc-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div className="pt-4 border-t border-zinc-800 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
             <div className="flex items-center gap-1.5 flex-wrap">
               {service.techStack.slice(0, 3).map((tech) => (
                 <Badge
                   key={tech}
                   variant="secondary"
-                  className="text-[10px] py-0.5 px-2 bg-zinc-100 border border-zinc-200 hover:bg-amber-50 hover:text-amber-700 transition-colors cursor-default"
+                  className="text-[10px] py-0.5 px-2 bg-zinc-950 border border-zinc-800 text-zinc-400 hover:text-white transition-colors cursor-default font-mono"
                 >
                   {tech}
                 </Badge>
               ))}
               {service.techStack.length > 3 && (
-                <span className="text-[10px] text-zinc-400 font-mono">
+                <span className="text-[10px] text-zinc-500 font-mono">
                   +{service.techStack.length - 3}
                 </span>
               )}
@@ -98,7 +98,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, onOpen
 
             <button
               onClick={() => onOpenDetails(service)}
-              className="inline-flex items-center gap-1.5 text-xs font-bold text-zinc-900 group-hover:text-[#FFAE00] transition-colors focus:outline-none rounded py-1 cursor-pointer group/btn"
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-zinc-300 group-hover:text-[#FFAE00] transition-colors focus:outline-none rounded py-1 cursor-pointer group/btn"
             >
               <span>Learn more &amp; specs</span>
               <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover/btn:translate-x-1.5 text-[#FFAE00]" />

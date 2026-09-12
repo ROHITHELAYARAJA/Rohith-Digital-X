@@ -7,25 +7,32 @@ import VaporizeTextCycle from "@/components/ui/vapour-text-effect"
 export const HeroSection: React.FC = () => {
   const { navigate } = useNavigation()
 
+  const tickerItems = [
+    { num: "01", title: "WEB APPS", desc: "<0.4s load speed", route: "services-web" as const },
+    { num: "02", title: "MOBILE APPS", desc: "iOS & Android", route: "services-mobile" as const },
+    { num: "03", title: "AI AGENTS", desc: "WhatsApp & Autopilot", route: "services-automation" as const },
+    { num: "04", title: "PACKAGES", desc: "From ₹5,000", route: "packages" as const },
+  ]
+
   return (
     <section
       id="hero"
-      className="relative min-h-[90vh] flex flex-col justify-between pt-32 sm:pt-40 pb-12 overflow-hidden bg-white text-zinc-950 selection:bg-[#FF3B30] selection:text-white border-b border-zinc-200/80"
+      className="relative flex flex-col justify-between pt-24 sm:pt-28 pb-6 sm:pb-8 overflow-hidden bg-white text-zinc-950 selection:bg-[#0066FF] selection:text-white border-b border-zinc-200/80"
     >
-      {/* Fastlane-style Top Ambient Speed Glow (Atmospheric soft red/coral haze at the top) */}
-      <div className="absolute -top-24 sm:-top-32 left-1/2 -translate-x-1/2 w-[700px] sm:w-[1100px] h-[340px] sm:h-[460px] bg-gradient-to-b from-[#FF4D3D]/18 via-[#FFAE00]/10 to-transparent rounded-full blur-[90px] sm:blur-[120px] pointer-events-none -z-0" />
+      {/* Top Ambient Speed Glow (Electric Blue Aura) */}
+      <div className="absolute -top-24 sm:-top-32 left-1/2 -translate-x-1/2 w-[700px] sm:w-[1100px] h-[320px] sm:h-[420px] bg-gradient-to-b from-[#0066FF]/15 via-[#38BDF8]/8 to-transparent rounded-full blur-[90px] sm:blur-[120px] pointer-events-none -z-0" />
 
       <div className="container max-w-5xl mx-auto px-4 sm:px-6 relative z-10 flex-1 flex flex-col justify-center text-center">
-        <div className="space-y-6 sm:space-y-7 max-w-4xl mx-auto">
+        <div className="space-y-5 sm:space-y-6 max-w-4xl mx-auto">
           
-          {/* Eyebrow Badge (Fastlane-inspired, clean pill, vibrant red 'New' tag, zero dots) */}
+          {/* Eyebrow Badge (Clean pill, electric blue 'New' tag, zero dots) */}
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-            className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/95 border border-zinc-200/90 text-xs font-dmsans text-zinc-700 shadow-[0_2px_12px_rgba(0,0,0,0.04)] backdrop-blur-md hover:border-zinc-300 transition-colors"
+            className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/95 border border-zinc-200/90 text-xs font-dmsans text-zinc-700 shadow-[0_2px_12px_rgba(0,0,0,0.04)] backdrop-blur-md hover:border-blue-300 transition-colors"
           >
-            <span className="px-2 py-0.5 rounded-full bg-[#FF3B30] text-white font-extrabold text-[10px] tracking-wide uppercase">
+            <span className="px-2 py-0.5 rounded-full bg-[#0066FF] text-white font-extrabold text-[10px] tracking-wide uppercase">
               New
             </span>
             <span className="font-medium text-zinc-700 sm:text-xs text-[11px]">
@@ -33,12 +40,12 @@ export const HeroSection: React.FC = () => {
             </span>
           </motion.div>
 
-          {/* Fastlane-style Massive Kinetic Headline (Manrope Sans + Playfair Display Italic Contrast) */}
+          {/* Kinetic Headline (Manrope Sans + Playfair Display Italic Contrast) */}
           <motion.h1
             initial={{ opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
-            className="text-4xl sm:text-6xl md:text-7xl lg:text-[5.25rem] font-extrabold tracking-[-0.035em] text-zinc-950 leading-[1.07] font-manrope text-balance"
+            className="text-4xl sm:text-6xl md:text-7xl lg:text-[5rem] font-extrabold tracking-[-0.035em] text-zinc-950 leading-[1.07] font-manrope text-balance"
           >
             Ship{" "}
             <span className="font-playfair italic font-medium text-zinc-950 inline-block px-1">
@@ -51,7 +58,7 @@ export const HeroSection: React.FC = () => {
             , not quarters.
           </motion.h1>
 
-          {/* Crisp, High-Impact 2-Line Subtitle */}
+          {/* Subtitle */}
           <motion.p
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
@@ -61,17 +68,17 @@ export const HeroSection: React.FC = () => {
             The fastest way to engineer web applications, native mobile apps, and autonomous AI systems — delivered in 14 days directly by founder Rohith E.
           </motion.p>
 
-          {/* Dynamic Particle Vaporization Effect (Wise Integration of vapour-text-effect) */}
+          {/* Dynamic Particle Vaporization Effect (Image 2: Larger, Slow & Smooth) */}
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.22 }}
-            className="w-full max-w-lg mx-auto h-12 flex items-center justify-center px-4 rounded-xl bg-zinc-50/80 border border-zinc-200/80"
+            className="w-full max-w-xl mx-auto h-14 sm:h-16 flex items-center justify-center px-6 rounded-2xl bg-white/95 border border-blue-500/25 shadow-[0_8px_30px_rgba(0,102,255,0.08)] backdrop-blur-md"
           >
-            <div className="text-[11px] font-mono uppercase tracking-widest text-zinc-500 font-bold mr-2 shrink-0">
+            <div className="text-xs sm:text-sm font-mono uppercase tracking-widest text-[#0066FF] font-extrabold mr-3 shrink-0">
               BUILDING:
             </div>
-            <div className="flex-1 h-10 flex items-center justify-center overflow-hidden">
+            <div className="flex-1 h-12 flex items-center justify-center overflow-hidden">
               <VaporizeTextCycle
                 texts={[
                   "High-Converting Web Platforms",
@@ -81,16 +88,16 @@ export const HeroSection: React.FC = () => {
                 ]}
                 font={{
                   fontFamily: "Manrope, sans-serif",
-                  fontSize: "14px",
-                  fontWeight: 700,
+                  fontSize: "17px",
+                  fontWeight: 800,
                 }}
                 color="rgb(24, 24, 27)"
                 spread={3}
                 density={5}
                 animation={{
-                  vaporizeDuration: 1.8,
-                  fadeInDuration: 0.6,
-                  waitDuration: 1.4,
+                  vaporizeDuration: 2.6,
+                  fadeInDuration: 0.9,
+                  waitDuration: 2.8,
                 }}
                 direction="left-to-right"
                 alignment="center"
@@ -98,7 +105,7 @@ export const HeroSection: React.FC = () => {
             </div>
           </motion.div>
 
-          {/* Action CTA Buttons: Sleek Fastlane-Style Pill Buttons */}
+          {/* Action CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
@@ -107,7 +114,7 @@ export const HeroSection: React.FC = () => {
           >
             <button
               onClick={() => navigate("contact")}
-              className="inline-flex items-center gap-2.5 px-6 sm:px-7 py-3.5 rounded-full bg-[#111111] hover:bg-black text-white font-manrope font-bold text-sm sm:text-base shadow-[0_8px_20px_rgba(0,0,0,0.12)] hover:shadow-[0_12px_28px_rgba(0,0,0,0.2)] active:scale-95 transition-all duration-200 cursor-pointer group"
+              className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-zinc-950 hover:bg-[#0066FF] text-white font-manrope font-bold text-sm sm:text-base shadow-[0_8px_20px_rgba(0,102,255,0.2)] hover:shadow-[0_12px_28px_rgba(0,102,255,0.35)] active:scale-95 transition-all duration-200 cursor-pointer group"
             >
               <span>Get Started for Free</span>
               <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -115,79 +122,36 @@ export const HeroSection: React.FC = () => {
 
             <button
               onClick={() => navigate("work")}
-              className="inline-flex items-center gap-2 px-6 sm:px-7 py-3.5 rounded-full bg-white hover:bg-zinc-50 border border-zinc-300 text-zinc-800 font-manrope font-semibold text-sm sm:text-base shadow-xs hover:border-zinc-400 active:scale-95 transition-all duration-200 cursor-pointer"
+              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white hover:bg-zinc-50 border border-zinc-300 text-zinc-800 font-manrope font-semibold text-sm sm:text-base shadow-xs hover:border-blue-400 active:scale-95 transition-all duration-200 cursor-pointer"
             >
               <span>Explore Case Studies</span>
               <ArrowUpRight className="h-4 w-4 text-zinc-500" />
             </button>
           </motion.div>
 
-          {/* Micro-Trust Line: Pure, Clean Stats without Any Small Dots or Blinking Balls */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.32 }}
-            className="flex flex-wrap items-center justify-center gap-6 sm:gap-8 pt-3 text-xs sm:text-sm font-dmsans text-zinc-600"
-          >
-            <div className="flex items-center gap-1.5 font-medium text-zinc-800">
-              <ShieldCheck className="h-4 w-4 text-[#FF3B30]" />
-              <span>Direct Founder Access (Rohith E)</span>
-            </div>
-            <div className="flex items-center gap-1.5">
-              <Zap className="h-4 w-4 text-[#FFAE00]" />
-              <span className="font-bold text-zinc-950 font-manrope">14-Day Delivery</span>
-              <span className="text-zinc-500">Guarantee</span>
-            </div>
-            <div className="flex items-center gap-1.5">
-              <Award className="h-4 w-4 text-[#FF3B30]" />
-              <span className="font-bold text-zinc-950 font-manrope">100/100</span>
-              <span className="text-zinc-500">Lighthouse Target</span>
-            </div>
-          </motion.div>
-
         </div>
       </div>
 
-      {/* Bottom Service Matrix Bar: Clean, Minimal Strip */}
-      <div className="mt-12 sm:mt-16 pt-5 border-t border-zinc-200/80 bg-zinc-50/70 backdrop-blur-md">
-        <div className="container max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="flex flex-wrap items-center justify-between gap-4 text-xs font-dmsans text-zinc-600">
+      {/* Bottom Service Matrix Bar (Image 4: Smooth Continuous Scrolling Marquee with Increased Font Size) */}
+      <div className="mt-8 sm:mt-10 pt-4 pb-4 border-t border-zinc-200/80 bg-zinc-50/70 backdrop-blur-md overflow-hidden relative">
+        <div className="flex w-max items-center gap-8 animate-marquee hover:[animation-play-state:paused]">
+          {[...tickerItems, ...tickerItems, ...tickerItems].map((item, idx) => (
             <button
-              onClick={() => navigate("services-web")}
-              className="flex items-center gap-2 hover:text-[#FF3B30] transition-colors cursor-pointer group"
+              key={`${item.num}-${idx}`}
+              onClick={() => navigate(item.route)}
+              className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/80 hover:bg-white border border-zinc-200 hover:border-blue-300 shadow-2xs hover:shadow-xs transition-all cursor-pointer group shrink-0"
             >
-              <span className="text-[#FF3B30] font-bold font-mono">01</span>
-              <span className="font-bold text-zinc-900 group-hover:text-[#FF3B30]">WEB APPS</span>
-              <span className="text-zinc-500 font-normal">(&lt;0.4s load speed)</span>
+              <span className="text-[#0066FF] font-black font-mono text-sm sm:text-base tracking-tight">
+                {item.num}
+              </span>
+              <span className="font-extrabold text-zinc-900 group-hover:text-[#0066FF] font-manrope text-sm sm:text-base tracking-tight transition-colors">
+                {item.title}
+              </span>
+              <span className="text-zinc-500 font-normal font-dmsans text-xs sm:text-sm">
+                ({item.desc})
+              </span>
             </button>
-
-            <button
-              onClick={() => navigate("services-mobile")}
-              className="flex items-center gap-2 hover:text-[#FF3B30] transition-colors cursor-pointer group"
-            >
-              <span className="text-[#FF3B30] font-bold font-mono">02</span>
-              <span className="font-bold text-zinc-900 group-hover:text-[#FF3B30]">MOBILE APPS</span>
-              <span className="text-zinc-500 font-normal">(iOS &amp; Android)</span>
-            </button>
-
-            <button
-              onClick={() => navigate("services-automation")}
-              className="flex items-center gap-2 hover:text-[#FF3B30] transition-colors cursor-pointer group"
-            >
-              <span className="text-[#FF3B30] font-bold font-mono">03</span>
-              <span className="font-bold text-zinc-900 group-hover:text-[#FF3B30]">AI AGENTS</span>
-              <span className="text-zinc-500 font-normal">(WhatsApp &amp; Autopilot)</span>
-            </button>
-
-            <button
-              onClick={() => navigate("packages")}
-              className="flex items-center gap-2 hover:text-[#FF3B30] transition-colors cursor-pointer group"
-            >
-              <span className="text-[#FF3B30] font-bold font-mono">04</span>
-              <span className="font-bold text-zinc-900 group-hover:text-[#FF3B30]">PACKAGES</span>
-              <span className="text-zinc-500 font-normal">(From ₹5,000)</span>
-            </button>
-          </div>
+          ))}
         </div>
       </div>
     </section>

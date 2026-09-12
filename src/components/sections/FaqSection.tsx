@@ -14,7 +14,7 @@ export const FaqSection: React.FC = () => {
   }
 
   return (
-    <section id="faq" className="py-20 sm:py-28 bg-white border-t border-zinc-200 relative text-zinc-950">
+    <section id="faq" className="py-14 sm:py-20 bg-white border-t border-zinc-200 relative text-zinc-950">
       <div className="container max-w-4xl mx-auto px-4 sm:px-6">
         
         {/* Header with Scroll Animation */}
@@ -23,7 +23,7 @@ export const FaqSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-          className="text-center max-w-2xl mx-auto mb-12 sm:mb-16 space-y-4"
+          className="text-center max-w-2xl mx-auto mb-10 sm:mb-12 space-y-4"
         >
           <div className="inline-flex items-center px-3.5 py-1 rounded-full bg-zinc-100 border border-zinc-250 text-xs font-semibold text-zinc-700 shadow-xs">
             <span className="font-manrope font-bold text-[11px] uppercase tracking-wider text-zinc-600">
@@ -32,7 +32,7 @@ export const FaqSection: React.FC = () => {
           </div>
           <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-zinc-950 leading-[1.08] font-manrope">
             Everything you need to{" "}
-            <span className="font-playfair italic font-medium text-[#FF3B30]">
+            <span className="font-playfair italic font-medium text-[#0066FF]">
               know
             </span>
             .
@@ -59,7 +59,7 @@ export const FaqSection: React.FC = () => {
         </div>
 
         {/* Bottom Help CTA */}
-        <div className="mt-14 p-8 rounded-3xl bg-zinc-950 text-white border border-zinc-800 text-center space-y-4 shadow-xl">
+        <div className="mt-12 p-8 rounded-3xl bg-zinc-950 text-white border border-zinc-800 text-center space-y-4 shadow-xl">
           <h3 className="text-lg sm:text-xl font-bold font-display text-white">
             Have a specific question not covered here?
           </h3>
@@ -71,7 +71,7 @@ export const FaqSection: React.FC = () => {
               href="https://wa.me/919655483130?text=Hello%20Rohith,%20I%20have%20a%20question%20regarding%20a%20project."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#FFAE00] text-black font-extrabold text-xs shadow-md hover:bg-[#FFB800] transition-all"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#0066FF] hover:bg-[#0052CC] text-white font-extrabold text-xs shadow-md transition-all active:scale-95 cursor-pointer"
             >
               <span>Chat with Rohith E on WhatsApp ↗</span>
             </a>

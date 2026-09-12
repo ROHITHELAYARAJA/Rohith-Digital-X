@@ -95,7 +95,7 @@ export const Navbar: React.FC = () => {
             {/* Logo on Left: Aerodynamic R Logo (Fastlane Racing Style) */}
             <button
               onClick={() => handleNavClick("home")}
-              className="flex items-center gap-2.5 pr-2 text-xs sm:text-sm font-manrope font-extrabold tracking-tight text-zinc-950 dark:text-white hover:text-[#0066FF] transition-colors cursor-pointer group"
+              className="flex items-center gap-2.5 pr-2 text-xs sm:text-sm font-manrope font-extrabold tracking-tight text-zinc-950 dark:text-white hover:text-[#FF3B30] transition-colors cursor-pointer group"
             >
               <img
                 src="/rdx-r-logo.png"
@@ -113,12 +113,12 @@ export const Navbar: React.FC = () => {
               <div
                 ref={limelightRef}
                 className={cn(
-                  "absolute -top-[7px] pointer-events-none z-10 w-9 h-[3.5px] rounded-full bg-[#0066FF] shadow-[0_10px_20px_rgba(0,102,255,0.7)]",
+                  "absolute -top-[7px] pointer-events-none z-10 w-9 h-[3.5px] rounded-full bg-[#FF3B30] shadow-[0_10px_20px_rgba(255,59,48,0.7)]",
                   isLimelightReady ? "transition-[left] duration-300 ease-in-out" : "opacity-0"
                 )}
                 style={{ left: "-999px" }}
               >
-                <div className="absolute left-[-45%] top-[3.5px] w-[190%] h-8 [clip-path:polygon(15%_100%,35%_0,65%_0,85%_100%)] bg-gradient-to-b from-[#0066FF]/35 to-transparent pointer-events-none" />
+                <div className="absolute left-[-45%] top-[3.5px] w-[190%] h-8 [clip-path:polygon(15%_100%,35%_0,65%_0,85%_100%)] bg-gradient-to-b from-[#FF3B30]/35 to-transparent pointer-events-none" />
               </div>
 
               {[
@@ -178,7 +178,7 @@ export const Navbar: React.FC = () => {
             {/* Right: Fastlane-Style Action Button */}
             <button
               onClick={() => handleNavClick("contact")}
-              className="hidden sm:flex items-center gap-1.5 px-4 py-2 text-xs font-bold font-manrope rounded-full bg-zinc-950 text-white dark:bg-white dark:text-zinc-950 hover:bg-[#0066FF] dark:hover:bg-[#0066FF] dark:hover:text-white transition-all shadow-xs active:scale-95 cursor-pointer ml-1 whitespace-nowrap"
+              className="hidden sm:flex items-center gap-1.5 px-4 py-2 text-xs font-bold font-manrope rounded-full bg-zinc-950 text-white dark:bg-white dark:text-zinc-950 hover:bg-[#FF3B30] dark:hover:bg-[#FF3B30] dark:hover:text-white transition-all shadow-xs active:scale-95 cursor-pointer ml-1 whitespace-nowrap"
             >
               <span>Get Started for Free</span>
               <ArrowUpRight className="h-3.5 w-3.5" />

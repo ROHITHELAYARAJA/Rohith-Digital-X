@@ -187,20 +187,20 @@ Project Scope: ${formData.description}`
             <TiltCard tiltMaxAngleX={4} tiltMaxAngleY={4} scale={1.015}>
               <div className="p-6 sm:p-8 rounded-3xl bg-zinc-950 text-white shadow-card space-y-6 border border-zinc-800">
                 <div>
-                  <span className="text-[10px] sm:text-[11px] font-mono uppercase tracking-widest text-[#FFAE00] font-bold">
+                  <span className="text-[10px] sm:text-[11px] font-mono uppercase tracking-widest text-[#0066FF] font-bold">
                     Direct Communication
                   </span>
                   <h3 className="text-lg sm:text-xl font-bold text-white mt-1">
                     Contact Rohith E Directly
                   </h3>
                   <p className="text-xs text-zinc-400 mt-1">
-                    Founder &amp; Principal Developer at Rohith Digital X
+                    Founder &amp; Lead Software Engineer at Rohith Digital X
                   </p>
                 </div>
 
                 <div className="space-y-4 pt-2 text-sm">
                   <div className="flex items-start gap-3.5">
-                    <div className="h-10 w-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-[#FFAE00] shrink-0 shadow-xs">
+                    <div className="h-10 w-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-[#0066FF] shrink-0 shadow-xs">
                       <Mail className="h-4 w-4" />
                     </div>
                     <div>

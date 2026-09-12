@@ -1,14 +1,5 @@
 import React, { useState } from "react"
-import { motion } from "framer-motion"
-import {
-  Calendar,
-  Clock,
-  Video,
-  ShieldCheck,
-  ExternalLink,
-  PhoneCall,
-  CheckCircle2,
-} from "lucide-react"
+import { CheckCircle2, Calendar } from "lucide-react"
 
 interface CalBookingWidgetProps {
   className?: string
@@ -21,113 +12,63 @@ export const CalBookingWidget: React.FC<CalBookingWidgetProps> = ({
 }) => {
   const [iframeLoaded, setIframeLoaded] = useState(false)
 
-  // Embed URL with styling parameters
-  const embedUrl = `${calLink}?embed=true&layout=month_view&theme=light`
+  // Clean dark embed URL for seamless integration into dark luxury theme
+  const embedUrl = `${calLink}?embed=true&layout=month_view&theme=dark`
 
   return (
     <div className={`w-full max-w-5xl mx-auto ${className}`}>
-      {/* Executive Header Bar */}
-      <div className="bg-zinc-950 text-white rounded-t-3xl p-6 sm:p-8 border border-zinc-800 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-2xl relative overflow-hidden">
-        {/* Subtle Ambient Glow */}
-        <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-br from-[#FF3B30]/20 via-[#FFAE00]/10 to-transparent rounded-full blur-3xl pointer-events-none" />
-
-        <div className="space-y-3 relative z-10 max-w-xl">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900 border border-zinc-800 text-xs font-mono font-semibold text-zinc-300">
-            <span className="text-[#FF3B30] font-bold">OFFICIAL CAL.COM SUITE</span>
-            <span className="text-zinc-600">/</span>
-            <span className="text-emerald-400 font-bold">LIVE SLOTS</span>
+      {/* Sleek Minimal Executive Container */}
+      <div className="rounded-3xl bg-zinc-950 border border-zinc-800 shadow-[0_20px_50px_rgba(0,0,0,0.6)] overflow-hidden">
+        {/* Subtle, Clean Header Bar — No noisy banners or unwanted links */}
+        <div className="px-6 py-4 border-b border-zinc-850 bg-zinc-900/60 backdrop-blur-sm flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <div className="flex items-center gap-1.5">
+              <span className="h-2.5 w-2.5 rounded-full bg-emerald-500 animate-pulse" />
+              <span className="h-2 w-2 rounded-full bg-zinc-700" />
+              <span className="h-2 w-2 rounded-full bg-zinc-700" />
+            </div>
+            <div className="h-3.5 w-[1px] bg-zinc-800" />
+            <div className="flex items-center gap-2">
+              <Calendar className="h-3.5 w-3.5 text-zinc-400" />
+              <span className="text-xs font-mono font-semibold text-zinc-300">
+                Rohith E — Direct Calendar Scheduler
+              </span>
+            </div>
           </div>
 
-          <h3 className="text-2xl sm:text-3xl font-black font-manrope tracking-tight text-white leading-tight">
-            Schedule a 30-Min Sprint Discovery Call
-          </h3>
-
-          <p className="text-sm text-zinc-400 font-dmsans leading-relaxed">
-            Book directly into founder <strong>Rohith E's</strong> personal calendar. We will review your product idea, estimate sprint scope, and blueprint the architecture.
-          </p>
-
-          {/* Feature Badges */}
-          <div className="flex flex-wrap items-center gap-4 pt-1 text-xs text-zinc-300 font-dmsans">
-            <div className="flex items-center gap-1.5">
-              <Clock className="h-4 w-4 text-[#FFAE00]" />
-              <span>30 Minutes</span>
-            </div>
-            <div className="flex items-center gap-1.5">
-              <Video className="h-4 w-4 text-[#FF3B30]" />
-              <span>Google Meet / Zoom</span>
-            </div>
-            <div className="flex items-center gap-1.5">
-              <ShieldCheck className="h-4 w-4 text-emerald-400" />
-              <span>100% Confidential</span>
-            </div>
+          <div className="hidden sm:flex items-center gap-2 text-[11px] font-mono text-zinc-500">
+            <span>Direct 1-on-1</span>
+            <span className="text-zinc-700">•</span>
+            <span>30-Min Discovery</span>
           </div>
         </div>
 
-        {/* Right CTA Button & Quick Info */}
-        <div className="flex flex-col sm:flex-row md:flex-col items-stretch sm:items-center md:items-end gap-3 w-full md:w-auto relative z-10">
-          <a
-            href={calLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-white hover:bg-zinc-100 text-zinc-950 font-manrope font-bold text-xs sm:text-sm shadow-md transition-all active:scale-95 cursor-pointer whitespace-nowrap group"
-          >
-            <span>Open in Cal.com</span>
-            <ExternalLink className="h-4 w-4 text-zinc-600 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-          </a>
+        {/* Embedded Cal.com Scheduler Frame */}
+        <div className="relative w-full bg-zinc-950 min-h-[660px] sm:min-h-[720px]">
+          {/* Loading placeholder skeleton while Cal.com iframe initializes */}
+          {!iframeLoaded && (
+            <div className="absolute inset-0 bg-zinc-950 flex flex-col items-center justify-center p-8 space-y-3 z-10">
+              <div className="h-8 w-8 rounded-full border-2 border-zinc-700 border-t-white animate-spin" />
+              <p className="text-xs font-manrope font-semibold text-zinc-400">
+                Loading live appointment calendar...
+              </p>
+            </div>
+          )}
 
-          <a
-            href="https://wa.me/919655483130?text=Hi%20Rohith,%20I%20would%20like%20to%20schedule%20a%20project%20discovery%20sprint"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-950/80 hover:bg-emerald-900 border border-emerald-800/80 text-emerald-300 font-mono text-xs font-semibold transition-all active:scale-95 cursor-pointer"
-          >
-            <PhoneCall className="h-3.5 w-3.5 text-emerald-400" />
-            <span>Instant WhatsApp Chat</span>
-          </a>
+          <iframe
+            src={embedUrl}
+            title="Rohith E | Appointment Scheduler"
+            onLoad={() => setIframeLoaded(true)}
+            className="w-full h-[680px] sm:h-[740px] border-0 bg-transparent"
+            style={{ width: "100%", height: "720px", overflow: "hidden" }}
+          />
         </div>
       </div>
 
-      {/* Embedded Live Cal.com Scheduler Frame */}
-      <div className="relative w-full rounded-b-3xl bg-white border-x border-b border-zinc-200 shadow-xl overflow-hidden min-h-[680px]">
-        {/* Loading placeholder skeleton while Cal.com iframe initializes */}
-        {!iframeLoaded && (
-          <div className="absolute inset-0 bg-zinc-50 flex flex-col items-center justify-center p-8 space-y-4 z-10">
-            <div className="h-10 w-10 rounded-full border-2 border-zinc-300 border-t-[#FF3B30] animate-spin" />
-            <p className="text-sm font-manrope font-semibold text-zinc-600">
-              Connecting to Rohith E's live Cal.com scheduler...
-            </p>
-            <p className="text-xs text-zinc-400 font-mono">
-              cal.com/rohith-e-3130/secret
-            </p>
-          </div>
-        )}
-
-        <iframe
-          src={embedUrl}
-          title="Rohith E | Cal.com Appointment Scheduler"
-          onLoad={() => setIframeLoaded(true)}
-          className="w-full h-[720px] sm:h-[760px] border-0"
-          style={{ width: "100%", height: "740px", overflow: "hidden" }}
-        />
-      </div>
-
-      {/* Trust Footer below booking */}
-      <div className="pt-4 flex flex-wrap items-center justify-between text-xs text-zinc-500 font-dmsans px-2 gap-2">
-        <div className="flex items-center gap-2">
-          <CheckCircle2 className="h-4 w-4 text-emerald-600" />
-          <span>Calendar invites and Google Meet links generated automatically upon booking</span>
-        </div>
-        <div className="font-mono text-xs text-zinc-400">
-          Direct link:{" "}
-          <a
-            href={calLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline hover:text-zinc-800"
-          >
-            cal.com/rohith-e-3130/secret
-          </a>
-        </div>
+      {/* Discreet Trust Note */}
+      <div className="pt-3 flex items-center justify-center text-xs text-zinc-500 font-dmsans gap-2">
+        <CheckCircle2 className="h-3.5 w-3.5 text-emerald-500 shrink-0" />
+        <span>Automated Google Meet link and calendar invitation generated instantly upon booking</span>
       </div>
     </div>
   )
