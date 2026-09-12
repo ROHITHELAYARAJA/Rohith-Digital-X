@@ -159,7 +159,7 @@ export const DeviceMockup: React.FC<DeviceMockupProps> = ({ type, variant }) => 
                         {prod.tag}
                       </span>
                       <p className="text-[10px] font-bold text-zinc-900 truncate">{prod.name}</p>
-                      <p className="text-[10px] font-extrabold text-zinc-900">{prod.price}</p>
+                      <p className="text-[10px] font-bold text-zinc-900">{prod.price}</p>
                     </div>
                   ))}
                 </div>

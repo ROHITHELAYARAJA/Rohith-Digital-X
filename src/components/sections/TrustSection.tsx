@@ -56,15 +56,6 @@ export const TrustSection: React.FC = () => {
         
         {/* Clean Centered Header */}
         <div className="max-w-3xl mx-auto text-center space-y-3">
-          <motion.span
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-purple-400 font-mono inline-flex items-center gap-1.5"
-          >
-            <Sparkles className="h-3 w-3" />
-            <span>FOUNDATIONAL ENGINEERING PRINCIPLES</span>
-          </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -73,7 +64,7 @@ export const TrustSection: React.FC = () => {
             className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-white leading-tight font-display"
           >
             Turning ambitious ideas into{" "}
-            <span className="font-boska italic font-normal text-purple-400">reliable digital products<span className="text-[#FF4D3D]">.</span></span>
+            <span className="font-playfair italic font-medium text-[#FF4D3D]">reliable digital products</span>.
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 15 }}

@@ -3,14 +3,13 @@ import { motion } from "framer-motion"
 import { techStackData } from "@/data/techStack"
 import { TiltCard } from "@/components/ui/tilt-card"
 import { MacDock } from "@/components/ui/mac-dock"
-import { Sparkles } from "lucide-react"
 
 const CLIENT_LOGOS = [
   { name: "INTERWOVE", font: "font-serif tracking-[0.25em]" },
   { name: "ZARNAMA", font: "font-mono tracking-[0.2em]" },
-  { name: "LAKSHITA", font: "font-sans font-black tracking-[0.15em]" },
-  { name: "DINO SYSTEMS", font: "font-mono font-extrabold tracking-tight" },
-  { name: "NOVAMARKET", font: "font-sans font-extrabold tracking-wider" },
+  { name: "LAKSHITA", font: "font-sans font-bold tracking-[0.15em]" },
+  { name: "DINO SYSTEMS", font: "font-mono font-bold tracking-tight" },
+  { name: "NOVAMARKET", font: "font-sans font-bold tracking-wider" },
   { name: "CAREPULSE", font: "font-sans font-bold tracking-widest" },
 ]
 
@@ -46,16 +45,16 @@ export const AboutSection: React.FC = () => {
             
             {/* Left Column: Headline & Story */}
             <div className="lg:col-span-6 space-y-4">
-              <span className="text-[10px] sm:text-xs font-mono font-bold uppercase tracking-[0.25em] text-purple-400">
+              <span className="text-[10px] sm:text-xs font-mono font-bold uppercase tracking-[0.25em] text-[#FF4D3D]">
                 A SUMMARY
               </span>
 
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white font-display">
-                Know <span className="font-boska italic font-normal text-zinc-400">me</span> as I am<span className="text-[#FF4D3D]">.</span>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white font-manrope">
+                Know <span className="font-playfair italic font-normal text-zinc-400">me</span> as I am<span className="text-[#FF4D3D]">.</span>
               </h2>
 
-              <p className="text-sm sm:text-base text-zinc-300 leading-relaxed font-normal pt-1 font-sans">
-                <span className="text-purple-400 font-bold">I design products that get out of the way.</span> 3+ years across SaaS, mobile ecosystems, and consumer platforms — from discovery to deployment. I care about speed, clarity, and the high-fidelity details that elevate a brand.
+              <p className="text-sm sm:text-base text-zinc-400 leading-relaxed font-normal pt-1 font-dmsans">
+                <span className="text-[#FF4D3D] font-semibold">I design products that get out of the way.</span> 3+ years across SaaS, mobile ecosystems, and consumer platforms — from discovery to deployment. I care about speed, clarity, and the high-fidelity details that elevate a brand.
               </p>
             </div>
 
@@ -67,9 +66,9 @@ export const AboutSection: React.FC = () => {
                 <span className="font-mono text-[10px] sm:text-xs uppercase font-bold tracking-widest text-zinc-500">
                   BASED
                 </span>
-                <div className="flex items-center gap-2 font-bold text-white font-sans">
+                <div className="flex items-center gap-2.5 font-bold text-white font-sans">
                   <span>Tamil Nadu, IN</span>
-                  <span className="text-[#FF4D3D] font-black text-xs">✦</span>
+                  <span className="text-zinc-600">·</span>
                   <span className="font-mono text-xs text-zinc-400">{localTime || "08:38 PM"}</span>
                 </div>
               </div>
@@ -79,10 +78,10 @@ export const AboutSection: React.FC = () => {
                 <span className="font-mono text-[10px] sm:text-xs uppercase font-bold tracking-widest text-zinc-500">
                   CURRENTLY
                 </span>
-                <div className="flex items-center gap-2 font-bold text-white font-sans">
-                  <span>Founder & Lead Engineer</span>
-                  <span className="text-purple-400 font-black text-xs">✦</span>
-                  <span className="font-mono text-xs text-purple-400">rdx.agency</span>
+                <div className="flex items-center gap-2.5 font-bold text-white font-sans">
+                  <span>Founder &amp; Lead Engineer</span>
+                  <span className="text-zinc-600">·</span>
+                  <span className="font-mono text-xs text-zinc-400">rdx.agency</span>
                 </div>
               </div>
 
@@ -116,12 +115,11 @@ export const AboutSection: React.FC = () => {
         <div className="space-y-6 text-center border-t border-zinc-800/80 pt-16">
           
           {/* Centered Top Badge */}
-          <div className="inline-flex items-center gap-1.5 text-xs font-mono font-bold uppercase tracking-widest text-purple-300">
-            <span className="text-[#FF4D3D] font-black text-sm">✦</span>
+          <div className="inline-flex items-center gap-1.5 text-xs font-mono font-bold uppercase tracking-widest text-zinc-500">
             <span>ABOUT &amp; METHODOLOGY</span>
           </div>
 
-          <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white max-w-4xl mx-auto leading-tight font-display">
+          <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white max-w-4xl mx-auto leading-tight font-manrope">
             Building Apps<span className="text-[#FF4D3D]">.</span> Designing Products<span className="text-[#FF4D3D]">.</span> Crafting Systems<span className="text-[#FF4D3D]">.</span>
           </h3>
 
@@ -140,15 +138,14 @@ export const AboutSection: React.FC = () => {
               transition={{ duration: 0.4, delay: 0.1 }}
             >
               <TiltCard tiltMaxAngleX={5} tiltMaxAngleY={5} scale={1.02} className="h-full">
-                <div className="rounded-[32px] bg-zinc-950/90 border border-zinc-800/90 p-7 sm:p-8 flex flex-col justify-between h-[360px] sm:h-[400px] shadow-2xl hover:border-purple-500/60 hover:bg-zinc-900/60 transition-all duration-300 group">
+                <div className="rounded-[32px] bg-zinc-950/90 border border-zinc-800/90 p-7 sm:p-8 flex flex-col justify-between h-[340px] sm:h-[380px] shadow-2xl hover:border-[#FF4D3D]/50 hover:shadow-[0_0_25px_rgba(255,77,61,0.2)] hover:bg-zinc-900/60 transition-all duration-300 group">
                   
                   {/* Frame Header */}
                   <div className="space-y-2 text-center">
-                    <span className="text-xs font-mono font-bold uppercase tracking-wider text-purple-400 flex items-center justify-center gap-1.5">
-                      <span className="text-[#FF4D3D] font-black">✦</span>
+                    <span className="text-xs font-mono font-bold uppercase tracking-wider text-zinc-500 flex items-center justify-center gap-1.5">
                       <span>FRAME 1</span>
                     </span>
-                    <h4 className="text-xl font-bold text-white font-display">Backend &amp; Architecture</h4>
+                    <h4 className="text-xl font-bold text-white font-manrope">Backend &amp; Architecture</h4>
                   </div>
 
                   {/* Frame Visual Preview */}
@@ -183,14 +180,13 @@ export const AboutSection: React.FC = () => {
               transition={{ duration: 0.4, delay: 0.2 }}
             >
               <TiltCard tiltMaxAngleX={5} tiltMaxAngleY={5} scale={1.02} className="h-full">
-                <div className="rounded-[32px] bg-zinc-950/90 border border-zinc-800/90 p-7 sm:p-8 flex flex-col justify-between h-[360px] sm:h-[400px] shadow-2xl hover:border-purple-500/60 hover:bg-zinc-900/60 transition-all duration-300 group">
+                <div className="rounded-[32px] bg-zinc-950/90 border border-zinc-800/90 p-7 sm:p-8 flex flex-col justify-between h-[340px] sm:h-[380px] shadow-2xl hover:border-[#FF4D3D]/60 hover:shadow-[0_0_25px_rgba(255,77,61,0.25)] hover:bg-zinc-900/60 transition-all duration-300 group">
                   
                   <div className="space-y-2 text-center">
-                    <span className="text-xs font-mono font-bold uppercase tracking-wider text-purple-400 flex items-center justify-center gap-1.5">
-                      <span className="text-[#FF4D3D] font-black">✦</span>
+                    <span className="text-xs font-mono font-bold uppercase tracking-wider text-zinc-500 flex items-center justify-center gap-1.5">
                       <span>FRAME 2</span>
                     </span>
-                    <h4 className="text-xl font-bold text-white font-display">UI/UX &amp; Mobile Apps</h4>
+                    <h4 className="text-xl font-bold text-white font-manrope">UI/UX &amp; Mobile Apps</h4>
                   </div>
 
                   <div className="my-auto p-4 rounded-2xl bg-zinc-900/80 border border-zinc-800 space-y-2 text-left">
@@ -198,7 +194,7 @@ export const AboutSection: React.FC = () => {
                       <span>CONVERSION PSYCHOLOGY</span>
                       <span className="text-[#FF4D3D] font-bold">FLUID</span>
                     </div>
-                    <p className="text-xs font-medium text-zinc-300 leading-snug font-sans">
+                    <p className="text-xs font-medium text-zinc-300 leading-snug font-dmsans">
                       React 19, TypeScript, React Native, micro-animations, and sub-second responsive viewport scaling.
                     </p>
                     <div className="flex gap-1.5 pt-1 text-[10px] font-mono text-zinc-400">
@@ -224,22 +220,21 @@ export const AboutSection: React.FC = () => {
               transition={{ duration: 0.4, delay: 0.3 }}
             >
               <TiltCard tiltMaxAngleX={5} tiltMaxAngleY={5} scale={1.02} className="h-full">
-                <div className="rounded-[32px] bg-zinc-950/90 border border-zinc-800/90 p-7 sm:p-8 flex flex-col justify-between h-[360px] sm:h-[400px] shadow-2xl hover:border-purple-500/60 hover:bg-zinc-900/60 transition-all duration-300 group">
+                <div className="rounded-[32px] bg-zinc-950/90 border border-zinc-800/90 p-7 sm:p-8 flex flex-col justify-between h-[340px] sm:h-[380px] shadow-2xl hover:border-[#FF4D3D]/50 hover:shadow-[0_0_25px_rgba(255,77,61,0.2)] hover:bg-zinc-900/60 transition-all duration-300 group">
                   
                   <div className="space-y-2 text-center">
-                    <span className="text-xs font-mono font-bold uppercase tracking-wider text-purple-400 flex items-center justify-center gap-1.5">
-                      <span className="text-[#FF4D3D] font-black">✦</span>
+                    <span className="text-xs font-mono font-bold uppercase tracking-wider text-zinc-500 flex items-center justify-center gap-1.5">
                       <span>FRAME 3</span>
                     </span>
-                    <h4 className="text-xl font-bold text-white font-display">AI &amp; Autonomous Agents</h4>
+                    <h4 className="text-xl font-bold text-white font-manrope">AI &amp; Autonomous Agents</h4>
                   </div>
 
                   <div className="my-auto p-4 rounded-2xl bg-zinc-900/80 border border-zinc-800 space-y-2 text-left">
                     <div className="flex items-center justify-between text-[10px] font-mono text-zinc-400">
                       <span>INTELLIGENT PIPELINES</span>
-                      <span className="text-purple-400 font-bold">SMART</span>
+                      <span className="text-[#FF4D3D] font-bold">SMART</span>
                     </div>
-                    <p className="text-xs font-medium text-zinc-300 leading-snug font-sans">
+                    <p className="text-xs font-medium text-zinc-300 leading-snug font-dmsans">
                       Trained RAG knowledge bases, 24/7 WhatsApp customer bots, and webhook CRM synchronization.
                     </p>
                     <div className="flex gap-1.5 pt-1 text-[10px] font-mono text-zinc-400">
@@ -271,7 +266,7 @@ export const AboutSection: React.FC = () => {
             {CLIENT_LOGOS.map((client, idx) => (
               <span
                 key={idx}
-                className={`text-sm sm:text-base text-zinc-400 hover:text-purple-400 transition-colors cursor-default select-none ${client.font}`}
+                className={`text-sm sm:text-base text-zinc-400 hover:text-[#FF4D3D] transition-colors cursor-default select-none ${client.font}`}
               >
                 {client.name}
               </span>
@@ -285,56 +280,51 @@ export const AboutSection: React.FC = () => {
             
             {/* Story Bio Column */}
             <div className="lg:col-span-7 space-y-4">
-              <span className="text-[10px] sm:text-xs font-mono font-bold uppercase tracking-widest text-purple-400">
+              <span className="text-[10px] sm:text-xs font-mono font-bold uppercase tracking-widest text-[#FF4D3D]">
                 KNOW ME
               </span>
 
-              <div className="flex items-center gap-3">
-                <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-white">
-                  Little about myself<span className="text-[#FF4D3D]">.</span>
-                </h3>
-                <span className="text-2xl sm:text-3xl select-none" role="img" aria-label="Developer emoji">
-                  👨‍💻
-                </span>
-              </div>
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-white font-manrope italic">
+                Little about myself<span className="text-[#FF4D3D]">.</span>
+              </h3>
 
-              <p className="text-sm sm:text-base text-zinc-300 leading-relaxed font-normal">
-                <strong className="text-white">I'm Rohith</strong>. I started in engineering, moved into building high-converting digital products and full-stack systems, giving me a distinct instinct — less <em>“make it generic,”</em> more <strong className="text-purple-300">“will this actually convert, perform with zero lag, and deliver real business ROI?”</strong>
+              <p className="text-sm sm:text-base text-zinc-400 leading-relaxed font-normal font-dmsans">
+                <strong className="text-white">I'm Rohith</strong>. I started in engineering, moved into building high-converting digital products and full-stack systems, giving me a distinct instinct — less <em>"make it generic,"</em> more <strong className="text-[#FF4D3D]">"will this actually convert, perform with zero lag, and deliver real business ROI?"</strong>
               </p>
 
-              <div className="pt-2 flex items-center gap-4 text-xs font-medium text-zinc-400 font-mono">
-                <span>📍 Namakkal, Tamil Nadu, India</span>
-                <span className="text-zinc-600">/</span>
-                <span className="text-emerald-400 font-bold">Available for Projects</span>
+              <div className="pt-2 flex items-center gap-4 text-xs font-medium text-zinc-500 font-mono">
+                <span>Namakkal, Tamil Nadu, India</span>
+                <span className="text-zinc-700">/</span>
+                <span className="text-white font-bold">Available for Projects</span>
               </div>
             </div>
 
             {/* Bold Stats Column */}
             <div className="lg:col-span-5 grid grid-cols-3 gap-4 text-center lg:text-left border-t lg:border-t-0 lg:border-l border-zinc-800 pt-6 lg:pt-0 lg:pl-8">
               
-              <div className="space-y-1">
-                <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-purple-400 tracking-tight font-trench">
+              <div className="space-y-1.5">
+                <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-white tracking-tight font-manrope italic leading-none">
                   03
                 </div>
-                <p className="text-[9px] sm:text-[10px] uppercase font-mono font-bold text-zinc-500 leading-tight">
+                <p className="text-[9px] sm:text-[10px] uppercase font-mono font-bold text-zinc-500 leading-tight tracking-wider">
                   Years In<br />Full-Stack
                 </p>
               </div>
 
-              <div className="space-y-1">
-                <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#FF4D3D] tracking-tight font-trench">
+              <div className="space-y-1.5">
+                <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-white tracking-tight font-manrope italic leading-none">
                   15+
                 </div>
-                <p className="text-[9px] sm:text-[10px] uppercase font-mono font-bold text-zinc-500 leading-tight">
+                <p className="text-[9px] sm:text-[10px] uppercase font-mono font-bold text-zinc-500 leading-tight tracking-wider">
                   Projects<br />Delivered
                 </p>
               </div>
 
-              <div className="space-y-1">
-                <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-purple-400 tracking-tight font-trench">
+              <div className="space-y-1.5">
+                <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-white tracking-tight font-manrope italic leading-none">
                   100%
                 </div>
-                <p className="text-[9px] sm:text-[10px] uppercase font-mono font-bold text-zinc-500 leading-tight">
+                <p className="text-[9px] sm:text-[10px] uppercase font-mono font-bold text-zinc-500 leading-tight tracking-wider">
                   Code &amp; IP<br />Ownership
                 </p>
               </div>
@@ -347,11 +337,10 @@ export const AboutSection: React.FC = () => {
         {/* Technical Stack Matrix */}
         <div className="space-y-8">
           <div>
-            <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-purple-400 font-mono inline-flex items-center gap-1.5">
-              <Sparkles className="h-3.5 w-3.5" />
-              <span>Production Architecture &amp; Engineering Standards</span>
+            <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-zinc-500 font-mono">
+              Production Architecture &amp; Engineering Standards
             </span>
-            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight text-white mt-1">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight text-white font-manrope mt-1">
               Production-grade technologies we employ<span className="text-[#FF4D3D]">.</span>
             </h3>
           </div>
@@ -366,9 +355,9 @@ export const AboutSection: React.FC = () => {
                 transition={{ duration: 0.35, delay: idx * 0.08 }}
               >
                 <TiltCard tiltMaxAngleX={4} tiltMaxAngleY={4} scale={1.015} className="h-full">
-                  <div className="p-5 rounded-2xl bg-zinc-950/80 border border-zinc-800/90 shadow-2xl hover:border-purple-500/60 hover:bg-zinc-900/60 transition-all duration-300 space-y-3 h-full cursor-default flex flex-col justify-between">
+                  <div className="p-5 rounded-2xl bg-zinc-950/80 border border-zinc-800/90 shadow-2xl hover:border-[#FF4D3D]/50 hover:bg-zinc-900/60 transition-all duration-300 space-y-3 h-full cursor-default flex flex-col justify-between">
                     <div>
-                      <h4 className="text-sm font-bold text-white group-hover:text-purple-400 transition-colors uppercase tracking-wider font-display">
+                      <h4 className="text-sm font-bold text-white group-hover:text-[#FF4D3D] transition-colors uppercase tracking-wider font-manrope">
                         {category.title}
                       </h4>
                       <p className="text-xs text-zinc-400 leading-relaxed mt-1.5">
@@ -380,7 +369,7 @@ export const AboutSection: React.FC = () => {
                       {category.skills.map((tech) => (
                         <span
                           key={tech.name}
-                          className="px-2 py-0.5 rounded-md bg-zinc-900 border border-zinc-800 text-[10px] font-mono font-medium text-zinc-300 hover:border-purple-500/50 hover:text-purple-300 transition-colors cursor-default"
+                          className="px-2 py-0.5 rounded-md bg-zinc-900 border border-zinc-800 text-[10px] font-mono font-medium text-zinc-300 hover:border-[#FF4D3D]/50 hover:text-[#FF4D3D] transition-colors cursor-default"
                         >
                           {tech.name}
                         </span>

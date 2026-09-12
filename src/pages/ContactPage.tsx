@@ -36,14 +36,14 @@ export const ContactPage: React.FC = () => {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
               <a
                 href="tel:+919655483130"
-                className="flex items-center gap-3 p-3.5 rounded-2xl bg-zinc-900/90 border border-zinc-800 hover:border-purple-500/60 transition-all group shadow-xs"
+                className="flex items-center gap-3 p-3.5 rounded-2xl bg-zinc-900/90 border border-zinc-800 hover:border-sky-500/60 hover:shadow-[0_0_20px_rgba(14,165,233,0.2)] transition-all group shadow-xs"
               >
-                <div className="h-8 w-8 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center font-bold">
+                <div className="h-8 w-8 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center font-bold">
                   <Phone className="h-4 w-4" />
                 </div>
                 <div>
                   <div className="text-[10px] font-mono text-zinc-500 uppercase">Call / WhatsApp</div>
-                  <div className="text-xs font-mono font-bold text-white group-hover:text-purple-300 transition-colors">
+                  <div className="text-xs font-mono font-bold text-white group-hover:text-sky-300 transition-colors">
                     +91 96554 83130
                   </div>
                 </div>
@@ -51,7 +51,7 @@ export const ContactPage: React.FC = () => {
 
               <a
                 href="mailto:e.rohith3130@gmail.com"
-                className="flex items-center gap-3 p-3.5 rounded-2xl bg-zinc-900/90 border border-zinc-800 hover:border-purple-500/60 transition-all group shadow-xs"
+                className="flex items-center gap-3 p-3.5 rounded-2xl bg-zinc-900/90 border border-zinc-800 hover:border-purple-500/60 hover:shadow-purple-glow transition-all group shadow-xs"
               >
                 <div className="h-8 w-8 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center font-bold">
                   <Mail className="h-4 w-4" />
@@ -65,7 +65,7 @@ export const ContactPage: React.FC = () => {
               </a>
 
               <div className="flex items-center gap-3 p-3.5 rounded-2xl bg-zinc-900/90 border border-zinc-800 shadow-xs">
-                <div className="h-8 w-8 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center font-bold">
+                <div className="h-8 w-8 rounded-xl bg-[#FF4D3D]/10 text-[#FF4D3D] flex items-center justify-center font-bold">
                   <MapPin className="h-4 w-4" />
                 </div>
                 <div>
@@ -83,7 +83,7 @@ export const ContactPage: React.FC = () => {
                 onClick={() => setActiveTab("calendar")}
                 className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold transition-all cursor-pointer ${
                   activeTab === "calendar"
-                    ? "bg-purple-600 text-white shadow-md shadow-purple-600/30 ring-1 ring-purple-400"
+                    ? "bg-sky-500 text-white shadow-md shadow-sky-500/30 ring-1 ring-sky-400"
                     : "bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-white"
                 }`}
               >
@@ -114,7 +114,7 @@ export const ContactPage: React.FC = () => {
           {activeTab === "calendar" ? (
             <div className="space-y-6">
               <div className="text-center space-y-2 mb-8">
-                <span className="text-[11px] font-mono font-bold tracking-widest uppercase text-purple-400">
+                <span className="text-[11px] font-mono font-bold tracking-widest uppercase text-sky-400">
                   SELECT YOUR TIME
                 </span>
                 <h2 className="text-2xl sm:text-4xl font-bold text-white font-display">

@@ -18,10 +18,10 @@ export const ArchitectureOrbit: React.FC = () => {
         className="relative z-20 flex h-20 w-20 sm:h-24 sm:w-24 items-center justify-center rounded-3xl bg-zinc-900 border-2 border-accent-crimson shadow-[0_0_35px_-5px_rgba(220,38,38,0.6)] p-3 text-center"
       >
         <div className="flex flex-col items-center justify-center">
-          <span className="text-[10px] sm:text-xs font-mono font-extrabold uppercase tracking-wider text-zinc-400">
+          <span className="text-[10px] sm:text-xs font-mono font-bold uppercase tracking-wider text-zinc-400">
             RDX
           </span>
-          <span className="text-xs sm:text-sm font-black text-white">
+          <span className="text-xs sm:text-sm font-bold text-white">
             ENGINE
           </span>
           <span className="text-[9px] font-mono text-emerald-400 font-bold mt-0.5 tracking-wider">

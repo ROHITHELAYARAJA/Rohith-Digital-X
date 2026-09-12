@@ -1,7 +1,7 @@
 import React from "react"
 import { motion } from "framer-motion"
 import { processSteps } from "@/data/process"
-import { Search, Compass, Hammer, Rocket, CheckCircle2, Sparkles } from "lucide-react"
+import { Search, Compass, Hammer, Rocket, CheckCircle2 } from "lucide-react"
 import { TiltCard } from "@/components/ui/tilt-card"
 
 const STEP_ICONS = [Search, Compass, Hammer, Rocket]
@@ -13,15 +13,6 @@ export const ProcessSection: React.FC = () => {
         
         {/* Section Header with Editorial Typography */}
         <div className="max-w-3xl mb-10 sm:mb-12 space-y-3">
-          <motion.span
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-purple-400 font-mono inline-flex items-center gap-1.5"
-          >
-            <Sparkles className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
-            <span>Disciplined Delivery Workflow</span>
-          </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -30,7 +21,7 @@ export const ProcessSection: React.FC = () => {
             className="text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white leading-tight font-manrope"
           >
             From initial concept to launch in{" "}
-            <span className="text-[#FF4D3D] font-bold">
+            <span className="text-white font-bold">
               4 disciplined phases.
             </span>
           </motion.h2>
@@ -65,7 +56,7 @@ export const ProcessSection: React.FC = () => {
                 y1="50%"
                 x2="95%"
                 y2="50%"
-                stroke="#8B5CF6"
+                stroke="#71717A"
                 strokeWidth="2"
                 strokeDasharray="12 180"
                 animate={{ strokeDashoffset: [200, 0] }}
@@ -88,20 +79,20 @@ export const ProcessSection: React.FC = () => {
                   className="h-full"
                 >
                   <TiltCard tiltMaxAngleX={6} tiltMaxAngleY={6} scale={1.02} className="h-full">
-                    <div className="group relative rounded-3xl border border-zinc-800/90 bg-zinc-900/80 p-6 sm:p-7 shadow-subtle hover:bg-zinc-900 hover:border-purple-500/60 hover:shadow-purple-glow transition-all duration-300 flex flex-col justify-between h-full cursor-default backdrop-blur-sm">
+                    <div className="group relative rounded-3xl border border-zinc-800 bg-[#0C0D11] p-6 sm:p-7 shadow-subtle hover:bg-zinc-900 hover:border-zinc-500 hover:shadow-[0_0_30px_rgba(255,255,255,0.08)] transition-all duration-300 flex flex-col justify-between h-full cursor-default backdrop-blur-sm">
                       <div>
                         {/* Step Header */}
                         <div className="flex items-center justify-between mb-5">
-                          <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-zinc-950 border border-zinc-800 text-white group-hover:text-purple-400 group-hover:border-purple-500/50 group-hover:bg-purple-950/40 group-hover:scale-110 transition-all duration-300 shadow-xs">
+                          <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-zinc-950 border border-zinc-800 text-zinc-300 group-hover:text-white group-hover:border-zinc-600 group-hover:bg-zinc-900 group-hover:scale-110 transition-all duration-300 shadow-xs">
                             <Icon className="h-6 w-6" />
                           </div>
-                          <span className="font-mono text-xs font-bold text-purple-400 tracking-wider px-2.5 py-1 rounded-full bg-purple-950/60 border border-purple-800/60">
+                          <span className="font-mono text-xs font-bold tracking-wider px-2.5 py-1 rounded-full text-zinc-300 bg-zinc-950 border border-zinc-800 group-hover:border-zinc-700">
                             {step.step}
                           </span>
                         </div>
 
                         {/* Title & Tagline */}
-                        <h3 className="text-lg font-bold tracking-tight text-white mb-1 group-hover:text-purple-400 transition-colors font-manrope">
+                        <h3 className="text-lg font-bold tracking-tight text-white mb-1 transition-colors font-sans group-hover:text-zinc-100">
                           {step.title}
                         </h3>
                         <div className="text-[11px] font-semibold text-zinc-400 mb-3 font-dmsans">
@@ -122,7 +113,7 @@ export const ProcessSection: React.FC = () => {
                         <ul className="space-y-1.5">
                           {step.deliverables.map((item, dIdx) => (
                             <li key={dIdx} className="flex items-center gap-2 text-xs text-zinc-300">
-                              <CheckCircle2 className="h-3.5 w-3.5 text-purple-400 shrink-0" />
+                              <CheckCircle2 className="h-3.5 w-3.5 shrink-0 text-zinc-400 group-hover:text-white transition-colors" />
                               <span className="leading-tight">{item}</span>
                             </li>
                           ))}

@@ -6,7 +6,6 @@ import { DigitalProductCapabilitiesSection } from "@/components/sections/Digital
 import { ServicesSection } from "@/components/sections/ServicesSection"
 import { PackagesSection } from "@/components/sections/PackagesSection"
 import { WorkSection } from "@/components/sections/WorkSection"
-import { HeyDigitalTestimonialsSection } from "@/components/sections/HeyDigitalTestimonialsSection"
 import { CalBookingWidget } from "@/components/ui/CalBookingWidget"
 import { FaqSection } from "@/components/sections/FaqSection"
 import { DetailedPackage } from "@/data/packages"
@@ -80,10 +79,7 @@ export const HomePage: React.FC = () => {
       {/* 4. Core Services Breakdown */}
       <ServicesSection onSelectServiceForInquiry={handleSelectServiceForInquiry} />
 
-      {/* 5. "From Brands We've Worked With" Testimonials Section */}
-      <HeyDigitalTestimonialsSection />
-
-      {/* 6. Transparent Packages & Pricing Section */}
+      {/* 5. Transparent Packages & Pricing Section */}
       <PackagesSection onSelectPackage={handleSelectPackage} />
 
       {/* 7. Interactive Cal.com-Style 30-Min Discovery Booking Suite */}

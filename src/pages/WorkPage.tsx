@@ -26,24 +26,35 @@ export const WorkPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-[#070708] text-white selection:bg-purple-600 selection:text-white">
-      {/* Hero Header Section */}
+      {/* Hero Header Section - Replica of HomePage Architecture on Black */}
       <section className="relative pt-28 sm:pt-36 pb-16 border-b border-zinc-800/80 overflow-hidden bg-[#070708]">
         {/* Ambient Gradient Glow */}
-        <div className="absolute -top-24 sm:-top-32 left-1/2 -translate-x-1/2 w-[700px] sm:w-[1000px] h-[340px] sm:h-[450px] bg-gradient-to-b from-purple-600/15 via-[#FF4D3D]/10 to-transparent rounded-full blur-[100px] pointer-events-none -z-0" />
+        <div className="absolute -top-24 sm:-top-32 left-1/2 -translate-x-1/2 w-[700px] sm:w-[1100px] h-[340px] sm:h-[460px] bg-gradient-to-b from-zinc-800/25 via-[#FF4D3D]/10 to-transparent rounded-full blur-[100px] pointer-events-none -z-0" />
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
 
         <div className="container max-w-5xl mx-auto px-4 sm:px-6 relative z-10 text-center space-y-6">
-          <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white leading-[1.08] font-manrope max-w-4xl mx-auto text-balance">
+
+          <motion.h1
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.55, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
+            className="text-4xl sm:text-6xl md:text-7xl lg:text-[5rem] font-bold tracking-tight text-white leading-[1.07] font-manrope text-balance max-w-4xl mx-auto"
+          >
             Digital systems we've{" "}
-            <span className="font-playfair italic font-medium text-purple-400">
-              shipped
+            <span className="font-playfair italic font-medium text-[#FF4D3D] inline-block px-1">
+              engineered to scale
             </span>
             .
-          </h1>
+          </motion.h1>
 
-          <p className="text-base sm:text-lg text-zinc-400 font-normal leading-relaxed max-w-2xl mx-auto font-dmsans">
-            Every project is crafted with obsessive attention to sub-second load times, fluid micro-interactions, and high-converting user journeys.
-          </p>
+          <motion.p
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.14, ease: [0.22, 1, 0.36, 1] }}
+            className="text-base sm:text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto font-normal leading-relaxed font-dmsans"
+          >
+            Every project is built with obsessive attention to sub-second speed, clean architecture, and direct founder accountability.
+          </motion.p>
 
           {/* Category Filter Tabs */}
           <div className="flex flex-wrap items-center justify-center gap-2 pt-2">
@@ -55,13 +66,14 @@ export const WorkPage: React.FC = () => {
               { id: "ai", label: "AI & Automation" },
             ].map((tab) => {
               const isActive = selectedCategory === tab.id
+
               return (
                 <button
                   key={tab.id}
                   onClick={() => setSelectedCategory(tab.id as ProjectCategory)}
-                  className={`px-4 py-2 rounded-full text-xs font-bold font-manrope transition-all cursor-pointer select-none ${
+                  className={`px-4 py-2 rounded-full text-xs font-bold font-sans transition-all cursor-pointer select-none ${
                     isActive
-                      ? "bg-purple-600 text-white shadow-purple-glow scale-105"
+                      ? "bg-[#FF4D3D] text-white shadow-[0_0_20px_rgba(255,77,61,0.35)] scale-105 border border-[#FF4D3D]"
                       : "bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-white hover:border-zinc-700"
                   }`}
                 >
@@ -73,20 +85,13 @@ export const WorkPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Featured Case Study Hero Card (JSBuilders) */}
+      {/* Featured Case Study Hero Card */}
       <section className="py-14 bg-[#090A0D] border-b border-zinc-800/80">
         <div className="container max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="p-6 sm:p-10 rounded-3xl bg-gradient-to-br from-zinc-900/90 via-black to-zinc-950 border border-zinc-800 hover:border-purple-500/60 transition-all shadow-2xl relative overflow-hidden group">
+          <div className="p-6 sm:p-10 rounded-3xl bg-gradient-to-br from-zinc-900/90 via-black to-zinc-950 border border-zinc-800 hover:border-[#FF4D3D] transition-all duration-300 shadow-2xl relative overflow-hidden group">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
               <div className="lg:col-span-7 space-y-4">
-                <div className="flex items-center gap-2">
-                  <span className="px-3 py-1 rounded-full bg-purple-950/60 border border-purple-800/60 text-[10px] font-mono font-semibold text-purple-300">
-                    ★ FEATURED CASE STUDY
-                  </span>
-                  <span className="text-xs font-mono text-zinc-400">100/100 LIGHTHOUSE</span>
-                </div>
-
-                <h2 className="text-2xl sm:text-4xl font-bold text-white font-manrope leading-snug">
+                <h2 className="text-2xl sm:text-4xl font-bold text-white font-sans tracking-tight leading-snug">
                   JSBuilders: Civil Engineering &amp; High-Converting Architectural Platform
                 </h2>
 
@@ -95,23 +100,23 @@ export const WorkPage: React.FC = () => {
                 </p>
 
                 <div className="grid grid-cols-3 gap-4 pt-2">
-                  <div className="border-l-2 border-purple-500 pl-3">
-                    <div className="text-xl font-bold font-mono text-purple-400">+340%</div>
-                    <div className="text-[11px] text-zinc-500">Inquiry Volume</div>
-                  </div>
                   <div className="border-l-2 border-[#FF4D3D] pl-3">
-                    <div className="text-xl font-bold font-mono text-white">0.32s</div>
-                    <div className="text-[11px] text-zinc-500">Page Load Time</div>
+                    <div className="text-xl font-bold font-mono text-[#FF4D3D]">+340%</div>
+                    <div className="text-[11px] text-zinc-500 font-dmsans">Inquiry Volume</div>
                   </div>
-                  <div className="border-l-2 border-purple-500 pl-3">
+                  <div className="border-l-2 border-zinc-700 pl-3">
+                    <div className="text-xl font-bold font-mono text-white">0.32s</div>
+                    <div className="text-[11px] text-zinc-500 font-dmsans">Page Load Time</div>
+                  </div>
+                  <div className="border-l-2 border-zinc-700 pl-3">
                     <div className="text-xl font-bold font-mono text-white">100/100</div>
-                    <div className="text-[11px] text-zinc-500">Core Web Vitals</div>
+                    <div className="text-[11px] text-zinc-500 font-dmsans">Core Web Vitals</div>
                   </div>
                 </div>
 
                 <div className="pt-4 flex flex-wrap items-center gap-3">
                   <HeyDigitalButton
-                    variant="purple"
+                    variant="orange"
                     size="md"
                     onClick={() => navigate("case-study-web")}
                   >
@@ -120,7 +125,7 @@ export const WorkPage: React.FC = () => {
 
                   <button
                     onClick={() => handleDiscussSimilar("JSBuilders Web Experience")}
-                    className="px-5 py-2.5 rounded-full border border-zinc-700 hover:border-white text-white text-xs font-bold transition-all cursor-pointer font-manrope"
+                    className="px-5 py-2.5 rounded-full border border-zinc-700 hover:border-white text-white text-xs font-bold transition-all cursor-pointer font-sans"
                   >
                     Build Something Similar
                   </button>
@@ -132,26 +137,26 @@ export const WorkPage: React.FC = () => {
                   <div className="flex items-center justify-between pb-3 border-b border-zinc-850">
                     <div className="flex items-center gap-1.5">
                       <span className="h-2.5 w-2.5 rounded-full bg-red-500" />
-                      <span className="h-2.5 w-2.5 rounded-full bg-purple-500" />
+                      <span className="h-2.5 w-2.5 rounded-full bg-sky-500" />
                       <span className="h-2.5 w-2.5 rounded-full bg-emerald-500" />
                     </div>
                     <span className="text-[11px] font-mono text-zinc-500">jsbuilders.in / lighthouse audit</span>
                   </div>
                   <div className="space-y-2 text-xs font-mono text-zinc-300">
-                    <div className="flex justify-between py-1 border-b border-zinc-900">
-                      <span>Performance</span>
+                    <div className="flex items-center justify-between">
+                      <span className="text-zinc-400">Performance</span>
                       <span className="text-emerald-400 font-bold">100</span>
                     </div>
-                    <div className="flex justify-between py-1 border-b border-zinc-900">
-                      <span>Accessibility</span>
+                    <div className="flex items-center justify-between">
+                      <span className="text-zinc-400">Accessibility</span>
                       <span className="text-emerald-400 font-bold">100</span>
                     </div>
-                    <div className="flex justify-between py-1 border-b border-zinc-900">
-                      <span>Best Practices</span>
+                    <div className="flex items-center justify-between">
+                      <span className="text-zinc-400">Best Practices</span>
                       <span className="text-emerald-400 font-bold">100</span>
                     </div>
-                    <div className="flex justify-between py-1 border-b border-zinc-900">
-                      <span>SEO</span>
+                    <div className="flex items-center justify-between">
+                      <span className="text-zinc-400">SEO Score</span>
                       <span className="text-emerald-400 font-bold">100</span>
                     </div>
                   </div>
@@ -162,12 +167,12 @@ export const WorkPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Projects Grid (Deep Dark Background) */}
+      {/* Projects Grid (Deep Dark Background with Balanced Sky/Orange/Purple Accents) */}
       <section className="py-14 sm:py-18 bg-[#070708] text-white">
         <div className="container max-w-6xl mx-auto px-4 sm:px-6 space-y-10">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-6 border-b border-zinc-800">
             <div>
-              <span className="text-[11px] font-mono font-bold tracking-widest uppercase text-purple-400">
+              <span className="text-[11px] font-mono font-bold tracking-widest uppercase text-[#FF4D3D]">
                 PORTFOLIO CATALOG
               </span>
               <h2 className="text-3xl sm:text-5xl font-bold text-white tracking-tight font-manrope mt-2">
@@ -190,11 +195,11 @@ export const WorkPage: React.FC = () => {
                   exit={{ opacity: 0, scale: 0.95 }}
                   transition={{ duration: 0.3 }}
                   onClick={() => setActiveProject(project)}
-                  className="p-6 rounded-3xl bg-zinc-950/80 border border-zinc-800 hover:border-purple-500/70 hover:shadow-purple-glow transition-all cursor-pointer flex flex-col justify-between group backdrop-blur-sm"
+                  className="p-6 sm:p-7 rounded-3xl bg-zinc-950/80 border border-zinc-800 transition-all duration-300 cursor-pointer flex flex-col justify-between group backdrop-blur-sm hover:border-[#FF4D3D] hover:shadow-[0_0_30px_rgba(255,77,61,0.22)]"
                 >
                   <div className="space-y-4">
                     <div className="flex items-center justify-between">
-                      <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-purple-950/60 text-purple-300 border border-purple-800/60">
+                      <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-[#FF4D3D]/10 text-[#FF4D3D] border border-[#FF4D3D]/25">
                         {project.categoryLabel}
                       </span>
                       <span className="text-[11px] font-mono text-zinc-400">
@@ -202,7 +207,7 @@ export const WorkPage: React.FC = () => {
                       </span>
                     </div>
 
-                    <h3 className="text-xl font-bold text-white group-hover:text-purple-400 transition-colors leading-snug font-manrope">
+                    <h3 className="text-lg sm:text-xl font-bold text-white group-hover:text-[#FF4D3D] transition-colors leading-snug font-sans tracking-tight">
                       {project.title}
                     </h3>
 
@@ -214,20 +219,20 @@ export const WorkPage: React.FC = () => {
                       {project.technologies.slice(0, 3).map((tech) => (
                         <span
                           key={tech}
-                          className="px-2 py-0.5 rounded-md bg-zinc-900 border border-zinc-800 text-[10px] font-mono font-semibold text-zinc-300"
+                          className="px-2.5 py-0.5 rounded-md bg-zinc-900 border border-zinc-800 text-[10px] font-mono font-semibold text-zinc-300"
                         >
                           {tech}
                         </span>
                       ))}
                       {project.technologies.length > 3 && (
-                        <span className="px-2 py-0.5 rounded-md bg-zinc-900 border border-zinc-800 text-[10px] font-mono font-semibold text-zinc-500">
+                        <span className="px-2.5 py-0.5 rounded-md bg-zinc-900 border border-zinc-800 text-[10px] font-mono font-semibold text-zinc-500">
                           +{project.technologies.length - 3}
                         </span>
                       )}
                     </div>
                   </div>
 
-                  <div className="pt-6 border-t border-zinc-800/80 mt-6 flex items-center justify-between text-xs font-bold text-zinc-300 group-hover:text-purple-400 transition-colors">
+                  <div className="pt-6 border-t border-zinc-800/80 mt-6 flex items-center justify-between text-xs font-bold text-zinc-300 group-hover:text-[#FF4D3D] transition-colors">
                     <span>Inspect Architecture</span>
                     <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </div>
@@ -256,7 +261,7 @@ export const WorkPage: React.FC = () => {
             Direct access to founder Rohith E with zero agency bureaucracy. Let's build something exceptional together.
           </p>
           <div className="pt-2">
-            <HeyDigitalButton variant="purple" size="lg" onClick={() => navigate("contact")}>
+            <HeyDigitalButton variant="orange" size="lg" onClick={() => navigate("contact")}>
               Book a 30-Min Discovery Sprint ↗
             </HeyDigitalButton>
           </div>

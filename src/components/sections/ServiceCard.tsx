@@ -42,7 +42,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, onOpen
                 <IconComponent className="h-7 w-7" />
               </div>
               <div className="flex items-center gap-2">
-                <span className="text-xs font-mono font-extrabold text-zinc-400 group-hover:text-purple-600 transition-colors">
+                <span className="text-xs font-mono font-bold text-zinc-400 group-hover:text-purple-600 transition-colors">
                   {service.number}
                 </span>
               </div>

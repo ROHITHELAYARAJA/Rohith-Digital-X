@@ -111,8 +111,8 @@ export const Footer: React.FC = () => {
                   alt="Rohith Digital X"
                   className="h-7 w-auto object-contain invert transition-transform group-hover:scale-105"
                 />
-                <div className="flex items-baseline font-sans text-2xl font-black tracking-tight text-white leading-none">
-                  <span className="font-manrope font-extrabold">Rohith Digital X</span>
+                <div className="flex items-baseline font-sans text-2xl font-bold tracking-tight text-white leading-none">
+                  <span className="font-manrope font-bold">Rohith Digital X</span>
                   <span className="text-[#FF3B30] text-xl font-bold ml-0.5">.</span>
                 </div>
               </button>
@@ -122,7 +122,7 @@ export const Footer: React.FC = () => {
               </p>
 
               <div className="space-y-1.5 text-xs text-zinc-400 font-mono">
-                <div>Phone: <a href="tel:+919655483130" className="text-white hover:text-purple-400">+91 96554 83130</a></div>
+                <div>Phone: <a href="tel:+919655483130" className="text-white hover:text-sky-400">+91 96554 83130</a></div>
                 <div>Email: <a href="mailto:e.rohith3130@gmail.com" className="text-white hover:text-purple-400">e.rohith3130@gmail.com</a></div>
               </div>
             </div>
@@ -135,7 +135,7 @@ export const Footer: React.FC = () => {
               
               {/* Column 1: GENERAL */}
               <div className="space-y-4">
-                <p className="text-[11px] font-mono font-bold uppercase tracking-wider text-purple-400">
+                <p className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#FF4D3D]">
                   GENERAL
                 </p>
                 <ul className="space-y-1.5 text-xs">
@@ -164,7 +164,7 @@ export const Footer: React.FC = () => {
 
               {/* Column 2: SERVICES */}
               <div className="space-y-4">
-                <p className="text-[11px] font-mono font-bold uppercase tracking-wider text-purple-400">
+                <p className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#FF4D3D]">
                   SPECIALTIES
                 </p>
                 <ul className="space-y-1.5 text-xs">
@@ -193,7 +193,7 @@ export const Footer: React.FC = () => {
 
               {/* Column 3: CONNECT */}
               <div className="space-y-4">
-                <p className="text-[11px] font-mono font-bold uppercase tracking-wider text-purple-400">
+                <p className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#FF4D3D]">
                   CONNECT
                 </p>
                 <ul className="space-y-1.5 text-xs">

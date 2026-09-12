@@ -22,13 +22,14 @@ export const WebDevelopmentPage: React.FC = () => {
       <section className="relative pt-32 sm:pt-40 pb-20 border-b border-zinc-800/80 overflow-hidden">
         {/* Subtle background grid */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-purple-600/10 blur-[120px] rounded-full pointer-events-none" />
+        {/* Ambient Glow: Sky Blue & Orange */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-sky-500/15 blur-[120px] rounded-full pointer-events-none" />
 
         <div className="container max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
           <div className="space-y-6 max-w-3xl">
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.08] font-display">
               Web platforms built for{" "}
-              <span className="font-boska italic font-light text-purple-400">
+              <span className="font-boska italic font-light text-sky-400">
                 speed &amp; taste
               </span>
               <span className="text-[#FF4D3D]">.</span>
@@ -40,7 +41,7 @@ export const WebDevelopmentPage: React.FC = () => {
 
             <div className="flex flex-wrap items-center gap-3 pt-2">
               <HeyDigitalButton
-                variant="purple"
+                variant="sky"
                 size="lg"
                 onClick={handleBookService}
               >
@@ -52,32 +53,32 @@ export const WebDevelopmentPage: React.FC = () => {
                 size="lg"
                 onClick={() => navigate("work")}
               >
-                View Web Portfolio
+                Inspect Live Demos
               </HeyDigitalButton>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Metric Highlights Strip */}
-      <section className="bg-zinc-950/80 border-b border-zinc-800 py-8">
+      {/* Metrics Banner */}
+      <section className="py-12 border-b border-zinc-800 bg-[#070708] text-white">
         <div className="container max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center md:text-left">
-            <div className="border-l-2 border-purple-500 pl-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div className="space-y-1">
               <div className="text-2xl sm:text-3xl font-bold font-mono text-white">&lt;0.4s</div>
-              <div className="text-xs text-zinc-400 mt-1">Average Page Load Speed</div>
+              <div className="text-xs text-zinc-400 uppercase tracking-wider font-mono">Load Speed</div>
             </div>
-            <div className="border-l-2 border-[#FF4D3D] pl-4">
+            <div className="space-y-1">
               <div className="text-2xl sm:text-3xl font-bold font-mono text-white">100/100</div>
-              <div className="text-xs text-zinc-400 mt-1">Lighthouse Performance</div>
+              <div className="text-xs text-zinc-400 uppercase tracking-wider font-mono">Lighthouse Score</div>
             </div>
-            <div className="border-l-2 border-purple-500 pl-4">
+            <div className="space-y-1">
               <div className="text-2xl sm:text-3xl font-bold font-mono text-white">2 - 3 Weeks</div>
-              <div className="text-xs text-zinc-400 mt-1">Rapid Sprint Delivery</div>
+              <div className="text-xs text-zinc-400 uppercase tracking-wider font-mono">Sprint Turnaround</div>
             </div>
-            <div className="border-l-2 border-[#FF4D3D] pl-4">
+            <div className="space-y-1">
               <div className="text-2xl sm:text-3xl font-bold font-mono text-white">100%</div>
-              <div className="text-xs text-zinc-400 mt-1">Code &amp; Asset Ownership</div>
+              <div className="text-xs text-zinc-400 uppercase tracking-wider font-mono">Code Handover</div>
             </div>
           </div>
         </div>
@@ -88,7 +89,7 @@ export const WebDevelopmentPage: React.FC = () => {
         <div className="container max-w-6xl mx-auto px-4 sm:px-6 space-y-12">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-zinc-800">
             <div>
-              <span className="text-[11px] font-mono font-bold tracking-widest uppercase text-purple-400">
+              <span className="text-[11px] font-mono font-bold tracking-widest uppercase text-sky-400">
                 WHAT WE DELIVER
               </span>
               <h2 className="text-3xl sm:text-5xl font-bold text-white tracking-tight font-display mt-2">
@@ -101,8 +102,8 @@ export const WebDevelopmentPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="p-6 rounded-2xl bg-zinc-950/80 border border-zinc-800/90 hover:border-purple-500/60 transition-all space-y-4">
-              <div className="h-10 w-10 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center font-bold">
+            <div className="p-6 rounded-2xl bg-zinc-950/80 border border-zinc-800/90 hover:border-sky-500/60 hover:shadow-[0_0_25px_rgba(14,165,233,0.25)] transition-all space-y-4">
+              <div className="h-10 w-10 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center font-bold">
                 <Gauge className="h-5 w-5" />
               </div>
               <h3 className="text-xl font-bold text-white">Sub-Second Performance</h3>
@@ -111,15 +112,15 @@ export const WebDevelopmentPage: React.FC = () => {
               </p>
               <ul className="space-y-2 text-xs text-zinc-300 pt-2">
                 <li className="flex items-center gap-2">
-                  <CheckCircle2 className="h-3.5 w-3.5 text-purple-400" />
+                  <CheckCircle2 className="h-3.5 w-3.5 text-sky-400" />
                   <span>Vite / Next.js Static &amp; SSR caching</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle2 className="h-3.5 w-3.5 text-purple-400" />
+                  <CheckCircle2 className="h-3.5 w-3.5 text-sky-400" />
                   <span>Next-gen WebP &amp; SVG asset pipelines</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle2 className="h-3.5 w-3.5 text-purple-400" />
+                  <CheckCircle2 className="h-3.5 w-3.5 text-sky-400" />
                   <span>Sub-300ms First Contentful Paint</span>
                 </li>
               </ul>
@@ -192,7 +193,7 @@ export const WebDevelopmentPage: React.FC = () => {
           </div>
 
           <div className="pt-6">
-            <HeyDigitalButton variant="purple" size="lg" onClick={handleBookService}>
+            <HeyDigitalButton variant="sky" size="lg" onClick={handleBookService}>
               Start Your Website Sprint ↗
             </HeyDigitalButton>
           </div>

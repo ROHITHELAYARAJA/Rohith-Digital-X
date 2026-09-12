@@ -18,7 +18,6 @@ import {
   MessageCircle,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { BorderBeam } from "@/components/ui/border-beam"
 import { TiltCard } from "@/components/ui/tilt-card"
 import { scrollToSection } from "@/lib/utils"
 
@@ -100,7 +99,7 @@ Please let me know the kickoff process and timeline to get started!`
           </motion.p>
         </div>
 
-        {/* Category Switcher Tabs with Morphing Background Indicator */}
+        {/* Category Switcher Tabs with Sleek Black & White Indicator */}
         <div className="flex justify-center mb-12">
           <div className="inline-flex p-1.5 rounded-2xl bg-zinc-900/90 border border-zinc-800 shadow-xs gap-1.5 flex-wrap justify-center relative">
             {packageCategories.map((cat) => {
@@ -112,17 +111,17 @@ Please let me know the kickoff process and timeline to get started!`
                   key={cat.id}
                   onClick={() => setSelectedCategory(cat.id)}
                   className={`relative flex items-center gap-2.5 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-colors duration-200 cursor-pointer select-none z-10 ${
-                    isSelected ? "text-white font-extrabold" : "text-zinc-400 hover:text-white"
+                    isSelected ? "text-zinc-950 font-bold" : "text-zinc-400 hover:text-white"
                   }`}
                 >
                   {isSelected && (
                     <motion.div
                       layoutId="activePackageCategoryTab"
-                      className="absolute inset-0 rounded-xl bg-purple-600 shadow-md ring-1 ring-purple-400"
+                      className="absolute inset-0 rounded-xl bg-white shadow-sm"
                       transition={{ type: "spring", stiffness: 380, damping: 30 }}
                     />
                   )}
-                  <Icon className={`relative z-10 h-4 w-4 ${isSelected ? "text-white" : ""}`} />
+                  <Icon className={`relative z-10 h-4 w-4 ${isSelected ? "text-zinc-950" : ""}`} />
                   <span className="relative z-10">{cat.label}</span>
                 </button>
               )
@@ -137,7 +136,7 @@ Please let me know the kickoff process and timeline to get started!`
           </p>
         </div>
 
-        {/* 3 Packages Cards Grid - Fully Height Aligned & Clear-Cut */}
+        {/* 3 Packages Cards Grid - Professional Black & White with Red/Orange Hover Border */}
         <AnimatePresence mode="wait">
           <motion.div
             key={selectedCategory}
@@ -161,24 +160,17 @@ Please let me know the kickoff process and timeline to get started!`
                   className="h-full flex flex-col"
                 >
                   <div
-                    className={`group relative rounded-3xl p-6 sm:p-7 flex flex-col justify-between transition-all duration-300 cursor-default h-full ${
+                    className={`group relative rounded-3xl p-6 sm:p-7 flex flex-col justify-between transition-all duration-300 cursor-default h-full border ${
                       isPopular
-                        ? "bg-zinc-900/90 text-white shadow-2xl ring-2 ring-purple-500 z-10 border border-purple-500/50"
-                        : "bg-zinc-950/80 text-white border border-zinc-800 hover:border-purple-500/50 hover:bg-zinc-900/60"
+                        ? "bg-[#111114] text-white border-zinc-700/80 shadow-2xl hover:border-[#FF4D3D] hover:shadow-[0_0_35px_rgba(255,77,61,0.25)] z-10"
+                        : "bg-[#090A0D] text-white border-zinc-800/80 hover:border-[#FF4D3D] hover:shadow-[0_0_35px_rgba(255,77,61,0.22)]"
                     }`}
                   >
-                    {/* Popular Card Animated Laser Border Beam */}
-                    {isPopular && (
-                      <div className="absolute inset-0 rounded-3xl overflow-hidden pointer-events-none">
-                        <BorderBeam size={180} duration={7} colorFrom="#8B5CF6" colorTo="#EC4899" borderWidth={2} />
-                      </div>
-                    )}
-
-                    {/* Popular Illuminated Header Pill Banner (Cleanly Integrated, Never Clipped) */}
+                    {/* Popular Pill Banner: Clean Black & White with subtle orange spark */}
                     {isPopular && (
                       <div className="mb-4 -mt-1 flex items-center justify-center">
-                        <span className="w-full py-1 px-3 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-[11px] font-bold uppercase tracking-wider text-center flex items-center justify-center gap-1.5 shadow-sm">
-                          <Sparkles className="h-3 w-3 fill-white" />
+                        <span className="w-full py-1.5 px-3 rounded-full bg-zinc-900 border border-zinc-700 text-white text-[11px] font-bold uppercase tracking-wider text-center flex items-center justify-center gap-1.5 shadow-sm">
+                          <Sparkles className="h-3 w-3 text-[#FF4D3D]" />
                           <span>{pkg.badge || "Most Popular Choice"}</span>
                         </span>
                       </div>
@@ -188,20 +180,12 @@ Please let me know the kickoff process and timeline to get started!`
                       {/* Top: Icon, Tier Number */}
                       <div className="flex items-center justify-between mb-4">
                         <div
-                          className={`flex h-11 w-11 items-center justify-center rounded-2xl border transition-all duration-300 ${
-                            isPopular
-                              ? "bg-purple-950/60 border-purple-800/80 text-purple-400 group-hover:scale-110"
-                              : "bg-zinc-900 border-zinc-800 text-zinc-300 group-hover:border-purple-500/60 group-hover:text-purple-400 group-hover:scale-110"
-                          }`}
+                          className="flex h-11 w-11 items-center justify-center rounded-2xl border transition-all duration-300 bg-zinc-900 border-zinc-800 text-white group-hover:border-[#FF4D3D]/50 group-hover:text-[#FF4D3D] group-hover:scale-105"
                         >
                           <Icon className="h-5 w-5" />
                         </div>
                         <span
-                          className={`text-xs font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-full transition-colors ${
-                            isPopular
-                              ? "bg-purple-900/50 text-purple-200 border border-purple-700/50"
-                              : "bg-zinc-900 text-zinc-400 border border-zinc-800"
-                          }`}
+                          className="text-xs font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-zinc-900 text-zinc-300 border border-zinc-800 transition-colors"
                         >
                           Tier {pkg.tierNumber}
                         </span>
@@ -210,23 +194,21 @@ Please let me know the kickoff process and timeline to get started!`
                       {/* Title & Tagline with standardized min-height for horizontal lockstep alignment */}
                       <div className="min-h-[66px] flex flex-col justify-start mb-2">
                         <h3
-                          className={`text-xl font-bold tracking-tight leading-snug transition-colors font-display ${
-                            isPopular ? "text-white" : "text-white group-hover:text-purple-300"
-                          }`}
+                          className="text-xl sm:text-2xl font-bold tracking-tight leading-snug font-manrope text-white group-hover:text-white"
                         >
                           {pkg.name}
                         </h3>
-                        <p className="text-xs font-semibold mt-1 font-mono text-purple-400">
+                        <p className="text-xs font-medium mt-1 font-mono text-zinc-400">
                           {pkg.tagline}
                         </p>
                       </div>
 
                       {/* Price Tag with standardized height */}
                       <div className="h-[60px] flex items-baseline gap-2 pb-4 mb-4 border-b border-zinc-800">
-                        <span className="text-3xl sm:text-4xl font-extrabold tracking-tight transition-colors font-trench text-white">
+                        <span className="text-3xl sm:text-4xl font-extrabold tracking-tight font-manrope text-white">
                           {pkg.price}
                         </span>
-                        <span className="text-xs font-medium font-general text-zinc-400">
+                        <span className="text-xs font-medium font-sans text-zinc-400">
                           turnkey investment
                         </span>
                       </div>
@@ -234,7 +216,7 @@ Please let me know the kickoff process and timeline to get started!`
                       {/* Scope & Delivery Info Pills (Locked to 40px each) */}
                       <div className="space-y-2 mb-4">
                         <div className="h-[40px] flex items-center gap-2 px-3 rounded-lg text-xs font-semibold bg-zinc-900/90 text-zinc-200 border border-zinc-800">
-                          <Clock className="h-3.5 w-3.5 text-purple-400 shrink-0" />
+                          <Clock className="h-3.5 w-3.5 text-zinc-400 shrink-0" />
                           <span className="line-clamp-1">Scope: {pkg.pagesOrScreens}</span>
                         </div>
 
@@ -245,16 +227,16 @@ Please let me know the kickoff process and timeline to get started!`
                       </div>
 
                       {/* Perfect For Box (Locked min-height for uniform horizontal alignment) */}
-                      <div className="min-h-[82px] p-3 rounded-xl mb-5 text-xs transition-all duration-200 flex flex-col justify-start bg-zinc-900/80 border border-zinc-800 text-zinc-300">
-                        <span className="font-bold block mb-0.5 text-[11px] text-zinc-400 uppercase tracking-wider">
+                      <div className="min-h-[82px] p-3.5 rounded-xl mb-5 text-xs transition-all duration-200 flex flex-col justify-start bg-zinc-900/70 border border-zinc-800/80 text-zinc-300">
+                        <span className="font-bold block mb-1 text-[11px] text-zinc-400 uppercase tracking-wider">
                           Perfect For:
                         </span>
-                        <p className="leading-relaxed line-clamp-3 text-xs">{pkg.idealFor}</p>
+                        <p className="leading-relaxed line-clamp-3 text-xs font-sans">{pkg.idealFor}</p>
                       </div>
 
                       {/* Features List (Flex 1 to occupy remaining height uniformly) */}
                       <div className="flex-1 space-y-2 mb-5">
-                        <span className="text-xs font-bold uppercase tracking-wider block mb-2 text-zinc-400">
+                        <span className="text-xs font-bold uppercase tracking-wider block mb-2 text-zinc-400 font-sans">
                           Included In This Package:
                         </span>
                         <ul className="space-y-1.5 text-xs">
@@ -264,9 +246,9 @@ Please let me know the kickoff process and timeline to get started!`
                               className="flex items-start gap-2 p-1 rounded-md transition-colors duration-150 group/feat hover:bg-zinc-900 hover:text-white"
                             >
                               <Check
-                                className="h-4 w-4 shrink-0 mt-0.5 text-purple-400 group-hover/feat:scale-125 transition-transform"
+                                className="h-4 w-4 shrink-0 mt-0.5 text-zinc-300 group-hover/feat:text-[#FF4D3D] group-hover/feat:scale-125 transition-transform"
                               />
-                              <span className="leading-relaxed text-xs text-zinc-300">
+                              <span className="leading-relaxed text-xs text-zinc-300 font-sans">
                                 {feature}
                               </span>
                             </li>
@@ -282,25 +264,21 @@ Please let me know the kickoff process and timeline to get started!`
                         href={whatsappUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white text-xs sm:text-sm font-bold shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer hover:scale-[1.02] active:scale-[0.98]"
+                        className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-white hover:bg-zinc-200 active:bg-zinc-300 text-zinc-950 text-xs sm:text-sm font-bold shadow-md transition-all duration-200 cursor-pointer hover:scale-[1.01] active:scale-[0.99]"
                       >
-                        <MessageCircle className="h-4 w-4 shrink-0 fill-current" />
+                        <MessageCircle className="h-4 w-4 shrink-0 text-emerald-600 fill-current" />
                         <span>Inquire on WhatsApp ({pkg.price})</span>
                       </a>
 
                       {/* Online Customization CTA */}
                       <Button
-                        variant={isPopular ? "outline" : "default"}
+                        variant="outline"
                         size="sm"
                         onClick={() => handleChoosePackage(pkg)}
-                        className={`w-full justify-center gap-2 text-xs font-bold hover:scale-[1.02] active:scale-[0.98] transition-transform ${
-                          isPopular
-                            ? "bg-purple-600 text-white hover:bg-purple-500 border-none shadow-md shadow-purple-600/30"
-                            : "bg-zinc-800 text-white hover:bg-zinc-700 border border-zinc-700"
-                        }`}
+                        className="w-full justify-center gap-2 text-xs font-bold bg-zinc-900 hover:bg-zinc-800 text-white border border-zinc-700 hover:border-zinc-500 hover:scale-[1.01] active:scale-[0.99] transition-all cursor-pointer"
                       >
                         <span>Customize Online &amp; Book</span>
-                        <ArrowRight className="h-3.5 w-3.5 text-purple-300" />
+                        <ArrowRight className="h-3.5 w-3.5 text-zinc-400 group-hover:text-white group-hover:translate-x-0.5 transition-all" />
                       </Button>
 
                       <p className="text-[10px] leading-relaxed text-center pt-1 text-zinc-400">

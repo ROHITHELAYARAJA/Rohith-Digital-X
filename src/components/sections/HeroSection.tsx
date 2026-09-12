@@ -1,6 +1,6 @@
 import React from "react"
 import { motion } from "framer-motion"
-import { ArrowUpRight, ArrowRight } from "lucide-react"
+import { ArrowUpRight } from "lucide-react"
 import { useNavigation } from "@/context/NavigationContext"
 import VaporizeTextCycle from "@/components/ui/vapour-text-effect"
 
@@ -95,7 +95,7 @@ export const HeroSection: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="w-full max-w-2xl mx-auto h-14 sm:h-16 flex items-center justify-center px-6 sm:px-8 rounded-2xl bg-zinc-50/95 border border-zinc-200/90 shadow-[0_4px_20px_rgba(0,0,0,0.04)]"
           >
-            <div className="text-xs sm:text-sm font-mono uppercase tracking-wider text-blue-600 font-extrabold mr-3 shrink-0">
+            <div className="text-xs sm:text-sm font-mono uppercase tracking-wider text-blue-600 font-bold mr-3 shrink-0">
               BUILDING:
             </div>
             <div className="flex-1 h-12 flex items-center justify-center overflow-hidden">
@@ -134,18 +134,19 @@ export const HeroSection: React.FC = () => {
           >
             <button
               onClick={() => navigate("contact")}
-              className="inline-flex items-center gap-2.5 px-6 sm:px-7 py-3.5 rounded-full bg-[#111111] hover:bg-black text-white font-manrope font-bold text-sm sm:text-base shadow-[0_8px_20px_rgba(0,0,0,0.12)] hover:shadow-[0_12px_28px_rgba(0,0,0,0.2)] active:scale-95 transition-all duration-200 cursor-pointer group"
+              className="inline-flex items-center gap-2.5 px-6 sm:px-7 py-3.5 rounded-full bg-[#111111] hover:bg-[#FF4D3D] text-white font-manrope font-bold text-sm sm:text-base shadow-[0_4px_20px_rgba(0,0,0,0.25)] hover:shadow-[0_4px_24px_rgba(255,77,61,0.5)] active:scale-95 transition-all duration-200 cursor-pointer group"
             >
               <span>Get Started for Free</span>
-              <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              <ArrowUpRight className="h-4 w-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </button>
 
+            {/* Secondary CTA: Professional black border */}
             <button
               onClick={() => navigate("work")}
-              className="inline-flex items-center gap-2 px-6 sm:px-7 py-3.5 rounded-full bg-white hover:bg-zinc-50 border border-zinc-300 text-zinc-800 font-manrope font-semibold text-sm sm:text-base shadow-xs hover:border-zinc-400 active:scale-95 transition-all duration-200 cursor-pointer"
+              className="inline-flex items-center gap-2.5 px-6 sm:px-7 py-3.5 rounded-full bg-transparent border border-zinc-900 text-zinc-900 font-manrope font-semibold text-sm sm:text-base hover:bg-zinc-900 hover:text-white active:scale-95 transition-all duration-200 cursor-pointer group"
             >
               <span>Explore Case Studies</span>
-              <ArrowUpRight className="h-4 w-4 text-zinc-500" />
+              <ArrowUpRight className="h-4 w-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </button>
           </motion.div>
 

@@ -117,7 +117,7 @@ const StackedCard: React.FC<{
         className={`relative rounded-[2rem] sm:rounded-[2.5rem] p-6 sm:p-10 lg:p-12 border ${card.borderColor} ${card.bgColor} shadow-2xl transition-all duration-300 overflow-hidden`}
       >
         {/* Subtle decorative watermark */}
-        <div className="absolute top-4 right-8 font-trench text-[90px] sm:text-[140px] font-black text-black/[0.03] select-none pointer-events-none leading-none">
+        <div className="absolute top-4 right-8 font-trench text-[90px] sm:text-[140px] font-bold text-black/[0.03] select-none pointer-events-none leading-none">
           0{index + 1}
         </div>
 
@@ -132,7 +132,7 @@ const StackedCard: React.FC<{
                 <React.Fragment key={tIdx}>
                   <span className="hover:text-zinc-950 transition-colors">{tag}</span>
                   {tIdx < card.tags.length - 1 && (
-                    <span className="text-purple-500 font-black">✦</span>
+                    <span className="text-zinc-400">·</span>
                   )}
                 </React.Fragment>
               ))}

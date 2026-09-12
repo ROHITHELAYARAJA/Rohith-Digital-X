@@ -88,7 +88,7 @@ export const AutomationPage: React.FC = () => {
         <div className="container max-w-6xl mx-auto px-4 sm:px-6 space-y-12">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-zinc-800">
             <div>
-              <span className="text-[11px] font-mono font-bold tracking-widest uppercase text-purple-400">
+              <span className="text-[11px] font-mono font-bold tracking-widest uppercase text-sky-400">
                 CORE WORKFLOWS
               </span>
               <h2 className="text-3xl sm:text-5xl font-bold text-white tracking-tight font-display mt-2">
@@ -101,8 +101,8 @@ export const AutomationPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="p-6 rounded-2xl bg-zinc-950/80 border border-zinc-800/90 hover:border-purple-500/60 transition-all space-y-4">
-              <div className="h-10 w-10 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center font-bold">
+            <div className="p-6 rounded-2xl bg-zinc-950/80 border border-zinc-800/90 hover:border-sky-500/60 hover:shadow-[0_0_20px_rgba(14,165,233,0.2)] transition-all space-y-4">
+              <div className="h-10 w-10 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center font-bold">
                 <MessageSquare className="h-5 w-5" />
               </div>
               <h3 className="text-xl font-bold text-white">WhatsApp Business Automation</h3>
@@ -111,17 +111,17 @@ export const AutomationPage: React.FC = () => {
               </p>
               <ul className="space-y-2 text-xs text-zinc-300 pt-2">
                 <li className="flex items-center gap-2">
-                  <CheckCircle2 className="h-3.5 w-3.5 text-purple-400" />
+                  <CheckCircle2 className="h-3.5 w-3.5 text-sky-400" />
                   <span>Official WhatsApp Cloud API verification</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle2 className="h-3.5 w-3.5 text-purple-400" />
+                  <CheckCircle2 className="h-3.5 w-3.5 text-sky-400" />
                   <span>Instant PDF brochure &amp; catalog dispatch</span>
                 </li>
               </ul>
             </div>
 
-            <div className="p-6 rounded-2xl bg-zinc-950/80 border border-zinc-800/90 hover:border-purple-500/60 transition-all space-y-4">
+            <div className="p-6 rounded-2xl bg-zinc-950/80 border border-zinc-800/90 hover:border-purple-500/60 hover:shadow-purple-glow transition-all space-y-4">
               <div className="h-10 w-10 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center font-bold">
                 <Bot className="h-5 w-5" />
               </div>
@@ -141,7 +141,7 @@ export const AutomationPage: React.FC = () => {
               </ul>
             </div>
 
-            <div className="p-6 rounded-2xl bg-zinc-950/80 border border-zinc-800/90 hover:border-purple-500/60 transition-all space-y-4">
+            <div className="p-6 rounded-2xl bg-zinc-950/80 border border-zinc-800/90 hover:border-[#FF4D3D]/60 hover:shadow-[0_0_20px_rgba(255,77,61,0.2)] transition-all space-y-4">
               <div className="h-10 w-10 rounded-xl bg-[#FF4D3D]/10 text-[#FF4D3D] flex items-center justify-center font-bold">
                 <Workflow className="h-5 w-5" />
               </div>

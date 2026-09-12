@@ -6,7 +6,7 @@ interface HeyDigitalButtonProps {
   children: React.ReactNode
   onClick?: () => void
   href?: string
-  variant?: "purple" | "orange" | "dark" | "white" | "amber"
+  variant?: "purple" | "orange" | "sky" | "dark" | "white" | "amber"
   size?: "sm" | "md" | "lg"
   direction?: "right" | "down"
   className?: string
@@ -27,6 +27,7 @@ export const HeyDigitalButton: React.FC<HeyDigitalButtonProps> = ({
 }) => {
   const isPurple = variant === "purple" || variant === "amber"
   const isOrange = variant === "orange"
+  const isSky = variant === "sky"
   const isDark = variant === "dark"
   const isWhite = variant === "white"
 
@@ -44,6 +45,8 @@ export const HeyDigitalButton: React.FC<HeyDigitalButtonProps> = ({
     ${
       isOrange
         ? "bg-[#FF4D3D] hover:bg-[#FF3B2B] text-white shadow-[0_8px_25px_-5px_rgba(255,77,61,0.45)] hover:shadow-[0_12px_32px_-4px_rgba(255,77,61,0.6)]"
+        : isSky
+        ? "bg-sky-500 hover:bg-sky-400 text-white shadow-[0_8px_25px_-5px_rgba(14,165,233,0.45)] hover:shadow-[0_12px_32px_-4px_rgba(14,165,233,0.6)]"
         : isPurple
         ? "bg-purple-600 hover:bg-purple-500 text-white shadow-[0_8px_25px_-5px_rgba(139,92,246,0.45)] hover:shadow-[0_12px_32px_-4px_rgba(139,92,246,0.6)]"
         : isDark
@@ -69,6 +72,8 @@ export const HeyDigitalButton: React.FC<HeyDigitalButtonProps> = ({
           ${
             isOrange
               ? "bg-white text-[#FF4D3D]"
+              : isSky
+              ? "bg-white text-sky-600"
               : isPurple
               ? "bg-white text-purple-700"
               : isDark

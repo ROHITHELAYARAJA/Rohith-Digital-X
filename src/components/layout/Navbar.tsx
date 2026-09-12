@@ -82,14 +82,14 @@ export const Navbar: React.FC = () => {
             {/* Logo on Left: Aerodynamic R Logo (Fastlane Racing Style) */}
             <button
               onClick={() => handleNavClick("home")}
-              className="flex items-center gap-2.5 pr-2 text-xs sm:text-sm font-manrope font-extrabold tracking-tight text-zinc-950 dark:text-white hover:text-[#FF3B30] transition-colors cursor-pointer group"
+              className="flex items-center gap-2.5 pr-2 text-xs sm:text-sm font-manrope font-bold tracking-tight text-zinc-950 dark:text-white hover:text-[#FF3B30] transition-colors cursor-pointer group"
             >
               <img
                 src="/rdx-r-logo.png"
                 alt="Rohith Digital X"
                 className="h-5 sm:h-5.5 w-auto object-contain transition-transform group-hover:scale-105"
               />
-              <span className="font-extrabold tracking-tight">Rohith Digital X</span>
+              <span className="font-bold tracking-tight">Rohith Digital X</span>
             </button>
 
             <div className="h-4 w-[1px] bg-zinc-200 dark:bg-zinc-800 hidden md:block" />
@@ -191,10 +191,10 @@ export const Navbar: React.FC = () => {
             >
               <div className="flex items-center justify-between pb-4 border-b border-zinc-100">
                 <div className="flex flex-col text-left">
-                  <div className="flex items-baseline font-sans text-lg font-extrabold tracking-tight text-zinc-950 leading-none">
-                    <span className="font-black">Rohith</span>
+                  <div className="flex items-baseline font-sans text-lg font-bold tracking-tight text-zinc-950 leading-none">
+                    <span className="font-bold">Rohith</span>
                     <span className="text-zinc-500 font-medium ml-1.5 tracking-tight">Digital</span>
-                    <span className="font-black text-purple-600 ml-1.5">
+                    <span className="font-bold text-purple-600 ml-1.5">
                       X
                     </span>
                   </div>
@@ -261,7 +261,7 @@ export const Navbar: React.FC = () => {
               <div className="mt-5">
                 <Button
                   onClick={() => handleNavClick("contact")}
-                  className="w-full justify-center gap-2 text-sm font-black h-11 bg-[#111111] hover:bg-black text-white shadow-md rounded-full font-manrope cursor-pointer"
+                  className="w-full justify-center gap-2 text-sm font-bold h-11 bg-[#111111] hover:bg-black text-white shadow-md rounded-full font-manrope cursor-pointer"
                 >
                   <span>Get Started for Free</span>
                   <ArrowUpRight className="h-4 w-4" />

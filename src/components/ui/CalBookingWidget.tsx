@@ -10,7 +10,6 @@ import {
   CheckCircle2,
   ArrowLeft,
   MessageSquare,
-  Sparkles,
   User,
   Mail,
   Phone,
@@ -18,7 +17,6 @@ import {
   CalendarPlus,
   Download,
   Check,
-  ExternalLink,
 } from "lucide-react"
 
 interface CalBookingWidgetProps {
@@ -86,7 +84,6 @@ export const CalBookingWidget: React.FC<CalBookingWidgetProps> = ({
   calLink = "https://cal.com/rohith-e-3130/secret",
   onSuccess,
 }) => {
-  const [viewMode, setViewMode] = useState<"interactive" | "calcom">("interactive")
   const [currentStep, setCurrentStep] = useState<"calendar" | "form" | "confirmed">("calendar")
 
   // Starting reference: September 2026
@@ -234,56 +231,7 @@ export const CalBookingWidget: React.FC<CalBookingWidgetProps> = ({
 
   return (
     <div className={`w-full max-w-4xl mx-auto rounded-[2rem] bg-[#0C0D11] border border-zinc-800/90 text-white shadow-[0_24px_60px_rgba(0,0,0,0.7)] overflow-hidden font-sans ${className}`}>
-      
-      {/* Top Header Mode Switcher & Direct Link */}
-      <div className="px-6 py-3.5 bg-zinc-950 border-b border-zinc-800/80 flex flex-wrap items-center justify-between gap-3 text-xs">
-        <div className="flex items-center gap-2">
-          <button
-            onClick={() => setViewMode("interactive")}
-            className={`px-3 py-1.5 rounded-lg font-mono font-bold transition-all cursor-pointer ${
-              viewMode === "interactive"
-                ? "bg-blue-600 text-white shadow-sm"
-                : "text-zinc-400 hover:text-white bg-zinc-900"
-            }`}
-          >
-            ⚡ Interactive Blue Booking
-          </button>
-          <button
-            onClick={() => setViewMode("calcom")}
-            className={`px-3 py-1.5 rounded-lg font-mono font-semibold transition-all cursor-pointer ${
-              viewMode === "calcom"
-                ? "bg-blue-600 text-white shadow-sm"
-                : "text-zinc-400 hover:text-white bg-zinc-900"
-            }`}
-          >
-            🌐 Live Cal.com Embed
-          </button>
-        </div>
-
-        <a
-          href={calLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 text-zinc-400 hover:text-blue-400 font-mono transition-colors group"
-        >
-          <span>cal.com/rohith-e-3130/secret</span>
-          <ExternalLink className="h-3.5 w-3.5 text-zinc-500 group-hover:text-blue-400 transition-colors" />
-        </a>
-      </div>
-
-      {viewMode === "calcom" ? (
-        /* Live Cal.com Iframe View */
-        <div className="relative w-full bg-white min-h-[680px]">
-          <iframe
-            src={`${calLink}?embed=true&layout=month_view&theme=light`}
-            title="Rohith E | Cal.com Appointment Scheduler"
-            className="w-full h-[720px] border-0"
-            style={{ width: "100%", height: "720px", overflow: "hidden" }}
-          />
-        </div>
-      ) : (
-        /* Interactive Blue Scheduler Experience */
-        <AnimatePresence mode="wait">
+      <AnimatePresence mode="wait">
           {/* STEP 1: Interactive Calendar & Time Slots */}
           {currentStep === "calendar" && (
             <motion.div
@@ -297,15 +245,14 @@ export const CalBookingWidget: React.FC<CalBookingWidgetProps> = ({
               {/* Left Info Panel */}
               <div className="lg:col-span-4 p-6 sm:p-8 space-y-6 bg-[#090A0D]">
                 <div className="flex items-center gap-3">
-                  <div className="h-10 w-10 rounded-full bg-gradient-to-tr from-blue-700 to-blue-500 flex items-center justify-center text-white font-bold text-sm shadow-md shadow-blue-600/30">
-                    ✋
+                  <div className="h-10 w-10 rounded-full bg-zinc-900 border border-zinc-700 flex items-center justify-center overflow-hidden flex-shrink-0">
+                    <img src="/rdx-r-logo.png" alt="Rohith Digital X" className="h-7 w-7 object-contain invert" />
                   </div>
                   <div>
-                    <h4 className="text-xs font-bold uppercase tracking-wider text-zinc-200">
+                    <h4 className="text-xs font-bold uppercase tracking-wider text-white font-manrope">
                       Rohith Digital X
                     </h4>
-                    {/* Cleaned: Removed "(Principal)" as requested */}
-                    <p className="text-xs text-blue-400 font-semibold">Founder: Rohith E</p>
+                    <p className="text-[11px] text-zinc-400 font-medium italic font-dmsans">Founder: Rohith E</p>
                   </div>
                 </div>
 
@@ -318,27 +265,19 @@ export const CalBookingWidget: React.FC<CalBookingWidgetProps> = ({
                   </p>
                 </div>
 
-                <div className="space-y-3 pt-2 text-xs text-zinc-300 font-medium font-dmsans">
+                <div className="space-y-3 pt-2 text-xs text-zinc-400 font-medium font-dmsans">
                   <div className="flex items-center gap-2.5">
-                    <Clock className="h-4 w-4 text-blue-400" />
+                    <Clock className="h-4 w-4 text-zinc-500" />
                     <span>30 minutes</span>
                   </div>
                   <div className="flex items-center gap-2.5">
-                    <Video className="h-4 w-4 text-blue-400" />
+                    <Video className="h-4 w-4 text-zinc-500" />
                     <span>Google Meet / Cal Video</span>
                   </div>
                   <div className="flex items-center gap-2.5">
-                    <Globe className="h-4 w-4 text-blue-400" />
+                    <Globe className="h-4 w-4 text-zinc-500" />
                     <span>Asia/Kolkata (IST)</span>
                   </div>
-                </div>
-
-                <div className="p-3.5 rounded-xl bg-blue-950/30 border border-blue-800/40 text-[11px] text-blue-200 leading-relaxed font-dmsans">
-                  <div className="flex items-center gap-1.5 text-blue-400 font-bold mb-1">
-                    <Sparkles className="h-3.5 w-3.5 text-blue-400" />
-                    <span>Instant Founder Direct</span>
-                  </div>
-                  Connect directly with Rohith E. No junior reps or account runarounds.
                 </div>
               </div>
 
@@ -406,7 +345,7 @@ export const CalBookingWidget: React.FC<CalBookingWidgetProps> = ({
                           relative h-9 sm:h-10 w-full rounded-full text-xs font-bold font-manrope flex items-center justify-center transition-all cursor-pointer
                           ${
                             isSelected
-                              ? "bg-blue-600 text-white font-bold shadow-[0_0_16px_rgba(37,99,235,0.6)] scale-105 z-10"
+                              ? "bg-white text-black font-bold shadow-[0_0_16px_rgba(255,255,255,0.15)] scale-105 z-10"
                               : "text-zinc-300 hover:bg-zinc-800 hover:text-white"
                           }
                         `}
@@ -436,7 +375,7 @@ export const CalBookingWidget: React.FC<CalBookingWidgetProps> = ({
                       <button
                         onClick={() => setIs24Hour(false)}
                         className={`px-1.5 py-0.5 rounded transition-colors cursor-pointer ${
-                          !is24Hour ? "bg-blue-600 text-white font-bold" : "text-zinc-400"
+                          !is24Hour ? "bg-white text-black font-bold" : "text-zinc-400"
                         }`}
                       >
                         12h
@@ -444,7 +383,7 @@ export const CalBookingWidget: React.FC<CalBookingWidgetProps> = ({
                       <button
                         onClick={() => setIs24Hour(true)}
                         className={`px-1.5 py-0.5 rounded transition-colors cursor-pointer ${
-                          is24Hour ? "bg-blue-600 text-white font-bold" : "text-zinc-400"
+                          is24Hour ? "bg-white text-black font-bold" : "text-zinc-400"
                         }`}
                       >
                         24h
@@ -467,7 +406,7 @@ export const CalBookingWidget: React.FC<CalBookingWidgetProps> = ({
                             w-full py-2.5 px-3 rounded-xl text-xs font-semibold flex items-center justify-between transition-all cursor-pointer
                             ${
                               isSelected
-                                ? "bg-blue-600 text-white font-bold shadow-[0_0_14px_rgba(37,99,235,0.45)] border border-blue-500"
+                                ? "bg-white text-black font-bold border border-white/20"
                                 : "bg-zinc-900/90 text-zinc-300 hover:bg-zinc-800 border border-zinc-800/80"
                             }
                           `}
@@ -480,12 +419,12 @@ export const CalBookingWidget: React.FC<CalBookingWidgetProps> = ({
                   </div>
                 </div>
 
-                {/* Next Step Action Button - Vibrant Blue */}
+                {/* Next Step Action Button - Professional White */}
                 <motion.button
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.97 }}
                   onClick={handleProceedToForm}
-                  className="w-full py-3.5 px-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs uppercase tracking-wider transition-all shadow-lg shadow-blue-600/30 flex items-center justify-center gap-1.5 cursor-pointer"
+                  className="w-full py-3.5 px-4 rounded-xl bg-white hover:bg-zinc-100 text-black font-bold text-xs uppercase tracking-widest transition-all shadow-lg flex items-center justify-center gap-1.5 cursor-pointer font-manrope"
                 >
                   <span>Next: Details</span>
                   <span>→</span>
@@ -519,7 +458,7 @@ export const CalBookingWidget: React.FC<CalBookingWidgetProps> = ({
                 <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight font-manrope">
                   Enter Your Discovery Details
                 </h3>
-                <p className="text-xs text-blue-400 font-medium">
+                <p className="text-xs text-zinc-400 font-medium italic font-dmsans">
                   {selectedWeekdayLong}, {selectedMonthShort} {selectedDayOrdinal}, {currentYear} at {selectedTime} IST
                 </p>
               </div>
@@ -529,7 +468,7 @@ export const CalBookingWidget: React.FC<CalBookingWidgetProps> = ({
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-1.5 text-left">
                     <label className="text-xs font-bold text-zinc-300 flex items-center gap-1.5">
-                      <User className="h-3.5 w-3.5 text-blue-400" />
+                      <User className="h-3.5 w-3.5 text-zinc-500" />
                       <span>Your Name *</span>
                     </label>
                     <input
@@ -538,13 +477,13 @@ export const CalBookingWidget: React.FC<CalBookingWidgetProps> = ({
                       placeholder="Rohith / Client"
                       value={guestName}
                       onChange={(e) => setGuestName(e.target.value)}
-                      className="w-full px-4 py-2.5 rounded-xl bg-zinc-900 border border-zinc-700 text-white text-xs focus:outline-none focus:border-blue-500 transition-colors"
+                      className="w-full px-4 py-2.5 rounded-xl bg-zinc-900 border border-zinc-700 text-white text-xs focus:outline-none focus:border-white/40 transition-colors"
                     />
                   </div>
 
                   <div className="space-y-1.5 text-left">
                     <label className="text-xs font-bold text-zinc-300 flex items-center gap-1.5">
-                      <Mail className="h-3.5 w-3.5 text-blue-400" />
+                      <Mail className="h-3.5 w-3.5 text-zinc-500" />
                       <span>Business Email *</span>
                     </label>
                     <input
@@ -553,14 +492,14 @@ export const CalBookingWidget: React.FC<CalBookingWidgetProps> = ({
                       placeholder="founder@company.com"
                       value={guestEmail}
                       onChange={(e) => setGuestEmail(e.target.value)}
-                      className="w-full px-4 py-2.5 rounded-xl bg-zinc-900 border border-zinc-700 text-white text-xs focus:outline-none focus:border-blue-500 transition-colors"
+                      className="w-full px-4 py-2.5 rounded-xl bg-zinc-900 border border-zinc-700 text-white text-xs focus:outline-none focus:border-white/40 transition-colors"
                     />
                   </div>
                 </div>
 
                 <div className="space-y-1.5 text-left">
                   <label className="text-xs font-bold text-zinc-300 flex items-center gap-1.5">
-                    <Phone className="h-3.5 w-3.5 text-blue-400" />
+                    <Phone className="h-3.5 w-3.5 text-zinc-500" />
                     <span>WhatsApp / Phone (For Meeting Link)</span>
                   </label>
                   <input
@@ -568,7 +507,7 @@ export const CalBookingWidget: React.FC<CalBookingWidgetProps> = ({
                     placeholder="+91 96554 83130"
                     value={guestPhone}
                     onChange={(e) => setGuestPhone(e.target.value)}
-                    className="w-full px-4 py-2.5 rounded-xl bg-zinc-900 border border-zinc-700 text-white text-xs focus:outline-none focus:border-blue-500 transition-colors"
+                    className="w-full px-4 py-2.5 rounded-xl bg-zinc-900 border border-zinc-700 text-white text-xs focus:outline-none focus:border-white/40 transition-colors"
                   />
                 </div>
 
@@ -583,7 +522,7 @@ export const CalBookingWidget: React.FC<CalBookingWidgetProps> = ({
                         onClick={() => setProjectType(type)}
                         className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
                           projectType === type
-                            ? "bg-blue-600 text-white font-bold shadow-sm"
+                            ? "bg-white text-black font-bold"
                             : "bg-zinc-800/80 text-zinc-300 hover:bg-zinc-700 border border-zinc-700/60"
                         }`}
                       >
@@ -596,7 +535,7 @@ export const CalBookingWidget: React.FC<CalBookingWidgetProps> = ({
                 {/* Notes */}
                 <div className="space-y-1.5 text-left">
                   <label className="text-xs font-bold text-zinc-300 flex items-center gap-1.5">
-                    <FileText className="h-3.5 w-3.5 text-blue-400" />
+                    <FileText className="h-3.5 w-3.5 text-zinc-500" />
                     <span>Project brief / notes (optional)</span>
                   </label>
                   <textarea
@@ -604,7 +543,7 @@ export const CalBookingWidget: React.FC<CalBookingWidgetProps> = ({
                     placeholder="Share website link, goals, target deadline, or current tech stack..."
                     value={guestNotes}
                     onChange={(e) => setGuestNotes(e.target.value)}
-                    className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-zinc-700 text-white text-sm focus:outline-none focus:border-blue-500 transition-colors resize-none"
+                    className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-zinc-700 text-white text-sm focus:outline-none focus:border-white/40 transition-colors resize-none"
                   />
                 </div>
 
@@ -649,7 +588,7 @@ export const CalBookingWidget: React.FC<CalBookingWidgetProps> = ({
                   </button>
                   <button
                     type="submit"
-                    className="px-7 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs uppercase tracking-wider transition-all shadow-lg shadow-blue-600/30 active:scale-95 cursor-pointer"
+                    className="px-7 py-3 rounded-xl bg-white hover:bg-zinc-100 text-black font-bold text-xs uppercase tracking-widest transition-all shadow-lg active:scale-95 cursor-pointer font-manrope"
                   >
                     Confirm 30-Min Sprint →
                   </button>
@@ -667,7 +606,7 @@ export const CalBookingWidget: React.FC<CalBookingWidgetProps> = ({
               transition={{ duration: 0.35 }}
               className="p-8 sm:p-12 text-center space-y-6 max-w-lg mx-auto"
             >
-              <div className="h-16 w-16 rounded-full bg-blue-600/20 text-blue-400 flex items-center justify-center mx-auto border border-blue-500/40 shadow-lg shadow-blue-600/20">
+              <div className="h-16 w-16 rounded-full bg-zinc-900 text-white flex items-center justify-center mx-auto border border-zinc-700 shadow-lg">
                 <CheckCircle2 className="h-9 w-9" />
               </div>
 
@@ -689,7 +628,7 @@ export const CalBookingWidget: React.FC<CalBookingWidgetProps> = ({
                 </div>
                 <div className="flex items-center justify-between text-zinc-400">
                   <span>Time:</span>
-                  <span className="text-blue-400 font-bold tabular-nums">{selectedTime} IST</span>
+                  <span className="text-white font-bold tabular-nums">{selectedTime} IST</span>
                 </div>
                 <div className="flex items-center justify-between text-zinc-400">
                   <span>Focus:</span>
@@ -721,7 +660,7 @@ export const CalBookingWidget: React.FC<CalBookingWidgetProps> = ({
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl border border-zinc-700 bg-zinc-900 hover:bg-zinc-800 text-zinc-200 hover:text-white font-semibold text-xs transition-colors"
                   >
-                    <CalendarPlus className="h-3.5 w-3.5 text-blue-400" />
+                    <CalendarPlus className="h-3.5 w-3.5 text-zinc-400" />
                     <span>Google Calendar</span>
                   </a>
 
@@ -729,7 +668,7 @@ export const CalBookingWidget: React.FC<CalBookingWidgetProps> = ({
                     onClick={handleDownloadICS}
                     className="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl border border-zinc-700 bg-zinc-900 hover:bg-zinc-800 text-zinc-200 hover:text-white font-semibold text-xs transition-colors cursor-pointer"
                   >
-                    <Download className="h-3.5 w-3.5 text-blue-400" />
+                    <Download className="h-3.5 w-3.5 text-zinc-400" />
                     <span>Download .ICS</span>
                   </button>
                 </div>
@@ -750,7 +689,6 @@ export const CalBookingWidget: React.FC<CalBookingWidgetProps> = ({
             </motion.div>
           )}
         </AnimatePresence>
-      )}
     </div>
   )
 }

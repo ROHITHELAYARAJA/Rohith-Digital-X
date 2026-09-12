@@ -20,28 +20,39 @@ export const ServicesPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-[#070708] text-white selection:bg-purple-600 selection:text-white">
-      {/* Hero Header Section */}
+      {/* Hero Header Section - Replica of HomePage Architecture on Black */}
       <section className="relative pt-28 sm:pt-36 pb-16 border-b border-zinc-800/80 overflow-hidden bg-[#070708]">
-        {/* Ambient Gradient Glow: Purple & Orange */}
-        <div className="absolute -top-24 sm:-top-32 left-1/2 -translate-x-1/2 w-[700px] sm:w-[1000px] h-[340px] sm:h-[450px] bg-gradient-to-b from-purple-600/15 via-[#FF4D3D]/10 to-transparent rounded-full blur-[100px] pointer-events-none -z-0" />
+        {/* Ambient Gradient Glow */}
+        <div className="absolute -top-24 sm:-top-32 left-1/2 -translate-x-1/2 w-[700px] sm:w-[1100px] h-[340px] sm:h-[460px] bg-gradient-to-b from-zinc-800/25 via-[#FF4D3D]/10 to-transparent rounded-full blur-[100px] pointer-events-none -z-0" />
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
 
         <div className="container max-w-5xl mx-auto px-4 sm:px-6 relative z-10 text-center space-y-6">
-          <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white leading-[1.08] font-manrope max-w-4xl mx-auto text-balance">
-            Digital capabilities engineered to{" "}
-            <span className="font-playfair italic font-medium text-purple-400">
-              convert
+
+          <motion.h1
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.55, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
+            className="text-4xl sm:text-6xl md:text-7xl lg:text-[5rem] font-bold tracking-tight text-white leading-[1.07] font-manrope text-balance max-w-4xl mx-auto"
+          >
+            Full-stack software built to{" "}
+            <span className="font-playfair italic font-medium text-[#FF4D3D] inline-block px-1">
+              scale businesses
             </span>
             .
-          </h1>
+          </motion.h1>
 
-          <p className="text-base sm:text-lg text-zinc-400 font-normal leading-relaxed max-w-2xl mx-auto font-dmsans">
-            We engineer high-velocity web platforms, native mobile applications, and autonomous AI automation agents — delivered in 14-day sprints directly by founder Rohith E.
-          </p>
+          <motion.p
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.14, ease: [0.22, 1, 0.36, 1] }}
+            className="text-base sm:text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto font-normal leading-relaxed font-dmsans"
+          >
+            We engineer high-velocity web platforms, native mobile applications, and autonomous AI systems — delivered in 14 days directly by founder Rohith E.
+          </motion.p>
 
           <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
             <HeyDigitalButton
-              variant="purple"
+              variant="orange"
               size="lg"
               onClick={() => navigate("contact")}
             >
@@ -65,7 +76,7 @@ export const ServicesPage: React.FC = () => {
           
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-zinc-800">
             <div>
-              <span className="text-[11px] font-mono font-bold tracking-widest uppercase text-purple-400">
+              <span className="text-[11px] font-mono font-bold tracking-widest uppercase text-[#FF4D3D]">
                 THREE SPECIALTIES
               </span>
               <h2 className="text-3xl sm:text-5xl font-bold text-white tracking-tight font-manrope mt-2">
@@ -79,11 +90,11 @@ export const ServicesPage: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             
-            {/* Service 1: Web Development */}
-            <div className="p-8 rounded-3xl bg-zinc-950/80 border border-zinc-800 hover:border-purple-500/70 hover:shadow-purple-glow transition-all flex flex-col justify-between group backdrop-blur-sm">
+            {/* Service 1: Web Development (Sky Blue Specialty) */}
+            <div className="p-8 rounded-3xl bg-zinc-950/80 border border-zinc-800 hover:border-sky-500/70 hover:shadow-[0_0_25px_rgba(14,165,233,0.3)] transition-all flex flex-col justify-between group backdrop-blur-sm">
               <div className="space-y-5">
                 <div className="flex items-center justify-between">
-                  <div className="h-12 w-12 rounded-2xl bg-purple-950/60 border border-purple-800/60 text-purple-400 flex items-center justify-center font-bold group-hover:scale-110 transition-transform">
+                  <div className="h-12 w-12 rounded-2xl bg-sky-950/60 border border-sky-800/60 text-sky-400 flex items-center justify-center font-bold group-hover:scale-110 transition-transform">
                     <Code className="h-6 w-6" />
                   </div>
                   <span className="text-xs font-mono font-bold text-zinc-400">01 / WEB</span>
@@ -98,15 +109,15 @@ export const ServicesPage: React.FC = () => {
 
                 <ul className="space-y-2.5 text-xs text-zinc-300 pt-2 border-t border-zinc-800">
                   <li className="flex items-center gap-2">
-                    <CheckCircle2 className="h-4 w-4 text-purple-400 shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-sky-400 shrink-0" />
                     <span>Next.js 15, Vite &amp; React architecture</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle2 className="h-4 w-4 text-purple-400 shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-sky-400 shrink-0" />
                     <span>60fps fluid micro-interactions</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle2 className="h-4 w-4 text-purple-400 shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-sky-400 shrink-0" />
                     <span>Turnaround in 14-day sprints</span>
                   </li>
                 </ul>
@@ -115,7 +126,7 @@ export const ServicesPage: React.FC = () => {
               <div className="pt-8 flex flex-col gap-2.5">
                 <button
                   onClick={() => navigate("services-web")}
-                  className="w-full py-3 px-4 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs transition-all flex items-center justify-center gap-2 cursor-pointer shadow-md"
+                  className="w-full py-3 px-4 rounded-xl bg-sky-500 hover:bg-sky-400 text-white font-bold text-xs transition-all flex items-center justify-center gap-2 cursor-pointer shadow-md"
                 >
                   <span>Explore Web Service</span>
                   <ArrowRight className="h-3.5 w-3.5" />
@@ -240,7 +251,7 @@ export const ServicesPage: React.FC = () => {
       <section className="py-14 sm:py-18 bg-[#070708] border-t border-zinc-800">
         <div className="container max-w-5xl mx-auto px-4 sm:px-6">
           <div className="text-center space-y-4 mb-10">
-            <span className="text-[11px] font-mono font-bold tracking-widest uppercase text-purple-400">
+            <span className="text-[11px] font-mono font-bold tracking-widest uppercase text-sky-400">
               DIRECT CALENDAR ACCESS
             </span>
             <h2 className="text-3xl sm:text-5xl font-bold text-white font-manrope">

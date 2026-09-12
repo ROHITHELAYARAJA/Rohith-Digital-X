@@ -233,6 +233,8 @@ export default {
         'purple-pill': '0 8px 30px -4px rgba(139, 92, 246, 0.45)',
         'orange-glow': '0 0 25px rgba(255, 77, 61, 0.45)',
         'orange-pill': '0 8px 30px -4px rgba(255, 77, 61, 0.45)',
+        'sky-glow': '0 0 25px rgba(14, 165, 233, 0.45)',
+        'sky-pill': '0 8px 30px -4px rgba(14, 165, 233, 0.45)',
         'dark-card': '0 20px 40px -15px rgba(0, 0, 0, 0.7)',
       },
     },
