@@ -27,14 +27,7 @@ export const ServicesPage: React.FC = () => {
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
 
         <div className="container max-w-5xl mx-auto px-4 sm:px-6 relative z-10 text-center space-y-6">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-zinc-900 border border-zinc-800 text-xs font-semibold text-zinc-300 shadow-xs">
-            <span className="h-2 w-2 rounded-full bg-purple-400 animate-pulse" />
-            <span className="font-mono text-[11px] uppercase tracking-wider text-purple-300">
-              CORE CAPABILITIES
-            </span>
-          </div>
-
-          <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white leading-[1.08] font-manrope max-w-4xl mx-auto text-balance">
+          <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white leading-[1.08] font-manrope max-w-4xl mx-auto text-balance">
             Digital capabilities engineered to{" "}
             <span className="font-playfair italic font-medium text-purple-400">
               convert
@@ -75,7 +68,7 @@ export const ServicesPage: React.FC = () => {
               <span className="text-[11px] font-mono font-bold tracking-widest uppercase text-purple-400">
                 THREE SPECIALTIES
               </span>
-              <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight font-manrope mt-2">
+              <h2 className="text-3xl sm:text-5xl font-bold text-white tracking-tight font-manrope mt-2">
                 Focused mastery. Zero fluff.
               </h2>
             </div>
@@ -97,7 +90,7 @@ export const ServicesPage: React.FC = () => {
                 </div>
 
                 <div>
-                  <h3 className="text-2xl font-black text-white font-manrope">Web Development</h3>
+                  <h3 className="text-2xl font-bold text-white font-manrope">Web Development</h3>
                   <p className="text-sm text-zinc-400 mt-2 leading-relaxed font-dmsans">
                     Custom business websites, web applications, and landing pages with sub-0.4s load speed, SEO mastery, and 100/100 Lighthouse scores.
                   </p>
@@ -147,7 +140,7 @@ export const ServicesPage: React.FC = () => {
                 </div>
 
                 <div>
-                  <h3 className="text-2xl font-black text-white font-manrope">Mobile Apps</h3>
+                  <h3 className="text-2xl font-bold text-white font-manrope">Mobile Apps</h3>
                   <p className="text-sm text-zinc-400 mt-2 leading-relaxed font-dmsans">
                     Native-grade cross-platform apps for iOS and Android with push notifications, offline SQLite sync, and App Store publishing support.
                   </p>
@@ -197,7 +190,7 @@ export const ServicesPage: React.FC = () => {
                 </div>
 
                 <div>
-                  <h3 className="text-2xl font-black text-white font-manrope">Automation &amp; AI</h3>
+                  <h3 className="text-2xl font-bold text-white font-manrope">Automation &amp; AI</h3>
                   <p className="text-sm text-zinc-400 mt-2 leading-relaxed font-dmsans">
                     Autonomous WhatsApp lead capture, 24/7 AI customer support bots, and automated CRM pipelines that save 20+ hours of manual labor per week.
                   </p>

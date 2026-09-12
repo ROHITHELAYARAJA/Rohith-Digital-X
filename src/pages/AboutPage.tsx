@@ -18,14 +18,7 @@ export const AboutPage: React.FC = () => {
 
         <div className="container max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
           <div className="space-y-6 max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/25 text-xs font-semibold text-purple-300">
-              <span className="h-1.5 w-1.5 rounded-full bg-purple-400 animate-pulse" />
-              <span className="font-mono font-bold text-[11px] uppercase tracking-wider">
-                FOUNDER PROFILE &amp; PHILOSOPHY
-              </span>
-            </div>
-
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white leading-[1.08] font-display">
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.08] font-display">
               Architecting digital systems with{" "}
               <span className="font-boska italic font-light text-purple-400">
                 speed &amp; taste
@@ -68,7 +61,7 @@ export const AboutPage: React.FC = () => {
       <div className="py-20 container max-w-4xl mx-auto px-4 text-center">
         <div className="p-8 sm:p-12 rounded-3xl bg-zinc-950 text-white space-y-6 shadow-2xl border border-zinc-800">
           <div className="space-y-2">
-            <h3 className="text-2xl sm:text-4xl font-extrabold font-display">
+            <h3 className="text-2xl sm:text-4xl font-bold font-display">
               Ready to build your next product<span className="text-[#FF4D3D]">?</span>
             </h3>
             <p className="text-sm text-zinc-400 max-w-xl mx-auto">

@@ -33,14 +33,7 @@ export const WorkPage: React.FC = () => {
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
 
         <div className="container max-w-5xl mx-auto px-4 sm:px-6 relative z-10 text-center space-y-6">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-zinc-900 border border-zinc-800 text-xs font-semibold text-zinc-300 shadow-xs">
-            <span className="h-2 w-2 rounded-full bg-purple-400 animate-pulse" />
-            <span className="font-mono text-[11px] uppercase tracking-wider text-purple-300">
-              SHIPPED ARCHITECTURES
-            </span>
-          </div>
-
-          <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white leading-[1.08] font-manrope max-w-4xl mx-auto text-balance">
+          <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white leading-[1.08] font-manrope max-w-4xl mx-auto text-balance">
             Digital systems we've{" "}
             <span className="font-playfair italic font-medium text-purple-400">
               shipped
@@ -87,13 +80,13 @@ export const WorkPage: React.FC = () => {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
               <div className="lg:col-span-7 space-y-4">
                 <div className="flex items-center gap-2">
-                  <span className="px-3 py-1 rounded-full bg-purple-950/60 border border-purple-800/60 text-[10px] font-mono font-black text-purple-300">
+                  <span className="px-3 py-1 rounded-full bg-purple-950/60 border border-purple-800/60 text-[10px] font-mono font-semibold text-purple-300">
                     ★ FEATURED CASE STUDY
                   </span>
                   <span className="text-xs font-mono text-zinc-400">100/100 LIGHTHOUSE</span>
                 </div>
 
-                <h2 className="text-2xl sm:text-4xl font-extrabold text-white font-manrope leading-snug">
+                <h2 className="text-2xl sm:text-4xl font-bold text-white font-manrope leading-snug">
                   JSBuilders: Civil Engineering &amp; High-Converting Architectural Platform
                 </h2>
 
@@ -177,7 +170,7 @@ export const WorkPage: React.FC = () => {
               <span className="text-[11px] font-mono font-bold tracking-widest uppercase text-purple-400">
                 PORTFOLIO CATALOG
               </span>
-              <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight font-manrope mt-2">
+              <h2 className="text-3xl sm:text-5xl font-bold text-white tracking-tight font-manrope mt-2">
                 Production-ready systems.
               </h2>
             </div>
