@@ -1,7 +1,6 @@
 import React from "react"
 import { HeroSection } from "@/components/sections/HeroSection"
 import { FastlaneSpotlightSection } from "@/components/sections/FastlaneSpotlightSection"
-import { ThreeReasonsSection } from "@/components/sections/ThreeReasonsSection"
 import { DigitalProductCapabilitiesSection } from "@/components/sections/DigitalProductCapabilitiesSection"
 import { ServicesSection } from "@/components/sections/ServicesSection"
 import { PackagesSection } from "@/components/sections/PackagesSection"
@@ -66,9 +65,6 @@ export const HomePage: React.FC = () => {
 
       {/* 2. Fastlane Spotlight Section (Matching Image 5 with Signature Glowing Orange Box Button) */}
       <FastlaneSpotlightSection />
-
-      {/* 3. Signature "Three Reasons They Stay" Section */}
-      <ThreeReasonsSection />
 
       {/* 2.5. Fastlane-Inspired Proprietary Architecture & Bento Capabilities */}
       <DigitalProductCapabilitiesSection />

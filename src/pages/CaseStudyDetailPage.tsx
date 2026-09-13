@@ -1,6 +1,6 @@
 import React from "react"
 import { motion } from "framer-motion"
-import { ArrowLeft, CheckCircle2, ArrowRight, ExternalLink, Zap, Shield, Sparkles, TrendingUp, Layers } from "lucide-react"
+import { ArrowLeft, CheckCircle2, ArrowRight, ExternalLink, Zap, Shield, TrendingUp, Layers } from "lucide-react"
 import { useNavigation } from "@/context/NavigationContext"
 import { HeyDigitalButton } from "@/components/ui/HeyDigitalButton"
 

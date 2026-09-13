@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { motion } from "framer-motion"
 import {
-  Sparkles,
+  Target,
   Users,
   Brain,
   Layers,
@@ -79,7 +79,7 @@ export const DigitalProductCapabilitiesSection: React.FC = () => {
                     selected: activeChip === 0,
                   },
                   {
-                    icon: <Sparkles className="h-4 w-4 text-purple-500" />,
+                    icon: <Target className="h-4 w-4 text-purple-500" />,
                     text: "Here's where your brand stands out",
                     selected: activeChip === 1,
                   },

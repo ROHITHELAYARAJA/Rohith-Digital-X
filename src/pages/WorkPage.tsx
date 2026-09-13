@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { ArrowRight, ExternalLink, Sparkles, Filter, CheckCircle2, Layers, Zap } from "lucide-react"
+import { ArrowRight, ExternalLink, Filter, CheckCircle2, Layers, Zap } from "lucide-react"
 import { useNavigation } from "@/context/NavigationContext"
 import { projectsData, ProjectItem, ProjectCategory } from "@/data/projects"
 import { ProjectDetailModal } from "@/components/modals/ProjectDetailModal"

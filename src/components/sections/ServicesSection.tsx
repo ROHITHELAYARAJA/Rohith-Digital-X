@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 import { servicesData, ServiceItem } from "@/data/services"
 import { ServiceCard } from "./ServiceCard"
 import { ServiceDetailModal } from "@/components/modals/ServiceDetailModal"
-import { ArrowRight, Sparkles } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { scrollToSection } from "@/lib/utils"
 

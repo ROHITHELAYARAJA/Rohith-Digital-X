@@ -1,6 +1,6 @@
 import React from "react"
 import { motion } from "framer-motion"
-import { CheckCircle2, ArrowRight, Zap, Shield, Sparkles, Monitor, Layers, Gauge, Cpu } from "lucide-react"
+import { CheckCircle2, ArrowRight, Zap, Shield, Monitor, Layers, Gauge, Cpu } from "lucide-react"
 import { useNavigation } from "@/context/NavigationContext"
 import { HeyDigitalButton } from "@/components/ui/HeyDigitalButton"
 
@@ -128,7 +128,7 @@ export const WebDevelopmentPage: React.FC = () => {
 
             <div className="p-6 rounded-2xl bg-zinc-950/80 border border-zinc-800/90 hover:border-purple-500/60 transition-all space-y-4">
               <div className="h-10 w-10 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center font-bold">
-                <Sparkles className="h-5 w-5" />
+                <Gauge className="h-5 w-5" />
               </div>
               <h3 className="text-xl font-bold text-white">Fluid Animations &amp; Taste</h3>
               <p className="text-sm text-zinc-400 leading-relaxed">

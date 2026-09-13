@@ -9,7 +9,6 @@ import {
 import {
   Check,
   ArrowRight,
-  Sparkles,
   Globe,
   Smartphone,
   Bot,
@@ -166,11 +165,10 @@ Please let me know the kickoff process and timeline to get started!`
                         : "bg-[#090A0D] text-white border-zinc-800/80 hover:border-[#FF4D3D] hover:shadow-[0_0_35px_rgba(255,77,61,0.22)]"
                     }`}
                   >
-                    {/* Popular Pill Banner: Clean Black & White with subtle orange spark */}
+                    {/* Popular Pill Banner: Clean Black & White */}
                     {isPopular && (
                       <div className="mb-4 -mt-1 flex items-center justify-center">
                         <span className="w-full py-1.5 px-3 rounded-full bg-zinc-900 border border-zinc-700 text-white text-[11px] font-bold uppercase tracking-wider text-center flex items-center justify-center gap-1.5 shadow-sm">
-                          <Sparkles className="h-3 w-3 text-[#FF4D3D]" />
                           <span>{pkg.badge || "Most Popular Choice"}</span>
                         </span>
                       </div>

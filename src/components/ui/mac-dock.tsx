@@ -248,12 +248,12 @@ export const MacDock: React.FC = () => {
   const mouseX = useMotionValue(Infinity)
 
   return (
-    <div className="relative flex flex-col items-center justify-center pt-8 sm:pt-10 pb-2 overflow-visible">
-      {/* Floating Dark macOS Dock Pill Container with overflow-visible to prevent clipping */}
+    <div className="relative flex flex-col items-center justify-center pt-8 sm:pt-10 pb-2 overflow-x-auto max-w-full scrollbar-none">
+      {/* Floating Dark macOS Dock Pill Container with overflow-visible on larger screens */}
       <div
         onMouseMove={(e) => mouseX.set(e.pageX)}
         onMouseLeave={() => mouseX.set(Infinity)}
-        className="relative flex items-center gap-2 sm:gap-2.5 px-3.5 sm:px-4 py-2.5 rounded-full bg-[#18181B] backdrop-blur-2xl border border-zinc-700/80 shadow-[0_16px_40px_rgba(0,0,0,0.25)] ring-1 ring-white/10 overflow-visible max-w-full"
+        className="relative flex items-center gap-1.5 sm:gap-2.5 px-3 sm:px-4 py-2 sm:py-2.5 rounded-full bg-[#18181B] backdrop-blur-2xl border border-zinc-700/80 shadow-[0_16px_40px_rgba(0,0,0,0.25)] ring-1 ring-white/10 max-w-full overflow-visible shrink-0"
       >
         {AUTHENTIC_APP_TOOLS.map((item) => (
           <DockIcon key={item.id} item={item} mouseX={mouseX} />

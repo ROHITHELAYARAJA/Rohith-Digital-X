@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { motion } from "framer-motion"
-import { Phone, Mail, MapPin, MessageSquare, Calendar, Send, CheckCircle2, ShieldCheck, Sparkles } from "lucide-react"
+import { Phone, Mail, MapPin, MessageSquare, Calendar, Send, CheckCircle2, ShieldCheck } from "lucide-react"
 import { useNavigation } from "@/context/NavigationContext"
 import { ContactSection } from "@/components/sections/ContactSection"
 import { CalBookingWidget } from "@/components/ui/CalBookingWidget"

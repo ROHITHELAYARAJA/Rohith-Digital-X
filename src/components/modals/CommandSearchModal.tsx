@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Search, X, ArrowRight, Sparkles, Code2, Smartphone, Cpu, ShieldCheck, PhoneCall, Layers, BookOpen } from "lucide-react"
+import { Search, X, ArrowRight, Home, Code2, Smartphone, Cpu, ShieldCheck, PhoneCall, Layers, BookOpen } from "lucide-react"
 import { useNavigation, PageRoute } from "@/context/NavigationContext"
 
 interface CommandSearchModalProps {
@@ -16,7 +16,7 @@ interface SearchItem {
 }
 
 const SEARCH_ITEMS: SearchItem[] = [
-  { id: "home", title: "Home & Executive Overview", category: "Navigation", icon: <Sparkles className="h-4 w-4 text-accent-crimson" /> },
+  { id: "home", title: "Home & Executive Overview", category: "Navigation", icon: <Home className="h-4 w-4 text-accent-crimson" /> },
   { id: "about", title: "About, Methodology & Software Dock", category: "Profile", icon: <Layers className="h-4 w-4 text-blue-400" /> },
   { id: "services", title: "Core Services: Web, Mobile, AI Agents", category: "Capabilities", icon: <Code2 className="h-4 w-4 text-emerald-400" /> },
   { id: "work", title: "Selected Work & Case Studies", category: "Portfolio", icon: <Smartphone className="h-4 w-4 text-purple-400" /> },

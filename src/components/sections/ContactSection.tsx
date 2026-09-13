@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { motion } from "framer-motion"
-import { Mail, Phone, MapPin, Send, CheckCircle2, Copy, Check, ArrowUpRight, Sparkles, MessageSquare } from "lucide-react"
+import { Mail, Phone, MapPin, Send, CheckCircle2, Copy, Check, ArrowUpRight, MessageSquare } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input, Textarea, Select } from "@/components/ui/input"
 import { TiltCard } from "@/components/ui/tilt-card"
@@ -153,7 +153,6 @@ Looking forward to hearing from you!`
             viewport={{ once: true }}
             className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-purple-400 font-mono inline-flex items-center gap-1.5"
           >
-            <Sparkles className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
             <span>Direct Founder Consultation</span>
           </motion.span>
           <motion.h2

@@ -1,6 +1,6 @@
 import React from "react"
 import { motion } from "framer-motion"
-import { MessageSquareCode, Cpu, Smartphone, Layers, CheckCircle2, ShieldCheck, Zap, Lock, Code2, Sparkles } from "lucide-react"
+import { MessageSquareCode, Cpu, Smartphone, Layers, CheckCircle2, ShieldCheck, Zap, Lock, Code2 } from "lucide-react"
 import { Marquee } from "@/components/ui/marquee"
 import { TiltCard } from "@/components/ui/tilt-card"
 

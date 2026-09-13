@@ -34,19 +34,19 @@ export const ShadedBrandWatermark: React.FC<ShadedBrandWatermarkProps> = ({
       )}
 
       {/* Mammoth Shaded Typography Watermark */}
-      <div className="w-full flex justify-center items-end leading-none overflow-hidden px-2 sm:px-4">
+      <div className="w-full max-w-full flex justify-center items-end leading-none overflow-hidden px-2 sm:px-4">
         <motion.span
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className={`font-khand font-bold tracking-tight uppercase text-center whitespace-nowrap leading-[0.74] block ${
+          className={`font-khand font-bold tracking-tight uppercase text-center whitespace-nowrap leading-[0.74] block max-w-full ${
             isLight
               ? "bg-gradient-to-b from-zinc-400 via-zinc-300/40 to-transparent bg-clip-text text-transparent"
               : "bg-gradient-to-b from-zinc-600 via-zinc-800/30 to-transparent bg-clip-text text-transparent"
           }`}
           style={{
-            fontSize: "clamp(4.5rem, 18vw, 17rem)",
+            fontSize: "clamp(2rem, 11.5vw, 17rem)",
             WebkitMaskImage: "linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 45%, rgba(0,0,0,0) 92%)",
             maskImage: "linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 45%, rgba(0,0,0,0) 92%)",
           }}

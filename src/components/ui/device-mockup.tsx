@@ -1,5 +1,5 @@
 import React from "react"
-import { Star, Bot } from "lucide-react"
+import { Bot } from "lucide-react"
 
 interface DeviceMockupProps {
   type: "laptop" | "phone" | "tablet"
@@ -51,9 +51,8 @@ export const DeviceMockup: React.FC<DeviceMockupProps> = ({ type, variant }) => 
                   <p className="text-[9px] text-zinc-500">Master Technician</p>
                 </div>
               </div>
-              <div className="flex items-center gap-0.5 text-purple-600 text-[10px] font-bold">
-                <Star className="h-3 w-3 fill-current" />
-                <span>4.9</span>
+              <div className="flex items-center gap-1 text-purple-600 text-[10px] font-mono font-bold bg-purple-50 px-1.5 py-0.5 rounded">
+                <span>4.9 / 5.0</span>
               </div>
             </div>
           </div>

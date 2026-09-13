@@ -58,7 +58,7 @@ function AppContent() {
   }
 
   return (
-    <div className="relative min-h-screen bg-[#070708] text-white flex flex-col font-sans selection:bg-purple-600 selection:text-white">
+    <div className="relative min-h-screen bg-[#070708] text-white flex flex-col font-sans selection:bg-purple-600 selection:text-white w-full max-w-full overflow-x-hidden">
       {/* Sticky Navigation Bar */}
       <Navbar />
 
@@ -66,7 +66,7 @@ function AppContent() {
       <ScrollProgressBar />
 
       {/* Multi-Page Route Render with Smooth Page Transitions */}
-      <main className="flex-1">
+      <main className="flex-1 w-full max-w-full overflow-x-hidden">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentPage}

@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { ArrowRight, CheckCircle2, TrendingUp, Zap, Star, ShieldCheck, Sparkles } from "lucide-react"
+import { ArrowRight, CheckCircle2, TrendingUp, Zap, ShieldCheck } from "lucide-react"
 import { useNavigation } from "@/context/NavigationContext"
 
 interface SpotlightStory {
@@ -118,7 +118,7 @@ export const FastlaneSpotlightSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          className="rounded-3xl bg-zinc-50/90 border border-zinc-200/90 p-8 sm:p-12 lg:p-16 shadow-[0_16px_48px_rgba(0,0,0,0.04)] relative overflow-hidden"
+          className="rounded-3xl bg-zinc-50/90 border border-zinc-200/90 p-5 sm:p-12 lg:p-16 shadow-[0_16px_48px_rgba(0,0,0,0.04)] relative overflow-hidden"
         >
           <AnimatePresence mode="wait">
             <motion.div
@@ -127,13 +127,13 @@ export const FastlaneSpotlightSection: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -14 }}
               transition={{ duration: 0.35, ease: "easeOut" }}
-              className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center"
+              className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center"
             >
               {/* Left Column: Spotlight Text & The Famous Orange/Red Box Button */}
-              <div className="lg:col-span-7 space-y-7">
+              <div className="lg:col-span-7 space-y-6 sm:space-y-7">
                 
                 {/* Image 5 Style SPOTLIGHT Tag without any blinking dots */}
-                <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white border border-zinc-200 shadow-xs text-xs font-manrope font-bold tracking-wider text-zinc-800">
+                <div className="inline-flex items-center gap-2.5 px-3.5 sm:px-4 py-1.5 rounded-full bg-white border border-zinc-200 shadow-xs text-xs font-manrope font-bold tracking-wider text-zinc-800">
                   <span className="uppercase text-[11px] font-bold text-[#FF3B30] tracking-widest">
                     SPOTLIGHT
                   </span>
@@ -141,20 +141,20 @@ export const FastlaneSpotlightSection: React.FC = () => {
                 </div>
 
                 {/* Giant Bold Headline */}
-                <h3 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-zinc-950 font-manrope tracking-tight leading-[1.08] text-balance">
+                <h3 className="text-2xl sm:text-4xl lg:text-6xl font-bold text-zinc-950 font-manrope tracking-tight leading-[1.12] sm:leading-[1.08] text-balance">
                   {currentStory.metricHeadline}
                 </h3>
 
                 {/* Punchy 2-line Subtitle */}
-                <p className="text-base sm:text-lg text-zinc-600 font-normal leading-relaxed font-dmsans max-w-xl">
+                <p className="text-sm sm:text-base lg:text-lg text-zinc-600 font-normal leading-relaxed font-dmsans max-w-xl">
                   {currentStory.summary}
                 </p>
 
-                {/* THE SIGNATURE ORANGE/RED BOX BUTTON (User explicitly highlighted from Image 5) */}
-                <div className="pt-2 flex flex-wrap items-center gap-4">
+                {/* THE SIGNATURE ORANGE/RED BOX BUTTON */}
+                <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto">
                   <button
                     onClick={() => navigate("contact")}
-                    className="px-7 sm:px-8 py-3.5 sm:py-4 rounded-xl sm:rounded-2xl bg-gradient-to-r from-[#FF3B30] via-[#FF4D3D] to-[#FF6B3D] text-white font-manrope font-bold text-sm sm:text-base shadow-[0_12px_28px_rgba(255,59,48,0.38)] hover:shadow-[0_16px_36px_rgba(255,59,48,0.52)] hover:scale-[1.02] active:scale-95 transition-all duration-200 flex items-center gap-2.5 cursor-pointer select-none group"
+                    className="w-full sm:w-auto justify-center px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl sm:rounded-2xl bg-gradient-to-r from-[#FF3B30] via-[#FF4D3D] to-[#FF6B3D] text-white font-manrope font-bold text-sm sm:text-base shadow-[0_12px_28px_rgba(255,59,48,0.38)] hover:shadow-[0_16px_36px_rgba(255,59,48,0.52)] hover:scale-[1.02] active:scale-95 transition-all duration-200 flex items-center gap-2.5 cursor-pointer select-none group text-center"
                   >
                     <span>Get started for free</span>
                     <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -162,59 +162,57 @@ export const FastlaneSpotlightSection: React.FC = () => {
 
                   <button
                     onClick={() => navigate("work")}
-                    className="px-5 py-3.5 rounded-xl border border-zinc-300 hover:border-zinc-400 bg-white hover:bg-zinc-100 text-zinc-800 font-manrope font-semibold text-xs sm:text-sm transition-all cursor-pointer"
+                    className="w-full sm:w-auto justify-center px-5 py-3.5 rounded-xl border border-zinc-300 hover:border-zinc-400 bg-white hover:bg-zinc-100 text-zinc-800 font-manrope font-semibold text-xs sm:text-sm transition-all cursor-pointer text-center"
                   >
                     View Case Study
                   </button>
                 </div>
 
                 {/* Founder Sprint Guarantee Line */}
-                <div className="flex items-center gap-2 text-xs font-dmsans text-zinc-500 pt-2">
-                  <CheckCircle2 className="h-4 w-4 text-[#FF3B30]" />
-                  <span>Full IP ownership transferred immediately upon deployment • Handled directly by Rohith E</span>
+                <div className="flex items-center gap-2 text-xs font-dmsans text-zinc-500 pt-1 sm:pt-2">
+                  <CheckCircle2 className="h-4 w-4 text-[#FF3B30] shrink-0" />
+                  <span className="leading-snug">Full IP ownership transferred immediately upon deployment • Handled directly by Rohith E</span>
                 </div>
 
               </div>
 
               {/* Right Column: Creative Live Metrics & Testimonial Card */}
-              <div className="lg:col-span-5 space-y-6">
+              <div className="lg:col-span-5 space-y-5 sm:space-y-6">
                 
                 {/* 3 Metric Mini-Counters */}
-                <div className="grid grid-cols-3 gap-3">
-                  <div className="p-4 rounded-2xl bg-white border border-zinc-200/90 shadow-xs text-center">
-                    <div className="text-xl sm:text-2xl font-bold text-zinc-950 font-manrope">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-3">
+                  <div className="p-3 sm:p-4 rounded-2xl bg-white border border-zinc-200/90 shadow-xs text-center flex sm:flex-col items-center justify-between sm:justify-center">
+                    <div className="text-lg sm:text-2xl font-bold text-zinc-950 font-manrope">
                       {currentStory.stat1.value}
                     </div>
-                    <div className="text-[10px] sm:text-xs text-zinc-500 font-dmsans font-medium mt-1 leading-tight">
+                    <div className="text-[11px] sm:text-xs text-zinc-500 font-dmsans font-medium mt-0.5 sm:mt-1 leading-tight">
                       {currentStory.stat1.label}
                     </div>
                   </div>
 
-                  <div className="p-4 rounded-2xl bg-white border border-zinc-200/90 shadow-xs text-center">
-                    <div className="text-xl sm:text-2xl font-bold text-[#FF3B30] font-manrope">
+                  <div className="p-3 sm:p-4 rounded-2xl bg-white border border-zinc-200/90 shadow-xs text-center flex sm:flex-col items-center justify-between sm:justify-center">
+                    <div className="text-lg sm:text-2xl font-bold text-[#FF3B30] font-manrope">
                       {currentStory.stat2.value}
                     </div>
-                    <div className="text-[10px] sm:text-xs text-zinc-500 font-dmsans font-medium mt-1 leading-tight">
+                    <div className="text-[11px] sm:text-xs text-zinc-500 font-dmsans font-medium mt-0.5 sm:mt-1 leading-tight">
                       {currentStory.stat2.label}
                     </div>
                   </div>
 
-                  <div className="p-4 rounded-2xl bg-white border border-zinc-200/90 shadow-xs text-center">
-                    <div className="text-xl sm:text-2xl font-bold text-purple-600 font-manrope">
+                  <div className="p-3 sm:p-4 rounded-2xl bg-white border border-zinc-200/90 shadow-xs text-center flex sm:flex-col items-center justify-between sm:justify-center">
+                    <div className="text-lg sm:text-2xl font-bold text-purple-600 font-manrope">
                       {currentStory.stat3.value}
                     </div>
-                    <div className="text-[10px] sm:text-xs text-zinc-500 font-dmsans font-medium mt-1 leading-tight">
+                    <div className="text-[11px] sm:text-xs text-zinc-500 font-dmsans font-medium mt-0.5 sm:mt-1 leading-tight">
                       {currentStory.stat3.label}
                     </div>
                   </div>
                 </div>
 
-                {/* Client Quote Card */}
-                <div className="p-6 rounded-2xl bg-white border border-zinc-200/90 shadow-sm space-y-4">
-                  <div className="flex items-center gap-1 text-purple-500">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 fill-current" />
-                    ))}
+                {/* Client Quote Card (No Star icons, clean verified badge) */}
+                <div className="p-5 sm:p-6 rounded-2xl bg-white border border-zinc-200/90 shadow-sm space-y-3 sm:space-y-4">
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-purple-50 border border-purple-200 text-purple-700 text-[10px] sm:text-xs font-mono font-bold uppercase tracking-wider">
+                    <span>Verified Review • 5.0 Rating</span>
                   </div>
 
                   <p className="text-xs sm:text-sm text-zinc-700 italic font-dmsans leading-relaxed">

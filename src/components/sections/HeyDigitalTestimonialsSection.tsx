@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Star, ChevronLeft, ChevronRight, Quote, CheckCircle2 } from "lucide-react"
+import { ChevronLeft, ChevronRight, Quote, CheckCircle2 } from "lucide-react"
 import { testimonialsData, TestimonialItem } from "@/data/testimonials"
 import { HeyDigitalButton } from "@/components/ui/HeyDigitalButton"
 import { useNavigation } from "@/context/NavigationContext"
@@ -62,12 +62,10 @@ export const HeyDigitalTestimonialsSection: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
             <div className="lg:col-span-8 space-y-6">
-              {/* Star Rating & Metric Badge */}
-              <div className="flex flex-wrap items-center gap-4">
-                <div className="flex items-center gap-1 text-purple-400">
-                  {[...Array(activeReview.stars)].map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-purple-400 text-purple-400" />
-                  ))}
+              {/* Rating & Metric Badge */}
+              <div className="flex flex-wrap items-center gap-3 sm:gap-4">
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/30 text-[11px] font-mono font-bold text-purple-400">
+                  <span>5.0 / 5.0 RATING</span>
                 </div>
                 <span className="px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/30 text-[11px] font-mono font-bold text-purple-400">
                   {activeReview.metricBadge}

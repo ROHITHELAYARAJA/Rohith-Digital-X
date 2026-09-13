@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from "react"
 import { motion } from "framer-motion"
-import { Calculator, Check, ArrowRight, Clock, MessageCircle, Sparkles, PackageCheck, Sliders } from "lucide-react"
+import { Calculator, Check, ArrowRight, Clock, MessageCircle, PackageCheck, Sliders } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { TiltCard } from "@/components/ui/tilt-card"
@@ -256,7 +256,6 @@ Please let me know how we can discuss requirements and schedule a kickoff call!`
             viewport={{ once: true }}
             className="text-xs font-bold uppercase tracking-widest text-purple-400 font-mono inline-flex items-center gap-1.5"
           >
-            <Sparkles className="h-3.5 w-3.5" />
             <span>Interactive Scope &amp; Investment Estimator</span>
           </motion.span>
           <motion.h2
