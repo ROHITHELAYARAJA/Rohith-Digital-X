@@ -32,7 +32,7 @@ export const ServicesPage: React.FC = () => {
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
-            className="text-4xl sm:text-6xl md:text-7xl lg:text-[5rem] font-bold tracking-tight text-white leading-[1.07] font-manrope text-balance max-w-4xl mx-auto"
+            className="text-2xl sm:text-5xl md:text-6xl lg:text-[5rem] font-bold tracking-tight text-white leading-[1.12] sm:leading-[1.07] font-manrope text-balance max-w-4xl mx-auto"
           >
             Full-stack software built to{" "}
             <span className="font-playfair italic font-medium text-[#FF4D3D] inline-block px-1">
@@ -45,12 +45,12 @@ export const ServicesPage: React.FC = () => {
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.14, ease: [0.22, 1, 0.36, 1] }}
-            className="text-base sm:text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto font-normal leading-relaxed font-dmsans"
+            className="text-xs sm:text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto font-normal leading-relaxed font-dmsans px-3"
           >
-            We engineer high-velocity web platforms, native mobile applications, and autonomous AI systems — delivered in 14 days directly by founder Rohith E.
+            We engineer high-velocity web platforms, native mobile applications, and autonomous AI systems — delivered in 14 days directly by founder Rohith&nbsp;E.
           </motion.p>
 
-          <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-2.5 sm:gap-3 pt-2">
             <HeyDigitalButton
               variant="orange"
               size="lg"
@@ -71,33 +71,33 @@ export const ServicesPage: React.FC = () => {
       </section>
 
       {/* Services Grid (Deep Black Background with Purple/Orange Accents) */}
-      <section className="py-14 sm:py-18 bg-[#090A0D] text-white border-b border-zinc-800/80">
-        <div className="container max-w-6xl mx-auto px-4 sm:px-6 space-y-10">
+      <section className="py-12 sm:py-18 bg-[#090A0D] text-white border-b border-zinc-800/80">
+        <div className="container max-w-6xl mx-auto px-4 sm:px-6 space-y-8 sm:space-y-10">
           
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-zinc-800">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-6 pb-5 sm:pb-6 border-b border-zinc-800">
             <div>
-              <span className="text-[11px] font-mono font-bold tracking-widest uppercase text-[#FF4D3D]">
+              <span className="text-[10px] sm:text-[11px] font-mono font-bold tracking-widest uppercase text-[#FF4D3D]">
                 THREE SPECIALTIES
               </span>
-              <h2 className="text-3xl sm:text-5xl font-bold text-white tracking-tight font-manrope mt-2">
+              <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight font-manrope mt-1.5 sm:mt-2">
                 Focused mastery. Zero fluff.
               </h2>
             </div>
-            <p className="text-sm text-zinc-400 max-w-md font-dmsans">
+            <p className="text-xs sm:text-sm text-zinc-400 max-w-md font-dmsans">
               We focus on the three highest-leverage digital assets a modern business needs to scale and dominate their category.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             
             {/* Service 1: Web Development (Sky Blue Specialty) */}
-            <div className="p-8 rounded-3xl bg-zinc-950/80 border border-zinc-800 hover:border-sky-500/70 hover:shadow-[0_0_25px_rgba(14,165,233,0.3)] transition-all flex flex-col justify-between group backdrop-blur-sm">
-              <div className="space-y-5">
+            <div className="p-5 sm:p-8 rounded-2xl sm:rounded-3xl bg-zinc-950/80 border border-zinc-800 hover:border-sky-500/70 hover:shadow-[0_0_25px_rgba(14,165,233,0.3)] transition-all flex flex-col justify-between group backdrop-blur-sm">
+              <div className="space-y-4 sm:space-y-5">
                 <div className="flex items-center justify-between">
-                  <div className="h-12 w-12 rounded-2xl bg-sky-950/60 border border-sky-800/60 text-sky-400 flex items-center justify-center font-bold group-hover:scale-110 transition-transform">
-                    <Code className="h-6 w-6" />
+                  <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-xl sm:rounded-2xl bg-sky-950/60 border border-sky-800/60 text-sky-400 flex items-center justify-center font-bold group-hover:scale-110 transition-transform">
+                    <Code className="h-5 w-5 sm:h-6 sm:w-6" />
                   </div>
-                  <span className="text-xs font-mono font-bold text-zinc-400">01 / WEB</span>
+                  <span className="text-[11px] sm:text-xs font-mono font-bold text-zinc-400">01 / WEB</span>
                 </div>
 
                 <div>
@@ -141,23 +141,23 @@ export const ServicesPage: React.FC = () => {
             </div>
 
             {/* Service 2: Mobile Apps */}
-            <div className="p-8 rounded-3xl bg-zinc-950/80 border border-zinc-800 hover:border-[#FF4D3D]/70 hover:shadow-orange-glow transition-all flex flex-col justify-between group backdrop-blur-sm">
-              <div className="space-y-5">
+            <div className="p-5 sm:p-8 rounded-2xl sm:rounded-3xl bg-zinc-950/80 border border-zinc-800 hover:border-[#FF4D3D]/70 hover:shadow-orange-glow transition-all flex flex-col justify-between group backdrop-blur-sm">
+              <div className="space-y-4 sm:space-y-5">
                 <div className="flex items-center justify-between">
-                  <div className="h-12 w-12 rounded-2xl bg-orange-950/60 border border-orange-800/60 text-[#FF4D3D] flex items-center justify-center font-bold group-hover:scale-110 transition-transform">
-                    <Smartphone className="h-6 w-6" />
+                  <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-xl sm:rounded-2xl bg-orange-950/60 border border-orange-800/60 text-[#FF4D3D] flex items-center justify-center font-bold group-hover:scale-110 transition-transform">
+                    <Smartphone className="h-5 w-5 sm:h-6 sm:w-6" />
                   </div>
-                  <span className="text-xs font-mono font-bold text-zinc-400">02 / APP</span>
+                  <span className="text-[11px] sm:text-xs font-mono font-bold text-zinc-400">02 / APP</span>
                 </div>
 
                 <div>
-                  <h3 className="text-2xl font-bold text-white font-manrope">Mobile Apps</h3>
-                  <p className="text-sm text-zinc-400 mt-2 leading-relaxed font-dmsans">
+                  <h3 className="text-xl sm:text-2xl font-bold text-white font-manrope">Mobile Apps</h3>
+                  <p className="text-xs sm:text-sm text-zinc-400 mt-1.5 sm:mt-2 leading-relaxed font-dmsans">
                     Native-grade cross-platform apps for iOS and Android with push notifications, offline SQLite sync, and App Store publishing support.
                   </p>
                 </div>
 
-                <ul className="space-y-2.5 text-xs text-zinc-300 pt-2 border-t border-zinc-800">
+                <ul className="space-y-2 sm:space-y-2.5 text-xs text-zinc-300 pt-2 border-t border-zinc-800">
                   <li className="flex items-center gap-2">
                     <CheckCircle2 className="h-4 w-4 text-[#FF4D3D] shrink-0" />
                     <span>React Native &amp; Flutter high-velocity UI</span>
@@ -173,17 +173,17 @@ export const ServicesPage: React.FC = () => {
                 </ul>
               </div>
 
-              <div className="pt-8 flex flex-col gap-2.5">
+              <div className="pt-6 sm:pt-8 flex flex-col gap-2 sm:gap-2.5">
                 <button
                   onClick={() => navigate("services-mobile")}
-                  className="w-full py-3 px-4 rounded-xl bg-[#FF4D3D] hover:bg-[#FF3B2B] text-white font-bold text-xs transition-all flex items-center justify-center gap-2 cursor-pointer shadow-md"
+                  className="w-full py-2.5 sm:py-3 px-4 rounded-xl bg-[#FF4D3D] hover:bg-[#FF3B2B] text-white font-bold text-xs transition-all flex items-center justify-center gap-2 cursor-pointer shadow-md"
                 >
                   <span>Explore Mobile Service</span>
                   <ArrowRight className="h-3.5 w-3.5" />
                 </button>
                 <button
                   onClick={() => handleSelectService("Mobile App Development", "₹50,000 - ₹1,00,000")}
-                  className="w-full py-2.5 px-4 rounded-xl border border-zinc-800 hover:border-zinc-700 bg-zinc-900/60 text-zinc-300 text-xs font-semibold transition-all cursor-pointer hover:text-white"
+                  className="w-full py-2 sm:py-2.5 px-4 rounded-xl border border-zinc-800 hover:border-zinc-700 bg-zinc-900/60 text-zinc-300 text-xs font-semibold transition-all cursor-pointer hover:text-white"
                 >
                   Book App Sprint
                 </button>
@@ -191,18 +191,18 @@ export const ServicesPage: React.FC = () => {
             </div>
 
             {/* Service 3: AI & Automation */}
-            <div className="p-8 rounded-3xl bg-zinc-950/80 border border-zinc-800 hover:border-purple-500/70 hover:shadow-purple-glow transition-all flex flex-col justify-between group backdrop-blur-sm">
-              <div className="space-y-5">
+            <div className="p-5 sm:p-8 rounded-2xl sm:rounded-3xl bg-zinc-950/80 border border-zinc-800 hover:border-purple-500/70 hover:shadow-purple-glow transition-all flex flex-col justify-between group backdrop-blur-sm">
+              <div className="space-y-4 sm:space-y-5">
                 <div className="flex items-center justify-between">
-                  <div className="h-12 w-12 rounded-2xl bg-purple-950/60 border border-purple-800/60 text-purple-400 flex items-center justify-center font-bold group-hover:scale-110 transition-transform">
-                    <Bot className="h-6 w-6" />
+                  <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-xl sm:rounded-2xl bg-purple-950/60 border border-purple-800/60 text-purple-400 flex items-center justify-center font-bold group-hover:scale-110 transition-transform">
+                    <Bot className="h-5 w-5 sm:h-6 sm:w-6" />
                   </div>
-                  <span className="text-xs font-mono font-bold text-zinc-400">03 / AUTO</span>
+                  <span className="text-[11px] sm:text-xs font-mono font-bold text-zinc-400">03 / AUTO</span>
                 </div>
 
                 <div>
-                  <h3 className="text-2xl font-bold text-white font-manrope">Automation &amp; AI</h3>
-                  <p className="text-sm text-zinc-400 mt-2 leading-relaxed font-dmsans">
+                  <h3 className="text-xl sm:text-2xl font-bold text-white font-manrope">Automation &amp; AI</h3>
+                  <p className="text-xs sm:text-sm text-zinc-400 mt-1.5 sm:mt-2 leading-relaxed font-dmsans">
                     Autonomous WhatsApp lead capture, 24/7 AI customer support bots, and automated CRM pipelines that save 20+ hours of manual labor per week.
                   </p>
                 </div>

@@ -114,20 +114,20 @@ const StackedCard: React.FC<{
       }}
     >
       <div
-        className={`relative rounded-[2rem] sm:rounded-[2.5rem] p-6 sm:p-10 lg:p-12 border ${card.borderColor} ${card.bgColor} shadow-2xl transition-all duration-300 overflow-hidden`}
+        className={`relative rounded-2xl sm:rounded-[2.5rem] p-4 sm:p-10 lg:p-12 border ${card.borderColor} ${card.bgColor} shadow-2xl transition-all duration-300 overflow-hidden`}
       >
         {/* Subtle decorative watermark */}
-        <div className="absolute top-4 right-8 font-trench text-[90px] sm:text-[140px] font-bold text-black/[0.03] select-none pointer-events-none leading-none">
+        <div className="absolute top-4 right-6 sm:right-8 font-trench text-[50px] sm:text-[140px] font-bold text-black/[0.03] select-none pointer-events-none leading-none">
           0{index + 1}
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
           
           {/* Left Column: Project Details */}
-          <div className="lg:col-span-6 space-y-4 sm:space-y-6">
+          <div className="lg:col-span-6 space-y-3.5 sm:space-y-6">
             
             {/* Tagline / Categories with Diamond Separators */}
-            <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap text-[10px] sm:text-xs font-pilcrow font-bold uppercase tracking-wider text-zinc-600">
+            <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap text-[9px] sm:text-xs font-pilcrow font-bold uppercase tracking-wider text-zinc-600">
               {card.tags.map((tag, tIdx) => (
                 <React.Fragment key={tIdx}>
                   <span className="hover:text-zinc-950 transition-colors">{tag}</span>
@@ -140,11 +140,11 @@ const StackedCard: React.FC<{
 
             {/* Brand Title with Amber Period */}
             <div>
-              <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-zinc-950 leading-tight font-manrope">
+              <h3 className="text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-zinc-950 leading-tight font-manrope">
                 {card.brandName}
                 <span className="text-[#FF3B30]">.</span>
               </h3>
-              <p className="text-sm sm:text-base font-bold text-zinc-800 mt-1 font-playfair">
+              <p className="text-xs sm:text-base font-bold text-zinc-800 mt-0.5 sm:mt-1 font-playfair">
                 {card.title}
               </p>
             </div>
@@ -155,11 +155,11 @@ const StackedCard: React.FC<{
             </p>
 
             {/* Key Capabilities Pills */}
-            <div className="flex flex-wrap gap-1.5 pt-1">
+            <div className="flex flex-wrap gap-1 sm:gap-1.5 pt-0.5 sm:pt-1">
               {card.fullProject.technologies.map((tech, techIdx) => (
                 <span
                   key={techIdx}
-                  className="text-[10px] sm:text-xs font-mono font-medium px-2.5 py-1 rounded-md bg-white border border-zinc-200/80 text-zinc-700"
+                  className="text-[9px] sm:text-xs font-mono font-medium px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-md bg-white border border-zinc-200/80 text-zinc-700"
                 >
                   {tech}
                 </span>
@@ -170,10 +170,10 @@ const StackedCard: React.FC<{
             <div className="pt-2 sm:pt-4">
               <button
                 onClick={() => onOpenModal(card.fullProject)}
-                className="inline-flex items-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-zinc-950 text-white font-bold text-xs sm:text-sm shadow-md hover:bg-purple-600 hover:text-white transition-all duration-300 group/btn cursor-pointer active:scale-95"
+                className="inline-flex items-center gap-2 px-5 sm:px-7 py-2.5 sm:py-3.5 rounded-full bg-zinc-950 text-white font-bold text-xs sm:text-sm shadow-md hover:bg-purple-600 hover:text-white transition-all duration-300 group/btn cursor-pointer active:scale-95"
               >
                 <span>PREVIEW THE UI</span>
-                <ArrowUpRight className="h-4 w-4 transition-transform group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 text-purple-400 group-hover/btn:text-white" />
+                <ArrowUpRight className="h-3.5 w-3.5 sm:h-4 sm:w-4 transition-transform group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 text-purple-400 group-hover/btn:text-white" />
               </button>
             </div>
 
@@ -235,7 +235,7 @@ export const WorkSection: React.FC<WorkSectionProps> = ({ onDiscussSimilar }) =>
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-zinc-950 max-w-4xl mx-auto leading-[1.08] font-manrope"
+            className="text-2xl sm:text-4xl md:text-6xl font-bold tracking-tight text-zinc-950 max-w-4xl mx-auto leading-[1.12] sm:leading-[1.08] font-manrope"
           >
             Engineered for <span className="font-playfair italic font-medium text-[#FF3B30]">scale</span> and measurable growth<span className="text-[#FF3B30]">.</span>
           </motion.h2>
@@ -246,14 +246,14 @@ export const WorkSection: React.FC<WorkSectionProps> = ({ onDiscussSimilar }) =>
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.18 }}
-            className="text-sm sm:text-base text-zinc-600 max-w-2xl mx-auto font-normal leading-relaxed font-dmsans"
+            className="text-xs sm:text-base text-zinc-600 max-w-2xl mx-auto font-normal leading-relaxed font-dmsans"
           >
-            Every product below was architected, coded, and deployed directly by Rohith E. Zero template bloat, sub-0.4s load times, and custom full-stack infrastructure.
+            Every product below was architected, coded, and deployed directly by founder Rohith&nbsp;E. Zero template bloat, sub-0.4s load times, and custom full-stack infrastructure.
           </motion.p>
         </div>
 
         {/* Filter Navigation Capsule Bar (Exact Match to User Reference Screenshot) */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-2">
           
           {/* Left Capsule Filter Pills */}
           <div className="flex items-center gap-1 p-1 rounded-full bg-[#F4F4F5] border border-zinc-200/90 shadow-2xs overflow-x-auto max-w-full no-scrollbar">
@@ -263,14 +263,14 @@ export const WorkSection: React.FC<WorkSectionProps> = ({ onDiscussSimilar }) =>
                 <button
                   key={cat.id}
                   onClick={() => setActiveCategory(cat.id)}
-                  className={`px-3.5 sm:px-4 py-1.5 rounded-full text-xs font-bold font-pilcrow transition-all flex items-center gap-1.5 cursor-pointer whitespace-nowrap ${
+                  className={`px-2.5 sm:px-4 py-1 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-bold font-pilcrow transition-all flex items-center gap-1 sm:gap-1.5 cursor-pointer whitespace-nowrap ${
                     isActive
                       ? "bg-zinc-950 text-white shadow-xs"
                       : "text-zinc-600 hover:text-zinc-950 hover:bg-zinc-200/60"
                   }`}
                 >
                   <span>{cat.label}</span>
-                  <span className={`text-[10px] ${isActive ? "text-zinc-400" : "text-zinc-400 font-normal"}`}>
+                  <span className={`text-[9px] sm:text-[10px] ${isActive ? "text-zinc-400" : "text-zinc-400 font-normal"}`}>
                     {cat.count < 10 ? `0${cat.count}` : cat.count}
                   </span>
                 </button>

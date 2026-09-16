@@ -87,7 +87,7 @@ export const FastlaneSpotlightSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-          className="flex flex-wrap items-center justify-center gap-2 sm:gap-3"
+          className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-3"
         >
           {SPOTLIGHT_STORIES.map((story, idx) => {
             const isActive = idx === activeStoryIdx
@@ -95,14 +95,14 @@ export const FastlaneSpotlightSection: React.FC = () => {
               <button
                 key={story.id}
                 onClick={() => setActiveStoryIdx(idx)}
-                className={`px-4 sm:px-5 py-2 rounded-full text-xs font-manrope font-bold transition-all cursor-pointer select-none flex items-center gap-2 ${
+                className={`px-3 sm:px-5 py-1.5 sm:py-2 rounded-full text-[11px] sm:text-xs font-manrope font-bold transition-all cursor-pointer select-none flex items-center gap-1.5 sm:gap-2 ${
                   isActive
-                    ? "bg-zinc-950 text-white shadow-md scale-105"
+                    ? "bg-zinc-950 text-white shadow-md scale-[1.02] sm:scale-105"
                     : "bg-zinc-100 hover:bg-zinc-200 text-zinc-700"
                 }`}
               >
                 <span>{story.client}</span>
-                <span className={`text-[10px] px-2 py-0.5 rounded-full font-bold ${
+                <span className={`text-[9px] sm:text-[10px] px-1.5 sm:px-2 py-0.5 rounded-full font-bold ${
                   isActive ? "bg-[#FF4D3D] text-white" : "bg-zinc-200 text-zinc-600"
                 }`}>
                   {story.badge}
@@ -118,7 +118,7 @@ export const FastlaneSpotlightSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          className="rounded-3xl bg-zinc-50/90 border border-zinc-200/90 p-5 sm:p-12 lg:p-16 shadow-[0_16px_48px_rgba(0,0,0,0.04)] relative overflow-hidden"
+          className="rounded-2xl sm:rounded-3xl bg-zinc-50/90 border border-zinc-200/90 p-4 sm:p-12 lg:p-16 shadow-[0_16px_48px_rgba(0,0,0,0.04)] relative overflow-hidden"
         >
           <AnimatePresence mode="wait">
             <motion.div
@@ -127,34 +127,34 @@ export const FastlaneSpotlightSection: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -14 }}
               transition={{ duration: 0.35, ease: "easeOut" }}
-              className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center"
+              className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-14 items-center"
             >
               {/* Left Column: Spotlight Text & The Famous Orange/Red Box Button */}
-              <div className="lg:col-span-7 space-y-6 sm:space-y-7">
+              <div className="lg:col-span-7 space-y-4 sm:space-y-7">
                 
                 {/* Image 5 Style SPOTLIGHT Tag without any blinking dots */}
-                <div className="inline-flex items-center gap-2.5 px-3.5 sm:px-4 py-1.5 rounded-full bg-white border border-zinc-200 shadow-xs text-xs font-manrope font-bold tracking-wider text-zinc-800">
-                  <span className="uppercase text-[11px] font-bold text-[#FF3B30] tracking-widest">
+                <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full bg-white border border-zinc-200 shadow-xs text-xs font-manrope font-bold tracking-wider text-zinc-800">
+                  <span className="uppercase text-[10px] sm:text-[11px] font-bold text-[#FF3B30] tracking-widest">
                     SPOTLIGHT
                   </span>
-                  <span className="text-zinc-500 font-semibold">{currentStory.category}</span>
+                  <span className="text-zinc-500 font-semibold text-[11px] sm:text-xs">{currentStory.category}</span>
                 </div>
 
-                {/* Giant Bold Headline */}
-                <h3 className="text-2xl sm:text-4xl lg:text-6xl font-bold text-zinc-950 font-manrope tracking-tight leading-[1.12] sm:leading-[1.08] text-balance">
+                {/* Responsive Headline */}
+                <h3 className="text-xl sm:text-4xl lg:text-5xl font-bold text-zinc-950 font-manrope tracking-tight leading-[1.15] sm:leading-[1.08] text-balance">
                   {currentStory.metricHeadline}
                 </h3>
 
                 {/* Punchy 2-line Subtitle */}
-                <p className="text-sm sm:text-base lg:text-lg text-zinc-600 font-normal leading-relaxed font-dmsans max-w-xl">
+                <p className="text-xs sm:text-base lg:text-lg text-zinc-600 font-normal leading-relaxed font-dmsans max-w-xl">
                   {currentStory.summary}
                 </p>
 
                 {/* THE SIGNATURE ORANGE/RED BOX BUTTON */}
-                <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto">
+                <div className="pt-1 sm:pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3 w-full sm:w-auto">
                   <button
                     onClick={() => navigate("contact")}
-                    className="w-full sm:w-auto justify-center px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl sm:rounded-2xl bg-gradient-to-r from-[#FF3B30] via-[#FF4D3D] to-[#FF6B3D] text-white font-manrope font-bold text-sm sm:text-base shadow-[0_12px_28px_rgba(255,59,48,0.38)] hover:shadow-[0_16px_36px_rgba(255,59,48,0.52)] hover:scale-[1.02] active:scale-95 transition-all duration-200 flex items-center gap-2.5 cursor-pointer select-none group text-center"
+                    className="w-full sm:w-auto justify-center px-5 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl bg-gradient-to-r from-[#FF3B30] via-[#FF4D3D] to-[#FF6B3D] text-white font-manrope font-bold text-xs sm:text-base shadow-[0_12px_28px_rgba(255,59,48,0.38)] hover:shadow-[0_16px_36px_rgba(255,59,48,0.52)] hover:scale-[1.02] active:scale-95 transition-all duration-200 flex items-center gap-2.5 cursor-pointer select-none group text-center"
                   >
                     <span>Get started for free</span>
                     <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -162,82 +162,82 @@ export const FastlaneSpotlightSection: React.FC = () => {
 
                   <button
                     onClick={() => navigate("work")}
-                    className="w-full sm:w-auto justify-center px-5 py-3.5 rounded-xl border border-zinc-300 hover:border-zinc-400 bg-white hover:bg-zinc-100 text-zinc-800 font-manrope font-semibold text-xs sm:text-sm transition-all cursor-pointer text-center"
+                    className="w-full sm:w-auto justify-center px-4 sm:px-5 py-3 sm:py-3.5 rounded-xl border border-zinc-300 hover:border-zinc-400 bg-white hover:bg-zinc-100 text-zinc-800 font-manrope font-semibold text-xs sm:text-sm transition-all cursor-pointer text-center"
                   >
                     View Case Study
                   </button>
                 </div>
 
                 {/* Founder Sprint Guarantee Line */}
-                <div className="flex items-center gap-2 text-xs font-dmsans text-zinc-500 pt-1 sm:pt-2">
-                  <CheckCircle2 className="h-4 w-4 text-[#FF3B30] shrink-0" />
-                  <span className="leading-snug">Full IP ownership transferred immediately upon deployment • Handled directly by Rohith E</span>
+                <div className="flex items-center gap-2 text-[11px] sm:text-xs font-dmsans text-zinc-500 pt-1">
+                  <CheckCircle2 className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-[#FF3B30] shrink-0" />
+                  <span className="leading-snug">Full IP ownership transferred immediately • Handled directly by Rohith&nbsp;E.</span>
                 </div>
 
               </div>
 
               {/* Right Column: Creative Live Metrics & Testimonial Card */}
-              <div className="lg:col-span-5 space-y-5 sm:space-y-6">
+              <div className="lg:col-span-5 space-y-3.5 sm:space-y-6">
                 
                 {/* 3 Metric Mini-Counters */}
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-3">
-                  <div className="p-3 sm:p-4 rounded-2xl bg-white border border-zinc-200/90 shadow-xs text-center flex sm:flex-col items-center justify-between sm:justify-center">
-                    <div className="text-lg sm:text-2xl font-bold text-zinc-950 font-manrope">
+                <div className="grid grid-cols-3 gap-2 sm:gap-3">
+                  <div className="p-2 sm:p-4 rounded-xl sm:rounded-2xl bg-white border border-zinc-200/90 shadow-xs text-center flex flex-col items-center justify-center">
+                    <div className="text-base sm:text-2xl font-bold text-zinc-950 font-manrope">
                       {currentStory.stat1.value}
                     </div>
-                    <div className="text-[11px] sm:text-xs text-zinc-500 font-dmsans font-medium mt-0.5 sm:mt-1 leading-tight">
+                    <div className="text-[9px] sm:text-xs text-zinc-500 font-dmsans font-medium mt-0.5 sm:mt-1 leading-tight">
                       {currentStory.stat1.label}
                     </div>
                   </div>
 
-                  <div className="p-3 sm:p-4 rounded-2xl bg-white border border-zinc-200/90 shadow-xs text-center flex sm:flex-col items-center justify-between sm:justify-center">
-                    <div className="text-lg sm:text-2xl font-bold text-[#FF3B30] font-manrope">
+                  <div className="p-2 sm:p-4 rounded-xl sm:rounded-2xl bg-white border border-zinc-200/90 shadow-xs text-center flex flex-col items-center justify-center">
+                    <div className="text-base sm:text-2xl font-bold text-[#FF3B30] font-manrope">
                       {currentStory.stat2.value}
                     </div>
-                    <div className="text-[11px] sm:text-xs text-zinc-500 font-dmsans font-medium mt-0.5 sm:mt-1 leading-tight">
+                    <div className="text-[9px] sm:text-xs text-zinc-500 font-dmsans font-medium mt-0.5 sm:mt-1 leading-tight">
                       {currentStory.stat2.label}
                     </div>
                   </div>
 
-                  <div className="p-3 sm:p-4 rounded-2xl bg-white border border-zinc-200/90 shadow-xs text-center flex sm:flex-col items-center justify-between sm:justify-center">
-                    <div className="text-lg sm:text-2xl font-bold text-purple-600 font-manrope">
+                  <div className="p-2 sm:p-4 rounded-xl sm:rounded-2xl bg-white border border-zinc-200/90 shadow-xs text-center flex flex-col items-center justify-center">
+                    <div className="text-base sm:text-2xl font-bold text-purple-600 font-manrope">
                       {currentStory.stat3.value}
                     </div>
-                    <div className="text-[11px] sm:text-xs text-zinc-500 font-dmsans font-medium mt-0.5 sm:mt-1 leading-tight">
+                    <div className="text-[9px] sm:text-xs text-zinc-500 font-dmsans font-medium mt-0.5 sm:mt-1 leading-tight">
                       {currentStory.stat3.label}
                     </div>
                   </div>
                 </div>
 
                 {/* Client Quote Card (No Star icons, clean verified badge) */}
-                <div className="p-5 sm:p-6 rounded-2xl bg-white border border-zinc-200/90 shadow-sm space-y-3 sm:space-y-4">
-                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-purple-50 border border-purple-200 text-purple-700 text-[10px] sm:text-xs font-mono font-bold uppercase tracking-wider">
+                <div className="p-3.5 sm:p-6 rounded-xl sm:rounded-2xl bg-white border border-zinc-200/90 shadow-sm space-y-2.5 sm:space-y-4">
+                  <div className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-purple-50 border border-purple-200 text-purple-700 text-[9px] sm:text-xs font-mono font-bold uppercase tracking-wider">
                     <span>Verified Review • 5.0 Rating</span>
                   </div>
 
-                  <p className="text-xs sm:text-sm text-zinc-700 italic font-dmsans leading-relaxed">
+                  <p className="text-[11px] sm:text-sm text-zinc-700 italic font-dmsans leading-relaxed">
                     "{currentStory.quote}"
                   </p>
 
-                  <div className="pt-3 border-t border-zinc-100 flex items-center justify-between">
+                  <div className="pt-2 sm:pt-3 border-t border-zinc-100 flex items-center justify-between">
                     <div>
                       <div className="font-bold text-xs sm:text-sm text-zinc-950 font-manrope">
                         {currentStory.author}
                       </div>
-                      <div className="text-[11px] text-zinc-500 font-dmsans">
+                      <div className="text-[10px] sm:text-[11px] text-zinc-500 font-dmsans">
                         {currentStory.role}
                       </div>
                     </div>
-                    <div className="h-8 w-8 rounded-full bg-zinc-100 flex items-center justify-center font-bold text-xs text-zinc-700">
+                    <div className="h-6 w-6 sm:h-8 sm:w-8 rounded-full bg-zinc-100 flex items-center justify-center font-bold text-xs text-zinc-700">
                       ✓
                     </div>
                   </div>
                 </div>
 
                 {/* Micro Guarantee Tag */}
-                <div className="p-4 rounded-xl bg-gradient-to-r from-zinc-900 to-zinc-950 text-white flex items-center justify-between text-xs font-dmsans">
+                <div className="p-3 sm:p-4 rounded-lg sm:rounded-xl bg-gradient-to-r from-zinc-900 to-zinc-950 text-white flex items-center justify-between text-[11px] sm:text-xs font-dmsans">
                   <div className="flex items-center gap-2">
-                    <Zap className="h-4 w-4 text-purple-400" />
+                    <Zap className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-purple-400" />
                     <span>Next Sprint Kickoff</span>
                   </div>
                   <span className="font-bold font-mono text-purple-400">Available This Week</span>

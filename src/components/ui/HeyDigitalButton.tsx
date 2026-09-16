@@ -33,13 +33,13 @@ export const HeyDigitalButton: React.FC<HeyDigitalButtonProps> = ({
 
   const sizeClasses =
     size === "sm"
-      ? "px-4 py-2 text-xs"
+      ? "px-3.5 sm:px-4 py-1.5 sm:py-2 text-[10px] sm:text-xs"
       : size === "lg"
-      ? "px-7 py-4 text-sm"
-      : "px-6 py-3 text-xs sm:text-sm"
+      ? "px-4.5 sm:px-7 py-2.5 sm:py-3.5 text-xs sm:text-sm"
+      : "px-4 sm:px-6 py-2 sm:py-3 text-xs sm:text-sm"
 
   const containerClasses = `
-    group relative inline-flex items-center gap-3 ${sizeClasses} rounded-full
+    group relative inline-flex items-center justify-center gap-2 sm:gap-3 ${sizeClasses} rounded-full
     font-sans font-bold uppercase tracking-wider select-none cursor-pointer
     transition-all duration-300 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed
     ${
@@ -63,7 +63,7 @@ export const HeyDigitalButton: React.FC<HeyDigitalButtonProps> = ({
       <span className="truncate">{children}</span>
       <span
         className={`
-          flex items-center justify-center h-7 w-7 sm:h-8 sm:w-8 rounded-full shrink-0 transition-transform duration-300
+          flex items-center justify-center h-6 w-6 sm:h-7 sm:w-7 rounded-full shrink-0 transition-transform duration-300
           ${
             direction === "right"
               ? "group-hover:translate-x-1"
@@ -82,7 +82,7 @@ export const HeyDigitalButton: React.FC<HeyDigitalButtonProps> = ({
           }
         `}
       >
-        <ArrowIcon className="h-3.5 w-3.5 sm:h-4 sm:w-4 stroke-[2.5]" />
+        <ArrowIcon className="h-3 w-3 sm:h-3.5 sm:w-3.5 stroke-[2.5]" />
       </span>
     </>
   )

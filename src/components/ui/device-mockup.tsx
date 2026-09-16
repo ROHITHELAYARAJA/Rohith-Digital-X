@@ -227,8 +227,8 @@ export const DeviceMockup: React.FC<DeviceMockupProps> = ({ type, variant }) => 
       </div>
 
       {/* Laptop Base Stand / Trackpad */}
-      <div className="relative w-[108%] -left-[4%] h-3 sm:h-3.5 bg-gradient-to-b from-zinc-800 to-zinc-900 rounded-b-xl shadow-lg flex items-center justify-center">
-        <div className="w-16 sm:w-20 h-1 bg-zinc-700 rounded-full" />
+      <div className="relative w-full left-0 sm:w-[106%] sm:-left-[3%] h-2.5 sm:h-3.5 bg-gradient-to-b from-zinc-800 to-zinc-900 rounded-b-xl shadow-lg flex items-center justify-center">
+        <div className="w-12 sm:w-20 h-1 bg-zinc-700 rounded-full" />
       </div>
 
     </div>

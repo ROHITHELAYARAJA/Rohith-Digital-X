@@ -45,17 +45,17 @@ export const DigitalProductCapabilitiesSection: React.FC = () => {
           className="flex flex-col md:flex-row md:items-end justify-between gap-6 max-w-4xl"
         >
           <div className="space-y-3">
-            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-zinc-950 leading-[1.08] font-manrope">
+            <h2 className="text-2xl sm:text-4xl lg:text-6xl font-bold tracking-tight text-zinc-950 leading-[1.12] sm:leading-[1.08] font-manrope">
               Engineered with <span className="font-playfair italic font-medium text-[#FF3B30]">taste</span> and microsecond speed.
             </h2>
           </div>
-          <p className="text-sm sm:text-base text-zinc-600 max-w-md leading-relaxed font-dmsans">
+          <p className="text-xs sm:text-base text-zinc-600 max-w-md leading-relaxed font-dmsans">
             Every digital product built by Rohith Digital X blends editorial elegance with rock-solid full-stack code. Inspired by modern fast-lane workflows.
           </p>
         </motion.div>
 
         {/* Bento Grid: 3-column top row, 2-column bottom row */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           
           {/* Card 1: Coral Red Company Profile Card */}
           <motion.div
@@ -64,7 +64,7 @@ export const DigitalProductCapabilitiesSection: React.FC = () => {
             viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.5, delay: 0.05, ease: [0.22, 1, 0.36, 1] }}
             whileHover={{ y: -4 }}
-            className="rounded-[2rem] bg-gradient-to-br from-[#FF5C4D] via-[#FF4D3D] to-[#E6392A] p-6 sm:p-8 text-white shadow-xl flex flex-col justify-between min-h-[380px] relative overflow-hidden"
+            className="rounded-2xl sm:rounded-[2rem] bg-gradient-to-br from-[#FF5C4D] via-[#FF4D3D] to-[#E6392A] p-4.5 sm:p-8 text-white shadow-xl flex flex-col justify-between min-h-0 sm:min-h-[380px] relative overflow-hidden"
           >
             {/* Subtle glow overlay */}
             <div className="absolute top-0 right-0 w-48 h-48 bg-white/10 rounded-full blur-2xl pointer-events-none" />
@@ -129,15 +129,15 @@ export const DigitalProductCapabilitiesSection: React.FC = () => {
             viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.5, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
             whileHover={{ y: -4 }}
-            className="rounded-[2rem] bg-[#EFE8D8] border border-[#E2D8C7] p-6 sm:p-8 flex flex-col justify-between min-h-[380px] shadow-sm relative overflow-hidden"
+            className="rounded-2xl sm:rounded-[2rem] bg-[#EFE8D8] border border-[#E2D8C7] p-4.5 sm:p-8 flex flex-col justify-between min-h-0 sm:min-h-[380px] shadow-sm relative overflow-hidden"
           >
             {/* Inner Floating White Modal */}
-            <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-5 border border-white/60 shadow-md space-y-4">
-              <div className="flex items-center text-[11px] font-semibold text-zinc-600">
+            <div className="bg-white/95 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-5 border border-white/60 shadow-md space-y-3.5 sm:space-y-4">
+              <div className="flex items-center text-[10px] sm:text-[11px] font-semibold text-zinc-600">
                 <span>Bespoke Engineering Studio</span>
               </div>
 
-              <div className="text-2xl sm:text-3xl font-bold text-zinc-950 tracking-tight font-manrope">
+              <div className="text-xl sm:text-3xl font-bold text-zinc-950 tracking-tight font-manrope">
                 Create with <span className="font-playfair italic text-[#FF3B30]">RDX</span>
               </div>
 
@@ -159,8 +159,8 @@ export const DigitalProductCapabilitiesSection: React.FC = () => {
               </div>
             </div>
 
-            <div className="pt-6">
-              <h3 className="text-xl font-bold text-zinc-950 tracking-tight font-manrope">
+            <div className="pt-5 sm:pt-6">
+              <h3 className="text-lg sm:text-xl font-bold text-zinc-950 tracking-tight font-manrope">
                 Crafted Without Templates
               </h3>
               <p className="text-xs text-zinc-600 mt-1 leading-relaxed font-dmsans">
@@ -176,10 +176,10 @@ export const DigitalProductCapabilitiesSection: React.FC = () => {
             viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.5, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
             whileHover={{ y: -4 }}
-            className="rounded-[2rem] bg-white border border-zinc-200/80 p-6 sm:p-8 flex flex-col justify-between min-h-[380px] shadow-sm relative"
+            className="rounded-2xl sm:rounded-[2rem] bg-white border border-zinc-200/80 p-4.5 sm:p-8 flex flex-col justify-between min-h-0 sm:min-h-[380px] shadow-sm relative"
           >
             {/* Calendar UI Mockup */}
-            <div className="bg-zinc-50/80 rounded-2xl p-5 border border-zinc-200/60 space-y-4 text-xs">
+            <div className="bg-zinc-50/80 rounded-xl sm:rounded-2xl p-4 sm:p-5 border border-zinc-200/60 space-y-3.5 sm:space-y-4 text-xs">
               <div className="flex items-center justify-between pb-2 border-b border-zinc-200">
                 <span className="font-bold text-zinc-900">Sprint Cadence</span>
                 <span className="text-zinc-500 text-[11px]">Weekly Sync</span>
@@ -251,9 +251,9 @@ export const DigitalProductCapabilitiesSection: React.FC = () => {
             viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.5, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
             whileHover={{ y: -4 }}
-            className="lg:col-span-8 rounded-[2rem] bg-white border border-zinc-200/80 p-6 sm:p-8 flex flex-col justify-between shadow-sm"
+            className="lg:col-span-8 rounded-2xl sm:rounded-[2rem] bg-white border border-zinc-200/80 p-4.5 sm:p-8 flex flex-col justify-between shadow-sm"
           >
-            <div className="space-y-6">
+            <div className="space-y-5 sm:space-y-6">
               {/* Header Bar with Tabs */}
               <div className="flex items-center justify-between pb-3 border-b border-zinc-100">
                 <div className="flex items-center gap-2">
@@ -286,10 +286,10 @@ export const DigitalProductCapabilitiesSection: React.FC = () => {
               </div>
 
               {/* 3 Metric Sub-Cards (Inspired by Fastlane cards) */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-3.5">
                 
                 {/* Metric 1 */}
-                <div className="p-4 rounded-2xl bg-zinc-50 border border-zinc-200/70 space-y-2">
+                <div className="p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-zinc-50 border border-zinc-200/70 space-y-2">
                   <div className="flex items-center justify-between text-xs font-bold text-zinc-900 font-manrope">
                     <span>Web Core Vitals</span>
                     <Globe className="h-3.5 w-3.5 text-[#FF3B30]" />
@@ -308,7 +308,7 @@ export const DigitalProductCapabilitiesSection: React.FC = () => {
                 </div>
 
                 {/* Metric 2 */}
-                <div className="p-4 rounded-2xl bg-zinc-50 border border-zinc-200/70 space-y-2">
+                <div className="p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-zinc-50 border border-zinc-200/70 space-y-2">
                   <div className="flex items-center justify-between text-xs font-bold text-zinc-900 font-manrope">
                     <span>Mobile Native</span>
                     <Smartphone className="h-3.5 w-3.5 text-indigo-600" />
@@ -327,7 +327,7 @@ export const DigitalProductCapabilitiesSection: React.FC = () => {
                 </div>
 
                 {/* Metric 3 */}
-                <div className="p-4 rounded-2xl bg-zinc-50 border border-zinc-200/70 space-y-2">
+                <div className="p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-zinc-50 border border-zinc-200/70 space-y-2">
                   <div className="flex items-center justify-between text-xs font-bold text-zinc-900 font-manrope">
                     <span>AI & Automation</span>
                     <Bot className="h-3.5 w-3.5 text-purple-600" />
@@ -348,22 +348,22 @@ export const DigitalProductCapabilitiesSection: React.FC = () => {
               </div>
 
               {/* Bottom Input & Coral Button Bar */}
-              <div className="flex items-center gap-2 p-2 rounded-2xl bg-zinc-100/80 border border-zinc-200">
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 p-2 rounded-xl sm:rounded-2xl bg-zinc-100/80 border border-zinc-200">
                 <input
                   type="text"
                   readOnly
                   value="Ready to scale: Web apps, mobile systems & automation"
-                  className="w-full bg-transparent px-3 text-xs text-zinc-700 font-medium focus:outline-none font-dmsans"
+                  className="w-full bg-transparent px-3 text-[11px] sm:text-xs text-zinc-700 font-medium focus:outline-none font-dmsans py-1 sm:py-0"
                 />
-                <button className="shrink-0 px-4 py-2 rounded-xl bg-[#FF3B30] hover:bg-[#E03627] text-white text-xs font-bold transition-all shadow-sm flex items-center gap-1.5 cursor-pointer font-manrope">
+                <button className="shrink-0 px-3.5 py-2 rounded-lg sm:rounded-xl bg-[#FF3B30] hover:bg-[#E03627] text-white text-xs font-bold transition-all shadow-sm flex items-center justify-center gap-1.5 cursor-pointer font-manrope">
                   <span>Explore Stack</span>
                   <ArrowUpRight className="h-3.5 w-3.5" />
                 </button>
               </div>
             </div>
 
-            <div className="pt-6">
-              <h3 className="text-xl font-bold text-zinc-950 tracking-tight font-manrope">
+            <div className="pt-5 sm:pt-6">
+              <h3 className="text-lg sm:text-xl font-bold text-zinc-950 tracking-tight font-manrope">
                 Observability & Production Quality
               </h3>
               <p className="text-xs text-zinc-600 mt-1 leading-relaxed font-dmsans">
@@ -379,7 +379,7 @@ export const DigitalProductCapabilitiesSection: React.FC = () => {
             viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.5, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
             whileHover={{ y: -4 }}
-            className="lg:col-span-4 rounded-[2rem] bg-white border border-zinc-200/80 p-6 sm:p-8 flex flex-col justify-between shadow-sm relative overflow-hidden"
+            className="lg:col-span-4 rounded-2xl sm:rounded-[2rem] bg-white border border-zinc-200/80 p-4.5 sm:p-8 flex flex-col justify-between shadow-sm relative overflow-hidden"
           >
             <div className="space-y-4">
               {/* Floating Visitors Tag */}

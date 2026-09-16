@@ -49,11 +49,11 @@ export const AboutSection: React.FC = () => {
                 A SUMMARY
               </span>
 
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white font-manrope">
+              <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white font-manrope">
                 Know <span className="font-playfair italic font-normal text-zinc-400">me</span> as I am<span className="text-[#FF4D3D]">.</span>
               </h2>
 
-              <p className="text-sm sm:text-base text-zinc-400 leading-relaxed font-normal pt-1 font-dmsans">
+              <p className="text-xs sm:text-base text-zinc-400 leading-relaxed font-normal pt-1 font-dmsans">
                 <span className="text-[#FF4D3D] font-semibold">I design products that get out of the way.</span> 3+ years across SaaS, mobile ecosystems, and consumer platforms — from discovery to deployment. I care about speed, clarity, and the high-fidelity details that elevate a brand.
               </p>
             </div>
@@ -62,35 +62,35 @@ export const AboutSection: React.FC = () => {
             <div className="lg:col-span-6 space-y-0 text-xs sm:text-sm divide-y divide-zinc-800 border-t border-b border-zinc-800">
               
               {/* Row 1: BASED */}
-              <div className="py-3.5 flex items-center justify-between gap-4">
+              <div className="py-2.5 sm:py-3.5 flex flex-col xs:flex-row xs:items-center justify-between gap-1 xs:gap-4">
                 <span className="font-mono text-[10px] sm:text-xs uppercase font-bold tracking-widest text-zinc-500">
                   BASED
                 </span>
-                <div className="flex items-center gap-2.5 font-bold text-white font-sans">
+                <div className="flex items-center gap-2 font-bold text-white font-sans text-xs sm:text-sm">
                   <span>Tamil Nadu, IN</span>
                   <span className="text-zinc-600">·</span>
-                  <span className="font-mono text-xs text-zinc-400">{localTime || "08:38 PM"}</span>
+                  <span className="font-mono text-[11px] sm:text-xs text-zinc-400">{localTime || "08:38 PM"}</span>
                 </div>
               </div>
 
               {/* Row 2: CURRENTLY */}
-              <div className="py-3.5 flex items-center justify-between gap-4">
+              <div className="py-2.5 sm:py-3.5 flex flex-col xs:flex-row xs:items-center justify-between gap-1 xs:gap-4">
                 <span className="font-mono text-[10px] sm:text-xs uppercase font-bold tracking-widest text-zinc-500">
                   CURRENTLY
                 </span>
-                <div className="flex items-center gap-2.5 font-bold text-white font-sans">
+                <div className="flex items-center gap-2 font-bold text-white font-sans text-xs sm:text-sm">
                   <span>Founder &amp; Lead Engineer</span>
                   <span className="text-zinc-600">·</span>
-                  <span className="font-mono text-xs text-zinc-400">rdx.agency</span>
+                  <span className="font-mono text-[11px] sm:text-xs text-zinc-400">rdx.agency</span>
                 </div>
               </div>
 
               {/* Row 3: DOMAIN */}
-              <div className="py-3.5 flex items-center justify-between gap-4">
+              <div className="py-2.5 sm:py-3.5 flex flex-col xs:flex-row xs:items-center justify-between gap-1 xs:gap-4">
                 <span className="font-mono text-[10px] sm:text-xs uppercase font-bold tracking-widest text-zinc-500">
                   DOMAIN
                 </span>
-                <div className="font-semibold text-zinc-300 text-right font-sans">
+                <div className="font-semibold text-zinc-300 text-left xs:text-right font-sans text-xs sm:text-sm">
                   <span>Mobile Apps • Web Platforms • AI Agents</span>
                 </div>
               </div>
@@ -112,23 +112,23 @@ export const AboutSection: React.FC = () => {
         </div>
 
         {/* 3-Frame Showcase */}
-        <div className="space-y-6 text-center border-t border-zinc-800/80 pt-16">
+        <div className="space-y-5 sm:space-y-6 text-center border-t border-zinc-800/80 pt-12 sm:pt-16">
           
           {/* Centered Top Badge */}
           <div className="inline-flex items-center gap-1.5 text-xs font-mono font-bold uppercase tracking-widest text-zinc-500">
             <span>ABOUT &amp; METHODOLOGY</span>
           </div>
 
-          <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white max-w-4xl mx-auto leading-tight font-manrope">
+          <h3 className="text-xl sm:text-3xl lg:text-5xl font-bold tracking-tight text-white max-w-4xl mx-auto leading-tight font-manrope">
             Building Apps<span className="text-[#FF4D3D]">.</span> Designing Products<span className="text-[#FF4D3D]">.</span> Crafting Systems<span className="text-[#FF4D3D]">.</span>
           </h3>
 
-          <p className="text-sm sm:text-base text-zinc-400 max-w-2xl mx-auto font-normal leading-relaxed font-sans">
+          <p className="text-xs sm:text-base text-zinc-400 max-w-2xl mx-auto font-normal leading-relaxed font-sans px-2">
             Software engineer and product builder turning complex problems into calm, high-performance digital products. From architecture to production — obsessed with clarity, speed, and precision.
           </p>
 
           {/* 3 Minimalist Rounded Frames */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 pt-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-8 pt-4">
             
             {/* FRAME 1: System Engineering */}
             <motion.div
@@ -138,33 +138,33 @@ export const AboutSection: React.FC = () => {
               transition={{ duration: 0.4, delay: 0.1 }}
             >
               <TiltCard tiltMaxAngleX={5} tiltMaxAngleY={5} scale={1.02} className="h-full">
-                <div className="rounded-[32px] bg-zinc-950/90 border border-zinc-800/90 p-7 sm:p-8 flex flex-col justify-between h-[340px] sm:h-[380px] shadow-2xl hover:border-[#FF4D3D]/50 hover:shadow-[0_0_25px_rgba(255,77,61,0.2)] hover:bg-zinc-900/60 transition-all duration-300 group">
+                <div className="rounded-2xl sm:rounded-[32px] bg-zinc-950/90 border border-zinc-800/90 p-4.5 sm:p-8 flex flex-col justify-between h-auto min-h-[300px] sm:h-[380px] shadow-2xl hover:border-[#FF4D3D]/50 hover:shadow-[0_0_25px_rgba(255,77,61,0.2)] hover:bg-zinc-900/60 transition-all duration-300 group">
                   
                   {/* Frame Header */}
-                  <div className="space-y-2 text-center">
-                    <span className="text-xs font-mono font-bold uppercase tracking-wider text-zinc-500 flex items-center justify-center gap-1.5">
+                  <div className="space-y-1.5 sm:space-y-2 text-center">
+                    <span className="text-[10px] sm:text-xs font-mono font-bold uppercase tracking-wider text-zinc-500 flex items-center justify-center gap-1.5">
                       <span>FRAME 1</span>
                     </span>
-                    <h4 className="text-xl font-bold text-white font-manrope">Backend &amp; Architecture</h4>
+                    <h4 className="text-lg sm:text-xl font-bold text-white font-manrope">Backend &amp; Architecture</h4>
                   </div>
 
                   {/* Frame Visual Preview */}
-                  <div className="my-auto p-4 rounded-2xl bg-zinc-900/80 border border-zinc-800 space-y-2 text-left">
-                    <div className="flex items-center justify-between text-[10px] font-mono text-zinc-400">
+                  <div className="my-auto p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-zinc-900/80 border border-zinc-800 space-y-2 text-left">
+                    <div className="flex items-center justify-between text-[9px] sm:text-[10px] font-mono text-zinc-400">
                       <span>ENGINEERING DISCIPLINE</span>
                       <span className="text-emerald-400 font-bold">STABLE</span>
                     </div>
                     <p className="text-xs font-medium text-zinc-300 leading-snug font-sans">
                       Java Spring Boot, relational PostgreSQL, database indexing, and strict token authorization.
                     </p>
-                    <div className="flex gap-1.5 pt-1 text-[10px] font-mono text-zinc-400">
+                    <div className="flex gap-1.5 pt-1 text-[9px] sm:text-[10px] font-mono text-zinc-400">
                       <span className="px-2 py-0.5 rounded bg-zinc-800 text-zinc-300">Java 21</span>
                       <span className="px-2 py-0.5 rounded bg-zinc-800 text-zinc-300">SQL</span>
                       <span className="px-2 py-0.5 rounded bg-zinc-800 text-zinc-300">JWT</span>
                     </div>
                   </div>
 
-                  <p className="text-[11px] font-mono uppercase tracking-widest text-zinc-500 text-center">
+                  <p className="text-[10px] sm:text-[11px] font-mono uppercase tracking-widest text-zinc-500 text-center">
                     Resilient Data Models
                   </p>
 
@@ -180,31 +180,31 @@ export const AboutSection: React.FC = () => {
               transition={{ duration: 0.4, delay: 0.2 }}
             >
               <TiltCard tiltMaxAngleX={5} tiltMaxAngleY={5} scale={1.02} className="h-full">
-                <div className="rounded-[32px] bg-zinc-950/90 border border-zinc-800/90 p-7 sm:p-8 flex flex-col justify-between h-[340px] sm:h-[380px] shadow-2xl hover:border-[#FF4D3D]/60 hover:shadow-[0_0_25px_rgba(255,77,61,0.25)] hover:bg-zinc-900/60 transition-all duration-300 group">
+                <div className="rounded-2xl sm:rounded-[32px] bg-zinc-950/90 border border-zinc-800/90 p-4.5 sm:p-8 flex flex-col justify-between h-auto min-h-[300px] sm:h-[380px] shadow-2xl hover:border-[#FF4D3D]/60 hover:shadow-[0_0_25px_rgba(255,77,61,0.25)] hover:bg-zinc-900/60 transition-all duration-300 group">
                   
-                  <div className="space-y-2 text-center">
-                    <span className="text-xs font-mono font-bold uppercase tracking-wider text-zinc-500 flex items-center justify-center gap-1.5">
+                  <div className="space-y-1.5 sm:space-y-2 text-center">
+                    <span className="text-[10px] sm:text-xs font-mono font-bold uppercase tracking-wider text-zinc-500 flex items-center justify-center gap-1.5">
                       <span>FRAME 2</span>
                     </span>
-                    <h4 className="text-xl font-bold text-white font-manrope">UI/UX &amp; Mobile Apps</h4>
+                    <h4 className="text-lg sm:text-xl font-bold text-white font-manrope">UI/UX &amp; Mobile Apps</h4>
                   </div>
 
-                  <div className="my-auto p-4 rounded-2xl bg-zinc-900/80 border border-zinc-800 space-y-2 text-left">
-                    <div className="flex items-center justify-between text-[10px] font-mono text-zinc-400">
+                  <div className="my-auto p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-zinc-900/80 border border-zinc-800 space-y-2 text-left">
+                    <div className="flex items-center justify-between text-[9px] sm:text-[10px] font-mono text-zinc-400">
                       <span>CONVERSION PSYCHOLOGY</span>
                       <span className="text-[#FF4D3D] font-bold">FLUID</span>
                     </div>
                     <p className="text-xs font-medium text-zinc-300 leading-snug font-dmsans">
                       React 19, TypeScript, React Native, micro-animations, and sub-second responsive viewport scaling.
                     </p>
-                    <div className="flex gap-1.5 pt-1 text-[10px] font-mono text-zinc-400">
+                    <div className="flex gap-1.5 pt-1 text-[9px] sm:text-[10px] font-mono text-zinc-400">
                       <span className="px-2 py-0.5 rounded bg-zinc-800 text-zinc-300">React 19</span>
                       <span className="px-2 py-0.5 rounded bg-zinc-800 text-zinc-300">iOS/Android</span>
                       <span className="px-2 py-0.5 rounded bg-zinc-800 text-zinc-300">Tailwind</span>
                     </div>
                   </div>
 
-                  <p className="text-[11px] font-mono uppercase tracking-widest text-zinc-500 text-center">
+                  <p className="text-[10px] sm:text-[11px] font-mono uppercase tracking-widest text-zinc-500 text-center">
                     High-Converting Products
                   </p>
 
@@ -220,31 +220,31 @@ export const AboutSection: React.FC = () => {
               transition={{ duration: 0.4, delay: 0.3 }}
             >
               <TiltCard tiltMaxAngleX={5} tiltMaxAngleY={5} scale={1.02} className="h-full">
-                <div className="rounded-[32px] bg-zinc-950/90 border border-zinc-800/90 p-7 sm:p-8 flex flex-col justify-between h-[340px] sm:h-[380px] shadow-2xl hover:border-[#FF4D3D]/50 hover:shadow-[0_0_25px_rgba(255,77,61,0.2)] hover:bg-zinc-900/60 transition-all duration-300 group">
+                <div className="rounded-2xl sm:rounded-[32px] bg-zinc-950/90 border border-zinc-800/90 p-4.5 sm:p-8 flex flex-col justify-between h-auto min-h-[300px] sm:h-[380px] shadow-2xl hover:border-[#FF4D3D]/50 hover:shadow-[0_0_25px_rgba(255,77,61,0.2)] hover:bg-zinc-900/60 transition-all duration-300 group">
                   
-                  <div className="space-y-2 text-center">
-                    <span className="text-xs font-mono font-bold uppercase tracking-wider text-zinc-500 flex items-center justify-center gap-1.5">
+                  <div className="space-y-1.5 sm:space-y-2 text-center">
+                    <span className="text-[10px] sm:text-xs font-mono font-bold uppercase tracking-wider text-zinc-500 flex items-center justify-center gap-1.5">
                       <span>FRAME 3</span>
                     </span>
-                    <h4 className="text-xl font-bold text-white font-manrope">AI &amp; Autonomous Agents</h4>
+                    <h4 className="text-lg sm:text-xl font-bold text-white font-manrope">AI &amp; Autonomous Agents</h4>
                   </div>
 
-                  <div className="my-auto p-4 rounded-2xl bg-zinc-900/80 border border-zinc-800 space-y-2 text-left">
-                    <div className="flex items-center justify-between text-[10px] font-mono text-zinc-400">
+                  <div className="my-auto p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-zinc-900/80 border border-zinc-800 space-y-2 text-left">
+                    <div className="flex items-center justify-between text-[9px] sm:text-[10px] font-mono text-zinc-400">
                       <span>INTELLIGENT PIPELINES</span>
                       <span className="text-[#FF4D3D] font-bold">SMART</span>
                     </div>
                     <p className="text-xs font-medium text-zinc-300 leading-snug font-dmsans">
                       Trained RAG knowledge bases, 24/7 WhatsApp customer bots, and webhook CRM synchronization.
                     </p>
-                    <div className="flex gap-1.5 pt-1 text-[10px] font-mono text-zinc-400">
+                    <div className="flex gap-1.5 pt-1 text-[9px] sm:text-[10px] font-mono text-zinc-400">
                       <span className="px-2 py-0.5 rounded bg-zinc-800 text-zinc-300">Gemini</span>
                       <span className="px-2 py-0.5 rounded bg-zinc-800 text-zinc-300">RAG</span>
                       <span className="px-2 py-0.5 rounded bg-zinc-800 text-zinc-300">Webhooks</span>
                     </div>
                   </div>
 
-                  <p className="text-[11px] font-mono uppercase tracking-widest text-zinc-500 text-center">
+                  <p className="text-[10px] sm:text-[11px] font-mono uppercase tracking-widest text-zinc-500 text-center">
                     Automated Growth
                   </p>
 

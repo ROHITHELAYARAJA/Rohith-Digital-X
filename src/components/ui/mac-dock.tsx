@@ -198,9 +198,13 @@ const DockIcon: React.FC<DockIconProps> = ({ item, mouseX }) => {
     return val - bounds.x - bounds.width / 2
   })
 
+  const isMobile = typeof window !== "undefined" ? window.innerWidth < 640 : false
+  const defaultSize = isMobile ? 32 : 42
+  const hoverSize = isMobile ? 44 : 66
+  const neighborSize = isMobile ? 38 : 52
+
   // Smooth sinusoidal continuous magnification curve (macOS physics)
-  // Distance 0 (under mouse): 66px, Neighbors (±75px): 52px, Default: 42px
-  const widthSync = useTransform(distance, [-150, -75, 0, 75, 150], [42, 52, 66, 52, 42])
+  const widthSync = useTransform(distance, [-150, -75, 0, 75, 150], [defaultSize, neighborSize, hoverSize, neighborSize, defaultSize])
   const width = useSpring(widthSync, { mass: 0.1, stiffness: 220, damping: 14 })
 
   // Lift icon slightly upward when magnified
@@ -222,7 +226,7 @@ const DockIcon: React.FC<DockIconProps> = ({ item, mouseX }) => {
             animate={{ opacity: 1, y: -58, scale: 1 }}
             exit={{ opacity: 0, y: 6, scale: 0.92 }}
             transition={{ duration: 0.14, ease: "easeOut" }}
-            className="absolute left-1/2 -translate-x-1/2 pointer-events-none z-50 whitespace-nowrap px-3.5 py-1.5 rounded-xl bg-zinc-950 text-white shadow-2xl border border-zinc-700/90 flex flex-col items-center gap-0.5 min-w-[100px]"
+            className="absolute left-1/2 -translate-x-1/2 pointer-events-none z-50 whitespace-nowrap px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-xl bg-zinc-950 text-white shadow-2xl border border-zinc-700/90 flex flex-col items-center gap-0.5 min-w-[90px]"
           >
             <span className="font-bold text-white text-xs tracking-tight font-sans leading-none">{item.title}</span>
             <span className="text-[10px] text-zinc-400 font-mono font-medium leading-none">{item.category}</span>
@@ -236,7 +240,7 @@ const DockIcon: React.FC<DockIconProps> = ({ item, mouseX }) => {
       <motion.div
         style={{ width, height: width, y }}
         whileTap={{ scale: 0.88 }}
-        className="relative flex items-center justify-center rounded-[12px] p-0.5 transition-all shadow-xs"
+        className="relative flex items-center justify-center rounded-[10px] sm:rounded-[12px] p-0.5 transition-all shadow-xs"
       >
         {item.icon}
       </motion.div>
@@ -248,12 +252,12 @@ export const MacDock: React.FC = () => {
   const mouseX = useMotionValue(Infinity)
 
   return (
-    <div className="relative flex flex-col items-center justify-center pt-8 sm:pt-10 pb-2 overflow-x-auto max-w-full scrollbar-none">
+    <div className="relative flex flex-col items-center justify-center pt-5 sm:pt-10 pb-2 overflow-x-auto max-w-full [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
       {/* Floating Dark macOS Dock Pill Container with overflow-visible on larger screens */}
       <div
         onMouseMove={(e) => mouseX.set(e.pageX)}
         onMouseLeave={() => mouseX.set(Infinity)}
-        className="relative flex items-center gap-1.5 sm:gap-2.5 px-3 sm:px-4 py-2 sm:py-2.5 rounded-full bg-[#18181B] backdrop-blur-2xl border border-zinc-700/80 shadow-[0_16px_40px_rgba(0,0,0,0.25)] ring-1 ring-white/10 max-w-full overflow-visible shrink-0"
+        className="relative flex items-center gap-1 sm:gap-2 px-2.5 sm:px-4 py-1.5 sm:py-2.5 rounded-full bg-[#18181B] backdrop-blur-2xl border border-zinc-700/80 shadow-[0_16px_40px_rgba(0,0,0,0.25)] ring-1 ring-white/10 max-w-full overflow-visible shrink-0"
       >
         {AUTHENTIC_APP_TOOLS.map((item) => (
           <DockIcon key={item.id} item={item} mouseX={mouseX} />

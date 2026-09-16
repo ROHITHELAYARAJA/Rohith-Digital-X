@@ -34,10 +34,10 @@ export const ScrollToTop: React.FC = () => {
           exit={{ opacity: 0, scale: 0.8, y: 10 }}
           transition={{ duration: 0.2 }}
           onClick={scrollToTop}
-          className="fixed bottom-5 left-5 z-40 sm:hidden flex h-10 w-10 items-center justify-center rounded-full bg-zinc-950/90 text-white shadow-card-hover border border-zinc-800 hover:bg-accent-crimson hover:border-accent-crimson transition-all duration-200 focus:outline-none cursor-pointer"
+          className="fixed bottom-4 right-4 z-30 sm:hidden flex h-9 w-9 items-center justify-center rounded-full bg-zinc-950/85 backdrop-blur-md text-white shadow-lg border border-zinc-800 hover:bg-[#FF4D3D] hover:border-[#FF4D3D] transition-all duration-200 focus:outline-none cursor-pointer"
           aria-label="Scroll to top of page"
         >
-          <ArrowUp className="h-4 w-4" />
+          <ArrowUp className="h-3.5 w-3.5" />
         </motion.button>
       )}
     </AnimatePresence>

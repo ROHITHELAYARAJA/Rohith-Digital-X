@@ -27,18 +27,18 @@ export const WorkPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-[#070708] text-white selection:bg-purple-600 selection:text-white">
       {/* Hero Header Section - Replica of HomePage Architecture on Black */}
-      <section className="relative pt-28 sm:pt-36 pb-16 border-b border-zinc-800/80 overflow-hidden bg-[#070708]">
+      <section className="relative pt-24 sm:pt-36 pb-10 sm:pb-16 border-b border-zinc-800/80 overflow-hidden bg-[#070708]">
         {/* Ambient Gradient Glow */}
         <div className="absolute -top-24 sm:-top-32 left-1/2 -translate-x-1/2 w-[700px] sm:w-[1100px] h-[340px] sm:h-[460px] bg-gradient-to-b from-zinc-800/25 via-[#FF4D3D]/10 to-transparent rounded-full blur-[100px] pointer-events-none -z-0" />
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
 
-        <div className="container max-w-5xl mx-auto px-4 sm:px-6 relative z-10 text-center space-y-6">
+        <div className="container max-w-5xl mx-auto px-4 sm:px-6 relative z-10 text-center space-y-4 sm:space-y-6">
 
           <motion.h1
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
-            className="text-4xl sm:text-6xl md:text-7xl lg:text-[5rem] font-bold tracking-tight text-white leading-[1.07] font-manrope text-balance max-w-4xl mx-auto"
+            className="text-2xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.1] font-manrope text-balance max-w-4xl mx-auto"
           >
             Digital systems we've{" "}
             <span className="font-playfair italic font-medium text-[#FF4D3D] inline-block px-1">
@@ -51,13 +51,13 @@ export const WorkPage: React.FC = () => {
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.14, ease: [0.22, 1, 0.36, 1] }}
-            className="text-base sm:text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto font-normal leading-relaxed font-dmsans"
+            className="text-xs sm:text-base md:text-lg text-zinc-400 max-w-2xl mx-auto font-normal leading-relaxed font-dmsans"
           >
             Every project is built with obsessive attention to sub-second speed, clean architecture, and direct founder accountability.
           </motion.p>
 
           {/* Category Filter Tabs */}
-          <div className="flex flex-wrap items-center justify-center gap-2 pt-2">
+          <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 pt-2">
             {[
               { id: "all", label: "All Projects" },
               { id: "websites", label: "Web Applications" },
@@ -71,7 +71,7 @@ export const WorkPage: React.FC = () => {
                 <button
                   key={tab.id}
                   onClick={() => setSelectedCategory(tab.id as ProjectCategory)}
-                  className={`px-4 py-2 rounded-full text-xs font-bold font-sans transition-all cursor-pointer select-none ${
+                  className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-[11px] sm:text-xs font-bold font-sans transition-all cursor-pointer select-none ${
                     isActive
                       ? "bg-[#FF4D3D] text-white shadow-[0_0_20px_rgba(255,77,61,0.35)] scale-105 border border-[#FF4D3D]"
                       : "bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-white hover:border-zinc-700"
@@ -86,35 +86,35 @@ export const WorkPage: React.FC = () => {
       </section>
 
       {/* Featured Case Study Hero Card */}
-      <section className="py-14 bg-[#090A0D] border-b border-zinc-800/80">
+      <section className="py-10 sm:py-14 bg-[#090A0D] border-b border-zinc-800/80">
         <div className="container max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="p-6 sm:p-10 rounded-3xl bg-gradient-to-br from-zinc-900/90 via-black to-zinc-950 border border-zinc-800 hover:border-[#FF4D3D] transition-all duration-300 shadow-2xl relative overflow-hidden group">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
-              <div className="lg:col-span-7 space-y-4">
-                <h2 className="text-2xl sm:text-4xl font-bold text-white font-sans tracking-tight leading-snug">
+          <div className="p-4.5 sm:p-8 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-zinc-900/90 via-black to-zinc-950 border border-zinc-800 hover:border-[#FF4D3D] transition-all duration-300 shadow-2xl relative overflow-hidden group">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center relative z-10">
+              <div className="lg:col-span-7 space-y-3 sm:space-y-4">
+                <h2 className="text-xl sm:text-3xl font-bold text-white font-sans tracking-tight leading-snug">
                   JSBuilders: Civil Engineering &amp; High-Converting Architectural Platform
                 </h2>
 
-                <p className="text-sm sm:text-base text-zinc-400 leading-relaxed max-w-xl font-dmsans">
+                <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed max-w-xl font-dmsans">
                   Replaced an outdated 4.8s WordPress site with a custom Vite/React architecture that boots in 0.32s, delivers sub-second WhatsApp quote routing, and boosted client inquiries by +340%.
                 </p>
 
-                <div className="grid grid-cols-3 gap-4 pt-2">
-                  <div className="border-l-2 border-[#FF4D3D] pl-3">
-                    <div className="text-xl font-bold font-mono text-[#FF4D3D]">+340%</div>
-                    <div className="text-[11px] text-zinc-500 font-dmsans">Inquiry Volume</div>
+                <div className="grid grid-cols-3 gap-2 sm:gap-4 pt-1 sm:pt-2">
+                  <div className="border-l-2 border-[#FF4D3D] pl-2 sm:pl-3">
+                    <div className="text-base sm:text-xl font-bold font-mono text-[#FF4D3D]">+340%</div>
+                    <div className="text-[9px] sm:text-[11px] text-zinc-500 font-dmsans">Inquiries</div>
                   </div>
-                  <div className="border-l-2 border-zinc-700 pl-3">
-                    <div className="text-xl font-bold font-mono text-white">0.32s</div>
-                    <div className="text-[11px] text-zinc-500 font-dmsans">Page Load Time</div>
+                  <div className="border-l-2 border-zinc-700 pl-2 sm:pl-3">
+                    <div className="text-base sm:text-xl font-bold font-mono text-white">0.32s</div>
+                    <div className="text-[9px] sm:text-[11px] text-zinc-500 font-dmsans">Load Time</div>
                   </div>
-                  <div className="border-l-2 border-zinc-700 pl-3">
-                    <div className="text-xl font-bold font-mono text-white">100/100</div>
-                    <div className="text-[11px] text-zinc-500 font-dmsans">Core Web Vitals</div>
+                  <div className="border-l-2 border-zinc-700 pl-2 sm:pl-3">
+                    <div className="text-base sm:text-xl font-bold font-mono text-white">100/100</div>
+                    <div className="text-[9px] sm:text-[11px] text-zinc-500 font-dmsans">Core Vitals</div>
                   </div>
                 </div>
 
-                <div className="pt-4 flex flex-wrap items-center gap-3">
+                <div className="pt-3 sm:pt-4 flex flex-wrap items-center gap-2.5 sm:gap-3">
                   <HeyDigitalButton
                     variant="orange"
                     size="md"
@@ -125,7 +125,7 @@ export const WorkPage: React.FC = () => {
 
                   <button
                     onClick={() => handleDiscussSimilar("JSBuilders Web Experience")}
-                    className="px-5 py-2.5 rounded-full border border-zinc-700 hover:border-white text-white text-xs font-bold transition-all cursor-pointer font-sans"
+                    className="px-4 sm:px-5 py-2 sm:py-2.5 rounded-full border border-zinc-700 hover:border-white text-white text-[11px] sm:text-xs font-bold transition-all cursor-pointer font-sans"
                   >
                     Build Something Similar
                   </button>
@@ -133,7 +133,7 @@ export const WorkPage: React.FC = () => {
               </div>
 
               <div className="lg:col-span-5 relative">
-                <div className="rounded-2xl border border-zinc-800 bg-zinc-950 p-6 space-y-4 shadow-xl">
+                <div className="rounded-xl sm:rounded-2xl border border-zinc-800 bg-zinc-950 p-4 sm:p-6 space-y-3 sm:space-y-4 shadow-xl">
                   <div className="flex items-center justify-between pb-3 border-b border-zinc-850">
                     <div className="flex items-center gap-1.5">
                       <span className="h-2.5 w-2.5 rounded-full bg-red-500" />
