@@ -141,7 +141,7 @@ export const FastlaneSpotlightSection: React.FC = () => {
                 </div>
 
                 {/* Responsive Headline */}
-                <h3 className="text-xl sm:text-4xl lg:text-5xl font-bold text-zinc-950 font-manrope tracking-tight leading-[1.15] sm:leading-[1.08] text-balance">
+                <h3 className="text-lg xs:text-2xl sm:text-4xl lg:text-5xl font-bold text-zinc-950 font-manrope tracking-tight leading-[1.18] sm:leading-[1.08] text-balance">
                   {currentStory.metricHeadline}
                 </h3>
 
@@ -151,7 +151,7 @@ export const FastlaneSpotlightSection: React.FC = () => {
                 </p>
 
                 {/* THE SIGNATURE ORANGE/RED BOX BUTTON */}
-                <div className="pt-1 sm:pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3 w-full sm:w-auto">
+                <div className="pt-1 sm:pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3 w-full max-w-xs sm:max-w-none">
                   <button
                     onClick={() => navigate("contact")}
                     className="w-full sm:w-auto justify-center px-5 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl bg-gradient-to-r from-[#FF3B30] via-[#FF4D3D] to-[#FF6B3D] text-white font-manrope font-bold text-xs sm:text-base shadow-[0_12px_28px_rgba(255,59,48,0.38)] hover:shadow-[0_16px_36px_rgba(255,59,48,0.52)] hover:scale-[1.02] active:scale-95 transition-all duration-200 flex items-center gap-2.5 cursor-pointer select-none group text-center"

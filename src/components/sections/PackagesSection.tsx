@@ -73,13 +73,13 @@ Please let me know the kickoff process and timeline to get started!`
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         
         {/* Section Header with Clean Typography */}
-        <div className="max-w-3xl mx-auto text-center mb-6 sm:mb-8 space-y-2.5 sm:space-y-3">
+        <div className="max-w-3xl mx-auto text-center mb-6 sm:mb-8 space-y-2 sm:space-y-3">
           <motion.h2
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.1] font-manrope"
+            className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.1] font-manrope"
           >
             Clear investment with{" "}
             <span className="font-playfair italic font-medium text-[#FF4D3D]">
@@ -99,7 +99,7 @@ Please let me know the kickoff process and timeline to get started!`
         </div>
 
         {/* Category Switcher Tabs with Sleek Black & White Indicator */}
-        <div className="flex justify-center mb-8 sm:mb-12">
+        <div className="flex justify-center mb-6 sm:mb-12">
           <div className="inline-flex p-1 sm:p-1.5 rounded-2xl bg-zinc-900/90 border border-zinc-800 shadow-xs gap-1 sm:gap-1.5 flex-wrap justify-center relative">
             {packageCategories.map((cat) => {
               const Icon = CATEGORY_ICONS[cat.id]
@@ -109,7 +109,7 @@ Please let me know the kickoff process and timeline to get started!`
                 <button
                   key={cat.id}
                   onClick={() => setSelectedCategory(cat.id)}
-                  className={`relative flex items-center gap-1.5 sm:gap-2.5 px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-colors duration-200 cursor-pointer select-none z-10 ${
+                  className={`relative flex items-center gap-1.5 sm:gap-2.5 px-3 py-1.5 sm:px-5 sm:py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-colors duration-200 cursor-pointer select-none z-10 ${
                     isSelected ? "text-zinc-950 font-bold" : "text-zinc-400 hover:text-white"
                   }`}
                 >

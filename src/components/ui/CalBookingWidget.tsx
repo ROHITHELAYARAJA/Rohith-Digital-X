@@ -230,7 +230,7 @@ export const CalBookingWidget: React.FC<CalBookingWidgetProps> = ({
   const activeTimeSlots = is24Hour ? TIME_SLOTS_24H : TIME_SLOTS_12H
 
   return (
-    <div className={`w-full max-w-4xl mx-auto rounded-[2rem] bg-[#0C0D11] border border-zinc-800/90 text-white shadow-[0_24px_60px_rgba(0,0,0,0.7)] overflow-hidden font-sans ${className}`}>
+    <div className={`w-full max-w-4xl mx-auto rounded-2xl sm:rounded-[2rem] bg-[#0C0D11] border border-zinc-800/90 text-white shadow-[0_24px_60px_rgba(0,0,0,0.7)] overflow-hidden font-sans ${className}`}>
       <AnimatePresence mode="wait">
           {/* STEP 1: Interactive Calendar & Time Slots */}
           {currentStep === "calendar" && (
@@ -243,29 +243,29 @@ export const CalBookingWidget: React.FC<CalBookingWidgetProps> = ({
               className="grid grid-cols-1 lg:grid-cols-12 divide-y lg:divide-y-0 lg:divide-x divide-zinc-800"
             >
               {/* Left Info Panel */}
-              <div className="lg:col-span-4 p-6 sm:p-8 space-y-6 bg-[#090A0D]">
-                <div className="flex items-center gap-3">
-                  <div className="h-10 w-10 rounded-full bg-zinc-900 border border-zinc-700 flex items-center justify-center overflow-hidden flex-shrink-0">
-                    <img src="/rdx-r-logo.png" alt="Rohith Digital X" className="h-7 w-7 object-contain invert" />
+              <div className="lg:col-span-4 p-4.5 sm:p-8 space-y-4 sm:space-y-6 bg-[#090A0D]">
+                <div className="flex items-center gap-2.5 sm:gap-3">
+                  <div className="h-9 w-9 sm:h-10 sm:w-10 rounded-full bg-zinc-900 border border-zinc-700 flex items-center justify-center overflow-hidden flex-shrink-0">
+                    <img src="/rdx-r-logo.png" alt="Rohith Digital X" className="h-6 w-6 sm:h-7 sm:w-7 object-contain invert" />
                   </div>
                   <div>
-                    <h4 className="text-xs font-bold uppercase tracking-wider text-white font-manrope">
+                    <h4 className="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-white font-manrope">
                       Rohith Digital X
                     </h4>
-                    <p className="text-[11px] text-zinc-400 font-medium italic font-dmsans">Founder: Rohith E</p>
+                    <p className="text-[10px] sm:text-[11px] text-zinc-400 font-medium italic font-dmsans">Founder: Rohith E</p>
                   </div>
                 </div>
 
                 <div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
+                  <h3 className="text-lg sm:text-2xl font-bold text-white tracking-tight">
                     30 min meeting
                   </h3>
-                  <p className="text-xs text-zinc-400 mt-2 leading-relaxed font-dmsans">
+                  <p className="text-xs text-zinc-400 mt-1 sm:mt-2 leading-relaxed font-dmsans">
                     Fast, no-pitch technical discovery call. We review your architecture, scope, budget, and timeline.
                   </p>
                 </div>
 
-                <div className="space-y-3 pt-2 text-xs text-zinc-400 font-medium font-dmsans">
+                <div className="space-y-2.5 sm:space-y-3 pt-1 sm:pt-2 text-xs text-zinc-400 font-medium font-dmsans">
                   <div className="flex items-center gap-2.5">
                     <Clock className="h-4 w-4 text-zinc-500" />
                     <span>30 minutes</span>
@@ -282,31 +282,31 @@ export const CalBookingWidget: React.FC<CalBookingWidgetProps> = ({
               </div>
 
               {/* Center Calendar View */}
-              <div className="lg:col-span-5 p-6 sm:p-8 space-y-5 bg-[#0C0D11]">
+              <div className="lg:col-span-5 p-4.5 sm:p-8 space-y-4 sm:space-y-5 bg-[#0C0D11]">
                 {/* Month Navigation Header */}
                 <div className="flex items-center justify-between">
-                  <span className="text-base font-bold text-white tracking-tight tabular-nums font-manrope">
+                  <span className="text-sm sm:text-base font-bold text-white tracking-tight tabular-nums font-manrope">
                     {currentMonthLabel}
                   </span>
                   <div className="flex items-center gap-1.5">
                     <button
                       onClick={handlePrevMonth}
                       disabled={!canGoBack}
-                      className={`p-2 rounded-lg border border-zinc-800 transition-colors ${
+                      className={`p-1.5 sm:p-2 rounded-lg border border-zinc-800 transition-colors ${
                         canGoBack
                           ? "hover:bg-zinc-800 text-zinc-300 cursor-pointer"
                           : "opacity-30 text-zinc-600 cursor-not-allowed"
                       }`}
                       aria-label="Previous month"
                     >
-                      <ChevronLeft className="h-4 w-4" />
+                      <ChevronLeft className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
                     </button>
                     <button
                       onClick={handleNextMonth}
-                      className="p-2 rounded-lg border border-zinc-800 hover:bg-zinc-800 text-zinc-300 transition-colors cursor-pointer"
+                      className="p-1.5 sm:p-2 rounded-lg border border-zinc-800 hover:bg-zinc-800 text-zinc-300 transition-colors cursor-pointer"
                       aria-label="Next month"
                     >
-                      <ChevronRight className="h-4 w-4" />
+                      <ChevronRight className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
                     </button>
                   </div>
                 </div>
@@ -316,7 +316,7 @@ export const CalBookingWidget: React.FC<CalBookingWidgetProps> = ({
                   {DAYS_OF_WEEK.map((day) => (
                     <div
                       key={day}
-                      className="text-[11px] font-mono font-bold text-zinc-500 py-1"
+                      className="text-[10px] sm:text-[11px] font-mono font-bold text-zinc-500 py-0.5 sm:py-1"
                     >
                       {day}
                     </div>
@@ -324,10 +324,10 @@ export const CalBookingWidget: React.FC<CalBookingWidgetProps> = ({
                 </div>
 
                 {/* Days Grid */}
-                <div className="grid grid-cols-7 gap-1.5">
+                <div className="grid grid-cols-7 gap-1 sm:gap-1.5">
                   {/* Empty Offset Slots */}
                   {Array.from({ length: startDayOffset }).map((_, i) => (
-                    <div key={`empty-${i}`} className="h-9 sm:h-10" />
+                    <div key={`empty-${i}`} className="h-8 sm:h-10" />
                   ))}
 
                   {/* Month Day Buttons */}
@@ -342,7 +342,7 @@ export const CalBookingWidget: React.FC<CalBookingWidgetProps> = ({
                         whileTap={{ scale: 0.95 }}
                         onClick={() => handleSelectDay(day)}
                         className={`
-                          relative h-9 sm:h-10 w-full rounded-full text-xs font-bold font-manrope flex items-center justify-center transition-all cursor-pointer
+                          relative h-8 sm:h-10 w-full rounded-full text-xs font-bold font-manrope flex items-center justify-center transition-all cursor-pointer
                           ${
                             isSelected
                               ? "bg-white text-black font-bold shadow-[0_0_16px_rgba(255,255,255,0.15)] scale-105 z-10"
@@ -356,15 +356,15 @@ export const CalBookingWidget: React.FC<CalBookingWidgetProps> = ({
                   })}
                 </div>
 
-                <div className="pt-2 flex items-center justify-between text-[11px] text-zinc-500 font-mono">
+                <div className="pt-2 flex items-center justify-between text-[10px] sm:text-[11px] text-zinc-500 font-mono">
                   <span>Timezone: Asia/Kolkata</span>
                   <span>Slots updated real-time</span>
                 </div>
               </div>
 
               {/* Right Time Slots Panel */}
-              <div className="lg:col-span-3 p-6 sm:p-8 flex flex-col justify-between space-y-4 bg-[#090A0D]">
-                <div className="space-y-4">
+              <div className="lg:col-span-3 p-4.5 sm:p-8 flex flex-col justify-between space-y-4 bg-[#090A0D]">
+                <div className="space-y-3 sm:space-y-4">
                   {/* Header with Selected Weekday & 12h/24h Toggle */}
                   <div className="flex items-center justify-between">
                     <div className="text-xs font-bold text-white font-manrope">
@@ -392,7 +392,7 @@ export const CalBookingWidget: React.FC<CalBookingWidgetProps> = ({
                   </div>
 
                   {/* Time Slots List with Smooth Scroll */}
-                  <div className="max-h-[300px] overflow-y-auto space-y-1.5 pr-1 no-scrollbar">
+                  <div className="max-h-[250px] sm:max-h-[300px] overflow-y-auto space-y-1.5 pr-1 no-scrollbar">
                     {activeTimeSlots.map((time) => {
                       const isSelected = selectedTime === time
 
@@ -403,7 +403,7 @@ export const CalBookingWidget: React.FC<CalBookingWidgetProps> = ({
                           whileTap={{ scale: 0.98 }}
                           onClick={() => setSelectedTime(time)}
                           className={`
-                            w-full py-2.5 px-3 rounded-xl text-xs font-semibold flex items-center justify-between transition-all cursor-pointer
+                            w-full py-2 sm:py-2.5 px-3 rounded-xl text-xs font-semibold flex items-center justify-between transition-all cursor-pointer
                             ${
                               isSelected
                                 ? "bg-white text-black font-bold border border-white/20"
@@ -424,7 +424,7 @@ export const CalBookingWidget: React.FC<CalBookingWidgetProps> = ({
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.97 }}
                   onClick={handleProceedToForm}
-                  className="w-full py-3.5 px-4 rounded-xl bg-white hover:bg-zinc-100 text-black font-bold text-xs uppercase tracking-widest transition-all shadow-lg flex items-center justify-center gap-1.5 cursor-pointer font-manrope"
+                  className="w-full py-3 sm:py-3.5 px-4 rounded-xl bg-white hover:bg-zinc-100 text-black font-bold text-xs uppercase tracking-widest transition-all shadow-lg flex items-center justify-center gap-1.5 cursor-pointer font-manrope"
                 >
                   <span>Next: Details</span>
                   <span>→</span>

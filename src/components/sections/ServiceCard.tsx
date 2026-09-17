@@ -33,13 +33,13 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, onOpen
       <TiltCard tiltMaxAngleX={6} tiltMaxAngleY={6} scale={1.02} className="h-full">
         <CardSpotlight
           spotlightColor="rgba(139, 92, 246, 0.12)"
-          className="h-full group relative rounded-2xl sm:rounded-3xl border border-zinc-200/90 bg-white p-4.5 sm:p-8 shadow-subtle hover:shadow-card-hover hover:border-purple-500 transition-all duration-300 flex flex-col justify-between"
+          className="h-full group relative rounded-2xl sm:rounded-3xl border border-zinc-200/90 bg-white p-4 sm:p-7 lg:p-8 shadow-subtle hover:shadow-card-hover hover:border-purple-500 transition-all duration-300 flex flex-col justify-between"
         >
           <div>
             {/* Card Header: Icon, Number & Badge */}
-            <div className="flex items-center justify-between mb-4 sm:mb-6">
-              <div className="flex h-11 w-11 sm:h-14 sm:w-14 items-center justify-center rounded-xl sm:rounded-2xl bg-zinc-50 border border-zinc-200 text-zinc-900 group-hover:bg-purple-50 group-hover:text-purple-600 group-hover:border-purple-200 group-hover:scale-110 transition-all duration-300 shadow-xs">
-                <IconComponent className="h-5 w-5 sm:h-7 sm:w-7" />
+            <div className="flex items-center justify-between mb-3.5 sm:mb-6">
+              <div className="flex h-10 w-10 sm:h-14 sm:w-14 items-center justify-center rounded-xl sm:rounded-2xl bg-zinc-50 border border-zinc-200 text-zinc-900 group-hover:bg-purple-50 group-hover:text-purple-600 group-hover:border-purple-200 group-hover:scale-110 transition-all duration-300 shadow-xs">
+                <IconComponent className="h-4.5 w-4.5 sm:h-7 sm:w-7" />
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-xs font-mono font-bold text-zinc-400 group-hover:text-purple-600 transition-colors">
@@ -49,27 +49,27 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, onOpen
             </div>
 
             {/* Title & Tagline */}
-            <h3 className="text-lg sm:text-2xl font-bold tracking-tight text-zinc-950 group-hover:text-purple-600 transition-colors font-display">
+            <h3 className="text-base sm:text-2xl font-bold tracking-tight text-zinc-950 group-hover:text-purple-600 transition-colors font-display">
               {service.title}
             </h3>
-            <p className="text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-purple-600 mt-1 mb-2.5 sm:mb-3 font-mono">
+            <p className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-purple-600 mt-0.5 sm:mt-1 mb-2 sm:mb-3 font-mono">
               {service.tagline}
             </p>
 
             {/* Short Description */}
-            <p className="text-xs sm:text-sm text-zinc-600 leading-relaxed font-normal mb-4 sm:mb-5">
+            <p className="text-[11px] sm:text-sm text-zinc-600 leading-relaxed font-normal mb-3.5 sm:mb-5">
               {service.shortDescription}
             </p>
 
             {/* Highlight Key Capabilities */}
-            <div className="space-y-2 border-t border-zinc-100 pt-3 sm:pt-4 mb-4 sm:mb-6">
-              <span className="text-xs font-bold uppercase tracking-wider text-zinc-400 font-mono">
+            <div className="space-y-1.5 sm:space-y-2 border-t border-zinc-100 pt-3 sm:pt-4 mb-3.5 sm:mb-6">
+              <span className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-zinc-400 font-mono">
                 Key Capabilities
               </span>
-              <ul className="space-y-2 text-xs text-zinc-700">
+              <ul className="space-y-1.5 sm:space-y-2 text-[11px] sm:text-xs text-zinc-700">
                 {service.keyFeatures.slice(0, 3).map((feature, idx) => (
                   <li key={idx} className="flex items-start gap-2 group/item">
-                    <CheckCircle2 className="h-4 w-4 text-purple-600 shrink-0 mt-0.5 group-hover/item:scale-110 transition-transform" />
+                    <CheckCircle2 className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-purple-600 shrink-0 mt-0.5 group-hover/item:scale-110 transition-transform" />
                     <span className="line-clamp-1 leading-snug">{feature}</span>
                   </li>
                 ))}
@@ -78,19 +78,19 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, onOpen
           </div>
 
           {/* Card Footer: Tech tags & Action */}
-          <div className="pt-4 border-t border-zinc-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-            <div className="flex items-center gap-1.5 flex-wrap">
+          <div className="pt-3 sm:pt-4 border-t border-zinc-100 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 sm:gap-3">
+            <div className="flex items-center gap-1 sm:gap-1.5 flex-wrap">
               {service.techStack.slice(0, 3).map((tech) => (
                 <Badge
                   key={tech}
                   variant="secondary"
-                  className="text-[10px] py-0.5 px-2 bg-zinc-100 border border-zinc-200 hover:bg-purple-50 hover:text-purple-700 transition-colors cursor-default"
+                  className="text-[9px] sm:text-[10px] py-0.5 px-1.5 sm:px-2 bg-zinc-100 border border-zinc-200 hover:bg-purple-50 hover:text-purple-700 transition-colors cursor-default"
                 >
                   {tech}
                 </Badge>
               ))}
               {service.techStack.length > 3 && (
-                <span className="text-[10px] text-zinc-400 font-mono">
+                <span className="text-[9px] sm:text-[10px] text-zinc-400 font-mono">
                   +{service.techStack.length - 3}
                 </span>
               )}
@@ -98,7 +98,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, onOpen
 
             <button
               onClick={() => onOpenDetails(service)}
-              className="inline-flex items-center gap-1.5 text-xs font-bold text-zinc-900 group-hover:text-purple-600 transition-colors focus:outline-none rounded py-1 cursor-pointer group/btn"
+              className="inline-flex items-center justify-between sm:justify-start gap-1.5 text-[11px] sm:text-xs font-bold text-zinc-900 group-hover:text-purple-600 transition-colors focus:outline-none rounded py-1 cursor-pointer group/btn"
             >
               <span>Learn more &amp; specs</span>
               <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover/btn:translate-x-1.5 text-purple-600" />

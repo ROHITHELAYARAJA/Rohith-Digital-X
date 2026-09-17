@@ -108,23 +108,23 @@ const StackedCard: React.FC<{
   return (
     <div
       ref={cardRef}
-      className="relative sm:sticky sm:top-28 mb-6 sm:mb-12"
+      className="relative sm:sticky sm:top-28 mb-5 sm:mb-12"
       style={{
         zIndex: index + 1,
       }}
     >
       <div
-        className={`relative rounded-2xl sm:rounded-[2.5rem] p-4.5 sm:p-10 lg:p-12 border ${card.borderColor} ${card.bgColor} shadow-2xl transition-all duration-300 overflow-hidden`}
+        className={`relative rounded-2xl sm:rounded-[2.5rem] p-4 sm:p-8 lg:p-12 border ${card.borderColor} ${card.bgColor} shadow-2xl transition-all duration-300 overflow-hidden`}
       >
         {/* Subtle decorative watermark */}
-        <div className="absolute top-4 right-6 sm:right-8 font-trench text-[50px] sm:text-[140px] font-bold text-black/[0.03] select-none pointer-events-none leading-none">
+        <div className="absolute top-3 right-4 sm:top-4 sm:right-8 font-trench text-[36px] sm:text-[140px] font-bold text-black/[0.03] select-none pointer-events-none leading-none">
           0{index + 1}
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-10 items-center">
           
           {/* Left Column: Project Details */}
-          <div className="lg:col-span-6 space-y-3.5 sm:space-y-6">
+          <div className="lg:col-span-6 space-y-3 sm:space-y-6">
             
             {/* Tagline / Categories with Diamond Separators */}
             <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap text-[9px] sm:text-xs font-pilcrow font-bold uppercase tracking-wider text-zinc-600">
@@ -140,7 +140,7 @@ const StackedCard: React.FC<{
 
             {/* Brand Title with Amber Period */}
             <div>
-              <h3 className="text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-zinc-950 leading-tight font-manrope">
+              <h3 className="text-xl xs:text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-zinc-950 leading-tight font-manrope">
                 {card.brandName}
                 <span className="text-[#FF3B30]">.</span>
               </h3>
@@ -170,7 +170,7 @@ const StackedCard: React.FC<{
             <div className="pt-2 sm:pt-4">
               <button
                 onClick={() => onOpenModal(card.fullProject)}
-                className="inline-flex items-center gap-2 px-5 sm:px-7 py-2.5 sm:py-3.5 rounded-full bg-zinc-950 text-white font-bold text-xs sm:text-sm shadow-md hover:bg-purple-600 hover:text-white transition-all duration-300 group/btn cursor-pointer active:scale-95"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 sm:px-7 py-2.5 sm:py-3.5 rounded-full bg-zinc-950 text-white font-bold text-xs sm:text-sm shadow-md hover:bg-purple-600 hover:text-white transition-all duration-300 group/btn cursor-pointer active:scale-95"
               >
                 <span>PREVIEW THE UI</span>
                 <ArrowUpRight className="h-3.5 w-3.5 sm:h-4 sm:w-4 transition-transform group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 text-purple-400 group-hover/btn:text-white" />
@@ -180,7 +180,7 @@ const StackedCard: React.FC<{
           </div>
 
           {/* Right Column: Interactive 3D Device Showcase */}
-          <div className="lg:col-span-6 flex items-center justify-center pt-4 lg:pt-0">
+          <div className="lg:col-span-6 flex items-center justify-center pt-3 lg:pt-0">
             <div
               onClick={() => onOpenModal(card.fullProject)}
               className="cursor-pointer w-full hover:scale-[1.02] transition-transform duration-300"
@@ -235,7 +235,7 @@ export const WorkSection: React.FC<WorkSectionProps> = ({ onDiscussSimilar }) =>
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-2xl sm:text-4xl md:text-6xl font-bold tracking-tight text-zinc-950 max-w-4xl mx-auto leading-[1.12] sm:leading-[1.08] font-manrope"
+            className="text-2xl xs:text-3xl sm:text-4xl md:text-6xl font-bold tracking-tight text-zinc-950 max-w-4xl mx-auto leading-[1.12] sm:leading-[1.08] font-manrope"
           >
             Engineered for <span className="font-playfair italic font-medium text-[#FF3B30]">scale</span> and measurable growth<span className="text-[#FF3B30]">.</span>
           </motion.h2>
@@ -253,7 +253,7 @@ export const WorkSection: React.FC<WorkSectionProps> = ({ onDiscussSimilar }) =>
         </div>
 
         {/* Filter Navigation Capsule Bar (Exact Match to User Reference Screenshot) */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-2">
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 pt-2">
           
           {/* Left Capsule Filter Pills */}
           <div className="flex items-center gap-1 p-1 rounded-full bg-[#F4F4F5] border border-zinc-200/90 shadow-2xs overflow-x-auto max-w-full no-scrollbar">
@@ -279,7 +279,7 @@ export const WorkSection: React.FC<WorkSectionProps> = ({ onDiscussSimilar }) =>
           </div>
 
           {/* Right: Shown Count & View Switcher */}
-          <div className="flex items-center gap-3 self-end sm:self-center">
+          <div className="flex items-center justify-between sm:justify-end gap-3">
             <span className="text-xs font-pilcrow font-bold text-zinc-500">
               {filteredProjects.length} shown
             </span>

@@ -199,9 +199,9 @@ const DockIcon: React.FC<DockIconProps> = ({ item, mouseX }) => {
   })
 
   const isMobile = typeof window !== "undefined" ? window.innerWidth < 640 : false
-  const defaultSize = isMobile ? 32 : 42
-  const hoverSize = isMobile ? 44 : 66
-  const neighborSize = isMobile ? 38 : 52
+  const defaultSize = isMobile ? 28 : 42
+  const hoverSize = isMobile ? 38 : 66
+  const neighborSize = isMobile ? 32 : 52
 
   // Smooth sinusoidal continuous magnification curve (macOS physics)
   const widthSync = useTransform(distance, [-150, -75, 0, 75, 150], [defaultSize, neighborSize, hoverSize, neighborSize, defaultSize])
@@ -240,7 +240,7 @@ const DockIcon: React.FC<DockIconProps> = ({ item, mouseX }) => {
       <motion.div
         style={{ width, height: width, y }}
         whileTap={{ scale: 0.88 }}
-        className="relative flex items-center justify-center rounded-[10px] sm:rounded-[12px] p-0.5 transition-all shadow-xs"
+        className="relative flex items-center justify-center rounded-[8px] sm:rounded-[12px] p-0.5 transition-all shadow-xs"
       >
         {item.icon}
       </motion.div>
@@ -252,12 +252,12 @@ export const MacDock: React.FC = () => {
   const mouseX = useMotionValue(Infinity)
 
   return (
-    <div className="relative flex flex-col items-center justify-center pt-5 sm:pt-10 pb-2 overflow-x-auto max-w-full [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+    <div className="relative flex flex-col items-center justify-center pt-4 sm:pt-10 pb-2 overflow-x-auto max-w-full [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
       {/* Floating Dark macOS Dock Pill Container with overflow-visible on larger screens */}
       <div
         onMouseMove={(e) => mouseX.set(e.pageX)}
         onMouseLeave={() => mouseX.set(Infinity)}
-        className="relative flex items-center gap-1 sm:gap-2 px-2.5 sm:px-4 py-1.5 sm:py-2.5 rounded-full bg-[#18181B] backdrop-blur-2xl border border-zinc-700/80 shadow-[0_16px_40px_rgba(0,0,0,0.25)] ring-1 ring-white/10 max-w-full overflow-visible shrink-0"
+        className="relative flex items-center gap-1 sm:gap-2 px-2 sm:px-4 py-1.5 sm:py-2.5 rounded-full bg-[#18181B] backdrop-blur-2xl border border-zinc-700/80 shadow-[0_16px_40px_rgba(0,0,0,0.25)] ring-1 ring-white/10 max-w-full overflow-visible shrink-0"
       >
         {AUTHENTIC_APP_TOOLS.map((item) => (
           <DockIcon key={item.id} item={item} mouseX={mouseX} />

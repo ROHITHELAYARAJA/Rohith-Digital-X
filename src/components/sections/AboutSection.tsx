@@ -49,7 +49,7 @@ export const AboutSection: React.FC = () => {
                 A SUMMARY
               </span>
 
-              <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white font-manrope">
+              <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white font-manrope">
                 Know <span className="font-playfair italic font-normal text-zinc-400">me</span> as I am<span className="text-[#FF4D3D]">.</span>
               </h2>
 
@@ -100,7 +100,7 @@ export const AboutSection: React.FC = () => {
           </div>
 
           {/* Bottom of Summary: "SOFTWARE & TOOLS" macOS Floating Dock */}
-          <div className="space-y-4 pt-4 border-t border-zinc-800/80">
+          <div className="space-y-3 sm:space-y-4 pt-4 border-t border-zinc-800/80">
             <p className="text-[10px] sm:text-xs font-mono font-bold uppercase tracking-[0.25em] text-zinc-500 text-left">
               SOFTWARE &amp; TOOLS
             </p>
@@ -112,14 +112,14 @@ export const AboutSection: React.FC = () => {
         </div>
 
         {/* 3-Frame Showcase */}
-        <div className="space-y-5 sm:space-y-6 text-center border-t border-zinc-800/80 pt-12 sm:pt-16">
+        <div className="space-y-4 sm:space-y-6 text-center border-t border-zinc-800/80 pt-10 sm:pt-16">
           
           {/* Centered Top Badge */}
-          <div className="inline-flex items-center gap-1.5 text-xs font-mono font-bold uppercase tracking-widest text-zinc-500">
+          <div className="inline-flex items-center gap-1.5 text-[10px] sm:text-xs font-mono font-bold uppercase tracking-widest text-zinc-500">
             <span>ABOUT &amp; METHODOLOGY</span>
           </div>
 
-          <h3 className="text-xl sm:text-3xl lg:text-5xl font-bold tracking-tight text-white max-w-4xl mx-auto leading-tight font-manrope">
+          <h3 className="text-xl xs:text-2xl sm:text-3xl lg:text-5xl font-bold tracking-tight text-white max-w-4xl mx-auto leading-tight font-manrope">
             Building Apps<span className="text-[#FF4D3D]">.</span> Designing Products<span className="text-[#FF4D3D]">.</span> Crafting Systems<span className="text-[#FF4D3D]">.</span>
           </h3>
 
@@ -138,7 +138,7 @@ export const AboutSection: React.FC = () => {
               transition={{ duration: 0.4, delay: 0.1 }}
             >
               <TiltCard tiltMaxAngleX={5} tiltMaxAngleY={5} scale={1.02} className="h-full">
-                <div className="rounded-2xl sm:rounded-[32px] bg-zinc-950/90 border border-zinc-800/90 p-4.5 sm:p-8 flex flex-col justify-between h-auto min-h-[300px] sm:h-[380px] shadow-2xl hover:border-[#FF4D3D]/50 hover:shadow-[0_0_25px_rgba(255,77,61,0.2)] hover:bg-zinc-900/60 transition-all duration-300 group">
+                <div className="rounded-2xl sm:rounded-[32px] bg-zinc-950/90 border border-zinc-800/90 p-4 sm:p-7 lg:p-8 flex flex-col justify-between h-auto min-h-0 sm:min-h-[380px] shadow-2xl hover:border-[#FF4D3D]/50 hover:shadow-[0_0_25px_rgba(255,77,61,0.2)] hover:bg-zinc-900/60 transition-all duration-300 group">
                   
                   {/* Frame Header */}
                   <div className="space-y-1.5 sm:space-y-2 text-center">

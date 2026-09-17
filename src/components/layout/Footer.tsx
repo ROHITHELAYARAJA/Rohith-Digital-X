@@ -131,7 +131,7 @@ export const Footer: React.FC = () => {
             <div className="hidden lg:block lg:col-span-1 border-l border-zinc-800/60 h-full" />
 
             {/* Right 3 Navigation Columns (Col 6) */}
-            <div className="lg:col-span-6 grid grid-cols-3 gap-6 sm:gap-8">
+            <div className="lg:col-span-6 grid grid-cols-2 xs:grid-cols-3 gap-6 sm:gap-8">
               
               {/* Column 1: GENERAL */}
               <div className="space-y-4">

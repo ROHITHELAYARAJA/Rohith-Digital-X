@@ -45,7 +45,7 @@ export const DigitalProductCapabilitiesSection: React.FC = () => {
           className="flex flex-col md:flex-row md:items-end justify-between gap-6 max-w-4xl"
         >
           <div className="space-y-3">
-            <h2 className="text-2xl sm:text-4xl lg:text-6xl font-bold tracking-tight text-zinc-950 leading-[1.12] sm:leading-[1.08] font-manrope">
+            <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-6xl font-bold tracking-tight text-zinc-950 leading-[1.12] sm:leading-[1.08] font-manrope">
               Engineered with <span className="font-playfair italic font-medium text-[#FF3B30]">taste</span> and microsecond speed.
             </h2>
           </div>
@@ -64,32 +64,32 @@ export const DigitalProductCapabilitiesSection: React.FC = () => {
             viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.5, delay: 0.05, ease: [0.22, 1, 0.36, 1] }}
             whileHover={{ y: -4 }}
-            className="rounded-2xl sm:rounded-[2rem] bg-gradient-to-br from-[#FF5C4D] via-[#FF4D3D] to-[#E6392A] p-4.5 sm:p-8 text-white shadow-xl flex flex-col justify-between min-h-0 sm:min-h-[380px] relative overflow-hidden"
+            className="rounded-2xl sm:rounded-[2rem] bg-gradient-to-br from-[#FF5C4D] via-[#FF4D3D] to-[#E6392A] p-4 sm:p-7 lg:p-8 text-white shadow-xl flex flex-col justify-between min-h-0 sm:min-h-[380px] relative overflow-hidden"
           >
             {/* Subtle glow overlay */}
             <div className="absolute top-0 right-0 w-48 h-48 bg-white/10 rounded-full blur-2xl pointer-events-none" />
 
             <div className="space-y-3 relative z-10">
               {/* Stacked White Notification Pills */}
-              <div className="space-y-2.5">
+              <div className="space-y-2 sm:space-y-2.5">
                 {[
                   {
-                    icon: <Users className="h-4 w-4 text-indigo-600" />,
+                    icon: <Users className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-indigo-600" />,
                     text: "Your market is ambitious modern businesses",
                     selected: activeChip === 0,
                   },
                   {
-                    icon: <Target className="h-4 w-4 text-purple-500" />,
+                    icon: <Target className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-purple-500" />,
                     text: "Here's where your brand stands out",
                     selected: activeChip === 1,
                   },
                   {
-                    icon: <Brain className="h-4 w-4 text-rose-500" />,
+                    icon: <Brain className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-rose-500" />,
                     text: "Zero template bloat. 100% custom code.",
                     selected: activeChip === 2,
                   },
                   {
-                    icon: <Layers className="h-4 w-4 text-emerald-600" />,
+                    icon: <Layers className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-emerald-600" />,
                     text: "Sub-second load times & 60 FPS fluidity",
                     selected: activeChip === 3,
                   },
@@ -97,26 +97,26 @@ export const DigitalProductCapabilitiesSection: React.FC = () => {
                   <button
                     key={idx}
                     onClick={() => setActiveChip(idx)}
-                    className={`w-full text-left p-3 rounded-2xl flex items-center gap-3 transition-all cursor-pointer ${
+                    className={`w-full text-left p-2.5 sm:p-3 rounded-xl sm:rounded-2xl flex items-center gap-2.5 sm:gap-3 transition-all cursor-pointer ${
                       item.selected
-                        ? "bg-white text-zinc-950 shadow-md font-bold scale-[1.02] ring-2 ring-white/40"
-                        : "bg-white/95 text-zinc-800 hover:bg-white text-xs font-semibold shadow-xs"
+                        ? "bg-white text-zinc-950 shadow-md font-bold scale-[1.01] sm:scale-[1.02] ring-2 ring-white/40"
+                        : "bg-white/95 text-zinc-800 hover:bg-white text-[11px] sm:text-xs font-semibold shadow-xs"
                     }`}
                   >
-                    <div className="h-7 w-7 rounded-xl bg-zinc-100 flex items-center justify-center shrink-0">
+                    <div className="h-6 w-6 sm:h-7 sm:w-7 rounded-lg sm:rounded-xl bg-zinc-100 flex items-center justify-center shrink-0">
                       {item.icon}
                     </div>
-                    <span className="text-xs truncate">{item.text}</span>
+                    <span className="text-[11px] sm:text-xs truncate">{item.text}</span>
                   </button>
                 ))}
               </div>
             </div>
 
-            <div className="pt-6 relative z-10">
-              <h3 className="text-xl font-bold text-white tracking-tight">
+            <div className="pt-5 sm:pt-6 relative z-10">
+              <h3 className="text-lg sm:text-xl font-bold text-white tracking-tight">
                 Product & Scope Blueprint
               </h3>
-              <p className="text-xs text-white/80 mt-1 leading-relaxed">
+              <p className="text-[11px] sm:text-xs text-white/85 mt-1 leading-relaxed">
                 We analyze your market dynamics and convert complex requirements into clean, scalable features.
               </p>
             </div>
@@ -129,10 +129,10 @@ export const DigitalProductCapabilitiesSection: React.FC = () => {
             viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.5, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
             whileHover={{ y: -4 }}
-            className="rounded-2xl sm:rounded-[2rem] bg-[#EFE8D8] border border-[#E2D8C7] p-4.5 sm:p-8 flex flex-col justify-between min-h-0 sm:min-h-[380px] shadow-sm relative overflow-hidden"
+            className="rounded-2xl sm:rounded-[2rem] bg-[#EFE8D8] border border-[#E2D8C7] p-4 sm:p-7 lg:p-8 flex flex-col justify-between min-h-0 sm:min-h-[380px] shadow-sm relative overflow-hidden"
           >
             {/* Inner Floating White Modal */}
-            <div className="bg-white/95 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-5 border border-white/60 shadow-md space-y-3.5 sm:space-y-4">
+            <div className="bg-white/95 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3.5 sm:p-5 border border-white/60 shadow-md space-y-3 sm:space-y-4">
               <div className="flex items-center text-[10px] sm:text-[11px] font-semibold text-zinc-600">
                 <span>Bespoke Engineering Studio</span>
               </div>
@@ -142,7 +142,7 @@ export const DigitalProductCapabilitiesSection: React.FC = () => {
               </div>
 
               {/* Action Chips */}
-              <div className="flex flex-wrap gap-1.5 pt-1">
+              <div className="flex flex-wrap gap-1.5 pt-0.5">
                 {[
                   "Full-Stack Web App",
                   "iOS & Android",
@@ -163,7 +163,7 @@ export const DigitalProductCapabilitiesSection: React.FC = () => {
               <h3 className="text-lg sm:text-xl font-bold text-zinc-950 tracking-tight font-manrope">
                 Crafted Without Templates
               </h3>
-              <p className="text-xs text-zinc-600 mt-1 leading-relaxed font-dmsans">
+              <p className="text-[11px] sm:text-xs text-zinc-600 mt-1 leading-relaxed font-dmsans">
                 Enter our digital workshop. Hand-coded interfaces with bespoke visuals and modern API endpoints.
               </p>
             </div>
@@ -176,13 +176,13 @@ export const DigitalProductCapabilitiesSection: React.FC = () => {
             viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.5, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
             whileHover={{ y: -4 }}
-            className="rounded-2xl sm:rounded-[2rem] bg-white border border-zinc-200/80 p-4.5 sm:p-8 flex flex-col justify-between min-h-0 sm:min-h-[380px] shadow-sm relative"
+            className="rounded-2xl sm:rounded-[2rem] bg-white border border-zinc-200/80 p-4 sm:p-7 lg:p-8 flex flex-col justify-between min-h-0 sm:min-h-[380px] shadow-sm relative"
           >
             {/* Calendar UI Mockup */}
-            <div className="bg-zinc-50/80 rounded-xl sm:rounded-2xl p-4 sm:p-5 border border-zinc-200/60 space-y-3.5 sm:space-y-4 text-xs">
+            <div className="bg-zinc-50/80 rounded-xl sm:rounded-2xl p-3.5 sm:p-5 border border-zinc-200/60 space-y-3 sm:space-y-4 text-xs">
               <div className="flex items-center justify-between pb-2 border-b border-zinc-200">
-                <span className="font-bold text-zinc-900">Sprint Cadence</span>
-                <span className="text-zinc-500 text-[11px]">Weekly Sync</span>
+                <span className="font-bold text-zinc-900 text-xs sm:text-sm">Sprint Cadence</span>
+                <span className="text-zinc-500 text-[10px] sm:text-[11px]">Weekly Sync</span>
               </div>
 
               {/* Day Circle Buttons */}
@@ -193,7 +193,7 @@ export const DigitalProductCapabilitiesSection: React.FC = () => {
                     <button
                       key={i}
                       onClick={() => toggleDay(i)}
-                      className={`h-7 w-7 rounded-full text-xs font-bold flex items-center justify-center transition-all cursor-pointer ${
+                      className={`h-6.5 w-6.5 sm:h-7 sm:w-7 rounded-full text-[11px] sm:text-xs font-bold flex items-center justify-center transition-all cursor-pointer ${
                         isActive
                           ? "bg-zinc-950 text-white shadow-xs"
                           : "bg-zinc-200 text-zinc-500 hover:bg-zinc-300"
@@ -220,20 +220,20 @@ export const DigitalProductCapabilitiesSection: React.FC = () => {
 
               {/* Action Buttons */}
               <div className="flex items-center justify-end gap-2 pt-1">
-                <span className="px-3 py-1 rounded-lg text-[11px] font-bold text-zinc-600 bg-zinc-200/70">
+                <span className="px-2.5 sm:px-3 py-1 rounded-lg text-[10px] sm:text-[11px] font-bold text-zinc-600 bg-zinc-200/70">
                   Sprint Active
                 </span>
-                <span className="px-3 py-1 rounded-lg text-[11px] font-bold text-white bg-zinc-950">
+                <span className="px-2.5 sm:px-3 py-1 rounded-lg text-[10px] sm:text-[11px] font-bold text-white bg-zinc-950">
                   On Time
                 </span>
               </div>
             </div>
 
-            <div className="pt-6">
-              <h3 className="text-xl font-bold text-zinc-950 tracking-tight">
+            <div className="pt-5 sm:pt-6">
+              <h3 className="text-lg sm:text-xl font-bold text-zinc-950 tracking-tight">
                 Predictable Production Sprints
               </h3>
-              <p className="text-xs text-zinc-600 mt-1 leading-relaxed">
+              <p className="text-[11px] sm:text-xs text-zinc-600 mt-1 leading-relaxed">
                 Structured milestones with live preview deployments, daily commits, and direct founder accountability.
               </p>
             </div>
@@ -242,7 +242,7 @@ export const DigitalProductCapabilitiesSection: React.FC = () => {
         </div>
 
         {/* Bottom Bento Row: Analytics Dashboard (2 cols) & Live Traffic Card (1 col) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6">
           
           {/* Card 4: Advanced Analytics Dashboard (7 cols) */}
           <motion.div
@@ -251,15 +251,15 @@ export const DigitalProductCapabilitiesSection: React.FC = () => {
             viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.5, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
             whileHover={{ y: -4 }}
-            className="lg:col-span-8 rounded-2xl sm:rounded-[2rem] bg-white border border-zinc-200/80 p-4.5 sm:p-8 flex flex-col justify-between shadow-sm"
+            className="lg:col-span-8 rounded-2xl sm:rounded-[2rem] bg-white border border-zinc-200/80 p-4 sm:p-7 lg:p-8 flex flex-col justify-between shadow-sm"
           >
-            <div className="space-y-5 sm:space-y-6">
+            <div className="space-y-4 sm:space-y-6">
               {/* Header Bar with Tabs */}
-              <div className="flex items-center justify-between pb-3 border-b border-zinc-100">
-                <div className="flex items-center gap-2">
+              <div className="flex flex-col xs:flex-row items-start xs:items-center justify-between gap-2 pb-3 border-b border-zinc-100">
+                <div className="flex items-center gap-1.5 sm:gap-2">
                   <button
                     onClick={() => setActiveTab("performance")}
-                    className={`px-3 py-1 rounded-full text-xs font-bold transition-all cursor-pointer font-manrope ${
+                    className={`px-2.5 sm:px-3 py-1 rounded-full text-[11px] sm:text-xs font-bold transition-all cursor-pointer font-manrope ${
                       activeTab === "performance"
                         ? "bg-zinc-950 text-white shadow-xs"
                         : "text-zinc-500 hover:text-zinc-900"
@@ -269,7 +269,7 @@ export const DigitalProductCapabilitiesSection: React.FC = () => {
                   </button>
                   <button
                     onClick={() => setActiveTab("security")}
-                    className={`px-3 py-1 rounded-full text-xs font-bold transition-all cursor-pointer font-manrope ${
+                    className={`px-2.5 sm:px-3 py-1 rounded-full text-[11px] sm:text-xs font-bold transition-all cursor-pointer font-manrope ${
                       activeTab === "security"
                         ? "bg-zinc-950 text-white shadow-xs"
                         : "text-zinc-500 hover:text-zinc-900"
@@ -279,17 +279,17 @@ export const DigitalProductCapabilitiesSection: React.FC = () => {
                   </button>
                 </div>
 
-                <div className="flex items-center gap-1.5 text-xs text-zinc-500 font-semibold font-dmsans">
+                <div className="flex items-center gap-1.5 text-[11px] sm:text-xs text-zinc-500 font-semibold font-dmsans">
                   <Activity className="h-3.5 w-3.5 text-[#FF3B30]" />
                   <span>Realtime Telemetry</span>
                 </div>
               </div>
 
               {/* 3 Metric Sub-Cards (Inspired by Fastlane cards) */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-3.5">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-3.5">
                 
                 {/* Metric 1 */}
-                <div className="p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-zinc-50 border border-zinc-200/70 space-y-2">
+                <div className="p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-zinc-50 border border-zinc-200/70 space-y-1.5 sm:space-y-2">
                   <div className="flex items-center justify-between text-xs font-bold text-zinc-900 font-manrope">
                     <span>Web Core Vitals</span>
                     <Globe className="h-3.5 w-3.5 text-[#FF3B30]" />
@@ -308,7 +308,7 @@ export const DigitalProductCapabilitiesSection: React.FC = () => {
                 </div>
 
                 {/* Metric 2 */}
-                <div className="p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-zinc-50 border border-zinc-200/70 space-y-2">
+                <div className="p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-zinc-50 border border-zinc-200/70 space-y-1.5 sm:space-y-2">
                   <div className="flex items-center justify-between text-xs font-bold text-zinc-900 font-manrope">
                     <span>Mobile Native</span>
                     <Smartphone className="h-3.5 w-3.5 text-indigo-600" />
@@ -327,7 +327,7 @@ export const DigitalProductCapabilitiesSection: React.FC = () => {
                 </div>
 
                 {/* Metric 3 */}
-                <div className="p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-zinc-50 border border-zinc-200/70 space-y-2">
+                <div className="p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-zinc-50 border border-zinc-200/70 space-y-1.5 sm:space-y-2">
                   <div className="flex items-center justify-between text-xs font-bold text-zinc-900 font-manrope">
                     <span>AI & Automation</span>
                     <Bot className="h-3.5 w-3.5 text-purple-600" />
@@ -348,14 +348,14 @@ export const DigitalProductCapabilitiesSection: React.FC = () => {
               </div>
 
               {/* Bottom Input & Coral Button Bar */}
-              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 p-2 rounded-xl sm:rounded-2xl bg-zinc-100/80 border border-zinc-200">
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 p-1.5 sm:p-2 rounded-xl sm:rounded-2xl bg-zinc-100/80 border border-zinc-200">
                 <input
                   type="text"
                   readOnly
                   value="Ready to scale: Web apps, mobile systems & automation"
-                  className="w-full bg-transparent px-3 text-[11px] sm:text-xs text-zinc-700 font-medium focus:outline-none font-dmsans py-1 sm:py-0"
+                  className="w-full bg-transparent px-2.5 sm:px-3 text-[11px] sm:text-xs text-zinc-700 font-medium focus:outline-none font-dmsans py-1 sm:py-0"
                 />
-                <button className="shrink-0 px-3.5 py-2 rounded-lg sm:rounded-xl bg-[#FF3B30] hover:bg-[#E03627] text-white text-xs font-bold transition-all shadow-sm flex items-center justify-center gap-1.5 cursor-pointer font-manrope">
+                <button className="shrink-0 px-3.5 py-2 rounded-lg sm:rounded-xl bg-[#FF3B30] hover:bg-[#E03627] text-white text-[11px] sm:text-xs font-bold transition-all shadow-sm flex items-center justify-center gap-1.5 cursor-pointer font-manrope">
                   <span>Explore Stack</span>
                   <ArrowUpRight className="h-3.5 w-3.5" />
                 </button>
@@ -366,7 +366,7 @@ export const DigitalProductCapabilitiesSection: React.FC = () => {
               <h3 className="text-lg sm:text-xl font-bold text-zinc-950 tracking-tight font-manrope">
                 Observability & Production Quality
               </h3>
-              <p className="text-xs text-zinc-600 mt-1 leading-relaxed font-dmsans">
+              <p className="text-[11px] sm:text-xs text-zinc-600 mt-1 leading-relaxed font-dmsans">
                 Real-time telemetry, automated testing, and performance metrics built into every single deployment.
               </p>
             </div>
@@ -379,20 +379,20 @@ export const DigitalProductCapabilitiesSection: React.FC = () => {
             viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.5, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
             whileHover={{ y: -4 }}
-            className="lg:col-span-4 rounded-2xl sm:rounded-[2rem] bg-white border border-zinc-200/80 p-4.5 sm:p-8 flex flex-col justify-between shadow-sm relative overflow-hidden"
+            className="lg:col-span-4 rounded-2xl sm:rounded-[2rem] bg-white border border-zinc-200/80 p-4 sm:p-7 lg:p-8 flex flex-col justify-between shadow-sm relative overflow-hidden"
           >
             <div className="space-y-4">
               {/* Floating Visitors Tag */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-100 border border-zinc-200 text-xs font-bold text-zinc-900 shadow-xs">
+              <div className="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1.5 rounded-full bg-zinc-100 border border-zinc-200 text-xs font-bold text-zinc-900 shadow-xs">
                 <Zap className="h-3.5 w-3.5 text-[#FF4D3D]" />
                 <span className="font-khand text-base font-bold tracking-tight text-[#FF4D3D]">
                   1,025
                 </span>
-                <span className="text-zinc-600 font-medium">Live Visitors</span>
+                <span className="text-zinc-600 font-medium text-[11px] sm:text-xs">Live Visitors</span>
               </div>
 
-              {/* SVG Glowing Line Chart (Matching Image 3) */}
-              <div className="h-40 w-full relative pt-2">
+              {/* SVG Glowing Line Chart */}
+              <div className="h-28 sm:h-40 w-full relative pt-2">
                 <svg
                   className="w-full h-full overflow-visible"
                   viewBox="0 0 300 120"
@@ -432,19 +432,19 @@ export const DigitalProductCapabilitiesSection: React.FC = () => {
                 </svg>
               </div>
 
-              <div className="flex items-center justify-between p-3 rounded-xl bg-zinc-50 border border-zinc-200/70 text-xs">
-                <span className="text-zinc-500 font-medium">Conversion Lift</span>
-                <span className="font-khand text-lg font-bold text-emerald-600">
+              <div className="flex items-center justify-between p-2.5 sm:p-3 rounded-xl bg-zinc-50 border border-zinc-200/70 text-xs">
+                <span className="text-zinc-500 font-medium text-[11px] sm:text-xs">Conversion Lift</span>
+                <span className="font-khand text-base sm:text-lg font-bold text-emerald-600">
                   +340% Higher
                 </span>
               </div>
             </div>
 
-            <div className="pt-6">
-              <h3 className="text-xl font-bold text-zinc-950 tracking-tight">
+            <div className="pt-5 sm:pt-6">
+              <h3 className="text-lg sm:text-xl font-bold text-zinc-950 tracking-tight">
                 High-Traffic Conversions
               </h3>
-              <p className="text-xs text-zinc-600 mt-1 leading-relaxed">
+              <p className="text-[11px] sm:text-xs text-zinc-600 mt-1 leading-relaxed">
                 Architected to smoothly handle viral traffic surges and enterprise volume with zero performance degradation.
               </p>
             </div>

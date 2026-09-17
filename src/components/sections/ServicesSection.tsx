@@ -37,7 +37,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-2xl sm:text-5xl md:text-6xl font-bold tracking-tight text-zinc-950 leading-[1.12] sm:leading-[1.08] font-manrope"
+              className="text-2xl xs:text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-zinc-950 leading-[1.12] sm:leading-[1.08] font-manrope"
             >
               End-to-end solutions built for{" "}
               <span className="font-playfair italic font-medium text-[#FF3B30]">
