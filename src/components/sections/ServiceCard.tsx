@@ -33,13 +33,13 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, onOpen
       <TiltCard tiltMaxAngleX={6} tiltMaxAngleY={6} scale={1.02} className="h-full">
         <CardSpotlight
           spotlightColor="rgba(139, 92, 246, 0.12)"
-          className="h-full group relative rounded-3xl border border-zinc-200/90 bg-white p-6 sm:p-8 shadow-subtle hover:shadow-card-hover hover:border-purple-500 transition-all duration-300 flex flex-col justify-between"
+          className="h-full group relative rounded-2xl sm:rounded-3xl border border-zinc-200/90 bg-white p-4.5 sm:p-8 shadow-subtle hover:shadow-card-hover hover:border-purple-500 transition-all duration-300 flex flex-col justify-between"
         >
           <div>
             {/* Card Header: Icon, Number & Badge */}
-            <div className="flex items-center justify-between mb-6">
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-zinc-50 border border-zinc-200 text-zinc-900 group-hover:bg-purple-50 group-hover:text-purple-600 group-hover:border-purple-200 group-hover:scale-110 transition-all duration-300 shadow-xs">
-                <IconComponent className="h-7 w-7" />
+            <div className="flex items-center justify-between mb-4 sm:mb-6">
+              <div className="flex h-11 w-11 sm:h-14 sm:w-14 items-center justify-center rounded-xl sm:rounded-2xl bg-zinc-50 border border-zinc-200 text-zinc-900 group-hover:bg-purple-50 group-hover:text-purple-600 group-hover:border-purple-200 group-hover:scale-110 transition-all duration-300 shadow-xs">
+                <IconComponent className="h-5 w-5 sm:h-7 sm:w-7" />
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-xs font-mono font-bold text-zinc-400 group-hover:text-purple-600 transition-colors">
@@ -49,20 +49,20 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, onOpen
             </div>
 
             {/* Title & Tagline */}
-            <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-zinc-950 group-hover:text-purple-600 transition-colors font-display">
+            <h3 className="text-lg sm:text-2xl font-bold tracking-tight text-zinc-950 group-hover:text-purple-600 transition-colors font-display">
               {service.title}
             </h3>
-            <p className="text-xs font-semibold uppercase tracking-wider text-purple-600 mt-1 mb-3 font-mono">
+            <p className="text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-purple-600 mt-1 mb-2.5 sm:mb-3 font-mono">
               {service.tagline}
             </p>
 
             {/* Short Description */}
-            <p className="text-sm text-zinc-600 leading-relaxed font-normal mb-5">
+            <p className="text-xs sm:text-sm text-zinc-600 leading-relaxed font-normal mb-4 sm:mb-5">
               {service.shortDescription}
             </p>
 
             {/* Highlight Key Capabilities */}
-            <div className="space-y-2 border-t border-zinc-100 pt-4 mb-6">
+            <div className="space-y-2 border-t border-zinc-100 pt-3 sm:pt-4 mb-4 sm:mb-6">
               <span className="text-xs font-bold uppercase tracking-wider text-zinc-400 font-mono">
                 Key Capabilities
               </span>

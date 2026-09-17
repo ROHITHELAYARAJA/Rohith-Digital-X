@@ -108,13 +108,13 @@ const StackedCard: React.FC<{
   return (
     <div
       ref={cardRef}
-      className="sticky top-24 sm:top-28 mb-8 sm:mb-12"
+      className="relative sm:sticky sm:top-28 mb-6 sm:mb-12"
       style={{
         zIndex: index + 1,
       }}
     >
       <div
-        className={`relative rounded-2xl sm:rounded-[2.5rem] p-4 sm:p-10 lg:p-12 border ${card.borderColor} ${card.bgColor} shadow-2xl transition-all duration-300 overflow-hidden`}
+        className={`relative rounded-2xl sm:rounded-[2.5rem] p-4.5 sm:p-10 lg:p-12 border ${card.borderColor} ${card.bgColor} shadow-2xl transition-all duration-300 overflow-hidden`}
       >
         {/* Subtle decorative watermark */}
         <div className="absolute top-4 right-6 sm:right-8 font-trench text-[50px] sm:text-[140px] font-bold text-black/[0.03] select-none pointer-events-none leading-none">
@@ -313,18 +313,58 @@ export const WorkSection: React.FC<WorkSectionProps> = ({ onDiscussSimilar }) =>
 
         </div>
 
-        {/* Stacked Cards on Scroll Deck */}
-        <div className="relative pb-12">
-          {filteredProjects.map((card, index) => (
-            <StackedCard
-              key={card.id}
-              card={card}
-              index={index}
-              total={filteredProjects.length}
-              onOpenModal={handleOpenProject}
-            />
-          ))}
-        </div>
+        {/* Stacked Cards or Grid View */}
+        {viewMode === "stack" ? (
+          <div className="relative pb-8 sm:pb-12">
+            {filteredProjects.map((card, index) => (
+              <StackedCard
+                key={card.id}
+                card={card}
+                index={index}
+                total={filteredProjects.length}
+                onOpenModal={handleOpenProject}
+              />
+            ))}
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 pb-8 sm:pb-12">
+            {filteredProjects.map((card) => (
+              <div
+                key={card.id}
+                onClick={() => handleOpenProject(card.fullProject)}
+                className={`p-5 sm:p-6 rounded-2xl border ${card.borderColor} ${card.bgColor} shadow-md hover:shadow-xl transition-all cursor-pointer flex flex-col justify-between group`}
+              >
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-zinc-600">
+                      {card.tagline}
+                    </span>
+                    <span className="text-[11px] font-mono text-zinc-500">
+                      {card.fullProject.timelineEstimate}
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-bold text-zinc-950 font-manrope group-hover:text-[#FF3B30] transition-colors">
+                    {card.brandName}.
+                  </h3>
+                  <p className="text-xs text-zinc-700 leading-relaxed font-dmsans line-clamp-3">
+                    {card.description}
+                  </p>
+                  <div className="flex flex-wrap gap-1 pt-1">
+                    {card.tags.slice(0, 3).map((tag, tIdx) => (
+                      <span key={tIdx} className="text-[9px] font-mono px-2 py-0.5 rounded bg-white/80 border border-zinc-200 text-zinc-700">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <div className="pt-4 mt-4 border-t border-zinc-200/80 flex items-center justify-between text-xs font-bold text-zinc-900 group-hover:text-[#FF3B30] transition-colors">
+                  <span>Inspect Solution</span>
+                  <ArrowUpRight className="h-4 w-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
 
         {/* Bottom Banner */}
         <motion.div

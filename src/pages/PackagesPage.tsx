@@ -34,7 +34,7 @@ export const PackagesPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-[#070708] text-white selection:bg-sky-500 selection:text-white">
       {/* Top Page Header - Matching Modern HomePage Architecture */}
-      <section className="relative pt-32 sm:pt-40 pb-16 border-b border-zinc-800/80 overflow-hidden">
+      <section className="relative pt-24 sm:pt-40 pb-10 sm:pb-16 border-b border-zinc-800/80 overflow-hidden">
         {/* Subtle background grid */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
         
@@ -42,8 +42,8 @@ export const PackagesPage: React.FC = () => {
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-sky-500/10 blur-[120px] rounded-full pointer-events-none" />
 
         <div className="container max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
-          <div className="space-y-6 max-w-3xl">
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.08] font-display">
+          <div className="space-y-4 sm:space-y-6 max-w-3xl">
+            <h1 className="text-2xl sm:text-5xl lg:text-7xl font-bold tracking-tight text-white leading-[1.1] font-display">
               Clear packages<span className="text-[#FF4D3D]">.</span> Zero{" "}
               <span className="font-boska italic font-light text-sky-400">
                 hidden fees
@@ -51,7 +51,7 @@ export const PackagesPage: React.FC = () => {
               .
             </h1>
 
-            <p className="text-base sm:text-lg text-zinc-400 font-normal leading-relaxed max-w-2xl font-sans">
+            <p className="text-xs sm:text-base md:text-lg text-zinc-400 font-normal leading-relaxed max-w-2xl font-sans">
               Flat, predictable pricing with 100% source code ownership, rapid turnaround, and direct founder sprint delivery by Rohith E.
             </p>
 

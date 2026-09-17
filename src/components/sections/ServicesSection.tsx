@@ -37,7 +37,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-zinc-950 leading-[1.08] font-manrope"
+              className="text-2xl sm:text-5xl md:text-6xl font-bold tracking-tight text-zinc-950 leading-[1.12] sm:leading-[1.08] font-manrope"
             >
               End-to-end solutions built for{" "}
               <span className="font-playfair italic font-medium text-[#FF3B30]">
@@ -50,7 +50,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-sm sm:text-base text-zinc-600 leading-relaxed font-normal font-dmsans"
+              className="text-xs sm:text-base text-zinc-600 leading-relaxed font-normal font-dmsans"
             >
               Whether you are launching a high-converting web platform, a native iOS/Android application, or an autonomous AI agent, we deliver modular, scalable architecture with zero bloat.
             </motion.p>

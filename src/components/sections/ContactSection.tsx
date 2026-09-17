@@ -191,7 +191,7 @@ Looking forward to hearing from you!`
           >
             {/* Contact Channels Card with 3D Tilt */}
             <TiltCard tiltMaxAngleX={4} tiltMaxAngleY={4} scale={1.015}>
-              <div className="p-6 sm:p-8 rounded-3xl bg-zinc-950/90 text-white shadow-2xl space-y-6 border border-zinc-800">
+              <div className="p-4.5 sm:p-8 rounded-2xl sm:rounded-3xl bg-zinc-950/90 text-white shadow-2xl space-y-4 sm:space-y-6 border border-zinc-800">
                 <div>
                   <span className="text-[10px] sm:text-[11px] font-mono uppercase tracking-widest text-purple-400 font-bold">
                     Direct Communication
@@ -284,7 +284,7 @@ Looking forward to hearing from you!`
             transition={{ duration: 0.5, delay: 0.15 }}
             className="lg:col-span-7"
           >
-            <div className="p-5 sm:p-8 rounded-3xl bg-zinc-950/90 border border-zinc-800 shadow-2xl text-white">
+            <div className="p-4 sm:p-8 rounded-2xl sm:rounded-3xl bg-zinc-950/90 border border-zinc-800 shadow-2xl text-white">
               
               {status === "success" ? (
                 <motion.div

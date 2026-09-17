@@ -73,13 +73,13 @@ Please let me know the kickoff process and timeline to get started!`
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         
         {/* Section Header with Clean Typography */}
-        <div className="max-w-3xl mx-auto text-center mb-8 space-y-3">
+        <div className="max-w-3xl mx-auto text-center mb-6 sm:mb-8 space-y-2.5 sm:space-y-3">
           <motion.h2
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white leading-[1.08] font-manrope"
+            className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.1] font-manrope"
           >
             Clear investment with{" "}
             <span className="font-playfair italic font-medium text-[#FF4D3D]">
@@ -92,15 +92,15 @@ Please let me know the kickoff process and timeline to get started!`
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-sm sm:text-base text-zinc-400 leading-relaxed font-normal font-dmsans max-w-2xl mx-auto"
+            className="text-xs sm:text-base text-zinc-400 leading-relaxed font-normal font-dmsans max-w-2xl mx-auto"
           >
             No hourly bill padding or bloated agency overhead. Transparent milestones, guaranteed delivery sprints, and direct founder-level architecture.
           </motion.p>
         </div>
 
         {/* Category Switcher Tabs with Sleek Black & White Indicator */}
-        <div className="flex justify-center mb-12">
-          <div className="inline-flex p-1.5 rounded-2xl bg-zinc-900/90 border border-zinc-800 shadow-xs gap-1.5 flex-wrap justify-center relative">
+        <div className="flex justify-center mb-8 sm:mb-12">
+          <div className="inline-flex p-1 sm:p-1.5 rounded-2xl bg-zinc-900/90 border border-zinc-800 shadow-xs gap-1 sm:gap-1.5 flex-wrap justify-center relative">
             {packageCategories.map((cat) => {
               const Icon = CATEGORY_ICONS[cat.id]
               const isSelected = selectedCategory === cat.id
@@ -109,7 +109,7 @@ Please let me know the kickoff process and timeline to get started!`
                 <button
                   key={cat.id}
                   onClick={() => setSelectedCategory(cat.id)}
-                  className={`relative flex items-center gap-2.5 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-colors duration-200 cursor-pointer select-none z-10 ${
+                  className={`relative flex items-center gap-1.5 sm:gap-2.5 px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-colors duration-200 cursor-pointer select-none z-10 ${
                     isSelected ? "text-zinc-950 font-bold" : "text-zinc-400 hover:text-white"
                   }`}
                 >
@@ -120,7 +120,7 @@ Please let me know the kickoff process and timeline to get started!`
                       transition={{ type: "spring", stiffness: 380, damping: 30 }}
                     />
                   )}
-                  <Icon className={`relative z-10 h-4 w-4 ${isSelected ? "text-zinc-950" : ""}`} />
+                  <Icon className={`relative z-10 h-3.5 w-3.5 sm:h-4 sm:w-4 ${isSelected ? "text-zinc-950" : ""}`} />
                   <span className="relative z-10">{cat.label}</span>
                 </button>
               )
@@ -143,7 +143,7 @@ Please let me know the kickoff process and timeline to get started!`
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.35 }}
-            className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch"
+            className="grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-8 items-stretch"
           >
             {packages.map((pkg) => {
               const isPopular = pkg.popular
@@ -159,7 +159,7 @@ Please let me know the kickoff process and timeline to get started!`
                   className="h-full flex flex-col"
                 >
                   <div
-                    className={`group relative rounded-3xl p-6 sm:p-7 flex flex-col justify-between transition-all duration-300 cursor-default h-full border ${
+                    className={`group relative rounded-2xl sm:rounded-3xl p-4.5 sm:p-7 flex flex-col justify-between transition-all duration-300 cursor-default h-full border ${
                       isPopular
                         ? "bg-[#111114] text-white border-zinc-700/80 shadow-2xl hover:border-[#FF4D3D] hover:shadow-[0_0_35px_rgba(255,77,61,0.25)] z-10"
                         : "bg-[#090A0D] text-white border-zinc-800/80 hover:border-[#FF4D3D] hover:shadow-[0_0_35px_rgba(255,77,61,0.22)]"
@@ -167,8 +167,8 @@ Please let me know the kickoff process and timeline to get started!`
                   >
                     {/* Popular Pill Banner: Clean Black & White */}
                     {isPopular && (
-                      <div className="mb-4 -mt-1 flex items-center justify-center">
-                        <span className="w-full py-1.5 px-3 rounded-full bg-zinc-900 border border-zinc-700 text-white text-[11px] font-bold uppercase tracking-wider text-center flex items-center justify-center gap-1.5 shadow-sm">
+                      <div className="mb-3 sm:mb-4 -mt-1 flex items-center justify-center">
+                        <span className="w-full py-1 sm:py-1.5 px-3 rounded-full bg-zinc-900 border border-zinc-700 text-white text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-center flex items-center justify-center gap-1.5 shadow-sm">
                           <span>{pkg.badge || "Most Popular Choice"}</span>
                         </span>
                       </div>
@@ -176,57 +176,57 @@ Please let me know the kickoff process and timeline to get started!`
 
                     <div className="flex-1 flex flex-col">
                       {/* Top: Icon, Tier Number */}
-                      <div className="flex items-center justify-between mb-4">
+                      <div className="flex items-center justify-between mb-3 sm:mb-4">
                         <div
-                          className="flex h-11 w-11 items-center justify-center rounded-2xl border transition-all duration-300 bg-zinc-900 border-zinc-800 text-white group-hover:border-[#FF4D3D]/50 group-hover:text-[#FF4D3D] group-hover:scale-105"
+                          className="flex h-9 w-9 sm:h-11 sm:w-11 items-center justify-center rounded-xl sm:rounded-2xl border transition-all duration-300 bg-zinc-900 border-zinc-800 text-white group-hover:border-[#FF4D3D]/50 group-hover:text-[#FF4D3D] group-hover:scale-105"
                         >
-                          <Icon className="h-5 w-5" />
+                          <Icon className="h-4 w-4 sm:h-5 sm:w-5" />
                         </div>
                         <span
-                          className="text-xs font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-zinc-900 text-zinc-300 border border-zinc-800 transition-colors"
+                          className="text-[10px] sm:text-xs font-mono font-bold uppercase tracking-wider px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full bg-zinc-900 text-zinc-300 border border-zinc-800 transition-colors"
                         >
                           Tier {pkg.tierNumber}
                         </span>
                       </div>
 
                       {/* Title & Tagline with standardized min-height for horizontal lockstep alignment */}
-                      <div className="min-h-[66px] flex flex-col justify-start mb-2">
+                      <div className="sm:min-h-[66px] flex flex-col justify-start mb-2">
                         <h3
-                          className="text-xl sm:text-2xl font-bold tracking-tight leading-snug font-manrope text-white group-hover:text-white"
+                          className="text-lg sm:text-2xl font-bold tracking-tight leading-snug font-manrope text-white group-hover:text-white"
                         >
                           {pkg.name}
                         </h3>
-                        <p className="text-xs font-medium mt-1 font-mono text-zinc-400">
+                        <p className="text-[11px] sm:text-xs font-medium mt-0.5 sm:mt-1 font-mono text-zinc-400">
                           {pkg.tagline}
                         </p>
                       </div>
 
                       {/* Price Tag with standardized height */}
-                      <div className="h-[60px] flex items-baseline gap-2 pb-4 mb-4 border-b border-zinc-800">
-                        <span className="text-3xl sm:text-4xl font-extrabold tracking-tight font-manrope text-white">
+                      <div className="min-h-[44px] sm:h-[60px] flex items-baseline gap-2 pb-3 sm:pb-4 mb-3 sm:mb-4 border-b border-zinc-800">
+                        <span className="text-2xl sm:text-4xl font-extrabold tracking-tight font-manrope text-white">
                           {pkg.price}
                         </span>
-                        <span className="text-xs font-medium font-sans text-zinc-400">
+                        <span className="text-[11px] sm:text-xs font-medium font-sans text-zinc-400">
                           turnkey investment
                         </span>
                       </div>
 
-                      {/* Scope & Delivery Info Pills (Locked to 40px each) */}
-                      <div className="space-y-2 mb-4">
-                        <div className="h-[40px] flex items-center gap-2 px-3 rounded-lg text-xs font-semibold bg-zinc-900/90 text-zinc-200 border border-zinc-800">
+                      {/* Scope & Delivery Info Pills */}
+                      <div className="space-y-1.5 sm:space-y-2 mb-3 sm:mb-4">
+                        <div className="py-2 sm:h-[40px] flex items-center gap-2 px-3 rounded-lg text-xs font-semibold bg-zinc-900/90 text-zinc-200 border border-zinc-800">
                           <Clock className="h-3.5 w-3.5 text-zinc-400 shrink-0" />
                           <span className="line-clamp-1">Scope: {pkg.pagesOrScreens}</span>
                         </div>
 
-                        <div className="h-[40px] flex items-center gap-2 px-3 rounded-lg text-xs font-semibold bg-zinc-900/90 text-emerald-400 border border-zinc-800">
+                        <div className="py-2 sm:h-[40px] flex items-center gap-2 px-3 rounded-lg text-xs font-semibold bg-zinc-900/90 text-emerald-400 border border-zinc-800">
                           <CheckCircle2 className="h-3.5 w-3.5 text-emerald-400 shrink-0" />
                           <span className="line-clamp-1">{pkg.supportDays}</span>
                         </div>
                       </div>
 
-                      {/* Perfect For Box (Locked min-height for uniform horizontal alignment) */}
-                      <div className="min-h-[82px] p-3.5 rounded-xl mb-5 text-xs transition-all duration-200 flex flex-col justify-start bg-zinc-900/70 border border-zinc-800/80 text-zinc-300">
-                        <span className="font-bold block mb-1 text-[11px] text-zinc-400 uppercase tracking-wider">
+                      {/* Perfect For Box */}
+                      <div className="sm:min-h-[82px] p-3 sm:p-3.5 rounded-xl mb-4 sm:mb-5 text-xs transition-all duration-200 flex flex-col justify-start bg-zinc-900/70 border border-zinc-800/80 text-zinc-300">
+                        <span className="font-bold block mb-1 text-[10px] sm:text-[11px] text-zinc-400 uppercase tracking-wider">
                           Perfect For:
                         </span>
                         <p className="leading-relaxed line-clamp-3 text-xs font-sans">{pkg.idealFor}</p>

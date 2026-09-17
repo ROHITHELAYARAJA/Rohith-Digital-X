@@ -13,14 +13,14 @@ export const ContactPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-[#070708] text-white selection:bg-purple-600 selection:text-white">
       {/* Hero Header Section - Clean Modern Fastlane / Home Architecture */}
-      <section className="relative pt-32 sm:pt-40 pb-16 border-b border-zinc-800/80 overflow-hidden">
+      <section className="relative pt-24 sm:pt-40 pb-10 sm:pb-16 border-b border-zinc-800/80 overflow-hidden">
         {/* Subtle background grid */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-purple-600/10 blur-[120px] rounded-full pointer-events-none" />
 
         <div className="container max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
-          <div className="space-y-6 max-w-3xl">
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.08] font-display">
+          <div className="space-y-4 sm:space-y-6 max-w-3xl">
+            <h1 className="text-2xl sm:text-5xl lg:text-7xl font-bold tracking-tight text-white leading-[1.1] font-display">
               Bring the brief. We will ship the{" "}
               <span className="font-boska italic font-light text-purple-400">
                 product
@@ -28,7 +28,7 @@ export const ContactPage: React.FC = () => {
               <span className="text-[#FF4D3D]">.</span>
             </h1>
 
-            <p className="text-base sm:text-lg text-zinc-400 font-normal leading-relaxed max-w-2xl font-sans">
+            <p className="text-xs sm:text-base md:text-lg text-zinc-400 font-normal leading-relaxed max-w-2xl font-sans">
               Direct founder communication with Rohith E. Zero agency fluff or account managers. Schedule a 30-min discovery call or submit your project details below.
             </p>
 

@@ -79,7 +79,7 @@ export const GuestbookPage: React.FC = () => {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-4xl sm:text-6xl font-bold tracking-tight text-white font-display"
+          className="text-2xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white font-display"
         >
           Digital Guestbook<span className="text-[#FF4D3D]">.</span>
         </motion.h1>
@@ -88,7 +88,7 @@ export const GuestbookPage: React.FC = () => {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-base sm:text-lg text-zinc-400 max-w-xl mx-auto font-normal leading-relaxed font-sans"
+          className="text-xs sm:text-lg text-zinc-400 max-w-xl mx-auto font-normal leading-relaxed font-sans"
         >
           Leave a message, feedback, or say hello on our community wall.
         </motion.p>
@@ -96,7 +96,7 @@ export const GuestbookPage: React.FC = () => {
 
       <div className="container max-w-2xl mx-auto px-4 space-y-8">
         {/* Input Form Card */}
-        <form onSubmit={handleSubmit} className="p-6 sm:p-8 rounded-3xl bg-zinc-950/90 text-white border border-zinc-800 shadow-2xl space-y-4">
+        <form onSubmit={handleSubmit} className="p-4.5 sm:p-8 rounded-2xl sm:rounded-3xl bg-zinc-950/90 text-white border border-zinc-800 shadow-2xl space-y-4">
           <div className="flex items-center gap-2 text-purple-400">
             <Heart className="h-5 w-5 fill-purple-500/30" />
             <span className="text-xs font-mono font-bold uppercase tracking-wider text-zinc-300">Sign the Wall</span>
@@ -148,19 +148,19 @@ export const GuestbookPage: React.FC = () => {
               key={item.id}
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              className="p-5 sm:p-6 rounded-2xl bg-zinc-950/80 border border-zinc-800 shadow-2xl space-y-2 text-left"
+              className="p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-zinc-950/80 border border-zinc-800 shadow-2xl space-y-2 text-left"
             >
-              <div className="flex items-center justify-between">
+              <div className="flex flex-col xs:flex-row xs:items-center justify-between gap-1">
                 <div className="flex items-center gap-2.5">
-                  <span className={`h-7 w-7 rounded-full ${item.avatarColor} text-white flex items-center justify-center text-xs font-bold`}>
+                  <span className={`h-7 w-7 rounded-full ${item.avatarColor} text-white flex items-center justify-center text-xs font-bold shrink-0`}>
                     {item.name.charAt(0)}
                   </span>
-                  <span className="font-bold text-sm text-white font-sans">{item.name}</span>
-                  <span className="text-xs text-zinc-500 font-mono">• {item.location}</span>
+                  <span className="font-bold text-sm text-white font-sans truncate">{item.name}</span>
+                  <span className="text-xs text-zinc-500 font-mono shrink-0">• {item.location}</span>
                 </div>
-                <span className="text-xs text-zinc-500 font-mono">{item.date}</span>
+                <span className="text-[11px] sm:text-xs text-zinc-500 font-mono pl-9 xs:pl-0">{item.date}</span>
               </div>
-              <p className="text-sm text-zinc-300 pl-9 leading-relaxed font-sans font-normal">
+              <p className="text-xs sm:text-sm text-zinc-300 pl-0 xs:pl-9 pt-1 leading-relaxed font-sans font-normal break-words">
                 {item.message}
               </p>
             </motion.div>

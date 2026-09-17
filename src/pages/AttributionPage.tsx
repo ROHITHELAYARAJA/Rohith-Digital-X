@@ -51,7 +51,7 @@ export const AttributionPage: React.FC = () => {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-4xl sm:text-6xl font-bold tracking-tight text-white font-display"
+          className="text-2xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white font-display"
         >
           Attribution &amp; Stack<span className="text-[#FF4D3D]">.</span>
         </motion.h1>
@@ -60,7 +60,7 @@ export const AttributionPage: React.FC = () => {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-base sm:text-lg text-zinc-400 max-w-xl mx-auto font-normal leading-relaxed font-sans"
+          className="text-xs sm:text-lg text-zinc-400 max-w-xl mx-auto font-normal leading-relaxed font-sans"
         >
           Transparent acknowledgment of all design tokens, typefaces, and engineering libraries powering Rohith Digital X.
         </motion.p>
@@ -73,11 +73,11 @@ export const AttributionPage: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: idx * 0.1 }}
-            className="p-6 sm:p-8 rounded-3xl bg-zinc-950/80 border border-zinc-800 shadow-2xl space-y-4 text-left"
+            className="p-4.5 sm:p-8 rounded-2xl sm:rounded-3xl bg-zinc-950/80 border border-zinc-800 shadow-2xl space-y-4 text-left"
           >
             <div>
-              <h3 className="text-lg font-bold text-white font-display">{section.title}</h3>
-              <p className="text-xs text-zinc-400">{section.description}</p>
+              <h3 className="text-base sm:text-lg font-bold text-white font-display">{section.title}</h3>
+              <p className="text-[11px] sm:text-xs text-zinc-400">{section.description}</p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">

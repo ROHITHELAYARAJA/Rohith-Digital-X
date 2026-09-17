@@ -249,12 +249,12 @@ Please let me know how we can discuss requirements and schedule a kickoff call!`
       <div className="container max-w-6xl mx-auto px-4 sm:px-6">
         
         {/* Section Header with Clean Typography */}
-        <div className="max-w-3xl mb-10 space-y-3">
+        <div className="max-w-3xl mb-8 sm:mb-10 space-y-2.5 sm:space-y-3">
           <motion.span
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-xs font-bold uppercase tracking-widest text-purple-400 font-mono inline-flex items-center gap-1.5"
+            className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-purple-400 font-mono inline-flex items-center gap-1.5"
           >
             <span>Interactive Scope &amp; Investment Estimator</span>
           </motion.span>
@@ -263,7 +263,7 @@ Please let me know how we can discuss requirements and schedule a kickoff call!`
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white leading-tight font-display"
+            className="text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white leading-tight font-display"
           >
             Calculate your scope &amp;{" "}
             <span className="text-purple-400 font-bold">
@@ -275,47 +275,49 @@ Please let me know how we can discuss requirements and schedule a kickoff call!`
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-base text-zinc-400 leading-relaxed font-normal"
+            className="text-xs sm:text-base text-zinc-400 leading-relaxed font-normal"
           >
             Choose a standard turnkey package (Pack 1, 2, 3) or build a custom modular scope with your exact feature checklist.
           </motion.p>
         </div>
 
         {/* Mode Selector Tabs with Morphing Spring Indicator */}
-        <div className="flex mb-8">
-          <div className="inline-flex p-1.5 rounded-2xl bg-zinc-900 border border-zinc-800 shadow-xs gap-1.5 relative">
+        <div className="flex mb-6 sm:mb-8">
+          <div className="flex flex-col sm:flex-row p-1 sm:p-1.5 rounded-xl sm:rounded-2xl bg-zinc-900 border border-zinc-800 shadow-xs gap-1 sm:gap-1.5 w-full sm:w-auto relative">
             <button
               onClick={() => setEstimateMode("packages")}
-              className={`relative flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-colors duration-200 cursor-pointer z-10 ${
+              className={`relative flex items-center justify-center gap-2 px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-lg sm:rounded-xl text-xs sm:text-sm font-bold transition-colors duration-200 cursor-pointer z-10 ${
                 estimateMode === "packages" ? "text-white" : "text-zinc-400 hover:text-white"
               }`}
             >
               {estimateMode === "packages" && (
                 <motion.div
                   layoutId="activeEstimatorTab"
-                  className="absolute inset-0 rounded-xl bg-purple-600 shadow-md ring-1 ring-purple-400"
+                  className="absolute inset-0 rounded-lg sm:rounded-xl bg-purple-600 shadow-md ring-1 ring-purple-400"
                   transition={{ type: "spring", stiffness: 400, damping: 30 }}
                 />
               )}
-              <PackageCheck className="relative z-10 h-4 w-4" />
-              <span className="relative z-10">Standard Package Selection (Pack 1, 2, 3)</span>
+              <PackageCheck className="relative z-10 h-3.5 w-3.5 sm:h-4 sm:w-4" />
+              <span className="relative z-10 sm:hidden">Standard Packages</span>
+              <span className="relative z-10 hidden sm:inline">Standard Package Selection (Pack 1, 2, 3)</span>
             </button>
 
             <button
               onClick={() => setEstimateMode("custom")}
-              className={`relative flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-colors duration-200 cursor-pointer z-10 ${
+              className={`relative flex items-center justify-center gap-2 px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-lg sm:rounded-xl text-xs sm:text-sm font-bold transition-colors duration-200 cursor-pointer z-10 ${
                 estimateMode === "custom" ? "text-white" : "text-zinc-400 hover:text-white"
               }`}
             >
               {estimateMode === "custom" && (
                 <motion.div
                   layoutId="activeEstimatorTab"
-                  className="absolute inset-0 rounded-xl bg-purple-600 shadow-md ring-1 ring-purple-400"
+                  className="absolute inset-0 rounded-lg sm:rounded-xl bg-purple-600 shadow-md ring-1 ring-purple-400"
                   transition={{ type: "spring", stiffness: 400, damping: 30 }}
                 />
               )}
-              <Sliders className="relative z-10 h-4 w-4" />
-              <span className="relative z-10">Custom Modular Builder</span>
+              <Sliders className="relative z-10 h-3.5 w-3.5 sm:h-4 sm:w-4" />
+              <span className="relative z-10 sm:hidden">Custom Builder</span>
+              <span className="relative z-10 hidden sm:inline">Custom Modular Builder</span>
             </button>
           </div>
         </div>
@@ -518,14 +520,14 @@ Please let me know how we can discuss requirements and schedule a kickoff call!`
           </div>
 
           {/* Estimate Summary Column with 3D TiltCard & Animated Live Rolling Numbers */}
-          <div className="lg:col-span-5 sticky top-24">
+          <div className="lg:col-span-5 sm:sticky sm:top-24">
             <TiltCard tiltMaxAngleX={4} tiltMaxAngleY={4} scale={1.015}>
-              <div className="p-6 sm:p-8 rounded-3xl bg-zinc-950 text-white shadow-2xl space-y-6 border border-zinc-800">
+              <div className="p-4.5 sm:p-8 rounded-2xl sm:rounded-3xl bg-zinc-950 text-white shadow-2xl space-y-4 sm:space-y-6 border border-zinc-800">
                 
-                <div className="flex items-center justify-between pb-4 border-b border-zinc-800">
+                <div className="flex items-center justify-between pb-3 sm:pb-4 border-b border-zinc-800">
                   <div className="flex items-center gap-2">
-                    <Calculator className="h-5 w-5 text-purple-400" />
-                    <span className="text-xs font-mono font-bold uppercase tracking-widest text-zinc-300">
+                    <Calculator className="h-4.5 w-4.5 sm:h-5 sm:w-5 text-purple-400" />
+                    <span className="text-[11px] sm:text-xs font-mono font-bold uppercase tracking-widest text-zinc-300">
                       Estimate Summary
                     </span>
                   </div>
@@ -535,7 +537,7 @@ Please let me know how we can discuss requirements and schedule a kickoff call!`
                 </div>
 
                 {/* Service & Addons Selected */}
-                <div className="space-y-3">
+                <div className="space-y-2.5 sm:space-y-3">
                   {estimateMode === "packages" ? (
                     <>
                       <div className="flex items-center justify-between text-xs">
@@ -570,11 +572,11 @@ Please let me know how we can discuss requirements and schedule a kickoff call!`
                 </div>
 
                 {/* Calculated Ballpark Investment with Live Rolling Numbers */}
-                <div className="p-5 rounded-2xl bg-zinc-900/90 border border-zinc-800 space-y-2">
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-zinc-400">
+                <div className="p-4 sm:p-5 rounded-2xl bg-zinc-900/90 border border-zinc-800 space-y-1.5 sm:space-y-2">
+                  <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-zinc-400">
                     Estimated Investment
                   </span>
-                  <div className="text-2xl sm:text-3xl font-bold text-white tracking-tight font-trench">
+                  <div className="text-xl sm:text-3xl font-bold text-white tracking-tight font-trench">
                     {estimateMode === "packages" ? (
                       <AnimatedNumber value={activePreset.price} prefix="₹" />
                     ) : (
