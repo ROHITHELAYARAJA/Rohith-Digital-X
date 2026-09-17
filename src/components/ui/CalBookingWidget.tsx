@@ -412,7 +412,7 @@ export const CalBookingWidget: React.FC<CalBookingWidgetProps> = ({
                           `}
                         >
                           <span>{time}</span>
-                          {isSelected && <Check className="h-3.5 w-3.5 text-white" />}
+                          {isSelected && <Check className="h-3.5 w-3.5 text-black" />}
                         </motion.button>
                       )
                     })}

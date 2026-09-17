@@ -178,7 +178,7 @@ export const Navbar: React.FC = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="fixed inset-0 z-40 bg-black/60 backdrop-blur-xs xl:hidden"
+              className="fixed inset-0 z-40 bg-black/60 backdrop-blur-xs md:hidden"
             />
 
             {/* Slide Drawer */}
@@ -187,14 +187,14 @@ export const Navbar: React.FC = () => {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -20, scale: 0.98 }}
               transition={{ duration: 0.25, ease: "easeOut" }}
-              className="fixed top-20 left-4 right-4 z-50 rounded-3xl border border-zinc-200 bg-white p-6 shadow-2xl xl:hidden max-h-[85vh] overflow-y-auto"
+              className="fixed top-20 left-4 right-4 z-50 rounded-3xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 p-6 shadow-2xl md:hidden max-h-[85vh] overflow-y-auto"
             >
-              <div className="flex items-center justify-between pb-4 border-b border-zinc-100">
+              <div className="flex items-center justify-between pb-4 border-b border-zinc-100 dark:border-zinc-850">
                 <div className="flex flex-col text-left">
-                  <div className="flex items-baseline font-sans text-lg font-bold tracking-tight text-zinc-950 leading-none">
+                  <div className="flex items-baseline font-sans text-lg font-bold tracking-tight text-zinc-950 dark:text-white leading-none">
                     <span className="font-bold">Rohith</span>
                     <span className="text-zinc-500 font-medium ml-1.5 tracking-tight">Digital</span>
-                    <span className="font-bold text-purple-600 ml-1.5">
+                    <span className="font-bold text-[#FF3B30] ml-1.5">
                       X
                     </span>
                   </div>
@@ -202,7 +202,7 @@ export const Navbar: React.FC = () => {
                     Digital Product Studio
                   </div>
                 </div>
-                <span className="px-2.5 py-1 rounded-full bg-purple-50 text-purple-800 border border-purple-200 text-[10px] font-bold">
+                <span className="px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 text-[10px] font-bold">
                   Available for Projects
                 </span>
               </div>
@@ -225,34 +225,34 @@ export const Navbar: React.FC = () => {
                     className={cn(
                       "flex items-center justify-between p-3 rounded-xl text-left text-xs font-bold transition-all duration-200 cursor-pointer select-none",
                       currentPage === link.id
-                        ? "bg-purple-50 text-purple-900 border border-purple-200 shadow-xs"
-                        : "text-zinc-700 hover:text-purple-600 hover:bg-purple-50/50 active:bg-purple-100"
+                        ? "bg-zinc-100 dark:bg-zinc-800 text-zinc-950 dark:text-white border border-zinc-300 dark:border-zinc-700 shadow-xs"
+                        : "text-zinc-700 dark:text-zinc-300 hover:text-zinc-950 dark:hover:text-white hover:bg-zinc-100/70 dark:hover:bg-zinc-850 active:bg-zinc-200 dark:active:bg-zinc-800"
                     )}
                   >
                     <span>{link.label}</span>
                     {currentPage === link.id && (
-                      <span className="text-[10px] font-mono font-bold text-purple-700 uppercase">Active</span>
+                      <span className="text-[10px] font-mono font-bold text-[#FF3B30] uppercase">Active</span>
                     )}
                   </button>
                 ))}
               </div>
 
               {/* Contact Info Snippet with Exact User Details */}
-              <div className="mt-2 pt-4 border-t border-zinc-100 space-y-2.5 text-xs text-zinc-600">
+              <div className="mt-2 pt-4 border-t border-zinc-100 dark:border-zinc-850 space-y-2.5 text-xs text-zinc-600 dark:text-zinc-400">
                 <div className="flex items-center gap-2">
-                  <Phone className="h-3.5 w-3.5 text-purple-600" />
-                  <a href="tel:+919655483130" className="hover:text-purple-600 font-bold transition-colors font-mono">
+                  <Phone className="h-3.5 w-3.5 text-[#FF3B30]" />
+                  <a href="tel:+919655483130" className="hover:text-[#FF3B30] font-bold transition-colors font-mono">
                     +91 96554 83130
                   </a>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Mail className="h-3.5 w-3.5 text-purple-600" />
-                  <a href="mailto:e.rohith3130@gmail.com" className="hover:text-purple-600 font-bold transition-colors font-mono">
+                  <Mail className="h-3.5 w-3.5 text-[#FF3B30]" />
+                  <a href="mailto:e.rohith3130@gmail.com" className="hover:text-[#FF3B30] font-bold transition-colors font-mono">
                     e.rohith3130@gmail.com
                   </a>
                 </div>
                 <div className="flex items-center gap-2">
-                  <MapPin className="h-3.5 w-3.5 text-purple-600" />
+                  <MapPin className="h-3.5 w-3.5 text-[#FF3B30]" />
                   <span>Tamil Nadu, India</span>
                 </div>
               </div>
@@ -261,7 +261,7 @@ export const Navbar: React.FC = () => {
               <div className="mt-5">
                 <Button
                   onClick={() => handleNavClick("contact")}
-                  className="w-full justify-center gap-2 text-sm font-bold h-11 bg-[#111111] hover:bg-black text-white shadow-md rounded-full font-manrope cursor-pointer"
+                  className="w-full justify-center gap-2 text-sm font-bold h-11 bg-zinc-950 text-white dark:bg-white dark:text-zinc-950 hover:bg-[#FF3B30] dark:hover:bg-[#FF3B30] dark:hover:text-white shadow-md rounded-full font-manrope cursor-pointer transition-colors"
                 >
                   <span>Get Started for Free</span>
                   <ArrowUpRight className="h-4 w-4" />

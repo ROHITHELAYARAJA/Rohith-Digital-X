@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import { motion, useScroll, AnimatePresence } from "framer-motion"
 import { Compass, ChevronRight } from "lucide-react"
 import { scrollToSection } from "@/lib/utils"
+import { useNavigation } from "@/context/NavigationContext"
 
 const SECTIONS = [
   { id: "hero", label: "Home", short: "01" },
@@ -18,6 +19,7 @@ const SECTIONS = [
 
 export const ScrollProgressBar: React.FC = () => {
   const { scrollYProgress } = useScroll()
+  const { navigate, currentPage } = useNavigation()
 
   const [activeSection, setActiveSection] = useState<string>("hero")
   const [activeLabel, setActiveLabel] = useState<string>("Home")
@@ -104,7 +106,11 @@ export const ScrollProgressBar: React.FC = () => {
                     <button
                       key={sec.id}
                       onClick={() => {
-                        scrollToSection(sec.id)
+                        if (currentPage !== "home") {
+                          navigate("home", sec.id)
+                        } else {
+                          scrollToSection(sec.id)
+                        }
                         setIsExpanded(false)
                       }}
                       className={`w-full flex items-center justify-between px-2.5 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${

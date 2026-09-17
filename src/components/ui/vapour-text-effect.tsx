@@ -553,7 +553,10 @@ const createParticles = (
   const data = imageData.data;
 
   const baseDPR = 3;
-  const currentDPR = canvas.width / parseInt(canvas.style.width);
+  const parsedWidth = parseFloat(canvas.style.width);
+  const currentDPR = (!isNaN(parsedWidth) && parsedWidth > 0)
+    ? (canvas.width / parsedWidth)
+    : (typeof window !== "undefined" ? window.devicePixelRatio || 1 : 1);
   const baseSampleRate = Math.max(1, Math.round(currentDPR / baseDPR));
   const sampleRate = Math.max(1, Math.round(baseSampleRate));
 
@@ -563,7 +566,7 @@ const createParticles = (
       const alpha = data[index + 3];
       
       if (alpha > 0) {
-        const originalAlpha = alpha / 255 * (sampleRate / currentDPR);
+        const originalAlpha = (alpha / 255) * (sampleRate / (currentDPR || 1));
         const particle: Particle = {
           x,
           y,

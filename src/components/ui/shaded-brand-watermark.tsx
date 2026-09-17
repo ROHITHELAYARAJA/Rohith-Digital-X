@@ -12,14 +12,14 @@ export const ShadedBrandWatermark: React.FC<ShadedBrandWatermarkProps> = ({
   text = "ROHITH DIGITAL X",
   subtext = "ENGINEERED FOR SCALE & HIGH-CONVERTING DIGITAL EXPERIENCES",
   className = "",
-  variant = "light",
+  variant = "dark",
 }) => {
   const isLight = variant === "light"
 
   return (
     <div
       className={`relative w-full overflow-hidden select-none pointer-events-none flex flex-col items-center justify-end ${
-        isLight ? "bg-[#FAFAFA] text-zinc-950" : "bg-[#090A0B] text-white"
+        isLight ? "bg-[#FAFAFA] text-zinc-950" : "bg-[#070708] text-white"
       } ${className}`}
     >
       {/* Top subtle decorative subline */}
