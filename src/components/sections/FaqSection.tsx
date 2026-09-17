@@ -25,14 +25,14 @@ export const FaqSection: React.FC = () => {
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
           className="text-center max-w-2xl mx-auto mb-8 sm:mb-10 space-y-3"
         >
-          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.08] font-manrope">
+          <h2 className="text-2xl xs:text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.08] font-manrope">
             Everything you need to{" "}
             <span className="font-playfair italic font-medium text-[#FF3B30]">
               know
             </span>
             .
           </h2>
-          <p className="text-sm sm:text-base text-zinc-400 leading-relaxed font-normal font-dmsans">
+          <p className="text-xs sm:text-base text-zinc-400 leading-relaxed font-normal font-dmsans">
             Direct, candid answers about sprint timelines, founder communication, code ownership, and post-launch guarantees.
           </p>
         </motion.div>
@@ -54,7 +54,7 @@ export const FaqSection: React.FC = () => {
         </div>
 
         {/* Bottom Help CTA */}
-        <div className="mt-14 p-8 rounded-3xl bg-zinc-950 text-white border border-zinc-800 text-center space-y-4 shadow-xl">
+        <div className="mt-10 sm:mt-14 p-5 sm:p-8 rounded-3xl bg-zinc-950 text-white border border-zinc-800 text-center space-y-4 shadow-xl">
           <h3 className="text-lg sm:text-xl font-bold font-display text-white">
             Have a specific question not covered here?
           </h3>
@@ -66,7 +66,7 @@ export const FaqSection: React.FC = () => {
               href="https://wa.me/919655483130?text=Hello%20Rohith,%20I%20have%20a%20question%20regarding%20a%20project."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-purple-600 text-white font-bold text-xs shadow-[0_0_24px_rgba(139,92,246,0.35)] hover:bg-purple-500 transition-all cursor-pointer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-purple-600 text-white font-bold text-xs shadow-[0_0_24px_rgba(139,92,246,0.35)] hover:bg-purple-500 transition-all cursor-pointer"
             >
               <span>Chat with Rohith E on WhatsApp ↗</span>
             </a>

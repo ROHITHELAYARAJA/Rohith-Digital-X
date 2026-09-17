@@ -29,7 +29,7 @@ export const HeyDigitalTestimonialsSection: React.FC = () => {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-zinc-800">
           <div>
-            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight font-manrope leading-[1.08]">
+            <h2 className="text-2xl xs:text-3xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight font-manrope leading-[1.08]">
               From founders we've{" "}
               <span className="font-playfair italic font-medium text-[#FF3B30]">
                 partnered with
@@ -58,7 +58,7 @@ export const HeyDigitalTestimonialsSection: React.FC = () => {
         </div>
 
         {/* Featured Testimonial Spotlight */}
-        <div className="p-8 sm:p-12 rounded-3xl bg-zinc-950 border border-zinc-800 shadow-2xl relative overflow-hidden">
+        <div className="p-5 sm:p-8 md:p-12 rounded-3xl bg-zinc-950 border border-zinc-800 shadow-2xl relative overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
             <div className="lg:col-span-8 space-y-6">

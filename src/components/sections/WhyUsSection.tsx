@@ -70,7 +70,7 @@ export const WhyUsSection: React.FC = () => {
               >
                 <TiltCard tiltMaxAngleX={5} tiltMaxAngleY={5} scale={1.015} className="h-full">
                   <div
-                    className={`rounded-3xl p-7 sm:p-8 flex flex-col justify-between transition-all duration-300 h-full cursor-default ${
+                    className={`rounded-3xl p-5 sm:p-7 md:p-8 flex flex-col justify-between transition-all duration-300 h-full cursor-default ${
                       isFeatured
                         ? "bg-zinc-950 text-white shadow-2xl border border-zinc-800 relative overflow-hidden"
                         : "bg-white border border-zinc-200/90 text-zinc-900 hover:border-accent-crimson hover:shadow-card"
